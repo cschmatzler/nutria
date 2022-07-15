@@ -1,0 +1,8 @@
+[book]
+title = "Kubernetes on Hetzner"
+authors = ["Christoph Schmatzler"]
+
+language = "en"
+
+[rust]
+edition = "2021"
