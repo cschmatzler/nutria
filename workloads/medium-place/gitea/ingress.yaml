@@ -1,0 +1,31 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+
+metadata:
+  name: gitea
+  namespace: medium-place
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-body-size: 10m
+    cert-manager.io/cluster-issuer: letsencrypt
+  labels:
+    app.kubernetes.io/part-of: gitea
+
+spec:
+  ingressClassName: nginx
+
+  tls:
+    - hosts:
+        - forge.medium.place
+      secretName: forge.medium.place-tls
+
+  rules:
+    - host: forge.medium.place
+      http:
+        paths:
+          - pathType: Prefix
+            path: /
+            backend:
+              service:
+                name: gitea
+                port:
+                  name: http

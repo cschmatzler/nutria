@@ -1,0 +1,77 @@
+apiVersion: apps/v1
+kind: StatefulSet
+
+metadata:
+  name: gitea
+  namespace: medium-place
+  labels:
+    app.kubernetes.io/name: gitea
+    app.kubernetes.io/part-of: gitea
+    app.kubernetes.io/version: 1.16.9
+
+spec:
+  replicas: 1
+  revisionHistoryLimit: 5
+
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: gitea
+      app.kubernetes.io/part-of: gitea
+
+  template:
+    metadata:
+      annotations:
+        diun.enable: "true"
+        diun.regopt: docker.io
+        diun.watch_repo: "true"
+        diun.include_tags: "^\\d+\\.\\d+\\.\\d+$"
+      labels:
+        app.kubernetes.io/name: gitea
+        app.kubernetes.io/part-of: gitea
+        app.kubernetes.io/version: 1.16.9
+
+    spec:
+      serviceAccountName: gitea
+
+      containers:
+        - name: gitea
+          image: gitea/gitea:1.16.9
+
+          volumeMounts:
+            - name: data
+              mountPath: /data
+
+          envFrom:
+            - configMapRef:
+                name: gitea-env
+            - secretRef:
+                name: gitea-env
+
+          ports:
+            - name: http
+              protocol: TCP
+              containerPort: 3000
+            - name: ssh
+              protocol: TCP
+              containerPort: 22
+
+          resources:
+            requests:
+              cpu: 16m
+              memory: 256Mi
+            limits:
+              cpu: 64m
+              memory: 384Mi
+
+  volumeClaimTemplates:
+    - metadata:
+        name: data
+        namespace: medium-place
+
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        volumeMode: Filesystem
+        resources:
+          requests:
+            storage: 1Gi
