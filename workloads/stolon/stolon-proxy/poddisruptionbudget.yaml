@@ -1,0 +1,13 @@
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: stolon-proxy
+  namespace: stolon
+
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: stolon-proxy
+      app.kubernetes.io/part-of: stolon
+
+  maxUnavailable: 1

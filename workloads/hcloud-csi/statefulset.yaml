@@ -1,0 +1,129 @@
+apiVersion: apps/v1
+kind: StatefulSet
+
+metadata:
+  name: hcloud-csi-controller
+  namespace: kube-system
+  labels:
+    app.kubernetes.io/name: hcloud-csi-controller
+    app.kubernetes.io/part-of: hcloud-csi
+    app.kubernetes.io/version: 1.6.0
+
+spec:
+  serviceName: hcloud-csi-controller
+
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: hcloud-csi-controller
+      app.kubernetes.io/part-of: hcloud-csi
+
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: hcloud-csi-controller
+        app.kubernetes.io/part-of: hcloud-csi
+        app.kubernetes.io/version: 1.6.0
+
+    spec:
+      serviceAccountName: hcloud-csi
+
+      volumes:
+        - name: socket-dir
+          emptyDir: {}
+
+      containers:
+        - name: csi-attacher
+
+          image: k8s.gcr.io/sig-storage/csi-attacher:v3.2.1
+
+          securityContext:
+            privileged: true
+            allowPrivilegeEscalation: true
+            capabilities:
+              add: ["SYS_ADMIN"]
+
+          volumeMounts:
+            - name: socket-dir
+              mountPath: /run/csi
+
+        - name: csi-resizer
+
+          image: k8s.gcr.io/sig-storage/csi-resizer:v1.2.0
+
+          securityContext:
+            privileged: true
+            capabilities:
+              add: ["SYS_ADMIN"]
+            allowPrivilegeEscalation: true
+
+          volumeMounts:
+            - name: socket-dir
+              mountPath: /run/csi
+
+        - name: csi-provisioner
+
+          image: k8s.gcr.io/sig-storage/csi-provisioner:v2.2.2
+          args:
+            - --feature-gates=Topology=true
+            - --default-fstype=ext4
+
+          securityContext:
+            privileged: true
+            capabilities:
+              add: ["SYS_ADMIN"]
+            allowPrivilegeEscalation: true
+
+          volumeMounts:
+            - name: socket-dir
+              mountPath: /run/csi
+
+        - name: hcloud-csi-driver
+
+          image: hetznercloud/hcloud-csi-driver:1.6.0
+
+          securityContext:
+            privileged: true
+            capabilities:
+              add: ["SYS_ADMIN"]
+            allowPrivilegeEscalation: true
+
+          volumeMounts:
+            - name: socket-dir
+              mountPath: /run/csi
+
+          env:
+            - name: CSI_ENDPOINT
+              value: unix:///run/csi/socket
+            - name: ENABLE_METRICS
+              value: "false"
+            - name: KUBE_NODE_NAME
+              valueFrom:
+                fieldRef:
+                  apiVersion: v1
+                  fieldPath: spec.nodeName
+            - name: HCLOUD_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: hcloud
+                  key: token
+
+          ports:
+            - name: healthz
+              containerPort: 9808
+
+          livenessProbe:
+            failureThreshold: 5
+            httpGet:
+              port: healthz
+              path: /healthz
+            initialDelaySeconds: 10
+            timeoutSeconds: 3
+            periodSeconds: 2
+
+        - name: liveness-probe
+
+          image: k8s.gcr.io/sig-storage/livenessprobe:v2.3.0
+
+          volumeMounts:
+            - mountPath: /run/csi
+              name: socket-dir

@@ -1,0 +1,12 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+
+metadata:
+  name: hcloud-volume
+  namespace: kube-system
+  annotations:
+    storageclass.kubernetes.io/is-default-class: "true"
+
+provisioner: csi.hetzner.cloud
+volumeBindingMode: WaitForFirstConsumer
+allowVolumeExpansion: true

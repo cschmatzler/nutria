@@ -1,0 +1,13 @@
+.DS_Store
+
+.env
+kubeconfig
+
+.terraform/
+**/.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.backup
+*.tfplan
+
+talos/

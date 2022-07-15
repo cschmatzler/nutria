@@ -1,0 +1,13 @@
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: stolon-keeper
+  namespace: stolon
+
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: stolon-keeper
+      app.kubernetes.io/part-of: stolon
+
+  maxUnavailable: 1

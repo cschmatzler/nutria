@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: vaultwarden
+  namespace: leuchtturm-io
+  labels:
+    app.kubernetes.io/name: vaultwarden
+    app.kubernetes.io/part-of: vaultwarden
+    app.kubernetes.io/version: 1.25.0
+
+spec:
+  selector:
+    app.kubernetes.io/name: vaultwarden
+    app.kubernetes.io/part-of: vaultwarden
+
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: http

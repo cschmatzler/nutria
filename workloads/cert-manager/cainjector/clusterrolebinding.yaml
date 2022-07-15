@@ -1,0 +1,18 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+
+metadata:
+  name: cainjector
+  namespace: cert-manager
+  labels:
+    app.kubernetes.io/part-of: cert-manager
+
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cainjector
+
+subjects:
+  - kind: ServiceAccount
+    name: cainjector
+    namespace: cert-manager

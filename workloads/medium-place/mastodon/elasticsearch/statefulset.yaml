@@ -1,0 +1,74 @@
+apiVersion: apps/v1
+kind: StatefulSet
+
+metadata:
+  name: mastodon-elasticsearch
+  namespace: medium-place
+  labels:
+    app.kubernetes.io/name: elasticsearch
+    app.kubernetes.io/part-of: mastodon
+    app.kubernetes.io/version: 8.2.0
+
+spec:
+  replicas: 1
+  revisionHistoryLimit: 5
+
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: elasticsearch
+      app.kubernetes.io/part-of: mastodon
+
+  template:
+    metadata:
+      annotations:
+        diun.enable: "true"
+        diun.regopt: docker.io
+        diun.watch_repo: "true"
+        diun.include_tags: "^\\d+\\.\\d+\\.\\d+-debian-\\d+-r\\d+$"
+      labels:
+        app.kubernetes.io/name: elasticsearch
+        app.kubernetes.io/part-of: mastodon
+        app.kubernetes.io/version: 8.2.0
+
+    spec:
+      terminationGracePeriodSeconds: 60
+
+      securityContext:
+        fsGroup: 1001
+
+      containers:
+        - name: elasticsearch
+          image: bitnami/elasticsearch:8.2.2-debian-10-r0
+
+          volumeMounts:
+            - name: data
+              mountPath: /bitnami/elasticsearch/data
+
+          env:
+            - name: ELASTICSEARCH_HEAP_SIZE
+              value: 128m
+
+          ports:
+            - name: http
+              protocol: TCP
+              containerPort: 9200
+
+          resources:
+            requests:
+              cpu: 32m
+              memory: 256Mi
+            limits:
+              cpu: 256m
+              memory: 512Mi
+
+  volumeClaimTemplates:
+    - metadata:
+        name: data
+        namespace: medium-place
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        volumeMode: Filesystem
+        resources:
+          requests:
+            storage: 1Gi

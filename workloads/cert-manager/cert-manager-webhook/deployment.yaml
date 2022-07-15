@@ -1,0 +1,71 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: cert-manager-webhook
+  namespace: cert-manager
+  labels:
+    app.kubernetes.io/name: cert-manager-webhook
+    app.kubernetes.io/part-of: cert-manager
+    app.kubernetes.io/version: 1.8.0
+
+spec:
+  replicas: 1
+  revisionHistoryLimit: 5
+
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: cert-manager-webhook
+      app.kubernetes.io/part-of: cert-manager
+
+  template:
+    metadata:
+      annotations:
+        diun.enable: "true"
+        diun.regopt: docker.io
+        diun.watch_repo: "true"
+        diun.include_tags: "^\\d+\\.\\d+\\.\\d+-debian-\\d+-r\\d+$"
+      labels:
+        app.kubernetes.io/name: cert-manager-webhook
+        app.kubernetes.io/part-of: cert-manager
+        app.kubernetes.io/version: 1.8.0
+
+    spec:
+      serviceAccountName: cert-manager-webhook
+
+      terminationGracePeriodSeconds: 60
+
+      containers:
+        - name: webhook
+          image: bitnami/cert-manager-webhook:1.8.0-debian-10-r48
+
+          args:
+            - --v=2
+            - --secure-port=10250
+            - --dynamic-serving-ca-secret-namespace=cert-manager
+            - --dynamic-serving-ca-secret-name=cert-manager-webhook-ca
+            - --dynamic-serving-dns-names=cert-manager-webhook.cert-manager.svc.cluster.local
+
+          ports:
+            - name: https
+              protocol: TCP
+              containerPort: 10250
+
+          livenessProbe:
+            httpGet:
+              scheme: HTTP
+              path: /livez
+              port: 6080
+          readinessProbe:
+            httpGet:
+              scheme: HTTP
+              path: /healthz
+              port: 6080
+
+          resources:
+            requests:
+              cpu: 4m
+              memory: 32Mi
+            limits:
+              cpu: 16m
+              memory: 64Mi

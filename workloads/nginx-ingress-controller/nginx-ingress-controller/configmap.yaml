@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+
+metadata:
+  name: nginx-ingress-controller-tcp-services
+  namespace: nginx-ingress-controller
+
+data:
+  "22": "medium-place/gitea:22"

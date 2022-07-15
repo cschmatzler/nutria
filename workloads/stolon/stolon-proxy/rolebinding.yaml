@@ -1,0 +1,18 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+
+metadata:
+  name: stolon-proxy
+  namespace: stolon
+  labels:
+    app.kubernetes.io/part-of: stolon
+
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: stolon-proxy
+
+subjects:
+  - kind: ServiceAccount
+    name: stolon-proxy
+    namespace: stolon

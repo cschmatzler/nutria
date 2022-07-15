@@ -1,0 +1,24 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+
+metadata:
+  name: stolon-proxy
+  namespace: stolon
+  labels:
+    app.kubernetes.io/part-of: stolon
+
+rules:
+  - apiGroups:
+      - ""
+    resources:
+      - pods
+    verbs:
+      - get
+      - patch
+
+  - apiGroups:
+      - ""
+    resources:
+      - configmaps
+    verbs:
+      - get

@@ -1,0 +1,77 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hcloud-cloud-controller-manager
+  namespace: kube-system
+  labels:
+    app.kubernetes.io/name: hcloud-cloud-controller-manager
+    app.kubernetes.io/part-of: hcloud-cloud-controller-manager
+    app.kubernetes.io/version: 1.12.1
+
+spec:
+  replicas: 1
+  revisionHistoryLimit: 5
+
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: hcloud-cloud-controller-manager
+      app.kubernetes.io/part-of: hcloud-cloud-controller-manager
+
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: hcloud-cloud-controller-manager
+        app.kubernetes.io/part-of: hcloud-cloud-controller-manager
+        app.kubernetes.io/version: 1.12.1
+
+    spec:
+      tolerations:
+        - key: node.cloudprovider.kubernetes.io/uninitialized
+          value: "true"
+          effect: NoSchedule
+        - key: CriticalAddonsOnly
+          operator: Exists
+        - key: node-role.kubernetes.io/master
+          effect: NoSchedule
+          operator: Exists
+        - key: node-role.kubernetes.io/control-plane
+          effect: NoSchedule
+          operator: Exists
+        - key: node.kubernetes.io/not-ready
+          effect: NoSchedule
+
+      serviceAccountName: hcloud-cloud-controller-manager
+
+      hostNetwork: true
+      dnsPolicy: Default
+
+      containers:
+        - name: hcloud-cloud-controller-manager
+
+          image: hetznercloud/hcloud-cloud-controller-manager:v1.12.1
+          command:
+            - /bin/hcloud-cloud-controller-manager
+            - --cloud-provider=hcloud
+            - --leader-elect=false
+            - --allow-untagged-cloud
+
+          env:
+            - name: NODE_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName
+            - name: HCLOUD_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: hcloud
+                  key: token
+            - name: HCLOUD_NETWORK
+              valueFrom:
+                secretKeyRef:
+                  name: hcloud
+                  key: network
+
+          resources:
+            requests:
+              cpu: 100m
+              memory: 50Mi

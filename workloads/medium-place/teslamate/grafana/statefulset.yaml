@@ -1,0 +1,74 @@
+apiVersion: apps/v1
+kind: StatefulSet
+
+metadata:
+  name: teslamate-grafana
+  namespace: medium-place
+  labels:
+    app.kubernetes.io/name: grafana
+    app.kubernetes.io/part-of: teslamate
+    app.kubernetes.io/version: 1.27.0
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: grafana
+      app.kubernetes.io/part-of: teslamate
+
+  template:
+    metadata:
+      annotations:
+        diun.enable: "true"
+        diun.regopt: docker.io
+        diun.watch_repo: "true"
+        diun.include_tags: "^\\d+\\.\\d+\\.\\d+$"
+      labels:
+        app.kubernetes.io/name: grafana
+        app.kubernetes.io/part-of: teslamate
+        app.kubernetes.io/version: 1.27.0
+
+    spec:
+      serviceAccountName: teslamate-grafana
+
+      securityContext:
+        fsGroup: 472
+
+      containers:
+        - name: grafana
+          image: teslamate/grafana:1.27.0
+
+          volumeMounts:
+            - name: data
+              mountPath: /var/lib/grafana
+
+          envFrom:
+            - secretRef:
+                name: teslamate-grafana-env
+
+          ports:
+            - name: http
+              protocol: TCP
+              containerPort: 3000
+
+          resources:
+            requests:
+              cpu: 32m
+              memory: 64Mi
+            limits:
+              cpu: 64m
+              memory: 128Mi
+
+  volumeClaimTemplates:
+    - metadata:
+        name: data
+        namespace: medium-place
+
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        volumeMode: Filesystem
+        resources:
+          requests:
+            storage: 512Mi

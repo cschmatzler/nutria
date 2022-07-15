@@ -1,0 +1,120 @@
+apiVersion: apps/v1
+kind: DaemonSet
+
+metadata:
+  name: hcloud-csi-node
+  namespace: kube-system
+  labels:
+    app.kubernetes.io/name: hcloud-csi-node
+    app.kubernetes.io/part-of: hcloud-csi
+    app.kubernetes.io/version: 1.6.0
+
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: hcloud-csi-node
+      app.kubernetes.io/part-of: hcloud-csi
+
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: hcloud-csi-node
+        app.kubernetes.io/part-of: hcloud-csi
+        app.kubernetes.io/version: 1.6.0
+
+    spec:
+      serviceAccountName: hcloud-csi
+
+      volumes:
+        - name: kubelet-dir
+          hostPath:
+            path: /var/lib/kubelet
+            type: Directory
+        - name: plugin-dir
+          hostPath:
+            path: /var/lib/kubelet/plugins/csi.hetzner.cloud/
+            type: DirectoryOrCreate
+        - name: registration-dir
+          hostPath:
+            path: /var/lib/kubelet/plugins_registry/
+            type: Directory
+        - name: device-dir
+          hostPath:
+            path: /dev
+            type: Directory
+
+      containers:
+        - name: csi-node-driver-registrar
+
+          image: k8s.gcr.io/sig-storage/csi-node-driver-registrar:v2.2.0
+          args:
+            - --kubelet-registration-path=/var/lib/kubelet/plugins/csi.hetzner.cloud/socket
+
+          securityContext:
+            privileged: true
+
+          volumeMounts:
+            - name: plugin-dir
+              mountPath: /run/csi
+            - name: registration-dir
+              mountPath: /registration
+
+          env:
+            - name: KUBE_NODE_NAME
+              valueFrom:
+                fieldRef:
+                  apiVersion: v1
+                  fieldPath: spec.nodeName
+
+        - name: hcloud-csi-driver
+
+          image: hetznercloud/hcloud-csi-driver:1.6.0
+
+          securityContext:
+            privileged: true
+
+          volumeMounts:
+            - name: kubelet-dir
+              mountPath: /var/lib/kubelet
+              mountPropagation: "Bidirectional"
+            - name: plugin-dir
+              mountPath: /run/csi
+            - name: device-dir
+              mountPath: /dev
+
+          env:
+            - name: CSI_ENDPOINT
+              value: unix:///run/csi/socket
+            - name: ENABLE_METRICS
+              value: "false"
+            - name: KUBE_NODE_NAME
+              valueFrom:
+                fieldRef:
+                  apiVersion: v1
+                  fieldPath: spec.nodeName
+            - name: HCLOUD_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: hcloud
+                  key: token
+
+          ports:
+            - name: healthz
+              containerPort: 9808
+
+          livenessProbe:
+            failureThreshold: 5
+            httpGet:
+              port: healthz
+              path: /healthz
+            initialDelaySeconds: 10
+            timeoutSeconds: 3
+            periodSeconds: 2
+
+        - name: liveness-probe
+
+          image: k8s.gcr.io/sig-storage/livenessprobe:v2.3.0
+
+          volumeMounts:
+            - mountPath: /run/csi
+              name: plugin-dir

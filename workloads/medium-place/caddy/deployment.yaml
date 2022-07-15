@@ -1,0 +1,58 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: caddy
+  namespace: medium-place
+  labels:
+    app.kubernetes.io/name: caddy
+    app.kubernetes.io/part-of: caddy
+    app.kubernetes.io/version: 2.5.2
+
+spec:
+  replicas: 1
+  revisionHistoryLimit: 5
+
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: caddy
+      app.kubernetes.io/part-of: caddy
+
+  template:
+    metadata:
+      annotations:
+        diun.enable: "true"
+        diun.regopt: docker.io
+        diun.watch_repo: "true"
+        diun.include_tags: "^\\d+\\.\\d+\\.\\d+$"
+      labels:
+        app.kubernetes.io/name: caddy
+        app.kubernetes.io/part-of: caddy
+        app.kubernetes.io/version: 2.5.2
+
+    spec:
+      volumes:
+        - name: caddy-config
+          configMap:
+            name: caddy-config
+
+      containers:
+        - name: caddy
+          image: caddy:2.5.2
+
+          volumeMounts:
+            - name: caddy-config
+              mountPath: /etc/caddy
+
+          ports:
+            - name: http
+              protocol: TCP
+              containerPort: 8080
+
+          resources:
+            requests:
+              cpu: 2m
+              memory: 32Mi
+            limits:
+              cpu: 4m
+              memory: 64Mi

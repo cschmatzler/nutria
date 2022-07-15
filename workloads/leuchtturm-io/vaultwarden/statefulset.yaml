@@ -1,0 +1,88 @@
+apiVersion: apps/v1
+kind: StatefulSet
+
+metadata:
+  name: vaultwarden
+  namespace: leuchtturm-io
+  labels:
+    app.kubernetes.io/name: vaultwarden
+    app.kubernetes.io/part-of: vaultwarden
+    app.kubernetes.io/version: 1.25.0
+
+spec:
+  replicas: 1
+  revisionHistoryLimit: 5
+
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: vaultwarden
+      app.kubernetes.io/part-of: vaultwarden
+
+  template:
+    metadata:
+      annotations:
+        diun.enable: "true"
+        diun.regopt: docker.io
+        diun.watch_repo: "true"
+        diun.include_tags: "^\\d+\\.\\d+\\.\\d+$"
+      labels:
+        app.kubernetes.io/name: vaultwarden
+        app.kubernetes.io/part-of: vaultwarden
+        app.kubernetes.io/version: 1.25.0
+
+    spec:
+      serviceAccountName: vaultwarden
+
+      containers:
+        - name: vaultwarden
+
+          image: vaultwarden/server:1.25.0
+
+          volumeMounts:
+            - name: data
+              mountPath: /data
+
+          env:
+            - name: DOMAIN
+              value: https://vault.leuchtturm.io
+            - name: ROCKET_PORT
+              value: "8080"
+            - name: SMTP_PORT
+              value: "587"
+            - name: SMTP_SECURITY
+              value: starttls
+            - name: SMTP_FROM_NAME
+              value: Vault
+            - name: SIGNUPS_ALLOWED
+              value: "false"
+            - name: SIGNUPS_DOMAINS_WHITELIST 
+              value: medium.place,frisch-luebeck.de
+          envFrom:
+            - secretRef:
+                name: vaultwarden-env
+
+          ports:
+            - name: http
+              protocol: TCP
+              containerPort: 8080
+
+          resources:
+            requests:
+              cpu: 8m
+              memory: 64Mi
+            limits:
+              cpu: 128m
+              memory: 128Mi
+
+  volumeClaimTemplates:
+    - metadata:
+        name: data
+        namespace: leuchtturm-io
+
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        volumeMode: Filesystem
+        resources:
+          requests:
+            storage: 512Mi

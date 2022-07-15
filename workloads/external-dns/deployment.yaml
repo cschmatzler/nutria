@@ -1,0 +1,79 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: external-dns
+  namespace: external-dns
+  labels:
+    app.kubernetes.io/name: external-dns
+    app.kubernetes.io/part-of: external-dns
+    app.kubernetes.io/version: 0.12.0
+
+spec:
+  replicas: 1
+  revisionHistoryLimit: 5
+
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: external-dns
+      app.kubernetes.io/part-of: external-dns
+
+  template:
+    metadata:
+      annotations:
+        diun.enable: "true"
+        diun.regopt: docker.io
+        diun.watch_repo: "true"
+        diun.include_tags: "^\\d+\\.\\d+\\.\\d+-debian-\\d+-r\\d+$"
+      labels:
+        app.kubernetes.io/name: external-dns
+        app.kubernetes.io/part-of: external-dns
+        app.kubernetes.io/version: 0.12.0
+
+    spec:
+      serviceAccountName: external-dns
+
+      terminationGracePeriodSeconds: 50
+
+      containers:
+        - name: external-dns
+
+          image: bitnami/external-dns:0.12.0-debian-10-r0
+          args:
+            - --metrics-address=:7979
+            - --log-level=info
+            - --log-format=text
+            - --policy=upsert-only
+            - --provider=cloudflare
+            - --registry=txt
+            - --interval=1m
+            - --source=service
+            - --source=ingress
+
+          envFrom:
+            - secretRef:
+                name: external-dns-env
+
+          ports:
+            - name: http
+              protocol: TCP
+              containerPort: 7979
+
+          livenessProbe:
+            httpGet:
+              scheme: HTTP
+              port: http
+              path: /healthz
+          readinessProbe:
+            httpGet:
+              scheme: HTTP
+              port: http
+              path: /healthz
+
+          resources:
+            requests:
+              cpu: 4m
+              memory: 64Mi
+            limits:
+              cpu: 16m
+              memory: 128Mi

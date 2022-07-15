@@ -1,0 +1,66 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: sealed-secrets-controller
+  namespace: kube-system
+  labels:
+    app.kubernetes.io/name: sealed-secrets-controller
+    app.kubernetes.io/part-of: sealed-secrets-controller
+    app.kubernetes.io/version: 0.18.0
+
+spec:
+  replicas: 1
+  revisionHistoryLimit: 5
+
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: sealed-secrets-controller
+      app.kubernetes.io/part-of: sealed-secrets-controller
+
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: sealed-secrets-controller
+        app.kubernetes.io/part-of: sealed-secrets-controller
+        app.kubernetes.io/version: 0.18.0
+
+    spec:
+      serviceAccountName: sealed-secrets-controller
+
+      terminationGracePeriodSeconds: 30
+
+      securityContext:
+        fsGroup: 65534
+
+      volumes:
+        - name: tmp
+          emptyDir: {}
+
+      containers:
+        - name: sealed-secrets-controller
+          image: docker.io/bitnami/sealed-secrets-controller:v0.18.0
+          command:
+            - controller
+
+          securityContext:
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+            runAsUser: 1001
+
+          volumeMounts:
+            - name: tmp
+              mountPath: /tmp
+
+          ports:
+            - name: http
+              containerPort: 8080
+
+          livenessProbe:
+            httpGet:
+              port: http
+              path: /healthz
+          readinessProbe:
+            httpGet:
+              port: http
+              path: /healthz

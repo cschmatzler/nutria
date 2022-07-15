@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: external-dns
+  namespace: external-dns
+  labels:
+    app.kubernetes.io/name: external-dns
+    app.kubernetes.io/part-of: external-dns
+    app.kubernetes.io/version: 0.12.0
+
+spec:
+  type: ClusterIP
+
+  selector:
+    app.kubernetes.io/name: external-dns
+    app.kubernetes.io/part-of: external-dns
+
+  ports:
+    - name: http
+      protocol: TCP
+      port: 7979
+      targetPort: http

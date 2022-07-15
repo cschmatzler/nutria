@@ -1,0 +1,57 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: synapse
+  namespace: medium-place
+  labels:
+    app.kubernetes.io/name: synapse
+    app.kubernetes.io/part-of: synapse
+    app.kubernetes.io/version: 1.62.0
+
+spec:
+  replicas: 1
+  revisionHistoryLimit: 5
+
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: synapse
+      app.kubernetes.io/part-of: synapse
+
+  template:
+    metadata:
+      annotations:
+      labels:
+        app.kubernetes.io/name: synapse
+        app.kubernetes.io/part-of: synapse
+        app.kubernetes.io/version: 1.62.0
+
+    spec:
+      serviceAccountName: synapse
+
+      volumes:
+        - name: synapse-config
+          secret:
+            secretName: synapse-config
+
+      containers:
+        - name: synapse
+          image: cschmatzler/synapse:1.62.0
+
+          volumeMounts:
+            - name: synapse-config
+              mountPath: /data
+              readOnly: true
+
+          ports:
+            - name: http
+              protocol: TCP
+              containerPort: 8008
+
+          resources:
+            requests:
+              cpu: 16m
+              memory: 384Mi
+            limits:
+              cpu: 128m
+              memory: 512Mi

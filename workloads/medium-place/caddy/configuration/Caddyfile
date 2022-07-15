@@ -1,0 +1,24 @@
+(matrix-well-known-header) {
+  header Access-Control-Allow-Origin "*"
+  header Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+  header Access-Control-Allow-Headers "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+  header Content-Type "application/json"
+}
+
+http://medium.place:8080 { 
+  # Mastodon
+  handle /.well-known/webfinger {
+    redir https://plaza.medium.place{uri} permanent
+  }
+
+  # Synapse
+  handle /.well-known/matrix/server {
+    import matrix-well-known-header
+    respond `{ "m.server": "synapse.medium.place:443" }`
+  }
+
+  handle /.well-known/matrix/client {
+    import matrix-well-known-header
+    respond `{ "m.homeserver": { "base_url": "https://synapse.medium.place" }}`
+  }
+}
