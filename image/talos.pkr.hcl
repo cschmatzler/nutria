@@ -9,11 +9,10 @@ packer {
 
 variable "talos_version" {
   type    = string
-  default = "v1.1.0"
 }
 
 locals {
-  image = "https://github.com/siderolabs/talos/releases/download/${var.talos_version}/hcloud-amd64.raw.xz"
+  image = "https://github.com/siderolabs/talos/releases/download/v${var.talos_version}/hcloud-amd64.raw.xz"
 }
 
 source "hcloud" "talos" {

@@ -14,14 +14,17 @@ init:
   scripts/set-external-cloud-provider.sh
   scripts/set-server-tls-bootstrap.sh
 
-build:
-  packer build image
+build talos-version:
+  packer build -var talos_version={{talos-version}} image 
 
 plan: 
   terraform -chdir=nodes plan -out=nutria.tfplan
 
 deploy: plan
   terraform -chdir=nodes apply nutria.tfplan
+
+upgrade talos-version nodes:
+  talosctl upgrade --nodes {{nodes}} --image ghcr.io/siderolabs/installer:v{{talos-version}}
 
 destroy:
   terraform -chdir=nodes destroy
