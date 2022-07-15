@@ -29,3 +29,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: docs/book
           publish_branch: gh-pages
+          cname: docs.nutria.cloud
