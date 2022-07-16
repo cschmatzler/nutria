@@ -38,10 +38,10 @@ spec:
           volumeMounts:
             - name: data
               mountPath: /opt/recipes/staticfiles
-              subPath: /opt/recipes/staticfiles
+              subPath: opt/recipes/staticfiles
             - name: data
               mountPath: /opt/recipes/mediafiles
-              subPath: /opt/recipes/mediafiles
+              subPath: opt/recipes/mediafiles
 
           envFrom:
             - configMapRef:
