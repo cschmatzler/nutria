@@ -5,4 +5,4 @@ metadata:
   namespace: medium-place
 data:
   VIKUNJA_DATABASE_TYPE: postgres 
-  VIKUNJA_SERVICE_ENABLEREGISTRATION: "true"
+  VIKUNJA_SERVICE_ENABLEREGISTRATION: "false"
