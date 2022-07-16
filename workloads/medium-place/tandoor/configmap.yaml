@@ -5,3 +5,4 @@ metadata:
   namespace: medium-place
 data:
   DB_ENGINE: django.db.backends.postgresql
+  POSTGRES_PORT: "5432"
