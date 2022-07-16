@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: tandoor-env
+  namespace: medium-place
+data:
+  DB_ENGINE: django.db.backends.postgresql
