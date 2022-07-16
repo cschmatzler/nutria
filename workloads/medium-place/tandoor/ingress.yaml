@@ -1,0 +1,31 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+
+metadata:
+  name: tandoor
+  namespace: medium-place
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-body-size: 10m
+    cert-manager.io/cluster-issuer: letsencrypt
+  labels:
+    app.kubernetes.io/part-of: tandoor
+
+spec:
+  ingressClassName: nginx
+
+  tls:
+    - hosts:
+        - kitchen.medium.place
+      secretName: kitchen.medium.place-tls
+
+  rules:
+    - host: kitchen.medium.place
+      http:
+        paths:
+          - pathType: Prefix
+            path: /
+            backend:
+              service:
+                name: tandoor
+                port:
+                  name: http
