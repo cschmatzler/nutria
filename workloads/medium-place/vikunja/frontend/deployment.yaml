@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: vikunja-frontend
+  namespace: medium-place
+  labels:
+    app.kubernetes.io/name: vikunja-frontend
+    app.kubernetes.io/part-of: vikunja
+    app.kubernetes.io/version: 0.18.2
+
+spec:
+  replicas: 1
+  revisionHistoryLimit: 5
+
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: vikunja-frontend
+      app.kubernetes.io/part-of: vikunja
+
+  template:
+    metadata:
+      annotations:
+        diun.enable: "true"
+        diun.regopt: docker.io
+        diun.watch_repo: "true"
+        diun.include_tags: "^\\d+\\.\\d+\\.\\d+$"
+      labels:
+        app.kubernetes.io/name: vikunja-frontend
+        app.kubernetes.io/part-of: vikunja
+        app.kubernetes.io/version: 0.18.2
+
+    spec:
+      containers:
+        - name: vikunja-frontend
+          image: vikunja/frontend:0.18.2
+
+          ports:
+            - name: http
+              protocol: TCP
+              containerPort: 80
+
+          resources:
+            requests:
+              cpu: 2m
+              memory: 32Mi
+            limits:
+              cpu: 4m
+              memory: 64Mi

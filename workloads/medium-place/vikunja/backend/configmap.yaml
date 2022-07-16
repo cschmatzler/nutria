@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: vikunja-backend-env
+  namespace: medium-place
+data:
+  VIKUNJA_DATABASE_TYPE: postgres 
