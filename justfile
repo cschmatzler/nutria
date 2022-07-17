@@ -26,6 +26,9 @@ deploy: plan
 upgrade talos-version nodes:
   talosctl upgrade --nodes {{nodes}} --image ghcr.io/siderolabs/installer:v{{talos-version}}
 
+upgrade-k8s k8s-version:
+  talosctl upgrade-k8s --to {{k8s-version}}
+
 destroy:
   terraform -chdir=nodes destroy
 
