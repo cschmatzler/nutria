@@ -96,10 +96,10 @@ spec:
           resources:
             requests:
               cpu: 64m
-              memory: 256Mi
+              memory: 768Mi
             limits:
               cpu: 256m
-              memory: 512Mi
+              memory: 1536Mi
 
   volumeClaimTemplates:
     - metadata:
