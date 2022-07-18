@@ -7,7 +7,7 @@ metadata:
   labels:
     app.kubernetes.io/name: diun
     app.kubernetes.io/part-of: diun
-    app.kubernetes.io/version: 4.21.0
+    app.kubernetes.io/version: 4.22.0
 
 spec:
   replicas: 1
@@ -25,10 +25,11 @@ spec:
         diun.regopt: docker.io
         diun.watch_repo: "true"
         diun.include_tags: "^\\d+\\.\\d+\\.\\d+$"
+        diun.sort_tags: "semver"
       labels:
         app.kubernetes.io/name: diun
         app.kubernetes.io/part-of: diun
-        app.kubernetes.io/version: 4.21.0
+        app.kubernetes.io/version: 4.22.0
 
     spec:
       serviceAccountName: diun
@@ -43,7 +44,7 @@ spec:
       containers:
         - name: diun
 
-          image: crazymax/diun:4.21.0
+          image: crazymax/diun:4.22.0
           args:
             - serve
 
