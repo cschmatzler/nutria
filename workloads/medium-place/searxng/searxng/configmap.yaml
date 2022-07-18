@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: searxng-env
+  namespace: medium-place
+data:
+  SEARXNG_BASE_URL: https://library.medium.place

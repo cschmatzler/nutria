@@ -1,0 +1,66 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: searxng
+  namespace: medium-place
+  labels:
+    app.kubernetes.io/name: searxng
+    app.kubernetes.io/part-of: searxng
+    app.kubernetes.io/version: 2022.07.18
+
+spec:
+  replicas: 1
+  revisionHistoryLimit: 5
+
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: searxng
+      app.kubernetes.io/part-of: searxng
+
+  template:
+    metadata:
+      annotations:
+        diun.enable: "true"
+        diun.regopt: docker.io
+        diun.watch_repo: "true"
+        diun.include_tags: "^\\d+\\.\\d+\\.\\d+-.+"
+        diun.sort_tags: "semver"
+      labels:
+        app.kubernetes.io/name: searxng
+        app.kubernetes.io/part-of: searxng
+        app.kubernetes.io/version: 2022.07.18
+
+    spec:
+      terminationGracePeriodSeconds: 60
+
+      volumes:
+        - name: searxng-config
+          secret:
+            secretName: searxng-config
+
+      containers:
+        - name: searxng
+          image: searxng/searxng:2022.07.18-4d977269
+
+          volumeMounts:
+            - name: searxng-config
+              mountPath: /etc/searxng/settings.yml
+              subPath: settings.yml
+
+          envFrom:
+            - configMapRef:
+                name: searxng-env
+
+          ports:
+            - name: http
+              protocol: TCP
+              containerPort: 8080
+
+          resources:
+            requests:
+              cpu: 256m
+              memory: 256Mi
+            limits:
+              cpu: 768m
+              memory: 768Mi

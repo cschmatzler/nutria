@@ -1,0 +1,18 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+
+metadata:
+  name: medium-place-searxng
+  namespace: flux-system
+
+spec:
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: "./workloads/medium-place/searxng"
+  interval: 60m
+  wait: true
+  timeout: 3m0s
+  retryInterval: 2m0s
+  prune: true
+  force: true

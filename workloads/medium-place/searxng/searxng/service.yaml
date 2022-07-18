@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: searxng
+  namespace: medium-place
+  labels:
+    app.kubernetes.io/name: searxng
+    app.kubernetes.io/part-of: searxng
+    app.kubernetes.io/version: 2022.07.18-4d977269
+
+spec:
+  selector:
+    app.kubernetes.io/name: searxng
+    app.kubernetes.io/part-of: searxng
+
+  ports:
+    - name: http
+      protocol: TCP
+      port: 8080
+      targetPort: http
