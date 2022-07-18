@@ -24,6 +24,7 @@ spec:
         diun.regopt: docker.io
         diun.watch_repo: "true"
         diun.include_tags: "^\\d+\\.\\d+\\.\\d+$"
+        diun.sort_tags: "semver"
       labels:
         app.kubernetes.io/name: grafana
         app.kubernetes.io/part-of: teslamate

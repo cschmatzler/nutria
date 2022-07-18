@@ -25,6 +25,7 @@ spec:
         diun.regopt: docker.io
         diun.watch_repo: "true"
         diun.include_tags: "^\\d+\\.\\d+\\.\\d+-debian-\\d+-r\\d+$"
+        diun.sort_tags: "semver"
       labels:
         app.kubernetes.io/name: elasticsearch
         app.kubernetes.io/part-of: mastodon
