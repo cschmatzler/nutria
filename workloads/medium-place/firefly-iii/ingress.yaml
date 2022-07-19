@@ -5,8 +5,6 @@ metadata:
   name: firefly-iii
   namespace: medium-place
   annotations:
-    external-dns.alpha.kubernetes.io/hostname: bank.medium.place
-    nginx.ingress.kubernetes.io/proxy-body-size: 10m
     cert-manager.io/cluster-issuer: letsencrypt
   labels:
     app.kubernetes.io/part-of: firefly-iii
@@ -16,11 +14,11 @@ spec:
 
   tls:
     - hosts:
-        - bank.medium.place
-      secretName: bank.medium.place-tls
+        - treasury.medium.place
+      secretName: treasury.medium.place-tls
 
   rules:
-    - host: bank.medium.place
+    - host: treasury.medium.place
       http:
         paths:
           - pathType: Prefix
