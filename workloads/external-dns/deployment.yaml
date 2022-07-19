@@ -39,17 +39,15 @@ spec:
       containers:
         - name: external-dns
 
-          image: bitnami/external-dns:0.12.0-debian-10-r0
+          image: bitnami/external-dns:0.12.0-debian-11-r16
           args:
-            - --metrics-address=:7979
-            - --log-level=info
-            - --log-format=text
-            - --policy=upsert-only
             - --provider=cloudflare
+            - --cloudflare-proxied
+            - --policy=upsert-only
             - --registry=txt
-            - --interval=1m
-            - --source=service
+            - --txt-owner-id=nutria
             - --source=ingress
+            - --interval=30s
 
           envFrom:
             - secretRef:
