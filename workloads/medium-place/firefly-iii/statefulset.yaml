@@ -1,0 +1,65 @@
+apiVersion: apps/v1
+kind: StatefulSet
+
+metadata:
+  name: firefly-iii
+  namespace: medium-place
+  labels:
+    app.kubernetes.io/name: firefly-iii
+    app.kubernetes.io/part-of: firefly-iii
+    app.kubernetes.io/version: 5.7.9
+
+spec:
+  replicas: 1
+  revisionHistoryLimit: 5
+
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: firefly-iii
+      app.kubernetes.io/part-of: firefly-iii
+
+  template:
+    metadata:
+      annotations:
+        diun.enable: "true"
+        diun.regopt: docker.io
+        diun.watch_repo: "true"
+        diun.include_tags: "^version-\\d+\\.\\d+\\.\\d+$"
+        diun.sort_tags: "semver"
+      labels:
+        app.kubernetes.io/name: firefly-iii
+        app.kubernetes.io/part-of: firefly-iii
+        app.kubernetes.io/version: 5.7.9
+
+    spec:
+      containers:
+        - name: firefly-iii
+          image: fireflyiii/core:version-5.7.9
+
+          volumeMounts:
+            - name: data
+              mountPath: /var/www/html/storage/upload
+
+          envFrom:
+            - configMapRef:
+                name: firefly-iii-env
+            - secretRef:
+                name: firefly-iii-env
+
+          ports:
+            - name: http
+              protocol: TCP
+              containerPort: 8080
+
+  volumeClaimTemplates:
+    - metadata:
+        name: data
+        namespace: medium-place
+
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        volumeMode: Filesystem
+        resources:
+          requests:
+            storage: 1Gi
