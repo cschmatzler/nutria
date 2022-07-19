@@ -59,11 +59,3 @@ spec:
             - name: http
               protocol: TCP
               containerPort: 8080
-
-          resources:
-            requests:
-              cpu: 16m
-              memory: 64Mi
-            limits:
-              cpu: 32m
-              memory: 128Mi

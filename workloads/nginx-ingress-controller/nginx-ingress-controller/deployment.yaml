@@ -7,7 +7,7 @@ metadata:
   labels:
     app.kubernetes.io/name: nginx-ingress-controller
     app.kubernetes.io/part-of: nginx-ingress-controller
-    app.kubernetes.io/version: 1.2.0
+    app.kubernetes.io/version: 1.3.0
 
 spec:
   replicas: 2
@@ -29,7 +29,7 @@ spec:
       labels:
         app.kubernetes.io/name: nginx-ingress-controller
         app.kubernetes.io/part-of: nginx-ingress-controller
-        app.kubernetes.io/version: 1.2.0
+        app.kubernetes.io/version: 1.3.0
 
     spec:
       serviceAccountName: nginx-ingress-controller
@@ -54,7 +54,7 @@ spec:
       containers:
         - name: nginx-ingress-controller
 
-          image: bitnami/nginx-ingress-controller:1.2.0-debian-10-r9
+          image: bitnami/nginx-ingress-controller:1.3.0-debian-11-r1
           args:
             - /nginx-ingress-controller
             - --default-backend-service=nginx-ingress-controller/nginx
@@ -91,11 +91,3 @@ spec:
               scheme: HTTP
               path: /healthz
               port: 10254
-
-          resources:
-            requests:
-              cpu: 8m
-              memory: 128Mi
-            limits:
-              cpu: 128m
-              memory: 256Mi

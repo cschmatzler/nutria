@@ -7,7 +7,7 @@ metadata:
   labels:
     app.kubernetes.io/name: cainjector
     app.kubernetes.io/part-of: cert-manager
-    app.kubernetes.io/version: 1.8.0
+    app.kubernetes.io/version: 1.8.2
 
 spec:
   replicas: 1
@@ -29,7 +29,7 @@ spec:
       labels:
         app.kubernetes.io/name: cainjector
         app.kubernetes.io/part-of: cert-manager
-        app.kubernetes.io/version: 1.8.0
+        app.kubernetes.io/version: 1.8.2
 
     spec:
       serviceAccountName: cainjector
@@ -39,15 +39,7 @@ spec:
       containers:
         - name: cainjector
 
-          image: bitnami/cainjector:1.8.0-debian-10-r48
+          image: bitnami/cainjector:1.8.2-debian-11-r8
           args:
             - --v=2
             - --leader-election-namespace=cert-manager
-
-          resources:
-            requests:
-              cpu: 8m
-              memory: 128Mi
-            limits:
-              cpu: 32m
-              memory: 192Mi

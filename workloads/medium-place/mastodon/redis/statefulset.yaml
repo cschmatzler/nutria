@@ -7,7 +7,7 @@ metadata:
   labels:
     app.kubernetes.io/name: redis
     app.kubernetes.io/part-of: mastodon
-    app.kubernetes.io/version: 6.2.7
+    app.kubernetes.io/version: 7.0.4
 
 spec:
   replicas: 1
@@ -29,11 +29,9 @@ spec:
       labels:
         app.kubernetes.io/name: redis
         app.kubernetes.io/part-of: mastodon
-        app.kubernetes.io/version: 6.2.7
+        app.kubernetes.io/version: 7.0.4
 
     spec:
-      serviceAccountName: mastodon-redis
-
       terminationGracePeriodSeconds: 60
 
       securityContext:
@@ -41,7 +39,7 @@ spec:
 
       containers:
         - name: redis
-          image: bitnami/redis:6.2.7-debian-10-r27
+          image: bitnami/redis:7.0.4-debian-11-r2
 
           volumeMounts:
             - name: data
@@ -55,14 +53,6 @@ spec:
             - name: redis
               protocol: TCP
               containerPort: 6379
-
-          resources:
-            requests:
-              cpu: 16m
-              memory: 16Mi
-            limits:
-              cpu: 32m
-              memory: 32Mi
 
   volumeClaimTemplates:
     - metadata:

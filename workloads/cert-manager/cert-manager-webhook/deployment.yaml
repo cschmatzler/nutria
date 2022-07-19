@@ -7,7 +7,7 @@ metadata:
   labels:
     app.kubernetes.io/name: cert-manager-webhook
     app.kubernetes.io/part-of: cert-manager
-    app.kubernetes.io/version: 1.8.0
+    app.kubernetes.io/version: 1.8.2
 
 spec:
   replicas: 1
@@ -29,7 +29,7 @@ spec:
       labels:
         app.kubernetes.io/name: cert-manager-webhook
         app.kubernetes.io/part-of: cert-manager
-        app.kubernetes.io/version: 1.8.0
+        app.kubernetes.io/version: 1.8.2
 
     spec:
       serviceAccountName: cert-manager-webhook
@@ -38,7 +38,7 @@ spec:
 
       containers:
         - name: webhook
-          image: bitnami/cert-manager-webhook:1.8.0-debian-10-r48
+          image: bitnami/cert-manager-webhook:1.8.2-debian-11-r8
 
           args:
             - --v=2
@@ -62,11 +62,3 @@ spec:
               scheme: HTTP
               path: /healthz
               port: 6080
-
-          resources:
-            requests:
-              cpu: 4m
-              memory: 32Mi
-            limits:
-              cpu: 16m
-              memory: 64Mi

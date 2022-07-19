@@ -27,8 +27,6 @@ spec:
         app.kubernetes.io/version: 1.62.0
 
     spec:
-      serviceAccountName: synapse
-
       volumes:
         - name: synapse-config
           secret:
@@ -47,11 +45,3 @@ spec:
             - name: http
               protocol: TCP
               containerPort: 8008
-
-          resources:
-            requests:
-              cpu: 16m
-              memory: 384Mi
-            limits:
-              cpu: 128m
-              memory: 512Mi

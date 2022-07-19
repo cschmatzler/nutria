@@ -70,11 +70,3 @@ spec:
               scheme: HTTP
               port: http
               path: /healthz
-
-          resources:
-            requests:
-              cpu: 4m
-              memory: 64Mi
-            limits:
-              cpu: 16m
-              memory: 128Mi

@@ -32,7 +32,6 @@ spec:
         app.kubernetes.io/version: 1.27.0
 
     spec:
-      serviceAccountName: teslamate
       containers:
         - name: teslamate
           image: teslamate/teslamate:1.27.0
@@ -48,11 +47,3 @@ spec:
             - name: http
               protocol: TCP
               containerPort: 4000
-
-          resources:
-            requests:
-              cpu: 8m
-              memory: 256Mi
-            limits:
-              cpu: 256m
-              memory: 384Mi

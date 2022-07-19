@@ -40,11 +40,3 @@ spec:
             - name: http
               protocol: TCP
               containerPort: 80
-
-          resources:
-            requests:
-              cpu: 2m
-              memory: 32Mi
-            limits:
-              cpu: 4m
-              memory: 64Mi

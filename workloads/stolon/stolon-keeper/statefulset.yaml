@@ -93,14 +93,6 @@ spec:
               protocol: TCP
               containerPort: 5432
 
-          resources:
-            requests:
-              cpu: 64m
-              memory: 768Mi
-            limits:
-              cpu: 256m
-              memory: 1536Mi
-
   volumeClaimTemplates:
     - metadata:
         name: data

@@ -70,14 +70,6 @@ spec:
             - secretRef:
                 name: diun-env
 
-          resources:
-            requests:
-              cpu: 128m
-              memory: 256Mi
-            limits:
-              cpu: 256m
-              memory: 384Mi
-
   volumeClaimTemplates:
     - metadata:
         name: data

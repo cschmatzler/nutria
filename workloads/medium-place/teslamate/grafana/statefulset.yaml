@@ -31,8 +31,6 @@ spec:
         app.kubernetes.io/version: 1.27.0
 
     spec:
-      serviceAccountName: teslamate-grafana
-
       securityContext:
         fsGroup: 472
 
@@ -52,14 +50,6 @@ spec:
             - name: http
               protocol: TCP
               containerPort: 3000
-
-          resources:
-            requests:
-              cpu: 32m
-              memory: 64Mi
-            limits:
-              cpu: 64m
-              memory: 128Mi
 
   volumeClaimTemplates:
     - metadata:

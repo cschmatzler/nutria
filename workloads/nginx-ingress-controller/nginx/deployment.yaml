@@ -7,7 +7,7 @@ metadata:
   labels:
     app.kubernetes.io/name: nginx
     app.kubernetes.io/part-of: nginx-ingress-controller
-    app.kubernetes.io/version: 1.21.6
+    app.kubernetes.io/version: 1.23.0
 
 spec:
   replicas: 2
@@ -29,7 +29,7 @@ spec:
       labels:
         app.kubernetes.io/name: nginx
         app.kubernetes.io/part-of: nginx-ingress-controller
-        app.kubernetes.io/version: 1.21.6
+        app.kubernetes.io/version: 1.23.0
 
     spec:
       terminationGracePeriodSeconds: 60
@@ -58,7 +58,7 @@ spec:
       containers:
         - name: nginx
 
-          image: bitnami/nginx:1.21.6-debian-10-r119
+          image: bitnami/nginx:1.23.0-debian-11-r6
 
           volumeMounts:
             - name: nginx-config
@@ -82,11 +82,3 @@ spec:
               port: http
               path: /healthz
             initialDelaySeconds: 30
-
-          resources:
-            requests:
-              cpu: 2m
-              memory: 8Mi
-            limits:
-              cpu: 8m
-              memory: 32Mi

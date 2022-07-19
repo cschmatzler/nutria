@@ -7,7 +7,7 @@ metadata:
   labels:
     app.kubernetes.io/name: elasticsearch
     app.kubernetes.io/part-of: mastodon
-    app.kubernetes.io/version: 8.2.0
+    app.kubernetes.io/version: 8.3.2
 
 spec:
   replicas: 1
@@ -29,7 +29,7 @@ spec:
       labels:
         app.kubernetes.io/name: elasticsearch
         app.kubernetes.io/part-of: mastodon
-        app.kubernetes.io/version: 8.2.0
+        app.kubernetes.io/version: 8.3.2
 
     spec:
       terminationGracePeriodSeconds: 60
@@ -39,7 +39,7 @@ spec:
 
       containers:
         - name: elasticsearch
-          image: bitnami/elasticsearch:8.2.2-debian-10-r0
+          image: bitnami/elasticsearch:8.3.2-debian-11-r2
 
           volumeMounts:
             - name: data
@@ -53,14 +53,6 @@ spec:
             - name: http
               protocol: TCP
               containerPort: 9200
-
-          resources:
-            requests:
-              cpu: 32m
-              memory: 256Mi
-            limits:
-              cpu: 256m
-              memory: 512Mi
 
   volumeClaimTemplates:
     - metadata:
