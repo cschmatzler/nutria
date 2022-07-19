@@ -2,11 +2,11 @@ apiVersion: apps/v1
 kind: StatefulSet
 
 metadata:
-  name: firefly-iii
+  name: fireflyiii
   namespace: medium-place
   labels:
-    app.kubernetes.io/name: firefly-iii
-    app.kubernetes.io/part-of: firefly-iii
+    app.kubernetes.io/name: fireflyiii
+    app.kubernetes.io/part-of: fireflyiii
     app.kubernetes.io/version: 5.7.9
 
 spec:
@@ -15,8 +15,8 @@ spec:
 
   selector:
     matchLabels:
-      app.kubernetes.io/name: firefly-iii
-      app.kubernetes.io/part-of: firefly-iii
+      app.kubernetes.io/name: fireflyiii
+      app.kubernetes.io/part-of: fireflyiii
 
   template:
     metadata:
@@ -27,13 +27,13 @@ spec:
         diun.include_tags: "^version-\\d+\\.\\d+\\.\\d+$"
         diun.sort_tags: "semver"
       labels:
-        app.kubernetes.io/name: firefly-iii
-        app.kubernetes.io/part-of: firefly-iii
+        app.kubernetes.io/name: fireflyiii
+        app.kubernetes.io/part-of: fireflyiii
         app.kubernetes.io/version: 5.7.9
 
     spec:
       containers:
-        - name: firefly-iii
+        - name: fireflyiii
           image: fireflyiii/core:version-5.7.9
 
           volumeMounts:
@@ -42,9 +42,9 @@ spec:
 
           envFrom:
             - configMapRef:
-                name: firefly-iii-env
+                name: fireflyiii-env
             - secretRef:
-                name: firefly-iii-env
+                name: fireflyiii-env
 
           ports:
             - name: http

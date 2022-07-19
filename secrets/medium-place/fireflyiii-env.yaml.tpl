@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Secret
 metadata:
-  name: firefly-iii-env
+  name: fireflyiii-env
   namespace: medium-place
 data:
   APP_KEY: {{ base64.Encode .Env.APP_KEY }}

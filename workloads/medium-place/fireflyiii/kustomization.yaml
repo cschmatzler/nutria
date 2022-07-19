@@ -5,6 +5,6 @@ resources:
   - ingress.yaml
 
 configMapGenerator:
-  - name: firefly-iii-env
+  - name: fireflyiii-env
     namespace: medium-place
-    env: firefly-iii.env
+    env: fireflyiii.env
