@@ -1,0 +1,10 @@
+resources:
+  - sealedsecret.yaml
+  - deployment.yaml
+  - service.yaml
+  - ingress.yaml
+
+configMapGenerator:
+  - name: authentik-env
+    namespace: medium-place
+    env: authentik.env

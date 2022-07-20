@@ -1,0 +1,67 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: authentik
+  namespace: medium-place
+  labels:
+    app.kubernetes.io/name: authentik
+    app.kubernetes.io/part-of: authentik
+    app.kubernetes.io/version: 2022.7.2
+
+spec:
+  replicas: 1
+  revisionHistoryLimit: 5
+
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: authentik
+      app.kubernetes.io/part-of: authentik
+
+  template:
+    metadata:
+      annotations:
+        diun.enable: "true"
+        diun.regopt: docker.io
+        diun.watch_repo: "true"
+        diun.include_tags: "^\\d+\\.\\d+\\.\\d+"
+      labels:
+        app.kubernetes.io/name: authentik
+        app.kubernetes.io/part-of: authentik
+        app.kubernetes.io/version: 2022.7.2
+
+    spec:
+      terminationGracePeriodSeconds: 60
+
+      containers:
+        - name: server
+
+          image: ghcr.io/goauthentik/server:2022.7.2
+          args:
+            - server
+
+          envFrom:
+            - configMapRef:
+                name: authentik-env
+            - secretRef:
+                name: authentik-env
+
+          ports:
+            - name: http
+              protocol: TCP
+              containerPort: 9000
+            - name: https
+              protocol: TCP
+              containerPort: 9443
+
+        - name: worker
+
+          image: ghcr.io/goauthentik/server:2022.7.2
+          args:
+            - worker
+
+          envFrom:
+            - configMapRef:
+                name: authentik-env
+            - secretRef:
+                name: authentik-env
