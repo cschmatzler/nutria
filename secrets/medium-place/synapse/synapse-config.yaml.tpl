@@ -77,6 +77,13 @@ macaroon_secret_key: {{ .Env.MACAROON_SECRET }}
 presence:
   enabled: true 
 
+turn_uris: 
+  - turn:turn.medium.place?transport=udp
+  - turn:turn.medium.place?transport=tcp
+turn_shared_secret: {{ .Env.TURN_SECRET }}
+turn_user_lifetime: 86400000
+turn_allow_guests: false
+
 app_service_config_files:
   - /registrations/signal.yaml
 

@@ -10,4 +10,11 @@ resource "hcloud_server" "server" {
 
   labels    = var.labels
   user_data = var.user_data
+
+  lifecycle {
+    ignore_changes = [
+      image,
+      user_data
+    ]
+  }
 }

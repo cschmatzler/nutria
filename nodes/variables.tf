@@ -24,3 +24,8 @@ variable "image_id" {
   description = "Talos image snapshot ID"
   type        = string
 }
+
+variable "turn_secret" {
+  description = "TURN secret"
+  type        = string
+}
