@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: synapse-signal-bridge
+  namespace: medium-place
+  labels:
+    app.kubernetes.io/name: signal-bridge
+    app.kubernetes.io/part-of: synapse
+    app.kubernetes.io/version: 0.3.0
+
+spec:
+  selector:
+    app.kubernetes.io/name: signal-bridge
+    app.kubernetes.io/part-of: synapse
+
+  ports:
+    - name: http
+      protocol: TCP
+      port: 29328
+      targetPort: http

@@ -31,6 +31,9 @@ spec:
         - name: synapse-config
           secret:
             secretName: synapse-config
+        - name: synapse-bridge-registration
+          secret:
+            secretName: synapse-bridge-registration
 
       containers:
         - name: synapse
@@ -39,6 +42,9 @@ spec:
           volumeMounts:
             - name: synapse-config
               mountPath: /data
+              readOnly: true
+            - name: synapse-bridge-registration
+              mountPath: /registrations
               readOnly: true
 
           ports:

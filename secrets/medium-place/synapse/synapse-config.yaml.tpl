@@ -75,7 +75,10 @@ registration_shared_secret: {{ .Env.REGISTRATION_SECRET }}
 macaroon_secret_key: {{ .Env.MACAROON_SECRET }}
 
 presence:
-  enabled: false 
+  enabled: true 
+
+app_service_config_files:
+  - /registrations/signal.yaml
 
 allow_public_rooms_over_federation: false
 require_auth_for_profile_requests: true
