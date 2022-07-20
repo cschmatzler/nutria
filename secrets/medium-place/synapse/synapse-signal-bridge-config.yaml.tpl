@@ -32,7 +32,7 @@ appservice:
   bot_username: signal
   bot_displayname: Signal Bridge
   bot_avatar: mxc://maunium.net/wPJgTQbZOtpBFmDNkiNEMDUp
-  ephemeral_events: false
+  ephemeral_events: true
   as_token: {{ .Env.AS_TOKEN }} 
   hs_token: {{ .Env.HS_TOKEN }}
 metrics:
