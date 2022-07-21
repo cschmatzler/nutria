@@ -86,6 +86,7 @@ turn_allow_guests: false
 
 app_service_config_files:
   - /registrations/signal.yaml
+  - /registrations/facebook.yaml
 
 allow_public_rooms_over_federation: false
 require_auth_for_profile_requests: true
