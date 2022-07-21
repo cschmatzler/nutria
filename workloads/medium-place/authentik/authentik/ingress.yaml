@@ -6,7 +6,6 @@ metadata:
   namespace: medium-place
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt
-    nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
   labels:
     app.kubernetes.io/part-of: authentik
 
@@ -28,4 +27,4 @@ spec:
               service:
                 name: authentik
                 port:
-                  name: https
+                  name: http
