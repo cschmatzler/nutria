@@ -61,6 +61,7 @@ spec:
             - --publish-service=nginx-ingress-controller/nginx-ingress-controller
             - --election-id=ingress-controller-leader
             - --controller-class=k8s.io/ingress-nginx
+            - --configmap=nginx-ingress-controller/nginx-ingress-controller-config
             - --tcp-services-configmap=nginx-ingress-controller/nginx-ingress-controller-tcp-services
 
           env:
