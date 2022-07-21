@@ -39,7 +39,7 @@ spec:
       containers:
         - name: cainjector
 
-          image: bitnami/cainjector:1.8.2-debian-11-r8
+          image: bitnami/cainjector:1.8.2-debian-11-r9
           args:
             - --v=2
             - --leader-election-namespace=cert-manager

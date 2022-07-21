@@ -38,7 +38,7 @@ spec:
 
       containers:
         - name: webhook
-          image: bitnami/cert-manager-webhook:1.8.2-debian-11-r8
+          image: bitnami/cert-manager-webhook:1.8.2-debian-11-r9
 
           args:
             - --v=2

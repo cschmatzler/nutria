@@ -38,13 +38,13 @@ spec:
 
       containers:
         - name: cert-manager
-          image: bitnami/cert-manager:1.8.2-debian-11-r7
+          image: bitnami/cert-manager:1.8.2-debian-11-r8
 
           args:
             - --v=2
             - --leader-elect=false
             - --cluster-resource-namespace=$(POD_NAMESPACE)
-            - --acme-http01-solver-image=bitnami/acmesolver:1.8.2-debian-11-r8
+            - --acme-http01-solver-image=bitnami/acmesolver:1.8.2-debian-11-r9
 
           env:
             - name: POD_NAMESPACE

@@ -54,7 +54,7 @@ spec:
       containers:
         - name: nginx-ingress-controller
 
-          image: bitnami/nginx-ingress-controller:1.3.0-debian-11-r1
+          image: bitnami/nginx-ingress-controller:1.3.0-debian-11-r2
           args:
             - /nginx-ingress-controller
             - --default-backend-service=nginx-ingress-controller/nginx

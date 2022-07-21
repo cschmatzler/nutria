@@ -39,7 +39,7 @@ spec:
 
       containers:
         - name: elasticsearch
-          image: bitnami/elasticsearch:8.3.2-debian-11-r2
+          image: bitnami/elasticsearch:8.3.2-debian-11-r3
 
           volumeMounts:
             - name: data
