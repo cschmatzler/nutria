@@ -64,3 +64,7 @@ spec:
           volumeMounts:
             - name: signald
               mountPath: /signald
+          
+          envFrom:
+            - secretRef:
+                name: synapse-signal-bridge-env
