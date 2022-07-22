@@ -2,7 +2,6 @@ resources:
   - vikunja-backend-env.enc.yaml
   - statefulset.yaml
   - service.yaml
-  - ingress.yaml
 
 configMapGenerator:
   - name: vikunja-backend-env
