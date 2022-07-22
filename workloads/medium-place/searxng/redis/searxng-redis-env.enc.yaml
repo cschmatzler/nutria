@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: searxng-redis-env
+    namespace: medium-place
+data:
+    REDIS_PASSWORD: ENC[AES256_GCM,data:rtCznc5lSq2zzGaO7UR2TkrJxQdGpkiqsKx5GVOBUJCsAyXE/ygVUVtszmn4Av+CDPo/fyXe+HYIozycRrzHFg==,iv:+nHEamQYKiJSGFlP0gYEOlp4+RS3byqw3TXlVvG9duc=,tag:axhyAq5PvbOu6Fs8zgG5YA==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ufcw42mtfu65grs30zqwu65xl7wczkllu3r4gjpk5yr7tr02q5kqq0pnvg
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBpMzBRc1piTXpFSGFMSGxt
+            TzB4cW5pYlJwMEN3NGFEU2U1SHZvRittRlFZClpqOExpU3VsTTNldi95cWVQYmxW
+            RUtiaS8yNlNvRkMrYmZzblZGWWk4TVUKLS0tIDY4Mnh4U2Q3OEhYSmtLOUVyRHhz
+            NVNZVVFyVXgrd1p2V29zd3dxbDNDWWsKieeIZYdfV9tfF9vMChM5rDHytrKXPtxJ
+            Ugkc2IT5x297OTt+deRCx0QrdyU4EF2VkxrQbAVcVgXVOfDJ1fKwig==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2022-07-22T20:06:13Z"
+    mac: ENC[AES256_GCM,data:1qvCxYwJ1xofLHYJM2uHTLNnMjkvjOVnigetjtEvHDrkHsZ5runidoNQbTYL1q2HqHqnsNXqisLNNU+iIopsRxoEsFQVxXV9eM0ZPL+ldp6cwHD5CeC7jYIzxkOnMUVx/ALaAGJjtGSaWwDX6jeTKUB/i/FOXV3f67zRNXJpILg=,iv:F8j0iRQoMzhSdVaFALQH+Yqzcq3ssHEAj5HHIYV7FAM=,tag:5bHRagLEq19zXqY1YpNPQg==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.7.3

@@ -1,0 +1,10 @@
+resources:
+  - searxng-env.enc.yaml
+  - statefulset.yaml
+  - service.yaml
+  - ingress.yaml
+
+configMapGenerator:
+  - name: searxng-env
+    namespace: medium-place
+    env: configuration/searxng.env
