@@ -4,12 +4,12 @@ metadata:
     name: vaultwarden-env
     namespace: leuchtturm-io
 data:
-    ADMIN_TOKEN: ENC[AES256_GCM,data:qYIAfyzkoVs8az6muxYhYmm5rYdITEBL2NfKJFD98U+WKslDoPFk3n1eliAoGqMSeLQA5vth6j3laSGZuV3kiA==,iv:CoWcE+9rvIX0UOkdA9J6X1w3bNmLjkWk/xEuFKgJWoE=,tag:35rGV8JAqL5yTGvgg+9tCQ==,type:str]
-    DATABASE_URL: ENC[AES256_GCM,data:7gWvPBFRB9q4D7KLFsKhwnL68E8PtcfNH7c7sJFmOb/JrtqpiW8mVo+vkRTpu1CIWAK/+/sScELWSr3qVRHV0qqyGIW/T9cv2FgyMlpi6cntRoQ/aF6e7nyAQKZlMnS8KMtYFRJIysvoP7HfJ5MP2bAcwwSrONKS+WHCT6vUW8/OJco+tDFOJ8hoarU7avWKsQSHXrEjtl0NnjOAttRjKIQCnxlK338oIDFbkHgONrVosn1bLy01TcFo2GMIXOY+u59zPwewSNy6/6b328CE3w==,iv:Niz5GPUaOIFoNUReW+nV4FaYv1PMiZ79L20E1/4SkGU=,tag:YcS6rKoZH6dgm6959Yc8TA==,type:str]
-    SMTP_HOST: ENC[AES256_GCM,data:8tN+URAkISiay/3RWuGgxWxMPVdMAMENZNVSrVFMpV5p5VMa,iv:V5cV22hyy8VvbvD0xZajVkz5W1nV0UbV/d3F6ayeuDc=,tag:EAamOuENXgZejzCgTT0yhQ==,type:str]
-    SMTP_USERNAME: ENC[AES256_GCM,data:0bKgkqVxvfdU0arZwF4EWNv1zpgVrcO8I8qG1rUYgf8=,iv:adRw6l54X8dWvmmAjqj09Zuj8ut3AAJlmAlbjjqXdhQ=,tag:fTpgnKsM8N/nrEBxsXarEg==,type:str]
-    SMTP_PASSWORD: ENC[AES256_GCM,data:EbuvdS6mks/aL4YRcpvgKNbxMKP5AN2UHAhbUr2UDy105ArekyNVCHen7lazuUpbfCJP/jv+/0LmObafyk6PbJ3jF+iSQv74HPmfhzygVU36V1ARal9oww==,iv:3Qk6r3CEVWpfD7Q4sQ3YdWB84Sfre1Ai0HfhYdY7R50=,tag:qHZvBWf7GddhZrPCplt64g==,type:str]
-    SMTP_FROM: ENC[AES256_GCM,data:ODCmHay7LLAQfp0DeRFf6Y6mwc7Gp+Mrsa73kg7j4mk=,iv:uYIfgLCN5hhTkpDCDunyPcXBsAqFhvUEILHO4b8BZnE=,tag:SCKYBxCnpkNCkn8MAwgGdg==,type:str]
+    ADMIN_TOKEN: ENC[AES256_GCM,data:egUlhWU+8UUBlJVnP0RtW0mVHWCcNjeu5wziuEhBD5XAFtvtg/qpoT0xDtNobGqFCAjHVYMR0hv8swFfV+aAXA==,iv:/z+FIf8nysAV7r5LEKCDBkjQhGkxWmlEYG7eYBhQAho=,tag:2Dah3rpz87SGnjAxFXJhqQ==,type:str]
+    DATABASE_URL: ENC[AES256_GCM,data:33vITNRMRFO4KwkDxEZdYiOs4vjrEOGD7rQ+mq6md3cHs4cButGoPM2hR3cVkIsPb6v2OdUpy+EmcWPMTwA+no7dwvEk4KpHTpde8Y0iX4mFFmSYoeH3JgChDTfuEFwFIjj0ikufxur/U6BPFiSF+aDkjZtSX9P5+D7KxREKgj+kNxQkY+lEzDgoEIz/AEjAOEhtm7+Du/6K7q5bRP+nyJ9We6/uEe+Ox7aNteByzb0RKQPfxp/Hr3egHbUpt0yUvjzwMrAdIhbSfUj8k7NR2w==,iv:ZodCMK5lvEUYYSaksZTaEIRGO6BdJV7iFNHGHarzazI=,tag:dv0Oax6g8mI7FPxSLxnXFQ==,type:str]
+    SMTP_HOST: ENC[AES256_GCM,data:hM9P1hCDzBzsrI/Iw2GwBeSqUrjeDU2qX1DIioXViLnZ41Pd,iv:HpxqluFu6/aPUXzNgZ8xB0GmSJk0vzNiEJMLa88LHgs=,tag:2IE1MIwSuSqZuecaKwkGyQ==,type:str]
+    SMTP_USERNAME: ENC[AES256_GCM,data:qMB6XR6wh5DgHx8ru++lwn/IfOUEhqzAbvOJwBdIF8Y=,iv:jcC9LAymduLVC9uPVnGbAZe2m08UOmmTatT1wEUMrnU=,tag:zEUM0RkklaCpGNsdGpLnlQ==,type:str]
+    SMTP_PASSWORD: ENC[AES256_GCM,data:LNNMWElPOK2Jzdi6UXnxri/9ckCvsdM/jj75xJVn2HR/kUjfKR90QK+wOne9o54KfGN/vtLdvu2g0MDYcEkTibMEbIfQRFjIQA6C+Pomy73CEkHxjYuMBA==,iv:ZKcyCOREyaabW8hDJQpeLQF0yz2TGh8dcQ65BZKotOU=,tag:DnQkEgOxYUz3EmUtsS7vHA==,type:str]
+    SMTP_FROM: ENC[AES256_GCM,data:8bN4B3PjmvP2UZvqKZSp4cKTGBvWbm8JLaxpGj2LoT8=,iv:k7Ml8Cib7rQLuy98zotJ/eaL4aLzQ3YCqXWsny7b1bM=,tag:hEyoxZq26ukkpGr+FBtN1A==,type:str]
 sops:
     kms: []
     gcp_kms: []
@@ -19,14 +19,14 @@ sops:
         - recipient: age1ufcw42mtfu65grs30zqwu65xl7wczkllu3r4gjpk5yr7tr02q5kqq0pnvg
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBqWjYwaG1oL3hkd25ibFRh
-            V3d4c3NJN1NPdmJIaXJZQk9Tdk5uWHJxTVM0ClhZNkFOejZFS3Y0M2pqSkJ4bm5B
-            MXAySGJnRmdic1VSSE1vYkU4R0FXQkEKLS0tIFZoY1FTSTI2WDJ4U2tNVm8xYWdD
-            MzdQYWlTclNrQTJNbVl6YXBPaVN3S28KcHVS6P69qrX7jAv6JCMsquWV8WpqqqS3
-            M35/x7pnG3P3tRpZx72HR015XdmFZMnE4cQf6wwmcL4rTqF7zCuYDQ==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSA1WUVIT1A0U3Zra1VxRXVa
+            eS9oNE5renRwMkNFYUplQjlNMzJWY2Z2MjFBCmtDTVFvSURBSTFxR05XV0dsUkE3
+            ZUdPRnpjcmdQclBacjlMeEx0YTVXaWcKLS0tIHh1WWprM2FKM1AwQXVXWTA4bVJ5
+            VVdEQlJyV01TMjBvVVg5K1gvM0NzSXcKbWcJGLhSFJEP6GZgG2fmD+27mYZEW+c0
+            bjVqE6gHhMwAVOo4Gm0m42DRjTXGRada4rI3iJdu+gE/FaZ4C+SAhQ==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2022-07-22T21:17:31Z"
-    mac: ENC[AES256_GCM,data:ZfekERDgRQi9wehXXM4WhenmfFHL66BXw9uKOa6IulNWy/6BGj6I6NREL30gLC3E4o5ALCpxgzEGqMmEHacOpb5WkFWVg+XboDfhRXRiscS/g++vuuJ+dGlqPE60qWCFLt8O1S+8H4unClW2fvquemvdiEenm/lA7WiNAUxDorY=,iv:jg0419lX61EaFcUSXtcQ95Fa/g0OlOwmp4Ydqsn8Rbw=,tag:nEm3POFb8zF/W2aV2ToEXw==,type:str]
+    lastmodified: "2022-07-22T21:21:43Z"
+    mac: ENC[AES256_GCM,data:XmVCDcx55y+gFNCxSraiQynO/BCFbABm7uUaoCu9N95m1CLV/fHcy/6imQSlrz1Hp6AF9n72FlFveR1eioFntTRRcbjIDBqvIyiEe94qWqwS0b0UzMbjGRtLr7LY4xelpcIONbTiO9SuPMtygT4jlp3SGdQBJ1ZgoFEMZCYPTo4=,iv:nHgan+9P+TFchCWAJ69HXg7NUQhklZZhxkP5XMIU1MY=,tag:2Az4AhKMP3bSyQh/dRA4ZA==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData)$
     version: 3.7.3
