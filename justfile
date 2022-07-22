@@ -47,7 +47,7 @@ flux:
   flux bootstrap github \
     --owner=cschmatzler \
     --repository=nutria \
-    --path=workloads \
+    --path=flux \
     --personal \
     --author-email=christoph@medium.place \
     --author-name="Christoph Schmatzler" \
