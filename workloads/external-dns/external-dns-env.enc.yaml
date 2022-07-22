@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: external-dns-env
+    namespace: external-dns
+data:
+    CF_API_TOKEN: ENC[AES256_GCM,data:Fs+x5keK6tzAnCrzvHBRIzJD5yzACTqd4P7hEWhF4DkxCFc9TgZVUJiF56Mykuu8iKiZji+K3lY=,iv:p1A/33lhyw76F9Dp4rLKZH3hNci+XPFDuLp25tqe1CQ=,tag:8OZ6ErB9uR2ZzBkjW0RbEw==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ufcw42mtfu65grs30zqwu65xl7wczkllu3r4gjpk5yr7tr02q5kqq0pnvg
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBDZEJJWVZGdll6S05FTENN
+            RytFbE1wbEE0T0R2ODBPRW9QcS9sY2JYZUgwCi9VNTdZazRESGphV3BUTVlRb012
+            OFlWV3RqOHd3WE5oUUkzbERQOHNKQjAKLS0tIE12VTNOaWgzamIxdjFSaTVYTmRM
+            anErZWZFbE5STWRGc0hGZ2E0SUZWWTgK92lCMTplG8bny27SBcDnsnYBMgFJOiWY
+            unBtsVsV13RuT/0UPyXOD5GRCuA5q7wBFxzBrWqXvoxEWsA2hW9YGw==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2022-07-22T19:15:53Z"
+    mac: ENC[AES256_GCM,data:g8wzDODJ2uyfOnSQEYtDrmrUwUhFLK0cIH/PIHRPJ5lbIa+HCUC/k6l3vpIySkrhimn7gahMsHEojEsBVLbvugnYO2i4HljxUDupbzaPKmYqjGKHnEGld3BZLOzfh+WZ2mE8iKbgAH58+LYp3v/7F3MIiMyfEiuASwMcD7qiNXo=,iv:NaQEAtXeNzw0E95A1G0thYBinkDIiwr6YGuUg3PgCKQ=,tag:m05GvLWSh1g1I5VG9FtSHA==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.7.3
