@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: vaultwarden-env
+    namespace: leuchtturm-io
+data:
+    ADMIN_TOKEN: ENC[AES256_GCM,data:dD0lCznLIF/noTrGsNBpWIjOyJQtKdw24CxjP+ChEcelJGLgCYXZTGD8sE2lGlRKeumWh1541HTHm2LdKccW0g==,iv:XBMi1GEfSEAD+uyj/7DoRAzyTs0cWGf8LjRjDaL7f0w=,tag:BN3bpBNxI6mn/dSOqmGjVQ==,type:str]
+    DATABASE_URL: ENC[AES256_GCM,data:HYygU6g8PgsmB+g8sKBkZj+DbkOnuQBffFNq2dDdBCXt9nYvoDWdTitEGdAo2Fc5p9rA3NUHa/5hpWWWr6ORrZIeTXKLB4MTNCV0c0SUXQ84LIC8nbIi1uxYB+fXak+PqvTFTk62NTwGXkEfq9zbFqc4rtwH9IJwBjW4vdGhxDnhCvSc0EfN4a1QlEDCQsOfnpXMbLk1+AyDuPojOWvlkDgiPock+px2ikLK9dlTUvrrYrx+Xysu+ZGs6GI+mw4nqrKdSdtBvV32htsBGqdmMQ==,iv:w9iE+n94QzeWa4MHEUQC1HSE8qukm3p0hL2E/oIWYLw=,tag:s8SZ7TEZSulOCkqkTqSDYw==,type:str]
+    SMTP_HOST: ENC[AES256_GCM,data:fMTalUQ1B7/yV2tfi9o2GtDP5mGKsct8VXg8Fm5H0A4mTWwR,iv:j0ZRv1uEK9ndS9mcdrwz8lncJ3PX00m/7LzFVTixwUI=,tag:c2wH04Dy9zM+6bY0LVJspA==,type:str]
+    SMTP_USERNAME: ENC[AES256_GCM,data:DkANQe24LzJdneXwg7Yyk6pONHBTmHqcFvxWXm3xU6A=,iv:t0v2DBjjPOaC5IDmiy8H7UFZpo3swDrB21HZm3zCfEQ=,tag:pVxJex22lKlTaomzeVfKnQ==,type:str]
+    SMTP_PASSWORD: ENC[AES256_GCM,data:DR31ZVajsWBcclYqgoL1UxjPFWtq6kz4gG9xHDac8quf/CKX04YUrbsUTUudHuDuYwaHW1tzAA14e86Too6wqnTuO29ct6Mh1fMny4TRY30LHfLbB5zd5w==,iv:B57Roo/MyNWIX/TSMuDqIee9DpmyFrLQSca3rc1vvhE=,tag:Y7vOzd8xHA+6F9WyhZNmdg==,type:str]
+    SMTP_FROM: ENC[AES256_GCM,data:xmGI/CH1O/EsN4soOVtDwOiXe2F2UFvMfhhqRSnxt2M=,iv:TKeiUiPfEB9/T1fnMyNsKInKdYhXAJI2ZbgJLd5r4uw=,tag:OM7j9Z0QQhzC7pUvx0pzfA==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ufcw42mtfu65grs30zqwu65xl7wczkllu3r4gjpk5yr7tr02q5kqq0pnvg
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBrQTdwWC94cStLQWJORFVn
+            ZFpIV2ZrU2RxREludmdWdytPTE9zdFhiL0hvCmZwOUtBS3luTzl5WWNFWHdqd2ZY
+            elRBSXpkdWEvVWNmR08yR282STFBY1UKLS0tIC8rbittM0FVLzZKN3dXUWdFQVo3
+            RmZyb3hndkY2NDd5R0pxdGRQN3Iwd2sKkMNy0M4gCJ6MWBNYVn1pWNwDSXx9p0my
+            ocRlit0b47O4Weo14KlfoGogYYbe7PDNQHAdQ0EseJkvUeVVbaBGLQ==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2022-07-22T17:28:07Z"
+    mac: ENC[AES256_GCM,data:LXcOs79BzhbMp5uUfbVQR3Syr/jdH440xZq61o/TODbysJbljEQR8jzRr+ZKkhMRGm6jHNX6IC6AIMa4A89QbmZ2tyYcFAKorj8sCQCGiB0iCtO+UZ9hs45+/r40rL4+sg6Mr2bXGWZn9QO0b1Plg66U5UZff8rjxsYxVtsI9lk=,iv:1xyyxn4bc+Ud0gRnrAwdGoQ2rZzJsZxAHdzMeuOkgrI=,tag:3KWm30ciBZI8a4mVF0Pvxg==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.7.3
