@@ -1,6 +1,6 @@
 resources:
   - searxng-config.enc.yaml
-  - statefulset.yaml
+  - deployment.yaml
   - service.yaml
   - ingress.yaml
 
