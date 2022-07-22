@@ -1,10 +1,10 @@
 resources:
-  - fireflyiii-env.enc.yaml
+  - firefly-iii-env.enc.yaml
   - statefulset.yaml
   - service.yaml
   - ingress.yaml
 
 configMapGenerator:
-  - name: fireflyiii-env
+  - name: firefly-iii-env
     namespace: medium-place
-    env: configuration/fireflyiii.env
+    env: configuration/firefly-iii.env

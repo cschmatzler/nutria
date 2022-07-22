@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Secret
 metadata:
-    name: fireflyiii-env
+    name: firefly-iii-env
     namespace: medium-place
 data:
     APP_KEY: ENC[AES256_GCM,data:y5pGyWi/B+WLLLTZOE3DgqkIizI/iSdwEXoqZVtYFIk1ZfiDPTVQTtmPD8I=,iv:gKbmqHzEY1cr13e4EHzXCv06LHQDtUknuSJuuodHyS4=,tag:M5MlQOBCI7kzH/wUpYeC9A==,type:str]

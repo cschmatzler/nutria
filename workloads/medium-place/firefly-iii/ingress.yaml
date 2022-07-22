@@ -2,12 +2,12 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 
 metadata:
-  name: fireflyiii
+  name: firefly-iii
   namespace: medium-place
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt
   labels:
-    app.kubernetes.io/part-of: fireflyiii
+    app.kubernetes.io/part-of: firefly-iii
 
 spec:
   ingressClassName: nginx
@@ -25,6 +25,6 @@ spec:
             path: /
             backend:
               service:
-                name: fireflyiii
+                name: firefly-iii
                 port:
                   name: http
