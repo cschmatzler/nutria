@@ -1,5 +1,5 @@
 resources:
-  - sealedsecret.yaml
+  - fireflyiii-env.enc.yaml
   - statefulset.yaml
   - service.yaml
   - ingress.yaml
@@ -7,4 +7,4 @@ resources:
 configMapGenerator:
   - name: fireflyiii-env
     namespace: medium-place
-    env: fireflyiii.env
+    env: configuration/fireflyiii.env
