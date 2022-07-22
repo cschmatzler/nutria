@@ -4,8 +4,8 @@ metadata:
     name: stolon-keeper-env
     namespace: stolon
 data:
-    STKEEPER_PG_SU_PASSWORD: ENC[AES256_GCM,data:AIiIsEiFzTkJwhBcGG85moaOyMoTsTYr60mRBUldLrgCD0R913WnhjCT6llwCwOwMcsR4slYQAgEMRKiqoEOBg==,iv:UeLQulVCJYrsErDCjuE6jsdhgYzoT4Tkzqwa7PbbUSY=,tag:S6EH62bTnTa/e1huPdUpJw==,type:str]
-    STKEEPER_PG_REPL_PASSWORD: ENC[AES256_GCM,data:4iPTn9VGAK5nrfQYlz1uzOUL/7Mz9k3iigZO+Yx/KInVNeOpiAdOerWCdNDCBiYg1D6YqQ++5iEg2APVLJoiQg==,iv:7ED74JtPzWH9XqBCgIWkbNIBMhMZxm6fYYTE0rIIAjA=,tag:H67YzWAHQJWwzWsvBIFKxw==,type:str]
+    STKEEPER_PG_SU_PASSWORD: ENC[AES256_GCM,data:lhqcPac+Z4PoNMwaswBjq6H+Y139e3UZ6e+AgBigJ5/OXHtew9ealJNwbJA8lLtZSLd0wBauqdXXsRiMIm9Z0A==,iv:xtieS3Y0Znp0xJyu0R+AOZDk+/oAYdekqc85PrLPpUM=,tag:uqAz24jD+kgjWXF0qYp9Ug==,type:str]
+    STKEEPER_PG_REPL_PASSWORD: ENC[AES256_GCM,data:gxE+eHNyKTepwnHyGKPJuVVh5kLkpDoxXA165LO9oMySsYglVBI21a17jlqco0Mgh77cuf95yxTTcYJQ7qkVrQ==,iv:1aYjGpQmzNdggG97QZqb0XdOEn5z8fBjFVLPjRHatnE=,tag:3W9uNpodMj+aRr08SwSW1w==,type:str]
 sops:
     kms: []
     gcp_kms: []
@@ -15,14 +15,14 @@ sops:
         - recipient: age1ufcw42mtfu65grs30zqwu65xl7wczkllu3r4gjpk5yr7tr02q5kqq0pnvg
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSAwU0IrcUpXUUlxS2h1V01C
-            NEZ5OG53SGNVMGNpSFBZS2hQOGhNRTdTVDBJCmJxbHVIRTVmVEpJRXh0QWpPOTN1
-            eTZiY1lzUDdxbm1iV3hvR1lHdDZ1bXcKLS0tIGYxNHU5eGs3ZHVjN2dIc0JjYzZL
-            S0NGRkVoY05WL3pzRjQ5aGgrd1BwWTgK/7GYMNZxxU02cRRkGbMhjUOtlwNY38Tp
-            Av9kLlog0N8IjACgdt1M3NtNtx3KSnBbfvGRH4WiDj8QtD8YZLCvGg==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSArdWM0NXQ2d0pGcUZURWtl
+            UlBhSlJVMjVtN1NMcTdpa0YyRjRrU0lYMDM4CjlwNW1vQkxCaGFwbkRkcnRWcWFk
+            TG1FK3BtZWhiVHY1UWlBTjl6cjUydGsKLS0tIEFNKzRiSHgrUGdxd1lKeW01OWVk
+            MTJCd2dtSlBQUkxPc3FxK1NLdFlUU0kKUfcONsM3xsNC7W1Uz7Zvv7dI5z+sdIeN
+            LzPm8gDKLRPgsQwTzx39IzfS929nlbIb2MCaIo8jaWtkIvPMljLWzA==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2022-07-22T20:26:04Z"
-    mac: ENC[AES256_GCM,data:7liMD2A8YZaPtdNpSTbdN/a7uJ2Rf6P29T6mpVbdWu1sgxrP7dkcR/ApkEEiG2xh/wO41f0hTkI5UsCSoD8zCpcRlrHaZP4QsbUkSI/sXBPws2D9nW7VpRrHi/SYGZx0BL3wF8idtKCxGuKTDvF/iPSYKJjW77lHISeKEn+sKMc=,iv:47eUTohsqsBI73SDQdN4YgdNC1cQey7TDt+CGfE7yC4=,tag:4ZYii/vMpDYwXSNvU8DlKA==,type:str]
+    lastmodified: "2022-07-22T20:32:33Z"
+    mac: ENC[AES256_GCM,data:5FlEd+Tf7RJtqVrGjJ1CqXQrVuETPtBOaB6Wnmah/GjgPTMtRp/Wgo/qoKxAq8JdZWrxJISh0pZtnKMBdrtTaTrm/rYOXK2BDbFBUV/Jw7LO+bcNKWjXeKO629DZ7KgQLZx2FZnMTAZ8gML9OGCnxIJhzzhJ+Rx3xu0nbd+4xHg=,iv:+kypPWLhfvzAqjLbU5We2MH9uxcnkUYpPOiInmWL0xI=,tag:nMZT5dhfXbYbqp3sJCiJyg==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData)$
     version: 3.7.3
