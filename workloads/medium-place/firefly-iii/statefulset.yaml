@@ -34,7 +34,7 @@ spec:
     spec:
       containers:
         - name: firefly-iii
-          image: firefly-iii/core:version-5.7.10
+          image: fireflyiii/core:version-5.7.10
 
           volumeMounts:
             - name: data
