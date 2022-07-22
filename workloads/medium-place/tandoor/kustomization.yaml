@@ -1,0 +1,10 @@
+resources:
+  - tandoor-env.enc.yaml
+  - statefulset.yaml
+  - service.yaml
+  - ingress.yaml
+
+configMapGenerator:
+  - name: tandoor-env
+    namespace: medium-place
+    env: configuration/tandoor.env
