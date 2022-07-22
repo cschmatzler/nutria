@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: teslamate-grafana-env
+    namespace: medium-place
+data:
+    DATABASE_HOST: ENC[AES256_GCM,data:v/6vUwZIgaAXXOdIgX7/Xy6+E74m9n4DyEEufxWmz10kDVULt4oAYPqbAo7sFTGRKoNtHw==,iv:ql756KxrdB6mj2x+QLmjNkvYP2j6MPU4ciWJqBwch0A=,tag:A+a7xc8qvGOru3MVtZqBQQ==,type:str]
+    DATABASE_USER: ENC[AES256_GCM,data:N6+mGXqxY729avduUCQBt0LPaHKSPthR0xn4W7WOqIA=,iv:U7xn6wLxQv2kZUm1/6x/N4io7vaQqv7Xn+RXGcBwgd4=,tag:P+y6Ods83Fi8E6kqrZ9Qag==,type:str]
+    DATABASE_PASS: ENC[AES256_GCM,data:8Mu3a4A+U4fG0HwWORXZJDzxYX0dO3rd6gU5ZOvOvIG6/ICN3jV2kSPYXNk7OmoXW8yB7z7yLfY1d/zjWrwkjg==,iv:RtTE9MAAzawZF8AKaDMIVwlZ/TWupiPqX/eTJt4sBV0=,tag:nAzvl8fqlTCS8xowm1WFYg==,type:str]
+    DATABASE_NAME: ENC[AES256_GCM,data:jM9Cl/fPocN0P1ufjcsyNjJkAdZICJGDBdBGDPXbHXc=,iv:vNVayi5F09ygmxKOdOlJANiwA3UlAftndSBahnLwbMg=,tag:uSeeTJZlsWQOtvCrYhWcEQ==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ufcw42mtfu65grs30zqwu65xl7wczkllu3r4gjpk5yr7tr02q5kqq0pnvg
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBTTEJKbDVNdEF4SGRxRGYw
+            NFBTMU16YmV4NXdwUTNuanEwVUszeVJ0a0NZCm1Ld3lURFJ0NGFrZ2pyeW8vM1I0
+            WDFDditMcVpGRmg5MzYrSm9mYWVCY0EKLS0tIHZ5YmEvYlB2MXBiQ29iamNBb2F3
+            SDVqZm9xSnZjcE42UnR5c3NGY3N5OUkKPzqvtaie3GyG3IF/+9FQPAWPj/pzuaJd
+            /fF63ccNf/fqizPr3ZD5OBnDcZ+3uCEBDR5v7ib7W6yRKYpxT7C7LA==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2022-07-22T20:16:06Z"
+    mac: ENC[AES256_GCM,data:Y71RmOnFogjZ8wR1wtn3NGa8TR4vhV4wcJtT2G7QvGUQI89jEbWixBvOsw0ToaWsIYXR9JwIbi5X24wwvUpx5k9VyXDNagI+CB301YdxrMQ9ltTO2N87G5QqhdaWgQdSLntGoFdSZ+HcMB9DT6yRSHyqY6n6r9ypZpLlmNgboqM=,iv:Od8JC99jWdxY4Exwf5GI24XCqYXiEDFwWeOoaXbphGE=,tag:bWeMuLfKABBNiSZD9P/gxg==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.7.3
