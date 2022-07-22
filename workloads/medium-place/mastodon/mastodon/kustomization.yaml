@@ -1,0 +1,10 @@
+resources:
+  - mastodon-env.enc.yaml
+  - deployment.yaml
+  - service.yaml
+  - ingress.yaml
+
+configMapGenerator:
+  - name: mastodon-env
+    namespace: medium-place
+    env: configuration/mastodon.env
