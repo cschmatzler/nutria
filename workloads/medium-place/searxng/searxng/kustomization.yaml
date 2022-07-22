@@ -1,5 +1,5 @@
 resources:
-  - searxng-env.enc.yaml
+  - searxng-config.enc.yaml
   - statefulset.yaml
   - service.yaml
   - ingress.yaml
