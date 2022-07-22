@@ -11,3 +11,6 @@ kubeconfig
 *.tfplan
 
 talos/
+
+*.agekey
+**/*secret.yaml*
