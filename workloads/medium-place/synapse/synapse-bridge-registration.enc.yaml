@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: synapse-bridge-registration
+    namespace: medium-place
+data:
+    signal.yaml: ENC[AES256_GCM,data:e1/Ih3zN96O2hUWWjytJ7fv5kr6QNXK7SdZrJ2ugT6bO9kEk07STqTXruklyUXCfb9/3U9eIefqzidZXr8SqVlOFpk9EY4l79I8jaJtrsH0WkX5A72B+6S/usGEZoGZd99mMj6JHC9zWtOUV+C1G2cVcN2PnbDw4oxYOAzsn6EcPdYOP6iKkobYUxfox4Ms9MOAEaHULR4NWyd2aQuHvW7m0mDAlpG/U8lt8/YOLTOR2w4ZhWQVZJNNobqM5TLFwLjlPm7/jmKjrg34MWnPA9Nw37rguOAhAHPA0qi129E7YjORLOXK80VSkiRStXkF3iOunKkQ4CxJfS6zowCsFLUWEC6hzxODa3U5R2NqxsdmrKcLBHcJ2VmVHaj76LCfpmqRNayGE3BE+0eCH80hYttT8ChEArOtM7lP6z0FOYnfAQcQuo7ZEOU2dx9ZLEk0suiPqbfdly9Era+/0XZtxKCC6g3cE6wpHP6Jp9RQ+XTI+8u79x/obUqNYg9sbWmUQZ8mddHSscMnWQG67Ja6ouq4O2zyyDUjsn8Fp4jw6SVAp8xxP76fDD1aoqCFt87HX6slsMxQgP68/FyPfCW4rRaEpSmbFkAvdxbw4vGX8ONpymulp6IrPlkLx2X4Td9tkh7bMnyabI0jupvrV5q3hfmyUISudnaA/F14GxDVhYWv4kax2Lli9QE5qZfn1eYx9EBJg1b4YjWxC4K1fNVh5fgoBeIxVLQExCY6hFvCmoqaFVh4lr3D4iG1Q7vkAybD6mRTC5dJsu55zXAN2eNwiQfvb6lKXRYcsUwFhAEWIqZDzeG8+Q4skLlhD9AZzDzhLfCSIsMIcFDiaTfhu7suY3XovvI9lY9TG7vKw5Sl6TgpO0JE2QECy/Q==,iv:aSmctMAlm4waUPVTt3mWBMFmL83Xlm3XHpsw4iPkIxM=,tag:E7bxM3vn968u4hj8VbzlsA==,type:str]
+    facebook.yaml: ENC[AES256_GCM,data:6gCGIy7KLXTOIav/rC+TSrhpfkEgGS+zLzJmOuLiRkog42QbL1B/nMkCdYV/BC3WcxXNkZrhLX3ipJz6xXoOZrQLPwASKmDUzGhsbzseQO23CEp/dK1RJppjyGjKjXikex4CaWKxr1uQDLjGYkE8TxcVCclfTthLkuLTlxVR2LcftYeFgmjMI1QzmGRFqIvE+LAHcvdVVzSDhc+9hR1xUj+mPcIz1vAzwUvL/tTpp5q1IIZpGaxPGrvyMXLRWbq5k5Ub719b5jrTpBe0IRzNQvvom7vjNBsFfmJwI0ONEvl7EnE5A5Sl6ZNTSABbyMjFfTaCIAYG7vba43AS5nfFp1OW2VfLjHeWgEg75jGTP+CRpeHvhGN5mIC4mg36NohE/kCJruUz4eS7BKCTpyW2RwAnXUSpultQE+UDqF62fNgFo0LytrWxgMd8eb8NxWHgmjoSZonRaM5Jd7TdcFAUlXn4puE9zWD9bfxWyGdh/D4Xg7pXIXrcsvFgnKkTt1BLR66NUs2BE4JIt8dY9Zul2uCHtbIJ44+B/D4ZpEyKopQYK7d7mPzWAaZ5ej8o+ilq79Npah/RCZTid9HAOdlJs9AE5SCXj+wPOtD/2JIDPgWr+BhatTR1mS6qZf/JYDjexMQCC5GX2cYCBaLblS2zTrSt6o+hbd+QPXiXY3j/yndKWabHko/XlnhvtOzx5GS2WnesdQRHtO68u5is7ndDqGVhQCyU9W687C9F6X8WOZ7lF7yjj6bykUfQaF0s42PqY0pvkBD1ix1D6GrY6oETz7PgElY+WHlmNnbxfsf5G1MtjaRC01IIM++zYTIVtp39p/ltUyIlf6UieASkCG+oPUl1dhSyunvRY6SvpaE7uNB3X0Nal6TCyuf5Yx05/Zoi,iv:UUdK97LAaw4lCCXnr72fJalz/x9EgfW0sdqLqNRDJws=,tag:P7cZo76abralkV6ZdwoSTw==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ufcw42mtfu65grs30zqwu65xl7wczkllu3r4gjpk5yr7tr02q5kqq0pnvg
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBvcVJOSU5zdGkzdFBwM2Nk
+            YWgrMTFMS0tSU0ZBaUlXT2JqTlovdWdyaFE4CnhaSjZlTHZJOFFYdzZjdnJnZmhW
+            NWZlUEtjTFdQUnh5dThuS3p6SWRvenMKLS0tIFVGKytSL090QlVERm1HdlNzYU9y
+            bFFGaTJmM2loK3VzWUlodVZMRnZMYWcKHGa15m/mJGFTNFa6Bsd4mRF+xrmprfXh
+            TKWW++H0DYHcmxr8YCjI/L8t8u8OcKtC6d9a6IMhIYYc53eMCXW88g==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2022-07-22T18:55:41Z"
+    mac: ENC[AES256_GCM,data:t1Rt/F4UB7BnEvXYQotmM8P9VX8KB5XmB+lu+WwcOdS5i8aPEYdruHEZK+B7wEzG+AfwpEUzOndNFNJeMv4JnGEb8CGBSO08UPr5E9D3JRChB9hiyDqsBpc73RHU1toCbtCyN0AOFch9b/eq47Iad0dUeoBKo4P2e7C8mRC2DXw=,iv:aalVQUZpTIVAgHDD2eVurJixHhx10h+wyP+AToWC300=,tag:Xa3V396JMm3kVkEkOxMIwA==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.7.3

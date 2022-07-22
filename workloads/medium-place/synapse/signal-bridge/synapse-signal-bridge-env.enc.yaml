@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: synapse-signal-bridge-env
+    namespace: medium-place
+data:
+    SIGNALD_DATABASE: ENC[AES256_GCM,data:923LaCXNcwSIwIFixjDjyBA9wnEBlLljmWt5RKXYwlxRogVVi+Gvat76yD0zQ+GYW7pECnXUdy3KlsrPGMzYRd1waieFPZXK0fD48APAEAwKGb1GAw9N7R/toZIwbclpYbeUZx/eYRj8nrcGayINoXiEgGMNngMcgS+iK4mksILNp+C7fggSMnnHG5OKwUhEk8bxmcMzWlBeXX2MUryarhAlLMa8BXggvpcUMhC36zpV3afLTHjcWNVA2nTuZa6LKbNCukQoJWzPwshKZKih+oUUnh6XMoMh,iv:Idzz8Tz9mXbdY8Xo2aLn0DWCboRKIFaubfw1DvgDevM=,tag:UKZDgRdue6tuLE9KKJzhtA==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ufcw42mtfu65grs30zqwu65xl7wczkllu3r4gjpk5yr7tr02q5kqq0pnvg
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBFWGtCdm5IazFqeGhDem1h
+            SnB2YVRodm43YXM1K3ZyNFpSNXpLQzlDeFZRCmMvNitSdHZvNWlQelh0Skoyei9W
+            Y2MvblJlUUlvenRqTGlQWXIyTHJCYTQKLS0tIG5KOWZuL1RSd3UwTjBHbHVhVFFw
+            citvbWp0VUI0QTc1Skk1bktOL2JabE0Kb0EcAUfbojVnfteNqwsCNHjC+osbqWFH
+            TilClEezW4AUzulHQWDZ1lMW428AfWHhNlm2lWW141+91r5HG6foPQ==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2022-07-22T18:55:41Z"
+    mac: ENC[AES256_GCM,data:Tco/1bTkj4zdaoVgmkEWsZ35Ob8pTilapK6sAjrEgM4C1bKdMvBbUC9bCqnKdCJOxmIPb3eWNP9zgZWjpAj/dIKPqrAdT1OgeKVxXF8Y4uqJd+se/FkUcinwZRCmGQ4ZNmCns2UwZBigfmhZceTS95WfdXzgUVgJbnNtlGL7K08=,iv:u8oF4X8ZDZ3C5nyI6FBCWybEsS9hi+grJSXgquWj560=,tag:XwYAHTviI7gH620ggRAbLg==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.7.3
