@@ -1,0 +1,16 @@
+apiVersion: velero.io/v1
+kind: BackupStorageLocation
+
+metadata:
+  name: aws
+  namespace: velero
+
+spec:
+  default: true
+  provider: aws
+  config:
+    s3Url: https://s3.eu-central-2.wasabisys.com
+    region: eu-central-2
+    s3ForcePathStyle: "true"
+  objectStorage:
+    bucket: nutria-backups
