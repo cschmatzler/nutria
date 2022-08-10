@@ -61,7 +61,7 @@ spec:
                 fieldRef:
                   fieldPath: metadata.namespace
             - name: AWS_SHARED_CREDENTIALS_FILE
-              value: /credentials/cloud-credentials
+              value: /credentials/cloud
             - name: VELERO_SCRATCH_DIR
               value: /scratch
 
