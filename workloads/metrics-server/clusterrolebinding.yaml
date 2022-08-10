@@ -12,9 +12,9 @@ roleRef:
   name: system:auth-delegator
 
 subjects:
-- kind: ServiceAccount
-  name: metrics-server
-  namespace: kube-system
+  - kind: ServiceAccount
+    name: metrics-server
+    namespace: kube-system
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
@@ -30,6 +30,6 @@ roleRef:
   name: system:metrics-server
 
 subjects:
-- kind: ServiceAccount
-  name: metrics-server
-  namespace: kube-system
+  - kind: ServiceAccount
+    name: metrics-server
+    namespace: kube-system

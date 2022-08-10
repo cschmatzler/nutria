@@ -2,7 +2,7 @@ set dotenv-load
 
 fmt:
   terraform fmt -recursive
-  prettier -w **/*.yaml
+  prettier -w */**/*.yaml
 
 docs:
   mdbook build docs

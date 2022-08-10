@@ -11,5 +11,5 @@ variable "ssh_key_id" {
 
 variable "turn_secret" {
   description = "TURN secret"
-  type = string
+  type        = string
 }

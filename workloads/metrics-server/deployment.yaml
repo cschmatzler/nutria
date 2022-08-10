@@ -31,41 +31,41 @@ spec:
       priorityClassName: system-cluster-critical
 
       volumes:
-        - name: tmp 
+        - name: tmp
           emptyDir: {}
 
       containers:
-      - name: metrics-server
+        - name: metrics-server
 
-        image: k8s.gcr.io/metrics-server/metrics-server:v0.6.1
-        args:
-        - --cert-dir=/tmp
-        - --secure-port=4443
-        - --kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname
-        - --kubelet-use-node-status-port
-        - --metric-resolution=15s
+          image: k8s.gcr.io/metrics-server/metrics-server:v0.6.1
+          args:
+            - --cert-dir=/tmp
+            - --secure-port=4443
+            - --kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname
+            - --kubelet-use-node-status-port
+            - --metric-resolution=15s
 
-        volumeMounts:
-          - name: tmp 
-            mountPath: /tmp
+          volumeMounts:
+            - name: tmp
+              mountPath: /tmp
 
-        ports:
-          - name: https
-            protocol: TCP
-            containerPort: 4443
+          ports:
+            - name: https
+              protocol: TCP
+              containerPort: 4443
 
-        livenessProbe:
-          periodSeconds: 10
-          failureThreshold: 3
-          httpGet:
-            port: https
-            scheme: HTTPS
-            path: /livez
-        readinessProbe:
-          initialDelaySeconds: 20
-          periodSeconds: 10
-          failureThreshold: 3
-          httpGet:
-            port: https
-            scheme: HTTPS
-            path: /readyz
+          livenessProbe:
+            periodSeconds: 10
+            failureThreshold: 3
+            httpGet:
+              port: https
+              scheme: HTTPS
+              path: /livez
+          readinessProbe:
+            initialDelaySeconds: 20
+            periodSeconds: 10
+            failureThreshold: 3
+            httpGet:
+              port: https
+              scheme: HTTPS
+              path: /readyz

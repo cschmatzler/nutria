@@ -13,6 +13,6 @@ roleRef:
   name: extension-apiserver-authentication-reader
 
 subjects:
-- kind: ServiceAccount
-  name: metrics-server
-  namespace: kube-system
+  - kind: ServiceAccount
+    name: metrics-server
+    namespace: kube-system

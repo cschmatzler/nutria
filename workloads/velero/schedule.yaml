@@ -6,10 +6,10 @@ metadata:
   namespace: velero
 
 spec:
-  schedule: '@every 24h'
+  schedule: "@every 24h"
   useOwnerReferencesInBackup: false
 
   template:
     includedNamespaces:
-    - '*'
+      - "*"
     ttl: 0s
