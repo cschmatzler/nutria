@@ -26,12 +26,12 @@ output "cluster_nodes" {
   value = module.cluster
 }
 
-module "turn" {
-  source = "./turn"
-
-  hcloud_token = var.hcloud_token
-
-  ssh_key_id = module.network.ssh_key_id
-
-  turn_secret = var.turn_secret
-}
+# module "turn" {
+#   source = "./turn"
+#
+#   hcloud_token = var.hcloud_token
+#
+#   ssh_key_id = module.network.ssh_key_id
+#
+#   turn_secret = var.turn_secret
+# }
