@@ -27,6 +27,8 @@ spec:
         app.kubernetes.io/version: 0.17.0
         stolon-cluster: nutria
         component: stolon-keeper
+      annotations:
+        backup.velero.io/backup-volumes: data
 
     spec:
       serviceAccountName: stolon-keeper
