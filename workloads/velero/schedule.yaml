@@ -1,0 +1,15 @@
+apiVersion: velero.io/v1
+kind: Schedule
+
+metadata:
+  name: daily
+  namespace: velero
+
+spec:
+  schedule: '@every 24h'
+  useOwnerReferencesInBackup: false
+
+  template:
+    includedNamespaces:
+    - '*'
+    ttl: 0s
