@@ -21,6 +21,7 @@ spec:
   template:
     metadata:
       annotations:
+        backup.velero.io/backup-volumes: data
         diun.enable: "true"
         diun.regopt: docker.io
         diun.watch_repo: "true"
