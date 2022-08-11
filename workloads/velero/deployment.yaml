@@ -4,17 +4,23 @@ kind: Deployment
 metadata:
   name: velero
   namespace: velero
+  labels:
+    app.kubernetes.io/name: velero
+    app.kubernetes.io/part-of: velero
+    app.kubernetes.io/version: 1.9.0
 
 spec:
   selector:
     matchLabels:
-      deploy: velero
+      app.kubernetes.io/name: velero
+      app.kubernetes.io/part-of: velero
 
   template:
     metadata:
       labels:
-        component: velero
-        deploy: velero
+        app.kubernetes.io/name: velero
+        app.kubernetes.io/part-of: velero
+        app.kubernetes.io/version: 1.9.0
 
     spec:
       serviceAccountName: velero

@@ -4,17 +4,23 @@ kind: DaemonSet
 metadata:
   name: restic
   namespace: velero
+  labels:
+    app.kubernetes.io/name: restic
+    app.kubernetes.io/part-of: velero
+    app.kubernetes.io/version: 1.9.0
 
 spec:
   selector:
     matchLabels:
-      name: restic
+      app.kubernetes.io/name: restic
+      app.kubernetes.io/part-of: velero
 
   template:
     metadata:
       labels:
-        component: velero
-        name: restic
+        app.kubernetes.io/name: restic
+        app.kubernetes.io/part-of: velero
+        app.kubernetes.io/version: 1.9.0
 
     spec:
       serviceAccountName: velero
