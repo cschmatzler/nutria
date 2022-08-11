@@ -4,6 +4,8 @@ kind: Schedule
 metadata:
   name: daily
   namespace: velero
+  labels:
+    app.kubernetes.io/part-of: velero
 
 spec:
   schedule: "0 22 * * *"

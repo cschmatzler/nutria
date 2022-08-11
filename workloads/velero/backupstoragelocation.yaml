@@ -4,6 +4,8 @@ kind: BackupStorageLocation
 metadata:
   name: aws
   namespace: velero
+  labels:
+    app.kubernetes.io/part-of: velero
 
 spec:
   default: true
