@@ -7,7 +7,7 @@ metadata:
   labels:
     app.kubernetes.io/name: cert-manager-webhook
     app.kubernetes.io/part-of: cert-manager
-    app.kubernetes.io/version: 1.8.2
+    app.kubernetes.io/version: 1.9.1
 
 spec:
   replicas: 1
@@ -29,7 +29,7 @@ spec:
       labels:
         app.kubernetes.io/name: cert-manager-webhook
         app.kubernetes.io/part-of: cert-manager
-        app.kubernetes.io/version: 1.8.2
+        app.kubernetes.io/version: 1.9.1
 
     spec:
       serviceAccountName: cert-manager-webhook
@@ -38,7 +38,7 @@ spec:
 
       containers:
         - name: webhook
-          image: bitnami/cert-manager-webhook:1.8.2-debian-11-r9
+          image: bitnami/cert-manager-webhook:1.9.1-debian-11-r6
 
           args:
             - --v=2

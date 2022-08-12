@@ -7,7 +7,7 @@ metadata:
   labels:
     app.kubernetes.io/name: cert-manager
     app.kubernetes.io/part-of: cert-manager
-    app.kubernetes.io/version: 1.8.2
+    app.kubernetes.io/version: 1.9.1
 
 spec:
   replicas: 1
@@ -29,7 +29,7 @@ spec:
       labels:
         app.kubernetes.io/name: cert-manager
         app.kubernetes.io/part-of: cert-manager
-        app.kubernetes.io/version: 1.8.2
+        app.kubernetes.io/version: 1.9.1
 
     spec:
       serviceAccountName: cert-manager
@@ -38,13 +38,13 @@ spec:
 
       containers:
         - name: cert-manager
-          image: bitnami/cert-manager:1.8.2-debian-11-r8
+          image: bitnami/cert-manager:1.9.1-debian-11-r7
 
           args:
             - --v=2
             - --leader-elect=false
             - --cluster-resource-namespace=$(POD_NAMESPACE)
-            - --acme-http01-solver-image=bitnami/acmesolver:1.8.2-debian-11-r9
+            - --acme-http01-solver-image=bitnami/acmesolver:1.9.1-debian-11-r9
 
           env:
             - name: POD_NAMESPACE

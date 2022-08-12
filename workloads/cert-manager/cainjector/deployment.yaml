@@ -7,7 +7,7 @@ metadata:
   labels:
     app.kubernetes.io/name: cainjector
     app.kubernetes.io/part-of: cert-manager
-    app.kubernetes.io/version: 1.8.2
+    app.kubernetes.io/version: 1.9.1
 
 spec:
   replicas: 1
@@ -29,7 +29,7 @@ spec:
       labels:
         app.kubernetes.io/name: cainjector
         app.kubernetes.io/part-of: cert-manager
-        app.kubernetes.io/version: 1.8.2
+        app.kubernetes.io/version: 1.9.1
 
     spec:
       serviceAccountName: cainjector
@@ -39,7 +39,7 @@ spec:
       containers:
         - name: cainjector
 
-          image: bitnami/cainjector:1.8.2-debian-11-r9
+          image: bitnami/cainjector:1.9.1-debian-11-r7
           args:
             - --v=2
             - --leader-election-namespace=cert-manager
