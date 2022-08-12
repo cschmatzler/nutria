@@ -36,7 +36,7 @@ spec:
 
       containers:
         - name: redis
-          image: bitnami/redis:7.0.4-debian-11-r3
+          image: bitnami/redis:7.0.4-debian-11-r12
 
           envFrom:
             - secretRef:

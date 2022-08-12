@@ -7,7 +7,7 @@ metadata:
   labels:
     app.kubernetes.io/name: searxng
     app.kubernetes.io/part-of: searxng
-    app.kubernetes.io/version: 2022.07.18
+    app.kubernetes.io/version: 2022.08.10
 
 spec:
   replicas: 1
@@ -29,7 +29,7 @@ spec:
       labels:
         app.kubernetes.io/name: searxng
         app.kubernetes.io/part-of: searxng
-        app.kubernetes.io/version: 2022.07.18
+        app.kubernetes.io/version: 2022.08.10
 
     spec:
       terminationGracePeriodSeconds: 60
@@ -41,7 +41,7 @@ spec:
 
       containers:
         - name: searxng
-          image: searxng/searxng:2022.07.18-4d977269
+          image: searxng/searxng:2022.08.10-2bfb269f
 
           volumeMounts:
             - name: searxng-config
