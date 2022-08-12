@@ -9,7 +9,7 @@ docs:
 
 init:
   packer init image
-  terraform -chdir=nodes init
+  terraform -chdir=infrastructure init
   if [ ! -f talos/controlplane.yaml ]; then talosctl gen config nutria https://cluster.nutria.cloud:6443 -o=talos/ --talos-version=v1.1.0 --with-kubespan --with-examples=false --with-docs=false; fi
   if [ ! -f secrets.agekey ]; then age-keygen -o secrets.agekey; fi
   scripts/set-external-cloud-provider.sh
@@ -19,19 +19,19 @@ build talos-version:
   packer build -var talos_version={{talos-version}} image 
 
 plan: 
-  terraform -chdir=nodes plan -out=nutria.tfplan
+  terraform -chdir=infrastructure plan -out=nutria.tfplan
 
 deploy: plan
-  terraform -chdir=nodes apply nutria.tfplan
+  terraform -chdir=infrastructure apply nutria.tfplan
 
-upgrade talos-version nodes:
-  talosctl upgrade --nodes {{nodes}} --image ghcr.io/siderolabs/installer:v{{talos-version}}
+upgrade talos-version infrastructure:
+  talosctl upgrade --infrastructure {{infrastructure}} --image ghcr.io/siderolabs/installer:v{{talos-version}}
 
 upgrade-k8s k8s-version:
   talosctl upgrade-k8s --to {{k8s-version}}
 
 destroy:
-  terraform -chdir=nodes destroy
+  terraform -chdir=infrastructure destroy
 
 kubeconfig:
   talosctl kubeconfig kubeconfig
