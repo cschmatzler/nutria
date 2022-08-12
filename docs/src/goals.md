@@ -12,4 +12,4 @@ Another interest of mine is technical writing. Admittedly, I am not very profici
 
 ## Advertising
 
-If you'd like to work with me, email me at christoph@medium.place.
+If you'd like to work with me, email me at [christoph@medium.place](mailto:christoph@medium.place).
