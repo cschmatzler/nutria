@@ -58,7 +58,7 @@ spec:
       containers:
         - name: nginx
 
-          image: bitnami/nginx:1.23.1-debian-11-r0
+          image: bitnami/nginx:1.23.1-debian-11-r9
 
           volumeMounts:
             - name: nginx-config
