@@ -7,7 +7,7 @@ metadata:
   labels:
     app.kubernetes.io/name: elasticsearch
     app.kubernetes.io/part-of: mastodon
-    app.kubernetes.io/version: 8.3.2
+    app.kubernetes.io/version: 8.3.3
 
 spec:
   replicas: 1
@@ -29,7 +29,7 @@ spec:
       labels:
         app.kubernetes.io/name: elasticsearch
         app.kubernetes.io/part-of: mastodon
-        app.kubernetes.io/version: 8.3.2
+        app.kubernetes.io/version: 8.3.3
 
     spec:
       terminationGracePeriodSeconds: 60
@@ -39,7 +39,7 @@ spec:
 
       containers:
         - name: elasticsearch
-          image: bitnami/elasticsearch:8.3.2-debian-11-r3
+          image: bitnami/elasticsearch:8.3.3-debian-11-r6
 
           volumeMounts:
             - name: data
