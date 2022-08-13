@@ -7,3 +7,4 @@ The repository is split into multiple parts:
 - `flux/` - Flux components and Kustomizations to deploy other workloads.
 - `workloads/` - Cluster workloads
 - `scripts/` - Supporting scripts
+- `docs/` - this book!
