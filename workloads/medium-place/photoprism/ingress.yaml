@@ -1,0 +1,31 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+
+metadata:
+  name: photoprism
+  namespace: medium-place
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-body-size: 100m
+    cert-manager.io/cluster-issuer: letsencrypt
+  labels:
+    app.kubernetes.io/part-of: photoprism
+
+spec:
+  ingressClassName: nginx
+
+  tls:
+    - hosts:
+        - gallery.medium.place
+      secretName: gallery.medium.place-tls
+
+  rules:
+    - host: gallery.medium.place
+      http:
+        paths:
+          - pathType: Prefix
+            path: /
+            backend:
+              service:
+                name: photoprism
+                port:
+                  name: http

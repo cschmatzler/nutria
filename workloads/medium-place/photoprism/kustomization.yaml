@@ -1,8 +1,8 @@
 resources:
   - photoprism-env.enc.yaml
   - statefulset.yaml
-    #- service.yaml
-    #- ingress.yaml
+  - service.yaml
+  - ingress.yaml
 
 configMapGenerator:
   - name: photoprism-env
