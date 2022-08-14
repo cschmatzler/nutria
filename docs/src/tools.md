@@ -7,7 +7,7 @@ In addition to outlining the decisions made, each tool also requires unique setu
 
 If you're on macOS, this repository comes with a `Brewfile`. To install all the required tools to follow the book, simply run
 
-```
+```sh
 brew bundle install --file=Brewfile
 ```
 
