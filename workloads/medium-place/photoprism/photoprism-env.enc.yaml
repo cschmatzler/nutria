@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: tandoor-env
+    namespace: medium-place
+data:
+    PHOTOPRISM_ADMIN_PASSWORD: ENC[AES256_GCM,data:z1LEbVgQhDyv/VF2hX0QxvEXl5LVhIoQ/mUoKibZPPLbK/mY6V+8ysRCUu1a8XYy,iv:y0V6SeLGJ9OifAjh6jy6EfP/+Qxe6m4ejkkR04RG3RM=,tag:GL6MzOEADwTqpgKHRYwZwQ==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ufcw42mtfu65grs30zqwu65xl7wczkllu3r4gjpk5yr7tr02q5kqq0pnvg
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBaRjltR2I5Z1BDY3NYZXRR
+            RUppcTZpa21DK2UyOFN6MU9aTGJqUEgyL3dRCk82Vnl5RjU4aE1ydHFnc0NPcm51
+            WGNNUHJZODVkbjZFR2tyaFBYZ1cwN00KLS0tIC9ocUxtR25keG5uQ1ZTU1k4UUg1
+            VU4vVllnblE2YmlMdGt5OHQrS1V1YTQKzfoquzndVTcAvL9Vg6+sxMwGiAK/P19O
+            KCqfgSpMKG6t6NBKZk5zibwh4UUHpb8V6gJZkP5yawVzWEb6TvaEQQ==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2022-08-14T12:34:46Z"
+    mac: ENC[AES256_GCM,data:4BMwzgXXi1Ta7T0ZBqlrwPqw3CG89G6MGTBBBXTCRKo0R/RD4gyuHpeYkjhINEXdsi9CN5ICdnnwgMHGRTA5XnHmQyIfMyNdUGGwlHOq120DOTnz/JYsgCuTwS8ypyj8sFYmteDydGdki40twPemvNJO8kNFexd9hHpLKywA98I=,iv:bYyxRNcMrJ+JaHeqKSSiVRjWgVa4JrQFe5I3MXzWmsA=,tag:y8XpUTTqsg0frwdskSkA7Q==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.7.3

@@ -1,0 +1,10 @@
+resources:
+  - photoprism-env.enc.yaml
+  - statefulset.yaml
+    #- service.yaml
+    #- ingress.yaml
+
+configMapGenerator:
+  - name: photoprism-env
+    namespace: medium-place
+    env: configuration/photoprism.env

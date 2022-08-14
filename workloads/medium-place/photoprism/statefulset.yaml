@@ -1,0 +1,70 @@
+apiVersion: apps/v1
+kind: StatefulSet
+
+metadata:
+  name: photoprism
+  namespace: medium-place
+  labels:
+    app.kubernetes.io/name: photoprism
+    app.kubernetes.io/part-of: photoprism
+    app.kubernetes.io/version: 220730
+
+spec:
+  replicas: 1
+  revisionHistoryLimit: 5
+
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: photoprism
+      app.kubernetes.io/part-of: photoprism
+
+  template:
+    metadata:
+      annotations:
+        backup.velero.io/backup-volumes: data
+        diun.enable: "true"
+        diun.regopt: docker.io
+        diun.watch_repo: "true"
+        diun.include_tags: "^\\d+\\-bullseye"
+        diun.sort_tags: "semver"
+      labels:
+        app.kubernetes.io/name: photoprism
+        app.kubernetes.io/part-of: photoprism
+        app.kubernetes.io/version: 220730
+
+    spec:
+      containers:
+        - name: photoprism
+          image: photoprism/photoprism:220730-bullseye
+
+          volumeMounts:
+            - name: data
+              mountPath: /photoprism/originals
+              subPath: photoprism/originals
+            - name: data
+              mountPath: /photoprism/storage
+              subPath: photoprism/storage
+
+          envFrom:
+            - configMapRef:
+                name: photoprism-env
+            - secretRef:
+                name: photoprism-env
+
+          ports:
+            - name: http
+              protocol: TCP
+              containerPort: 2342
+
+  volumeClaimTemplates:
+    - metadata:
+        name: data
+        namespace: medium-place
+
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        volumeMode: Filesystem
+        resources:
+          requests:
+            storage: 1Gi
