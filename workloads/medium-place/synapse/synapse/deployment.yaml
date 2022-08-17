@@ -7,7 +7,7 @@ metadata:
   labels:
     app.kubernetes.io/name: synapse
     app.kubernetes.io/part-of: synapse
-    app.kubernetes.io/version: 1.64.0
+    app.kubernetes.io/version: 1.65.0
 
 spec:
   replicas: 1
@@ -24,7 +24,7 @@ spec:
       labels:
         app.kubernetes.io/name: synapse
         app.kubernetes.io/part-of: synapse
-        app.kubernetes.io/version: 1.64.0
+        app.kubernetes.io/version: 1.65.0
 
     spec:
       volumes:
@@ -37,7 +37,9 @@ spec:
 
       containers:
         - name: synapse
-          image: cschmatzler/synapse:1.64.0
+          image: forge.medium.place/christoph/synapse:1.65.0
+          imagePullSecrets:
+            - name: forge
 
           volumeMounts:
             - name: synapse-config
