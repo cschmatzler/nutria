@@ -8,7 +8,7 @@ docs:
   mdbook build docs
 
 init:
-  packer init image
+  packer init os
   terraform -chdir=infrastructure init
   if [ ! -f talos/controlplane.yaml ]; then talosctl gen config nutria https://cluster.nutria.cloud:6443 -o=talos/ --talos-version=v1.1.0 --with-kubespan --with-examples=false --with-docs=false; fi
   if [ ! -f secrets.agekey ]; then age-keygen -o secrets.agekey; fi
@@ -16,7 +16,7 @@ init:
   scripts/set-server-tls-bootstrap.sh
 
 build talos-version:
-  packer build -var talos_version={{talos-version}} image 
+  packer build -var talos_version={{talos-version}} os 
 
 plan: 
   terraform -chdir=infrastructure plan -out=nutria.tfplan
