@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Secret
+type: kubernetes.io/dockerconfigjson
+metadata:
+    name: forge
+    namespace: medium-place
+data:
+    .dockerconfigjson: ENC[AES256_GCM,data:sNDVFdnIgEY94dDrCr2oBTxC7NwGE3fiFLn43fEn0lG33hrl7/vm98XPyV5RMpsgAIP9Z8rivRz3KgOCAGccIwbatbz6yqGXrRw7IzCiYDI6BicMv7+EXuM9tJIlbpSpGZOgmNplkRpnzG+yrrKROnVkWh1A9+Kji/o3l2nEP4pRumd6FOEXbL3BT28EGsfM6ReiD7U3MWni2oipNT6FDXOG3a4+aflT1aDODILMEqKiITqqPiog/y5rHzzLEVyEwzkll5+1Lk2xuMDqJANuJNoV8e2UogMMXESvVv3unm2CI70JwLJZevRxfEvOZtp64FH+YRmlZ7n/IzzDiQpSnnUJAViOYmDnrIjYqAE+m9htVS3PFOQFMA==,iv:rESYnDc+1hcyULsbTOH8eE3EZyXNZfEqXBSiqxUOtr0=,tag:wWSawUOhMx1Uj5qFxTZoLQ==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ufcw42mtfu65grs30zqwu65xl7wczkllu3r4gjpk5yr7tr02q5kqq0pnvg
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBNZ2NFRS8xSWx4MFBhMFph
+            a3FabXJLWi9Ic0RqcUQ1UlZ0T0Y4L3FneTI0CjUySlIyTTltc3Fxc1A1R29tYWxa
+            SkVXYmFNWG56eTRSNy9HRnY3NzBsd0EKLS0tIDlKdHZrZDE5RXhuNDZNOTlqVTN2
+            WHZDQ2FtUGU4ajZMNWd1R1hkdEdOcVEKLFNw848jofzssWak1PmZT5wE+0y/z0mK
+            ZUR1wYFtU01m8k5xsIJHJ+nNA7yP0O0aIYrXbFOdfm4twSJLlkcwUQ==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2022-08-17T19:47:47Z"
+    mac: ENC[AES256_GCM,data:Ehj8Z2kB5KU2DSc/Ytia25L1WCI3Rw64hfS9U6GUr6xyTZfR4slFBYhOGKTKG/7CoCC0ZFK2iDpX5RQrdPSTvopiZL37JWbUmg6MKi3g+8mmYfy+JerPMEivIS6G6phoHjY05rGNBGzqky63ShN4sGiQyVSFXs6+yoNO6RttmR8=,iv:V4n0iie2Z/1t+5JD2MaaLLnkWJEJlRqrTFOkj7pJVFU=,tag:icibOrOQdifk6O633RHNCA==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.7.3
