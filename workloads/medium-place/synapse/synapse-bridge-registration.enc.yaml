@@ -4,7 +4,7 @@ metadata:
     name: synapse-bridge-registration
     namespace: medium-place
 data:
-    signal.yaml: ENC[AES256_GCM,data:emLymwTcJhKmI6G8xR/jTt3x4f5xI/WTQABl7vIJ7ko7fVHas9+dex8UBwDJxRjReaHxeNS5YvedIeEetmnQr6wd/RP4391lrk/+SG3RUozJe5zP7QSH2ZNf8xFQTs9m2AUmPvhNwph9iLncLCRSh9DH5SIOePeRrq0liQwPhOkM5tmhhONOW3D2AyPIHs9JgA5OwvHo7doNn5dcjRo2T55jToTG+lQw8F7XLS/a6TSw3niv0glZuTsomil0/Vemgl1YexiTG1Qaxh4MUgq7JSbn3iSMPQC4T8ZrmrvLpoDBb9uYaWURBRVAKIxUbrgxRSGKrYfhBxW3vsT92gzkznZMUVC/76vfwbrnOSZr7GIbL9m38YKbgscVHaLOKYxgcDjvLPErWKn/IsXYRU8LqoDfV7llRm2nosSJnZMMsIstEMWzpGSDC2nsN4Jt9IIaDdlwFWBOHYR67S/9n4rm3QkVarzWL2JJZv1EotZS1J4ds3cyN+v8r7oq9nrNrsgwBmeNAffh+w3aAN7zmbEixTny+owZNcbyMUwVkBNU4UGOvLliLO+fRILaIFnQ0yeTchPkQHWl+lU+wGtvMJZC5TyryQR6qmhWAK2JwqDDNzvBFkaOXiRM/jkhUhqQRjG50Vqx/EwiIXwVd2ivcgZRDCVPePHTLyp9Odea6j01FbX9o/Bk3PbEYUhm6jsvHGc7lIqS/8zFPJLKF0zzP1SpAbqDZqFguGuspLmYmQpzoCVHSqxSitWTlsc4WjCpoRne9weKJGOEH/dgv/UVgiKfSDqfRrrs92s2T/uvyJOF38xqRpUjhSm2ugk1v4G+/2lENDk7GSbdvuPBeNgOX+96XQLq0vnlx6XZ6uaWUKf+djBUQqVPU4nXZw==,iv:jfC8cIZxhC5lz298fY/wrr0aM5xRq009Tlm/5wMtWO8=,tag:c1rpffu5rq6uzaEWbl0J+Q==,type:str]
+    signal.yaml: ENC[AES256_GCM,data:bBWVYICNEPWCC8ldv/aEJeuQLRMkkQv02EE1oQo3ftCF2VBr1Q8savQMfTGm+XKNazM3SfKSzdL7zGyy9hifR6tUT0uFnf1y1yLMcfUwXFDhhcYGnqu7Z04OsMRXaRj5DjKCirVNiXkVRXx4xCm5H9idB84slzo9+BsCQotl6NkDg49LRSCH/1Rchz2QiFjrMuhwymf4V3eoDhK1uiPO6Cy3g+p8JanXf4SHGAqULHPvfILGctFflgUcNm/CwW63VvYAgAENkRF8aeLPBtIDmGMyUv5gAYlXfcKbX0LkbDn/HxWV+5nkulBl0btLyFq50kGQIy1Vkn5yLLl1AS1Y5U1yxnC+P15RCwqnZesc6yUbL6MEe46/whyIqETpTBIIDTV339ioyDcx8mmw+sA0x+R1xEE6bnbU9rttiOCZbHfV3uffpDcPbNxZYv9nNlZLP7k+znbRFKS6JLnKBjMuXbgeTtkLbB65sfGS5qD5VW2HpV6oo3/jzgQQ4p+0eH2Vn7Euon16MPTo/1NTBHLGNtv0a6yFbc/wZ1dVpt1JCw39NiYTmXGnu28dvDP7uMcz+MlMwoAKz4nA3IB2fGt7+53v7DwXw4pWSxiCJSdUU0qKI+ISTyulf8XVpR1Mg8IG+rUxksrDfobHd54Oq1dIRnE3Vm3PTc4ndYKAh9edCDM5uTjcH0rp4TSdMcHAlYA8r2Dr9z+HXkI1wgpAEo692CwTaxERb172U3q9uv5Zhu4DnMfLmjuFCnRoAAf3PNFOJOEJbNMz/Y/D3s/mdjm4dSeSMN/bjzYdPn5oDuQiqe70fuOfBnrr05GmluCZQlY79NhjgQQoPpE6OIBg9McmaRtO/lNj7YIYCk7rcz7lL1jFIDQWxOi13Q==,iv:r4D/xbliuhYxb2htMzqftYxp+nBXtR23EwysfygNPpo=,tag:gSCA1/UM3hvPJ9kQEZ05JQ==,type:str]
 sops:
     kms: []
     gcp_kms: []
@@ -14,14 +14,14 @@ sops:
         - recipient: age1ufcw42mtfu65grs30zqwu65xl7wczkllu3r4gjpk5yr7tr02q5kqq0pnvg
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSB4ZExMNWdFeW5qL1VIaGZT
-            dUJSbnJ4Yk5uY2VEQTIxU2NURU0wWDNUakNjCmtrNzRGV0xwcFZpQTN2alNiR0Ix
-            K1NWZzZydVUxSnBqNjBwZXhickt6QjgKLS0tIHFLVGZSb01CSll5YmtIRkFpNVJK
-            dTA2TWhWOUtobUlJanl3VkVlK3N4WVkKSJyelYAYq6supuWfaT8rYWI9xGbUx5f/
-            YHZf/tTVHYoQXkCtvaHhStiDs+L45EaaFeIw8GFcFAmqjPryckEyYQ==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBPQVcvL3pKQzNLZTVzdDhu
+            ZCtKZzhyRUdDaVVZTmc0VjhUM2hzdzJIYUNRCjh6U3UxeHgxcHUzaWVSTEpiYmVw
+            U3A5WDVidHNzVmhlMWd4c2M0VGluSFUKLS0tIHlJOGNRZnN3d2JPcUcrZlRVV0dR
+            UjczKzBlcm5SbFFpYVZSTVc0QXd6T3cKZuFg6LCtN2giWj+tP2khVC61NUi+q6eG
+            Y5Z0QecL87fV4ZSB7rfU3BBROFAj864aR9tpqzxAJKi24WN3DpFtDQ==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2022-08-07T17:35:31Z"
-    mac: ENC[AES256_GCM,data:4F8ghZsm8fdNXV2YnfEvTJqgy/XjhAi1Hk3Zwz6HwoOBTQGUgs2T3qmh1u1Ix6HBRgXCE8C24GPywTea04U3uvt+VKhBJ81qLbDfcVk8YMKoppbisS+AxNTYdsDS3MQ6nGcGMqDl0tjkk3NA7WYKIWswTJAg3i/+4nmxhNVrVIM=,iv:hbBokluXSASYX69EMiTWwKt1t67/vlTTDRo2Wm9+9xA=,tag:bgYZHKwh0D4jZVijEYXCSw==,type:str]
+    lastmodified: "2022-08-22T17:59:08Z"
+    mac: ENC[AES256_GCM,data:W5d+PhOiyd3HOovhgLdEvmGhGCZAHQVKaeJHZMPPFw1qLg+CXdm23p+ruQAvumDjE7vSyGE9DcYwh3Rc0CQrVzQZPL0IFxNztYqxMK0qXPKteD695bR08vS1EaMYiLobs6rfhXzabKC84eCGuxLtSUuk3SPHrSrjgeZtcDWJzdg=,iv:rm2hd6IEuPRt/znTFQEqVKH2mWvy9afi7Ztn17F5mOg=,tag:CFHpcURdePReXtc/fe5P+w==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData)$
     version: 3.7.3
