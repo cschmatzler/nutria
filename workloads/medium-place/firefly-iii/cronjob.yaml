@@ -1,0 +1,25 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: firefly-iii-cron
+  namespace: medium-place
+spec:
+  schedule: "*/1 * * * *"
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 1
+  failedJobsHistoryLimit: 1
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: firefly-iii-cron
+            image: alpine
+            args:
+            - /bin/sh
+            - -ec
+            - curl http://treasury.medium.place/api/v1/cron/$STATIC_CRON_TOKEN
+
+            envFrom:
+              - secretRef:
+                  name: firefly-iii-env
