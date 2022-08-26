@@ -23,7 +23,7 @@ spec:
             args:
             - /bin/sh
             - -ec
-            - wget -qO- http://treasury.medium.place/api/v1/cron/$STATIC_CRON_TOKEN
+            - wget -qO- https://treasury.medium.place/api/v1/cron/$STATIC_CRON_TOKEN
 
             envFrom:
               - secretRef:
