@@ -7,9 +7,11 @@ metadata:
 
 spec:
   schedule: "*/1 * * * *"
+
   concurrencyPolicy: Forbid
   successfulJobsHistoryLimit: 1
   failedJobsHistoryLimit: 1
+
   jobTemplate:
     spec:
       template:
@@ -17,14 +19,14 @@ spec:
           restartPolicy: OnFailure
 
           containers:
-          - name: firefly-iii-cron
+            - name: firefly-iii-cron
 
-            image: alpine
-            args:
-            - /bin/sh
-            - -ec
-            - wget -qO- https://treasury.medium.place/api/v1/cron/$STATIC_CRON_TOKEN
+              image: alpine
+              args:
+              - /bin/sh
+              - -ec
+              - wget -qO- https://treasury.medium.place/api/v1/cron/$STATIC_CRON_TOKEN
 
-            envFrom:
-              - secretRef:
-                  name: firefly-iii-env
+              envFrom:
+                - secretRef:
+                    name: firefly-iii-env
