@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: synapse-whatsapp-bridge 
+  namespace: medium-place
+  labels:
+    app.kubernetes.io/name: whatsapp-bridge
+    app.kubernetes.io/part-of: synapse
+    app.kubernetes.io/version: 0.6.1
+
+spec:
+  replicas: 1
+  revisionHistoryLimit: 5
+
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: whatsapp-bridge
+      app.kubernetes.io/part-of: synapse
+
+  template:
+    metadata:
+      annotations:
+      labels:
+        app.kubernetes.io/name: whatsapp-bridge
+        app.kubernetes.io/part-of: synapse
+        app.kubernetes.io/version: 0.6.1  
+
+    spec:
+      volumes:
+        - name: synapse-whatsapp-bridge-config
+          secret:
+            secretName: synapse-whatsapp-bridge-config
+        - name: synapse-bridge-registration
+          secret:
+            secretName: synapse-bridge-registration
+
+      containers:
+        - name: mautrix-whatsapp 
+          image: dock.mau.dev/mautrix/whatsapp:v0.6.1
+
+          volumeMounts:
+            - name: synapse-whatsapp-bridge-config
+              mountPath: /data/config.yaml
+              subPath: config.yaml
+              readOnly: false
+            - name: synapse-bridge-registration
+              mountPath: /data/registration.yaml
+              subPath: whatsapp.yaml
+              readOnly: false
+
+          ports:
+            - name: http
+              protocol: TCP
+              containerPort: 29318
