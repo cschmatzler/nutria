@@ -24,7 +24,7 @@ spec:
         diun.enable: "true"
         diun.regopt: docker.io
         diun.watch_repo: "true"
-        diun.include_tags: "^\\d+\\.\\d+\\.\\d+-debian-\\d+-r\\d+$"
+        diun.include_tags: "^\\d+\\.\\d+\\.\\d+"
         diun.sort_tags: "semver"
       labels:
         app.kubernetes.io/name: cert-manager
@@ -38,13 +38,14 @@ spec:
 
       containers:
         - name: cert-manager
-          image: bitnami/cert-manager:1.9.1-debian-11-r7
 
+          imagePullPolicy: Always
+          image: bitnami/cert-manager:1.9.1
           args:
             - --v=2
             - --leader-elect=false
             - --cluster-resource-namespace=$(POD_NAMESPACE)
-            - --acme-http01-solver-image=bitnami/acmesolver:1.9.1-debian-11-r9
+            - --acme-http01-solver-image=bitnami/acmesolver:1.9.1
 
           env:
             - name: POD_NAMESPACE

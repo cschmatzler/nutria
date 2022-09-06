@@ -24,7 +24,7 @@ spec:
         diun.enable: "true"
         diun.regopt: docker.io
         diun.watch_repo: "true"
-        diun.include_tags: "^\\d+\\.\\d+\\.\\d+-debian-\\d+-r\\d+$"
+        diun.include_tags: "^\\d+\\.\\d+\\.\\d+"
         diun.sort_tags: "semver"
       labels:
         app.kubernetes.io/name: cert-manager-webhook
@@ -38,8 +38,9 @@ spec:
 
       containers:
         - name: webhook
-          image: bitnami/cert-manager-webhook:1.9.1-debian-11-r6
 
+          imagePullPolicy: Always
+          image: bitnami/cert-manager-webhook:1.9.1
           args:
             - --v=2
             - --secure-port=10250

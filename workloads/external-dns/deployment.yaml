@@ -24,7 +24,7 @@ spec:
         diun.enable: "true"
         diun.regopt: docker.io
         diun.watch_repo: "true"
-        diun.include_tags: "^\\d+\\.\\d+\\.\\d+-debian-\\d+-r\\d+$"
+        diun.include_tags: "^\\d+\\.\\d+\\.\\d+"
         diun.sort_tags: "semver"
       labels:
         app.kubernetes.io/name: external-dns
@@ -39,7 +39,8 @@ spec:
       containers:
         - name: external-dns
 
-          image: bitnami/external-dns:0.12.2-debian-11-r6
+          imagePullPolicy: Always
+          image: bitnami/external-dns:0.12.2
           args:
             - --provider=ns1
             - --policy=upsert-only

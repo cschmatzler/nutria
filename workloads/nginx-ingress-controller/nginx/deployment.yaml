@@ -24,7 +24,7 @@ spec:
         diun.enable: "true"
         diun.regopt: docker.io
         diun.watch_repo: "true"
-        diun.include_tags: "^\\d+\\.\\d+\\.\\d+-debian-\\d+-r\\d+$"
+        diun.include_tags: "^\\d+\\.\\d+\\.\\d+"
         diun.sort_tags: "semver"
       labels:
         app.kubernetes.io/name: nginx
@@ -58,7 +58,8 @@ spec:
       containers:
         - name: nginx
 
-          image: bitnami/nginx:1.23.1-debian-11-r9
+          imagePullPolicy: Always
+          image: bitnami/nginx:1.23.1
 
           volumeMounts:
             - name: nginx-config

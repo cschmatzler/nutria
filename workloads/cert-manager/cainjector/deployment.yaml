@@ -24,7 +24,7 @@ spec:
         diun.enable: "true"
         diun.regopt: docker.io
         diun.watch_repo: "true"
-        diun.include_tags: "^\\d+\\.\\d+\\.\\d+-debian-\\d+-r\\d+$"
+        diun.include_tags: "^\\d+\\.\\d+\\.\\d+"
         diun.sort_tags: "semver"
       labels:
         app.kubernetes.io/name: cainjector
@@ -39,7 +39,8 @@ spec:
       containers:
         - name: cainjector
 
-          image: bitnami/cainjector:1.9.1-debian-11-r7
+          imagePullPolicy: Always
+          image: bitnami/cainjector:1.9.1
           args:
             - --v=2
             - --leader-election-namespace=cert-manager

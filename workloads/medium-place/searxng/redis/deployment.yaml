@@ -24,7 +24,7 @@ spec:
         diun.enable: "true"
         diun.regopt: docker.io
         diun.watch_repo: "true"
-        diun.include_tags: "^\\d+\\.\\d+\\.\\d+-debian-\\d+-r\\d+$"
+        diun.include_tags: "^\\d+\\.\\d+\\.\\d+"
         diun.sort_tags: "semver"
       labels:
         app.kubernetes.io/name: redis
@@ -36,7 +36,9 @@ spec:
 
       containers:
         - name: redis
-          image: bitnami/redis:7.0.4-debian-11-r12
+
+          imagePullPolicy: Always
+          image: bitnami/redis:7.0.4
 
           envFrom:
             - secretRef:
