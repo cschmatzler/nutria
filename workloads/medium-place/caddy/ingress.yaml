@@ -16,21 +16,10 @@ spec:
   tls:
     - hosts:
         - medium.place
-        - ingress.nutria.cloud
       secretName: medium.place-tls
 
   rules:
     - host: medium.place
-      http:
-        paths:
-          - pathType: Prefix
-            path: /
-            backend:
-              service:
-                name: caddy
-                port:
-                  name: http
-    - host: ingress.nutria.cloud
       http:
         paths:
           - pathType: Prefix
