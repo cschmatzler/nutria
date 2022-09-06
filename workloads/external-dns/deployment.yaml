@@ -41,7 +41,7 @@ spec:
 
           image: bitnami/external-dns:0.12.2-debian-11-r6
           args:
-            - --provider=cloudflare
+            - --provider=ns1
             - --policy=upsert-only
             - --registry=txt
             - --txt-owner-id=nutria
