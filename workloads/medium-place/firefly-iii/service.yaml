@@ -7,7 +7,7 @@ metadata:
   labels:
     app.kubernetes.io/name: firefly-iii
     app.kubernetes.io/part-of: firefly-iii
-    app.kubernetes.io/version: 5.7.10
+    app.kubernetes.io/version: 5.7.11
 
 spec:
   selector:
