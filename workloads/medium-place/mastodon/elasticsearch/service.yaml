@@ -7,7 +7,7 @@ metadata:
   labels:
     app.kubernetes.io/name: elasticsearch
     app.kubernetes.io/part-of: mastodon
-    app.kubernetes.io/version: 8.3.3
+    app.kubernetes.io/version: 8.4.1
 
 spec:
   selector:
