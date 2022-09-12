@@ -42,7 +42,7 @@ spec:
           imagePullPolicy: Always
           image: bitnami/external-dns:0.12.2
           args:
-            - --provider=ns1
+            - --provider=cloudflare
             - --policy=upsert-only
             - --registry=txt
             - --txt-owner-id=nutria
