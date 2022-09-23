@@ -6,7 +6,7 @@ metadata:
   labels:
     app.kubernetes.io/name: hcloud-cloud-controller-manager
     app.kubernetes.io/part-of: hcloud-cloud-controller-manager
-    app.kubernetes.io/version: 1.12.1
+    app.kubernetes.io/version: 1.13.0
 
 spec:
   replicas: 1
@@ -22,7 +22,7 @@ spec:
       labels:
         app.kubernetes.io/name: hcloud-cloud-controller-manager
         app.kubernetes.io/part-of: hcloud-cloud-controller-manager
-        app.kubernetes.io/version: 1.12.1
+        app.kubernetes.io/version: 1.13.0
 
     spec:
       tolerations:
@@ -30,9 +30,6 @@ spec:
           value: "true"
           effect: NoSchedule
         - key: CriticalAddonsOnly
-          operator: Exists
-        - key: node-role.kubernetes.io/master
-          effect: NoSchedule
           operator: Exists
         - key: node-role.kubernetes.io/control-plane
           effect: NoSchedule
@@ -48,12 +45,13 @@ spec:
       containers:
         - name: hcloud-cloud-controller-manager
 
-          image: hetznercloud/hcloud-cloud-controller-manager:v1.12.1
+          image: hetznercloud/hcloud-cloud-controller-manager:v1.13.0
           command:
             - /bin/hcloud-cloud-controller-manager
             - --cloud-provider=hcloud
             - --leader-elect=false
             - --allow-untagged-cloud
+            - --cluster-cidr=10.244.0.0/16
 
           env:
             - name: NODE_NAME
