@@ -27,6 +27,9 @@ deploy: plan
 upgrade talos-version nodes:
   talosctl upgrade --nodes {{nodes}} --image ghcr.io/siderolabs/installer:v{{talos-version}}
 
+approve-kubelet-csrs:
+  kubectl get csr -o custom-columns=":metadata.name" | xargs -L1 kubectl certificate approve
+
 upgrade-k8s k8s-version:
   talosctl upgrade-k8s --to {{k8s-version}}
 
@@ -39,7 +42,7 @@ kubeconfig:
 generate-secrets:
   scripts/generate-secrets.sh 
 
-ccm:
+deploy-ccm:
   gomplate -f secrets/hcloud.yaml.tpl | kubectl apply -f -
   kustomize build ccm | kubectl apply -f -
 
