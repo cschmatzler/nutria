@@ -3,3 +3,6 @@ kind: Namespace
 
 metadata:
   name: tailscale
+  labels:
+    pod-security.kubernetes.io/enforce: privileged
+
