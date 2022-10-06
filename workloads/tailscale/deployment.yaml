@@ -40,7 +40,7 @@ spec:
         - name: tailscale
 
           imagePullPolicy: Always
-          image: ghcr.io/tailscale/tailscale:1.30.2
+          image: ghcr.io/tailscale/tailscale:v1.30.2
 
           securityContext:
             capabilities:
