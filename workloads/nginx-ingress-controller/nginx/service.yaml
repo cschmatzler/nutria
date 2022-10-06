@@ -7,14 +7,12 @@ metadata:
   labels:
     app.kubernetes.io/name: nginx
     app.kubernetes.io/part-of: nginx-ingress-controller
-    app.kubernetes.io/version: 1.23.1
+    app.kubernetes.io/version: 1.23.0
 
 spec:
   selector:
     app.kubernetes.io/name: nginx
     app.kubernetes.io/part-of: nginx-ingress-controller
-
-  clusterIP: 10.96.0.10
 
   ports:
     - name: http

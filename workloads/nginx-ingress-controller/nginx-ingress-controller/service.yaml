@@ -20,6 +20,8 @@ spec:
   type: LoadBalancer
   externalTrafficPolicy: Local
 
+  clusterIP: 10.96.0.20
+
   selector:
     app.kubernetes.io/name: nginx-ingress-controller
     app.kubernetes.io/part-of: nginx-ingress-controller
