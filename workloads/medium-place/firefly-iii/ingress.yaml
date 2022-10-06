@@ -7,7 +7,7 @@ metadata:
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt
     external-dns.alpha.kubernetes.io/target: 100.125.83.187
-
+    nginx.ingress.kubernetes.io/whitelist-source-range: 100.64.0.0/10
   labels:
     app.kubernetes.io/part-of: firefly-iii
 
