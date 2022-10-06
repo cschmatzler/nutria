@@ -5,13 +5,12 @@ metadata:
   name: nginx-ingress-controller
   namespace: nginx-ingress-controller
   annotations:
-    external-dns.alpha.kubernetes.io/endpoints-type: NodeExternalIP
-    # load-balancer.hetzner.cloud/name: nginx-ingress-controller
-    # load-balancer.hetzner.cloud/use-private-ip: "true"
-    # load-balancer.hetzner.cloud/disable-private-ingress: "true"
-    # load-balancer.hetzner.cloud/ipv6-disabled: "true"
-    # load-balancer.hetzner.cloud/location: fsn1
-    # load-balancer.hetzner.cloud/type: lb11
+    load-balancer.hetzner.cloud/name: nginx-ingress-controller
+    load-balancer.hetzner.cloud/use-private-ip: "true"
+    load-balancer.hetzner.cloud/disable-private-ingress: "true"
+    load-balancer.hetzner.cloud/ipv6-disabled: "true"
+    load-balancer.hetzner.cloud/location: fsn1
+    load-balancer.hetzner.cloud/type: lb11
   labels:
     app.kubernetes.io/name: nginx-ingress-controller
     app.kubernetes.io/part-of: nginx-ingress-controller
@@ -19,6 +18,7 @@ metadata:
 
 spec:
   type: LoadBalancer
+  externalTrafficPolicy: Local
 
   clusterIP: 10.96.0.20
 
@@ -29,17 +29,13 @@ spec:
   ports:
     - name: http
       protocol: TCP
-      nodePort: 80
-      hostPort: 80
       port: 80
       targetPort: http
     - name: https
       protocol: TCP
-      hostPort: 443
       port: 443
       targetPort: https
     - name: ssh
       protocol: TCP
-      hostPort: 22
       port: 22
       targetPort: 22
