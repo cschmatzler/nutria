@@ -6,6 +6,7 @@ metadata:
   namespace: medium-place
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt
+    external-dns.alpha.kubernetes.io/target: 100.125.83.187
   labels:
     app.kubernetes.io/part-of: searxng
 

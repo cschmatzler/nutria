@@ -7,6 +7,7 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/proxy-body-size: 10m
     cert-manager.io/cluster-issuer: letsencrypt
+    external-dns.alpha.kubernetes.io/target: 100.125.83.187
   labels:
     app.kubernetes.io/part-of: tandoor
 
