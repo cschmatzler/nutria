@@ -1,0 +1,63 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: tailscale
+  namespace: tailscale
+  labels:
+    app.kubernetes.io/name: tailscale
+    app.kubernetes.io/part-of: tailscale
+    app.kubernetes.io/version: 1.30.2
+
+spec:
+  replicas: 1
+  revisionHistoryLimit: 5
+
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: tailscale
+      app.kubernetes.io/part-of: tailscale
+
+  template:
+    metadata:
+      annotations:
+        # diun.enable: "true"
+        # diun.regopt: docker.io
+        # diun.watch_repo: "true"
+        # diun.include_tags: "^\\d+\\.\\d+\\.\\d+$"
+        # diun.sort_tags: "semver"
+      labels:
+        app.kubernetes.io/name: tailscale
+        app.kubernetes.io/part-of: tailscale
+        app.kubernetes.io/version: 1.30.2
+
+    spec:
+      serviceAccountName: tailscale
+
+      terminationGracePeriodSeconds: 60
+
+      containers:
+        - name: tailscale
+
+          imagePullPolicy: Always
+          image: ghcr.io/tailscale/tailscale:1.30.2
+
+          securityContext:
+            capabilities:
+              add:
+                - NET_ADMIN
+
+          env:
+            - name: TS_KUBE_SECRET
+              value: "tailscale-auth"
+            - name: TS_USERSPACE
+              value: "false"
+            - name: TS_AUTH_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: tailscale-auth
+                  key: TS_AUTH_KEY
+                  optional: true
+            - name: TS_DEST_IP
+              value: nginx-ingress-controller.nginx-ingress-controller.svc.cluster.local
+   
