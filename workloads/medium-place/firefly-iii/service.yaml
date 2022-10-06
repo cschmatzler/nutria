@@ -8,6 +8,8 @@ metadata:
     app.kubernetes.io/name: firefly-iii
     app.kubernetes.io/part-of: firefly-iii
     app.kubernetes.io/version: 5.7.12
+  annotations:
+    external-dns.alpha.kubernetes.io/target: 100.125.83.187
 
 spec:
   selector:
