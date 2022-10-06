@@ -6,6 +6,9 @@ metadata:
   namespace: nginx-ingress-controller
 
 data:
+  use-proxy-protocol: "true"
+  real-ip-header: proxy_protocol
+  set-real-ip-from: "10.0.0.0/16"
   use-forwarded-headers: "true"
   compute-full-forwarded-for: "true"
 ---
@@ -17,5 +20,5 @@ metadata:
   namespace: nginx-ingress-controller
 
 data:
-  "22": "medium-place/gitea:22"
+  "22": "medium-place/gitea:22:PROXY"
 
