@@ -2,7 +2,7 @@ resources:
   - searxng-config.enc.yaml
   - deployment.yaml
   - service.yaml
-  - ingress.yaml
+  - dnsendpoint.yaml
 
 configMapGenerator:
   - name: searxng-env

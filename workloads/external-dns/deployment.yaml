@@ -45,10 +45,16 @@ spec:
             - --provider=cloudflare
             - --policy=upsert-only
             - --registry=txt
+            - --txt-prefix=external-dns.
             - --txt-owner-id=nutria
-            - --source=ingress
             - --source=service
+            - --source=ingress
+            - --source=crd
+            - --crd-source-apiversion=externaldns.k8s.io/v1alpha1
+            - --crd-source-kind=DNSEndpoint
             - --interval=30s
+            - --publish-internal-services
+            - --log-level=debug
 
           envFrom:
             - secretRef:

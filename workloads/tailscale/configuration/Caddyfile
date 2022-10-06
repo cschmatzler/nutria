@@ -1,0 +1,19 @@
+{
+  acme_dns cloudflare {env.CF_API_TOKEN}
+}
+
+garage.medium.place {
+  reverse_proxy teslamate-grafana.medium-place.svc.cluster.local:3000
+}
+
+kitchen.medium.place {
+  reverse_proxy tandoor.medium-place.svc.cluster.local:8080
+}
+
+library.medium.place {
+  reverse_proxy searxng.medium-place.svc.cluster.local:8080
+}
+
+treasury.medium.place {
+  reverse_proxy firefly-iii.medium-place.svc.cluster.local:8080
+}

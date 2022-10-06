@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: caddy-env
+    namespace: tailscale
+data:
+    CF_API_TOKEN: ENC[AES256_GCM,data:j1+K8MEJIoZlhO96IavoIivkzZfdrffBq9CsfkTejkzYpCDvsi5z+u1UN321s9/MFJQrs2HMVHU=,iv:YBUQv8EfU/WvDFi+DhtWCHH9a6PhqjkG/OWhG7z1C0I=,tag:Ic0bfOOF/NEiMWDY3X1wow==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ufcw42mtfu65grs30zqwu65xl7wczkllu3r4gjpk5yr7tr02q5kqq0pnvg
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBoZUQreEZGSXJPUk1YdGp5
+            V3YyL3lvU0JEWGZyQkhVYmx5elFqbDgxUkVrCmZTR29OTklEdDN2YlBXMVZ3bG5p
+            VmswbVNQVndYUUt3NVBUelV0OVA3czAKLS0tIFVkQ044aDNHenBpRFJrZnpwTlpJ
+            VUhEKzFYOHN0dURJSTl1TzAxMVZxUWcKvOlbH3R68oPpU0UVaGi3DAeOOuSDUQZO
+            HXYZa4Sr2GGoa3R1QKjacN1b1tCVQ0iU6jN08xUui50IPGPLmj+8Uw==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2022-10-06T19:33:06Z"
+    mac: ENC[AES256_GCM,data:CHraCpoE4TaInyobh9dkUTUj6HHYATFKUlvdU4MMyfl1jvmtolDvoi0dQLJ2S73WO7gY+2ysQqRjhJefgZMqKJtsOXpOwPwV2L0JyRa6gEhYolqpdZ00aqEnu33t8+QDeEMNWMF2H9NhpnFficuDu8cXTeQaGAlhAdXCCT6S5aU=,iv:t3qSq9dB1nOU+EwXI7hRIa3F7sHiDZdfejG8a4DIfJU=,tag:CiIyzwc96vgg2XsefXaN8Q==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.7.3
