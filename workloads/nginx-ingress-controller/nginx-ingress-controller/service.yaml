@@ -29,13 +29,16 @@ spec:
   ports:
     - name: http
       protocol: TCP
+      hostPort: 80
       port: 80
       targetPort: http
     - name: https
       protocol: TCP
+      hostPort: 443
       port: 443
       targetPort: https
     - name: ssh
       protocol: TCP
+      hostPort: 22
       port: 22
       targetPort: 22
