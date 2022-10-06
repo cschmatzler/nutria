@@ -47,6 +47,7 @@ spec:
             - --registry=txt
             - --txt-owner-id=nutria
             - --source=ingress
+            - --source=service
             - --interval=30s
 
           envFrom:

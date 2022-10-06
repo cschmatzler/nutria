@@ -5,6 +5,7 @@ metadata:
   name: nginx-ingress-controller
   namespace: nginx-ingress-controller
   annotations:
+    external-dns.alpha.kubernetes.io/endpoints-type: NodeExternalIP
     # load-balancer.hetzner.cloud/name: nginx-ingress-controller
     # load-balancer.hetzner.cloud/use-private-ip: "true"
     # load-balancer.hetzner.cloud/disable-private-ingress: "true"
