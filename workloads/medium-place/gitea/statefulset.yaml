@@ -7,7 +7,7 @@ metadata:
   labels:
     app.kubernetes.io/name: gitea
     app.kubernetes.io/part-of: gitea
-    app.kubernetes.io/version: 1.17.1
+    app.kubernetes.io/version: 1.17.2
 
 spec:
   replicas: 1
@@ -30,12 +30,12 @@ spec:
       labels:
         app.kubernetes.io/name: gitea
         app.kubernetes.io/part-of: gitea
-        app.kubernetes.io/version: 1.17.1
+        app.kubernetes.io/version: 1.17.2
 
     spec:
       containers:
         - name: gitea
-          image: gitea/gitea:1.17.1
+          image: gitea/gitea:1.17.2
 
           volumeMounts:
             - name: data
