@@ -27,6 +27,9 @@ spec:
         app.kubernetes.io/version: 1.68.0
 
     spec:
+      securityContext:
+        fsGroup: 991
+
       volumes:
         - name: synapse-config
           secret:
