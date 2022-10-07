@@ -25,12 +25,14 @@ deploy: plan
   terraform -chdir=infrastructure apply nutria.tfplan
 
 upgrade talos-version nodes:
+  scripts/upgrade-talos.sh {{talos-version}}
   talosctl upgrade --nodes {{nodes}} --image ghcr.io/siderolabs/installer:v{{talos-version}}
 
 approve-kubelet-csrs:
   kubectl get csr -o custom-columns=":metadata.name" | xargs -L1 kubectl certificate approve
 
 upgrade-k8s k8s-version:
+  scripts/upgrade-k8s.sh {{k8s-version}}
   talosctl upgrade-k8s --to {{k8s-version}}
 
 destroy:
