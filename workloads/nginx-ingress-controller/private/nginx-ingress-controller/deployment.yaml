@@ -62,7 +62,7 @@ spec:
             - --publish-service=nginx-ingress-controller/nginx-ingress-controller-private
             - --election-id=ingress-controller-private-leader
             - --controller-class=k8s.io/ingress-nginx-private
-            - --ingress-class=k8s.io/ingress-nginx-private
+            - --ingress-class=k8s.io/nginx-private
 
           env:
             - name: POD_NAME
