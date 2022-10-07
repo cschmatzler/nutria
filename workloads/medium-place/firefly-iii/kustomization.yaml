@@ -4,7 +4,6 @@ resources:
   - cronjob.yaml
   - service.yaml
   - ingress.yaml
-  - dnsendpoint.yaml
 
 configMapGenerator:
   - name: firefly-iii-env
