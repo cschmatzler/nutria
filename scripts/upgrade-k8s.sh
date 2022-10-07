@@ -9,5 +9,3 @@ yq '.cluster.proxy.image = "k8s.gcr.io/kube-proxy:'$1'"' -i talos/controlplane.y
 yq '.cluster.scheduler.image = "k8s.gcr.io/kube-scheduler:'$1'"' -i talos/controlplane.yaml
 
 yq '.machine.kubelet.image = "ghcr.io/siderolabs/kubelet:'$1'"' -i talos/worker.yaml
-
-
