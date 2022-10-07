@@ -1,0 +1,30 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+
+metadata:
+  name: firefly-iii
+  namespace: medium-place
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt
+  labels:
+    app.kubernetes.io/part-of: firefly-iii
+
+spec:
+  ingressClassName: nginx-private
+
+  tls:
+    - hosts:
+        - treasury.medium.place
+      secretName: treasury.medium.place-tls
+
+  rules:
+    - host: treasury.medium.place
+      http:
+        paths:
+          - pathType: Prefix
+            path: /
+            backend:
+              service:
+                name: firefly-iii
+                port:
+                  name: http
