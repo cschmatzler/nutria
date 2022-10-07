@@ -21,6 +21,7 @@ spec:
   template:
     metadata:
       annotations:
+        backup.velero.io/backup-volumes: data
       labels:
         app.kubernetes.io/name: synapse
         app.kubernetes.io/part-of: synapse
