@@ -1,9 +1,0 @@
-resources:
-  - pixelfed-env.enc.yaml
-  - statefulset.yaml
-  - service.yaml
-
-configMapGenerator:
-  - name: pixelfed-env
-    namespace: medium-place
-    env: configuration/pixelfed.env
