@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: pixelfed-redis-env
+    namespace: medium-place
+data:
+    REDIS_PASSWORD: ENC[AES256_GCM,data:1+R4IKSuYo9JAYRXHyLAwsmrka+gzZaPXqw9WAojuzlOY7ldF7d2iMmIsIphuZCvsg45V7mJfF6mFp2lG9ydMQ==,iv:0dY6fu2ro+VC4HoOsY6Pn0Ce5mkYRgLf/79DFVnqCtA=,tag:SS4YLIhJl8mw2ZmnJI6Y7w==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ufcw42mtfu65grs30zqwu65xl7wczkllu3r4gjpk5yr7tr02q5kqq0pnvg
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSAvbklySUdGVW9tSjhMdzg1
+            SWwwb3BTbGI1OTdIOHhoblZIK3huY21kc1Q0CjVWM0NHaVFLR1N4M3F3ZUNMZVFH
+            OGh3bUZOT1prRkJLQ2hPVHBTbWg4ZXMKLS0tIHBGRmFONmVYbHVGbGJMKzFmSnA3
+            TnlVVzRpdURodFo1Vzd5d1lwMzZ0OXcKoJQnQ/191WaxjOGG/9ZzNU4vQuraiVon
+            aApJgCEZWQO6GFNA7whrG2YWAq0UtCpOcF29aJDRu7mBRnwK25XnRQ==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2022-10-07T19:47:56Z"
+    mac: ENC[AES256_GCM,data:qhuCxTbrf+zA9Hk3elN2P1h9qpCpXJE3j8tI1p1Ariv+eDkn1j/1b/pobC5jzY9YYS7i8vMsvcGIJbG3jclvN2YXW+Jm88fCajS3CzvnMKNM4tDG4IondP2z74EdUL6HtkR/Skuhj0S/uSasI+ueVqkZhCjXot+XkVK9vDdROlU=,iv:on6fa8j5imUwTCpJ5f85OWAi8k7LEHuvBSnWWDMb8s4=,tag:xdQG1veMDvO0Z28hSQoC8Q==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.7.3

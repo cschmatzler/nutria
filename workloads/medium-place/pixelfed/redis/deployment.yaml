@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: pixelfed-redis
+  namespace: medium-place
+  labels:
+    app.kubernetes.io/name: redis
+    app.kubernetes.io/part-of: pixelfed
+    app.kubernetes.io/version: 7.0.4
+
+spec:
+  replicas: 1
+  revisionHistoryLimit: 5
+
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: redis
+      app.kubernetes.io/part-of: pixelfed
+
+  template:
+    metadata:
+      annotations:
+        backup.velero.io/backup-volumes: data
+        diun.enable: "true"
+        diun.regopt: docker.io
+        diun.watch_repo: "true"
+        diun.include_tags: "^\\d+\\.\\d+\\.\\d+$"
+        diun.sort_tags: "semver"
+      labels:
+        app.kubernetes.io/name: redis
+        app.kubernetes.io/part-of: pixelfed
+        app.kubernetes.io/version: 7.0.4
+
+    spec:
+      terminationGracePeriodSeconds: 60
+
+      containers:
+        - name: redis
+
+          imagePullPolicy: Always
+          image: bitnami/redis:7.0.4
+
+          envFrom:
+            - secretRef:
+                name: pixelfed-redis-env
+
+          ports:
+            - name: redis
+              protocol: TCP
+              containerPort: 6379
