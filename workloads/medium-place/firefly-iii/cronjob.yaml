@@ -25,7 +25,7 @@ spec:
               args:
               - /bin/sh
               - -ec
-              - wget -qO- https://treasury.medium.place/api/v1/cron/$STATIC_CRON_TOKEN
+              - wget -qO- http://firefly-iii.medium-place.svc.cluster.local/api/v1/cron/$STATIC_CRON_TOKEN
 
               envFrom:
                 - secretRef:
