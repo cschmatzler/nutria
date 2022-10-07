@@ -1,8 +1,0 @@
-[book]
-title = "Nutria"
-authors = ["Christoph Schmatzler"]
-
-language = "en"
-
-[rust]
-edition = "2021"
