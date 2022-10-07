@@ -50,7 +50,8 @@ spec:
               readOnly: true
 
           env:
-            SYNAPSE_CONFIG_DIR: /config
+            - name: SYNAPSE_CONFIG_DIR
+              value: /config
 
           ports:
             - name: http
