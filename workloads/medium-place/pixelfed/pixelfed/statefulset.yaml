@@ -31,9 +31,7 @@ spec:
       containers:
         - name: pixelfed
 
-          image: forge.medium.place/nutria/pixelfed:0.11.4
-          imagePullSecrets:
-            - name: forge
+          image: cschmatzler/pixelfed:0.11.4
 
           volumeMounts:
             - name: data
