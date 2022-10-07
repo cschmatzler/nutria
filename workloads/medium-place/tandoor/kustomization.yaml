@@ -2,7 +2,7 @@ resources:
   - tandoor-env.enc.yaml
   - statefulset.yaml
   - service.yaml
-  - dnsendpoint.yaml
+  - ingress.yaml
 
 configMapGenerator:
   - name: tandoor-env
