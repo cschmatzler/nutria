@@ -58,7 +58,7 @@ spec:
               protocol: TCP
               containerPort: 8008
 
-    volumeClaimTemplates:
+  volumeClaimTemplates:
     - metadata:
         name: data
         namespace: medium-place
