@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 
 metadata:
   name: synapse
@@ -37,19 +37,35 @@ spec:
 
       containers:
         - name: synapse
-          image: forge.medium.place/nutria/synapse:1.68.0
-          imagePullSecrets:
-            - name: forge
+          image: matrixdotorg/synapse:v1.68.0
 
           volumeMounts:
-            - name: synapse-config
+            - name: data
               mountPath: /data
+            - name: synapse-config
+              mountPath: /config
               readOnly: true
             - name: synapse-bridge-registration
               mountPath: /registrations
               readOnly: true
 
+          env:
+            SYNAPSE_CONFIG_DIR: /config
+
           ports:
             - name: http
               protocol: TCP
               containerPort: 8008
+
+    volumeClaimTemplates:
+    - metadata:
+        name: data
+        namespace: medium-place
+
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        volumeMode: Filesystem
+        resources:
+          requests:
+            storage: 10Gi
