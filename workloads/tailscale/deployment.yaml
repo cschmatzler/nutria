@@ -59,7 +59,7 @@ spec:
                   key: TS_AUTH_KEY
                   optional: true
             - name: TS_DEST_IP
-              value: 10.96.0.21
+              value: 10.96.0.30
             - name: TS_EXTRA_ARGS
               value: --hostname=nutria
    
