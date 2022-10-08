@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: paperless-ngx-redis-env
+    namespace: medium-place
+data:
+    REDIS_PASSWORD: ENC[AES256_GCM,data:m0x8pNF4A1RtjRrcTupdxLC8CgUip472CKGg1YCR4IXPRolHCXssXUWhTFkdjPr/6Gd3Ft1G1O0pA3KH1gQDuQ==,iv:u6F5FLroFSSb6wPR2LmNhqixQECF/fYSmcYEy9o8XjE=,tag:T2GCIXDuvSgJVLYYNwfUNA==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ufcw42mtfu65grs30zqwu65xl7wczkllu3r4gjpk5yr7tr02q5kqq0pnvg
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBhSVJwZlhIZkN3eW91KzEv
+            cXlORWZIdkJIcmcxOCtvbjN0dzMybmVCRkZvCmxjMmFqdVVqTjRVdVVYWGpPUXdt
+            SWNVeG9oR1B0ZmVYenEvUUd3NlBNc1EKLS0tIEZ3Y3pBdHREa2gvenliZnpIVlll
+            ZFgybFc2SVZJVlYvTjJYZ0dmNFdRdnMKwPKpV/iNuJYu3l/EXTaqvSNnEvoP0kFe
+            RoajdCkjDKdz0qTvGdGYRvt3hSXsnU1GZdbe2B+fC87cNh7hCmuATQ==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2022-10-08T13:36:56Z"
+    mac: ENC[AES256_GCM,data:Z6jIqGiAVGn4+6t3w8YrJcJdR1/mgHGaCCxh+bosfnGP2iTCdtmqgRU7qZdVjJHLXhilElu743NOpdrW4a45/Hcyr4H3rDUq7in+8/kyqrioIomKg+By5ADoFo+amgYw1qnBfowEEJCUCMFLhxrJSaiLB/yNC+wyEskgMtrKW7E=,iv:xRLO+06/BPlTA9goYH1edJPxUUosjIuj00r9Dzlhtjk=,tag:E/LsBBwjvCY9+9SOGnKqSw==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.7.3

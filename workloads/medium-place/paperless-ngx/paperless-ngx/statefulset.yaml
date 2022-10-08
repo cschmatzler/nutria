@@ -1,0 +1,61 @@
+apiVersion: apps/v1
+kind: StatefulSet
+
+metadata:
+  name: paperless-ngx
+  namespace: medium-place
+  labels:
+    app.kubernetes.io/name: paperless-ngx
+    app.kubernetes.io/part-of: paperless-ngx
+    app.kubernetes.io/version: 1.9.2
+
+spec:
+  replicas: 1
+  revisionHistoryLimit: 5
+
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: paperless-ngx
+      app.kubernetes.io/part-of: paperless-ngx
+
+  template:
+    metadata:
+      annotations:
+        backup.velero.io/backup-volumes: data
+      labels:
+        app.kubernetes.io/name: paperless-ngx
+        app.kubernetes.io/part-of: paperless-ngx
+        app.kubernetes.io/version: 1.9.2
+
+    spec:
+      containers:
+        - name: paperless-ngx
+          image: ghcr.io/paperless-ngx/paperless-ngx:1.9.2
+
+          volumeMounts:
+            - name: data
+              mountPath: /data
+
+          envFrom:
+            - configMapRef:
+                name: paperless-ngx-env
+            - secretRef:
+                name: paperless-ngx-env
+
+          ports:
+            - name: http
+              protocol: TCP
+              containerPort: 8000
+
+  volumeClaimTemplates:
+    - metadata:
+        name: data
+        namespace: medium-place
+
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        volumeMode: Filesystem
+        resources:
+          requests:
+            storage: 1Gi
