@@ -7,7 +7,7 @@ metadata:
   labels:
     app.kubernetes.io/name: tika
     app.kubernetes.io/part-of: paperless-ngx
-    app.kubernetes.io/version: 2.0.1
+    app.kubernetes.io/version: 2.1.0
 
 spec:
   replicas: 1
@@ -23,7 +23,7 @@ spec:
       labels:
         app.kubernetes.io/name: tika
         app.kubernetes.io/part-of: paperless-ngx
-        app.kubernetes.io/version: 2.0.1
+        app.kubernetes.io/version: 2.1.0
 
     spec:
       terminationGracePeriodSeconds: 60
@@ -32,7 +32,7 @@ spec:
         - name: tika
 
           imagePullPolicy: Always
-          image: ghcr.io/paperless-ngx/tika:2.0.1-minimal
+          image: ghcr.io/paperless-ngx/tika:2.1.0-minimal
 
           ports:
             - name: tika
