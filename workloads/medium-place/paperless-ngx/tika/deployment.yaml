@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: paperless-ngx-tika
+  namespace: medium-place
+  labels:
+    app.kubernetes.io/name: tika
+    app.kubernetes.io/part-of: paperless-ngx
+    app.kubernetes.io/version: 2.0.1
+
+spec:
+  replicas: 1
+  revisionHistoryLimit: 5
+
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: tika
+      app.kubernetes.io/part-of: paperless-ngx
+
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: tika
+        app.kubernetes.io/part-of: paperless-ngx
+        app.kubernetes.io/version: 2.0.1
+
+    spec:
+      terminationGracePeriodSeconds: 60
+
+      containers:
+        - name: tika
+
+          imagePullPolicy: Always
+          image: ghcr.io/paperless-ngx/tika:2.0.1-minimal
+
+          ports:
+            - name: tika
+              protocol: TCP
+              containerPort: 9998
