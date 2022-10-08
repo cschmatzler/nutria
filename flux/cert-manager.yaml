@@ -16,6 +16,10 @@ spec:
     kind: GitRepository
     name: flux-system
   path: "./workloads/cert-manager"
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-age
   interval: 60m
   wait: true
   timeout: 3m0s
