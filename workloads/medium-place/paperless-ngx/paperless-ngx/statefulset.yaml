@@ -34,7 +34,17 @@ spec:
 
           volumeMounts:
             - name: data
-              mountPath: /data
+              mountPath: /usr/src/paperless/data
+              subPath: usr/src/paperless/data
+            - name: data
+              mountPath: /usr/src/paperless/media
+              subPath: usr/src/paperless/media
+            - name: data
+              mountPath: /usr/src/paperless/consume
+              subPath: usr/src/paperless/consume
+            - name: data
+              mountPath: /usr/src/paperless/export
+              subPath: usr/src/paperless/export
 
           envFrom:
             - configMapRef:
