@@ -1,5 +1,5 @@
 resources:
-  - paperless-ngx-env.enc.yaml
+  - configuration/paperless-ngx-env.yaml.enc
   - statefulset.yaml
   - service.yaml
   - ingress.yaml
