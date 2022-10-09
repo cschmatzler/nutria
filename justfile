@@ -41,8 +41,8 @@ destroy:
 kubeconfig:
   talosctl kubeconfig kubeconfig
 
-generate-secrets:
-  scripts/generate-secrets.sh 
+generate-secret secret:
+  scripts/generate-secret.sh {{secret}}
 
 deploy-ccm:
   gomplate -f secrets/hcloud.yaml.tpl | kubectl apply -f -
