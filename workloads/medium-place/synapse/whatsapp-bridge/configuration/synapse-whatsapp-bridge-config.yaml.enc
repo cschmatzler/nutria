@@ -1,0 +1,28 @@
+{
+	"apiVersion": "v1",
+	"kind": "Secret",
+	"metadata": {
+		"name": "synapse-whatsapp-bridge-config",
+		"namespace": "medium-place"
+	},
+	"data": {
+		"config.yaml": "ENC[AES256_GCM,data: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,iv:MwTXcd0krNp4O+WTPbLDali9pNMFl0LF76oitW+NAHk=,tag:p9AOw5rOrS4Y8+nIxbrsDA==,type:str]"
+	},
+	"sops": {
+		"kms": null,
+		"gcp_kms": null,
+		"azure_kv": null,
+		"hc_vault": null,
+		"age": [
+			{
+				"recipient": "age1ufcw42mtfu65grs30zqwu65xl7wczkllu3r4gjpk5yr7tr02q5kqq0pnvg",
+				"enc": "-----BEGIN AGE ENCRYPTED FILE-----\nYWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBlc3lIR25KK0lDRHhqQlJ6\nWG1ZQTViazJ3c3IvREhEdVZmZVIyb0Vxd0U0CkZNRis5eG9XMHVUQ2Y2cjJTRHFh\nak5HUGIzQ0JVODNrYzZYc2ZycVFrV3MKLS0tIDZHNW5vSUgvTkZFYmhITzM5VHFR\nSmxBNWxqL0RhWDY0RGtzanA0QTdLckUK82JISzwQRrsjnl2L+7fKJet2OA9qZtGi\nF54YywXzxoY7JlSYbd8uE/Z5ykrZx6csTdk2P8eqDCjQ1nXm/Ao0Kg==\n-----END AGE ENCRYPTED FILE-----\n"
+			}
+		],
+		"lastmodified": "2022-10-09T16:48:51Z",
+		"mac": "ENC[AES256_GCM,data:/tquzyAR89jT3FV+Q8TCMOUcEGOykmemhq9g1QhLV0yHMV7duq6W0RiZ12aOsrQ/IhWIWb5gHKOqnFbphZylXddQy8QkRp6lQrsjduoA3blQZo7WrnaxR7ZtCaD5GxBCtj6XNfiaT69Ua8KgHbtiyteP5agXK01VAvfr02Ootvw=,iv:7L1j0lxCiqn3jTvsqmJkyOxr4xIHZV6vMcnDySRk/Vk=,tag:G7BZckQw20kpjWJki4vz9Q==,type:str]",
+		"pgp": null,
+		"encrypted_regex": "^(data|stringData)$",
+		"version": "3.7.3"
+	}
+}

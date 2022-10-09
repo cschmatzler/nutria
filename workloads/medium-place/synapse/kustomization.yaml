@@ -1,0 +1,5 @@
+resources:
+  - configuration/synapse-bridge-registration.yaml.enc
+  - synapse 
+  - signal-bridge
+  - whatsapp-bridge

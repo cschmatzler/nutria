@@ -1,0 +1,5 @@
+resources:
+  - configuration/synapse-signal-bridge-config.yaml.enc
+  - configuration/synapse-signal-bridge-env.yaml.enc
+  - deployment.yaml 
+  - service.yaml

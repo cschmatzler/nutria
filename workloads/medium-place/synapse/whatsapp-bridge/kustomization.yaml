@@ -1,0 +1,4 @@
+resources:
+  - configuration/synapse-whatsapp-bridge-config.yaml.enc
+  - deployment.yaml
+  - service.yaml

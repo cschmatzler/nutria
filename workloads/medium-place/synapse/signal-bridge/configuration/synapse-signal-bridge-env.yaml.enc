@@ -1,0 +1,28 @@
+{
+	"apiVersion": "v1",
+	"kind": "Secret",
+	"metadata": {
+		"name": "synapse-signal-bridge-env",
+		"namespace": "medium-place"
+	},
+	"data": {
+		"SIGNALD_DATABASE": "ENC[AES256_GCM,data:DIR8ryKWQ56zoBgBcsEI7hSgtm1kLGGqABPPR9VfLJhDXzbW3xdhfmkhtXTg1NoNgDb/2RVMn6F4aqR8SuU42fWKNN1dKo3KFe7EpX5+YUiXfh/Y3UfqaEa7/fMf2OGaIycO3cW/Bkc3xfM1wQcdM2xTQsHBXfRA83MD5R0pozasjvNzRs7gartG+x5HpVk2GJmqjDb5XDnGHgZA0RFzXZuzQ5KOj6N7evotlaT0EgWdpI3JjgHquC/mRCYI+ZfumNle7cpksjFaaAWypcoLw3VbjRU/Q45+,iv:O54aHCHG1sE67oht0puYwvJYUTqZpth5eerG4Ey5VBU=,tag:Ondf/ikkk0IKeQPP2eu6tw==,type:str]"
+	},
+	"sops": {
+		"kms": null,
+		"gcp_kms": null,
+		"azure_kv": null,
+		"hc_vault": null,
+		"age": [
+			{
+				"recipient": "age1ufcw42mtfu65grs30zqwu65xl7wczkllu3r4gjpk5yr7tr02q5kqq0pnvg",
+				"enc": "-----BEGIN AGE ENCRYPTED FILE-----\nYWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBvMTJLNUtlNWlpZ3VLSFhq\neVlPLzcvbFZNWWhKYm5seDFEOEJMN1p0dFFNCjF1Nml0NDJNb280NGxIZXlWdUY5\nNkhTMmdxcmMzcFk2UUpIWEt1bEw2Qk0KLS0tIDRkL2xjc2Z1UGtGN0hlenQ3VkNm\nQUl0MlBXUkVyZVpEdFdQUXcvOTVGeUkKwT+vWM1rM+v/SxwqKlfDLvkPd/bHUBBL\nQbR8hYVLLHY+g5IOVGoasEabYkhVLn61S3RdN9ZahQ0kQ3QGxLUI/Q==\n-----END AGE ENCRYPTED FILE-----\n"
+			}
+		],
+		"lastmodified": "2022-10-09T16:49:07Z",
+		"mac": "ENC[AES256_GCM,data:iY27wvIapSh0hLxeREb2yPrN1VyqcDG0hifYl6WbHLQtzgx3H+3icKMrrwFsf+iM4ZzN9eLjUOABpE79lnyqJ4jk6meRcrYAyZAFQpYywXBp5vzEKXsqrl6tNVUxmk806acTk1c6mVQhHrBD7PgFhEUtpUQx+jBnveKFvmVBed0=,iv:E/+6nycrwUo4lsfBGkNwjr/jwteXbReqJrkYeR7bIvU=,tag:Llio0IYtAZaBrJKld3kKjg==,type:str]",
+		"pgp": null,
+		"encrypted_regex": "^(data|stringData)$",
+		"version": "3.7.3"
+	}
+}

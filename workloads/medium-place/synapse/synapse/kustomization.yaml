@@ -1,0 +1,5 @@
+resources:
+  - configuration/synapse-config.yaml.enc
+  - statefulset.yaml
+  - service.yaml
+  - ingress.yaml
