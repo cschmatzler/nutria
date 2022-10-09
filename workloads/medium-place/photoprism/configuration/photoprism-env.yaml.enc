@@ -1,0 +1,28 @@
+{
+	"apiVersion": "v1",
+	"kind": "Secret",
+	"metadata": {
+		"name": "photoprism-env",
+		"namespace": "medium-place"
+	},
+	"data": {
+		"PHOTOPRISM_ADMIN_PASSWORD": "ENC[AES256_GCM,data:cSyco55QIfrGL2WFiWsCrQVQBwo4j8NNqPZrw7wOB06Vjhcj3wXpLc2DNIJYFNmmeWDnN1LHE0v/iIEZ3WsNsw==,iv:bsMw9gSqIBCLEC9ioBCWvBsIGKlb9qTspJYB9016mMQ=,tag:wAuBXxP5C1UD4UKWa2ye5Q==,type:str]"
+	},
+	"sops": {
+		"kms": null,
+		"gcp_kms": null,
+		"azure_kv": null,
+		"hc_vault": null,
+		"age": [
+			{
+				"recipient": "age1ufcw42mtfu65grs30zqwu65xl7wczkllu3r4gjpk5yr7tr02q5kqq0pnvg",
+				"enc": "-----BEGIN AGE ENCRYPTED FILE-----\nYWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSA4ODZRV0F6aW9RR01CU1h3\nTE5zQ09KV2J4TzdHTDBVdmNQMFoxc0hnRzJNCnp5RXErNzZFaXBSTXZiemZyU3NM\nSVRpS1JCUEdYQ2tmSHArTlE2bXkra28KLS0tIG96cDJkZGZTNGJDZUluN2daK1RK\ndGVCRmRBVUNpUVlrSVU5YWxScjRPMVEKnhRB0xS8nzI5lCArwC6ypZsTd+q+xqAU\nmLIUvGzBZ9lafmgoMFZM/YuUcv9/Y+Y/cz/ClilAkXFiShDw9Op8Ww==\n-----END AGE ENCRYPTED FILE-----\n"
+			}
+		],
+		"lastmodified": "2022-10-09T15:03:40Z",
+		"mac": "ENC[AES256_GCM,data:12azQ6xsGCTINAAKiOHsZmH+xv8/+0sLycCxyZg52WFUkDV/DeKgPJX7/HKC0HOJnWTygm9maUqiKxHDZXBJ/AhxnfKIC+rm0Q0ehkAkMfUNRQ+mD/rsqygC7Z4G7kG2OdVvvXAlQL5+UD1qRdJ0+ZLZdOvLN4YMq2FoTpN8mHM=,iv:lJcTA7Nv2B1oNI7REBKoTh1F9t/2bwIBd+Xmn94emiQ=,tag:jubZkRSosFLuXsS9x1/vbg==,type:str]",
+		"pgp": null,
+		"encrypted_regex": "^(data|stringData)$",
+		"version": "3.7.3"
+	}
+}

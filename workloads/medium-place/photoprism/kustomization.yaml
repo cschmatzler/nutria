@@ -1,5 +1,5 @@
 resources:
-  - photoprism-env.enc.yaml
+  - configuration/photoprism-env.yaml.enc
   - statefulset.yaml
   - service.yaml
   - ingress.yaml
