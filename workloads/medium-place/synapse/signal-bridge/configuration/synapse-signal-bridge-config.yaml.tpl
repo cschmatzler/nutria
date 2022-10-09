@@ -60,31 +60,31 @@ manhole:
   enabled: false
 
 logging:
-    version: 1
-    formatters:
-        colored:
-            (): mautrix_signal.util.ColorFormatter
-            format: "[%(asctime)s] [%(levelname)s@%(name)s] %(message)s"
-        normal:
-            format: "[%(asctime)s] [%(levelname)s@%(name)s] %(message)s"
-    handlers:
-        file:
-            class: logging.handlers.RotatingFileHandler
-            formatter: normal
-            filename: ./mautrix-signal.log
-            maxBytes: 10485760
-            backupCount: 10
-        console:
-            class: logging.StreamHandler
-            formatter: colored
-    loggers:
-        mau:
-            level: DEBUG
-        aiohttp:
-            level: INFO
-    root:
-        level: DEBUG
-        handlers: [file, console]
+  version: 1
+  formatters:
+    colored:
+      (): mautrix_signal.util.ColorFormatter
+      format: "[%(asctime)s] [%(levelname)s@%(name)s] %(message)s"
+    normal:
+      format: "[%(asctime)s] [%(levelname)s@%(name)s] %(message)s"
+  handlers:
+    file:
+      class: logging.handlers.RotatingFileHandler
+      formatter: normal
+      filename: ./mautrix-signal.log
+      maxBytes: 10485760
+      backupCount: 10
+    console:
+      class: logging.StreamHandler
+      formatter: colored
+  loggers:
+    mau:
+      level: DEBUG
+    aiohttp:
+      level: INFO
+  root:
+    level: DEBUG
+    handlers: [file, console]
 
 metrics:
   enabled: false
