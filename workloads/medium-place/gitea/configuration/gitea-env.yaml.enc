@@ -1,0 +1,31 @@
+{
+	"apiVersion": "v1",
+	"kind": "Secret",
+	"metadata": {
+		"name": "gitea-env",
+		"namespace": "medium-place"
+	},
+	"data": {
+		"GITEA__database__HOST": "ENC[AES256_GCM,data:SD0eWr5r+AxSbc00qa1G4aEMucsUIJLRoG+OSDCh9LGYSxu9F8f0Zk8yb0PjOOHve+KiWg==,iv:ZoOA6/1fShbNKMfRQygnMqeeb9MalJ2evyWbjJcEIEE=,tag:QnbsSQGB2CcCOIZjRrOlvw==,type:str]",
+		"GITEA__database__USER": "ENC[AES256_GCM,data:ulAlCeXw1YUhqlrvXks+BaeN+xgZBDLP,iv:6v37Nq7gKn1Cusl49PI7y91Txn4VqnM4Z04g5H7zAm8=,tag:f6wFpSQfAygk/dRGtr3X6A==,type:str]",
+		"GITEA__database__PASSWD": "ENC[AES256_GCM,data:ggsSyx6Oz4Shvo+VfaRxVLfO9ccDQTXU+UBqtIeGpqvPV5S5oCX1YsRvm1GXJOT1I/78kMEoOpWiWoegr0aMkw==,iv:l+LdLvd7Dr3cOLF96lcMIxoXf0fu5rvyAoXJyaDytJU=,tag:QjomR2LuQbWlPnAhH4hJjA==,type:str]",
+		"GITEA__database__NAME": "ENC[AES256_GCM,data:zRgmBvZCsJQLKTbIrCpwNB3RDD6h/l+7,iv:rT9fR1RcZTIKIKLj5odTBAwZeQpuRkXAtkFKP2bprSs=,tag:bCmBj9mUpZ82nwAKRRtJEg==,type:str]"
+	},
+	"sops": {
+		"kms": null,
+		"gcp_kms": null,
+		"azure_kv": null,
+		"hc_vault": null,
+		"age": [
+			{
+				"recipient": "age1ufcw42mtfu65grs30zqwu65xl7wczkllu3r4gjpk5yr7tr02q5kqq0pnvg",
+				"enc": "-----BEGIN AGE ENCRYPTED FILE-----\nYWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSAyQzVBb3I5dVRUa0FOZmcv\nZCs0TDRSVWMwU0xFZ04rS281Z2Vyem1KUnlNCkJrVEtpdjlWUEZrSm5UeWUzZSt6\nZG5vVHE5VVpVRUpaVjQ5d2s3SVFXUjAKLS0tIHFJVk5sWFkvb1B2TnhHaTFXWVpJ\nOUdpYlFSMHY4aGljY0JrcXRMTXgrM2cK5VOJyMfI6xouFlCYcWJV34yJhhQgiYRQ\nZbTbSwPhCejz+XRpCBgACBZDnnlm1lzYpI2Nf66zIXyg4yQvX4i+0w==\n-----END AGE ENCRYPTED FILE-----\n"
+			}
+		],
+		"lastmodified": "2022-10-09T14:23:33Z",
+		"mac": "ENC[AES256_GCM,data:80oXJCdZi/SPIa9tdjFkJ6+fcVsqvACYrvcIRMwRIpaWCzBfo/VbrrIoG3SeDOw9E8vbTY4aAJEvdxEe4TIVcZ4xepE2WBf7sNmkII1TZTJC1LSQL01FqbSZEmuRt2ms0oxngBzo15bvsuZvQLEdoa/cpZdclitj/oE+lQZx0FI=,iv:fS8iP9rhBTdW7LBU/VjECLVFp9S/whBvxir3eEE0/eU=,tag:AffpKxtWGxfy+zQBKI+RKA==,type:str]",
+		"pgp": null,
+		"encrypted_regex": "^(data|stringData)$",
+		"version": "3.7.3"
+	}
+}

@@ -1,5 +1,5 @@
 resources:
-  - gitea-env.enc.yaml
+  - configuration/gitea-env.yaml.enc
   - statefulset.yaml
   - service.yaml
   - ingress.yaml
