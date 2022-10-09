@@ -7,7 +7,7 @@ metadata:
   labels:
     app.kubernetes.io/name: velero
     app.kubernetes.io/part-of: velero
-    app.kubernetes.io/version: 1.9.1
+    app.kubernetes.io/version: 1.9.2
 
 spec:
   selector:
@@ -20,15 +20,15 @@ spec:
       labels:
         app.kubernetes.io/name: velero
         app.kubernetes.io/part-of: velero
-        app.kubernetes.io/version: 1.9.1
+        app.kubernetes.io/version: 1.9.2
 
     spec:
       serviceAccountName: velero
 
       volumes:
-        - name: cloud-credentials
+        - name: wasabi-credentials
           secret:
-            secretName: cloud-credentials
+            secretName: wasabi-credentials
         - emptyDir: {}
           name: scratch
         - emptyDir: {}
@@ -36,7 +36,7 @@ spec:
 
       initContainers:
         - name: velero-plugin-for-aws
-          image: velero/velero-plugin-for-aws:v1.5.0
+          image: velero/velero-plugin-for-aws:v1.5.1
 
           volumeMounts:
             - mountPath: /target
@@ -44,7 +44,7 @@ spec:
 
       containers:
         - name: velero
-          image: velero/velero:v1.9.1
+          image: velero/velero:v1.9.2
 
           command:
             - /velero
@@ -65,7 +65,7 @@ spec:
 
           volumeMounts:
             - mountPath: /credentials
-              name: cloud-credentials
+              name: wasabi-credentials
             - mountPath: /scratch
               name: scratch
             - mountPath: /plugins

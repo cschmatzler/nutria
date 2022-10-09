@@ -7,7 +7,7 @@ metadata:
   labels:
     app.kubernetes.io/name: restic
     app.kubernetes.io/part-of: velero
-    app.kubernetes.io/version: 1.9.1
+    app.kubernetes.io/version: 1.9.2
 
 spec:
   selector:
@@ -20,7 +20,7 @@ spec:
       labels:
         app.kubernetes.io/name: restic
         app.kubernetes.io/part-of: velero
-        app.kubernetes.io/version: 1.9.1
+        app.kubernetes.io/version: 1.9.2
 
     spec:
       serviceAccountName: velero
@@ -32,9 +32,9 @@ spec:
         - name: host-pods
           hostPath:
             path: /var/lib/kubelet/pods
-        - name: cloud-credentials
+        - name: wasabi-credentials
           secret:
-            secretName: cloud-credentials
+            secretName: wasabi-credentials
         - name: scratch
           emptyDir: {}
 
@@ -42,14 +42,14 @@ spec:
         - name: host-pods
           mountPath: /host_pods
           mountPropagation: HostToContainer
-        - name: cloud-credentials
+        - name: wasabi-credentials
           mountPath: /credentials
         - name: scratch
           mountPath: /scratch
 
       containers:
         - name: restic
-          image: velero/velero:v1.9.1
+          image: velero/velero:v1.9.2
 
           command:
             - /velero

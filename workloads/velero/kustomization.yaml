@@ -1,0 +1,9 @@
+resources:
+  - configuration/wasabi-credentials.yaml.enc
+  - customresourcedefinition.yaml
+  - serviceaccount.yaml
+  - clusterrolebinding.yaml
+  - deployment.yaml
+  - daemonset.yaml
+  - backupstoragelocation.yaml
+  - schedule.yaml
