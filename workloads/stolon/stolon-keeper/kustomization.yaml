@@ -1,0 +1,7 @@
+resources:
+  - configuration/stolon-keeper-env.yaml.enc
+  - serviceaccount.yaml
+  - role.yaml
+  - rolebinding.yaml
+  - statefulset.yaml
+  - poddisruptionbudget.yaml
