@@ -1,5 +1,5 @@
 resources:
-  - configuration/tailscale-token.yaml.enc
+  - configuration/tailscale-config.yaml.enc
   - serviceaccount.yaml
   - role.yaml
   - rolebinding.yaml

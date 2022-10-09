@@ -1,0 +1,28 @@
+{
+	"apiVersion": "v1",
+	"kind": "Secret",
+	"metadata": {
+		"name": "tailscale-token",
+		"namespace": "tailscale"
+	},
+	"data": {
+		"TS_AUTH_KEY": "ENC[AES256_GCM,data:tMSlQrH+8B8RSwXFAJXMTU+3vQHKM3F5OOSH7KpMZJj+6OlOf0q0WG4cw/FczHb/5Otj1Qj7cVdLx6D051LrT9kBAlwygQP2OnxnJw==,iv:77TX8WJySo0JIrR8aTU0jQG/uVpXb/ebAX46pNEIg3w=,tag:NwrXyKtdtxsbgNpFgQmDCA==,type:str]"
+	},
+	"sops": {
+		"kms": null,
+		"gcp_kms": null,
+		"azure_kv": null,
+		"hc_vault": null,
+		"age": [
+			{
+				"recipient": "age1ufcw42mtfu65grs30zqwu65xl7wczkllu3r4gjpk5yr7tr02q5kqq0pnvg",
+				"enc": "-----BEGIN AGE ENCRYPTED FILE-----\nYWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSByNk5wbzRtWFlVN2J3TTgx\nQW1FWWRaRDBhdkx3K3FDcXhZTjlDNjgyZGswCit1Nm03ZG1NNHlNcjIrQzRxT1lX\nQ1Z2a00yMGlNRW1jNW9Xbmg5QU1FTUkKLS0tIENpL1ZCRVhVakdxY05IVHFia2tP\nSGs3R1V6NjFtY2ZqbCs1ZUNsYzlULzQKJu/BmAmXWcuypf7b+zKizG6rWWnx7vzB\n9I7o9ekTEV+q0pnLMdPe6BnGKWwavPw5KVkDoD/XQpRjhhVMPNvSLQ==\n-----END AGE ENCRYPTED FILE-----\n"
+			}
+		],
+		"lastmodified": "2022-10-09T19:40:51Z",
+		"mac": "ENC[AES256_GCM,data:7Cs7oa3NvTQ4IKqqsv1Jf0vWNo3jqJirnOhQFjJb5zRiTEiNT+XpdXYUdjomyh95NQ6WNDAwItu6N6lr/GjL1+c6HzRTRISNY6aI8Clkt3TRuT0rlJBTwStQF/caIUzJMLOKDWMz4Y7CZme6a5LX5ctghjz4OLk6878snxDRX6o=,iv:PlR1Cmg/yJ2JxyrZSPVjbZ9vB6YzWOHFg04zqGLU4YU=,tag:zflVJB3TS6VyKPTMO2N+Yw==,type:str]",
+		"pgp": null,
+		"encrypted_regex": "^(data|stringData)$",
+		"version": "3.7.3"
+	}
+}
