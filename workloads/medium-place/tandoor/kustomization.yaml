@@ -1,5 +1,5 @@
 resources:
-  - tandoor-env.enc.yaml
+  - configuration/tandoor-env.yaml.enc
   - statefulset.yaml
   - service.yaml
   - ingress.yaml

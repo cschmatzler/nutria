@@ -1,0 +1,32 @@
+{
+	"apiVersion": "v1",
+	"kind": "Secret",
+	"metadata": {
+		"name": "tandoor-env",
+		"namespace": "medium-place"
+	},
+	"data": {
+		"SECRET_KEY": "ENC[AES256_GCM,data:fYp3twU5NUh/T55VYaK1R9qhaqokRM0OsqkPqdNDDm1NvxV3XM+0bI6ov2KOFL2KNPQyURDhAGkVJgx5yYzcMw==,iv:BTA56hXWxRNpDImCdXEyOK3vN2KCLtmlwqHjdnNAm9s=,tag:G8SAaQJYGAeDEuolI6TDDw==,type:str]",
+		"POSTGRES_HOST": "ENC[AES256_GCM,data:wm9R8Sx3AbK+XKLMN1NRRLp43eCUR58/DqxMBsL69l1iGDWnxqm0RclzKTAwV7mUjwYFnA==,iv:74KSO3MhYSI15hG8VHIdCKcyPvO8D3z8CN9vZSBGS0E=,tag:+SItmZ19lCyABX0Ih7Dyjw==,type:str]",
+		"POSTGRES_USER": "ENC[AES256_GCM,data:FwTK+Yfz5qjTOXHZf2kMNKfmZ36e4v2gY9qjLw==,iv:HZm7SnIfcs95ApwRIQosiwEJduX+xoBBviXGSHNHPfE=,tag:8kVXL1blRYjFEkVDEZaODA==,type:str]",
+		"POSTGRES_PASSWORD": "ENC[AES256_GCM,data:R1nCnORRdJZeYuAlrSax8cjnWsXCQWWhrhZGwMTXbg6sJHv79LBSDzyOjTfHuLzbBoZfdg85/Chc4hbc+spCXw==,iv:VEKLF3p7omi9PrzbhuIKxIlY/bInn1TR30uYeicN9lQ=,tag:ipHKnoZ62zfX2X4OJ8aElw==,type:str]",
+		"POSTGRES_DB": "ENC[AES256_GCM,data:k8Il3JqhCMiar7Xe9slYJKlsqDGjZwb/EUTAFQ==,iv:bTJ5Ehg1n7QUmA6pqaXZRv4yZL1GCA0g87DRRGLqLlg=,tag:aOqJ3y+W9/dSjlz4bcOq6Q==,type:str]"
+	},
+	"sops": {
+		"kms": null,
+		"gcp_kms": null,
+		"azure_kv": null,
+		"hc_vault": null,
+		"age": [
+			{
+				"recipient": "age1ufcw42mtfu65grs30zqwu65xl7wczkllu3r4gjpk5yr7tr02q5kqq0pnvg",
+				"enc": "-----BEGIN AGE ENCRYPTED FILE-----\nYWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBGb09qc1g2QmkzMzRhL0Z0\ndzZjWTBBcXB4TmFZNzNveElOeTIvV05yTFNVCkNoWGdKcnhIYytFQ3N1bDBUZXNV\ndTEzSXE0aWFkY1J5ZXJYTWhPcm1iQU0KLS0tIE4zbGNTNGt4clIva3Ztamk2SnUr\nc2FuZlJZcnB5K29FeisxWVdsandOVFEKreBWJnbj7VJZrVWYY52Ni2weNeOErNhG\nAgdrDxo90t/+3+/AV1yX139CtutqhT79CuwKn9XG1fMG3V6Caxg5iw==\n-----END AGE ENCRYPTED FILE-----\n"
+			}
+		],
+		"lastmodified": "2022-10-09T17:27:20Z",
+		"mac": "ENC[AES256_GCM,data:+LKV3LRtTAIW+dE1d02O6VJieBUR0axe2T1qEjqJFq/qQrMrDJaoQ6X6HbmK1ywqAP0tK1NHbEgyHmV7KMlq1YeoKlWkiJ1ha7VAYfCLLqSdI9w76wYOgRDEQ8kdmZZKnYLDDBI8gO5mhfVXuo9tpMY+keT9N2Z0AnCy2hM9Irw=,iv:/F0nrpODaGhWeFM5RViaQU/0npBwPCVC+a6I86BkKeE=,tag:xeslff5stbO4p0UVwMoCZw==,type:str]",
+		"pgp": null,
+		"encrypted_regex": "^(data|stringData)$",
+		"version": "3.7.3"
+	}
+}
