@@ -1,0 +1,28 @@
+{
+	"apiVersion": "v1",
+	"kind": "Secret",
+	"metadata": {
+		"name": "mastodon-redis-env",
+		"namespace": "medium-place"
+	},
+	"data": {
+		"REDIS_PASSWORD": "ENC[AES256_GCM,data:hHS9ANURQcSKF5borejwZ/CFwY7LrJURwVH0yV9uh95DgvOaWESVX08KYmLnuNdWbVvz6kfYUaNmlAcVH/Fj1A==,iv:u2hl4rZ2wQ2CjglYqQchnN0jFUxUbQPyu6klKK6SwHw=,tag:pGuctgQSWYNV/mu1+0PTjg==,type:str]"
+	},
+	"sops": {
+		"kms": null,
+		"gcp_kms": null,
+		"azure_kv": null,
+		"hc_vault": null,
+		"age": [
+			{
+				"recipient": "age1ufcw42mtfu65grs30zqwu65xl7wczkllu3r4gjpk5yr7tr02q5kqq0pnvg",
+				"enc": "-----BEGIN AGE ENCRYPTED FILE-----\nYWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSB1c3lVUTFtYnFCNzBybXN4\nRGMxUERrRVc3VmE5YUhQQ3cwVW5WMUYzS3dvCjh5QWZQdWJXZkYzTXdiL0tVbm9M\nSUtaNWN5U21QRmR0K1VzUi9GN1lGQjQKLS0tIHQ3emFTYjFremkrZGxORDg0YkU1\nYW1sazBXV0lQUXNrYWxQaFdHZEMrRmsK8EBTxNjfrYjoI6uaLGbqXiHKOwysno1t\nFzpMdrAJDJcLNhDk8Ny53OQQ8KZvqBAc5y/1Az/E2JSszxukI5EfAQ==\n-----END AGE ENCRYPTED FILE-----\n"
+			}
+		],
+		"lastmodified": "2022-10-09T14:45:08Z",
+		"mac": "ENC[AES256_GCM,data:HmVEayhxzgMNpx8Y+FVcCQaWeickF15wNnMP+Yc2u876GlW7eYRlC+Wv/vj0lkxgqN1a22rS+urdf4gVLH9L/NAdobuCRtdLQWCOHHXJeVROZ0fHgc7WChnT1pGYYQheaYYtTXkEBV6ERUKHJxUaKfQUqj2p2IJQ0Ih+0AuBDYM=,iv:1qMes6P89yFSnfPhWlj2OkPlsBuQ2tAIX1gwlt5zjd4=,tag:T/VBc3pfz7Vsaqqw9as/nQ==,type:str]",
+		"pgp": null,
+		"encrypted_regex": "^(data|stringData)$",
+		"version": "3.7.3"
+	}
+}

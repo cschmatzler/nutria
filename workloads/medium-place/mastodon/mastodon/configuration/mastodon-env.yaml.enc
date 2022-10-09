@@ -1,0 +1,42 @@
+{
+	"apiVersion": "v1",
+	"kind": "Secret",
+	"metadata": {
+		"name": "mastodon-env",
+		"namespace": "medium-place"
+	},
+	"data": {
+		"SECRET_KEY_BASE": "ENC[AES256_GCM,data:/taUqwhr/NILtN9pTBvOWQFf2KF12BsTDIN+P1HIUTt/w/f2+xmSF7ngFsM=,iv:9OWvKPBe6IVrAZXZNjeIANbHlNmicXwAiYPmJgsO5/w=,tag:qhxjHYmERFpDntUxpaQy2A==,type:str]",
+		"OTP_SECRET": "ENC[AES256_GCM,data:dNSYE6QGdOWw4kJJnFz43JHm8AhbqicBivVEQlZQTxQbGclCsjxIHTq7Clc=,iv:xn4Nok/ouVrqa7jUiVU90B5Ys2iNSZjWIzIgTlgDu7M=,tag:10lXVc6nSoy75KSnwA3A/g==,type:str]",
+		"VAPID_PRIVATE_KEY": "ENC[AES256_GCM,data:V+Glcb9I2/LvKQFrY4d3/cAZPX4AWZC/TkpTVXwPRYCymIW4o/8QYhfqHTDYO9Z4vzNaxFhpEqWLOJeF855Hxo72Vre9tmoFWfEiirZ5euBgFOgPeYIZ3HKLYWgD5Nb2U3nXmPOzWvkl1/0nG67qXXilsLTwEriP,iv:swEkh2BJ7m7ijq93bERqrXzqwAqulpwDEkhhGgVAi/c=,tag:5NyeTpFZCYVxm+q7cfaBtw==,type:str]",
+		"VAPID_PUBLIC_KEY": "ENC[AES256_GCM,data:hbXQ2zpN3VY6kAbpoPwUnL3KW03aoKNPk2muVPz0vG63MDg+/dhaLZluvJIVxuYj3djfy6Gcc2hd4n1+,iv:+r4w3qTjr2U+K3ioG/ut1JznYrSNf25NjfP2KpQYoNE=,tag:vx4IMXI6j4FgFwr8g9TIRA==,type:str]",
+		"DB_HOST": "ENC[AES256_GCM,data:9Oa/Zoy3MTQml9C+StCdLBhxAMuMkiiDPOHz5vpElh6ajtg/PvwvPJMIxKTv2yfoEbDALQ==,iv:66E5z8sxr4lqb33DGG3JwDvLIS/W+DwvzZBY3GRBj9U=,tag:kuwufZa5dAHq+K4hNb9J2w==,type:str]",
+		"DB_USER": "ENC[AES256_GCM,data:3VwKCpU3SmG3KXxEN56kKbEUY4OItlwgAAgHUg==,iv:NI2jJvDgS6VxrUd02w+6NONcYDq8ztnlE6CBzrGRuzg=,tag:AycUeQeLJtWXbeDQf1VS7w==,type:str]",
+		"DB_PASS": "ENC[AES256_GCM,data:tUNL8g0kKoKnJK8x0y2kA1EyxU0ZEnOonE3T0zxE19VTnrXa9rtty7nid0NM1z048iZnReih9C4dHkqOAAu5FA==,iv:to1OqDTYUH2yh2z42KJv7CmhNm3SjFMpC/rzPRw/SS0=,tag:F0pzlhS6D4PMnQSCnCvL/A==,type:str]",
+		"DB_NAME": "ENC[AES256_GCM,data:Mq12rDcF14isd4a8JPB1f6rcObxMobZoqQ0LFg==,iv:TZqa8d37tbDg8cP242KrAt3bbssgi27G4mAnhELkOqk=,tag:Jmzd6KWqsxlUtUPtJo4qQA==,type:str]",
+		"REDIS_URL": "ENC[AES256_GCM,data:7QUfhTPnlMDrOn/yWPFiwUtf0N1rZEnqIFXY/f6aBMifklKNiDWwSnb2oVXwvT604yrN1z1rBuRpX1TdrjHoRQjTalMIqSXfQXVfRbo7Yzc3fYWMTv+yTrQVh9cr2dPXpibxCIKBJX8=,iv:BsNvcCT+WA1nIN8vkj9dOUIxWVEa/qjSLhJfH6wFwfY=,tag:83CcH+/UlnaYYBWKMcIEug==,type:str]",
+		"S3_ENDPOINT": "ENC[AES256_GCM,data:sAkjU9YtEgG0/w9EgPQKPeAT9KoOyAW4AJeBISLSJmj5rBGuS4fxKr4rHuYmN2rkNlXI0g==,iv:8Qp9BL3MDfZj4hkgeW25RbClfm7iJevirKeB57gYmUo=,tag:pnvhXH1mC6Hgu0Vo1ltkqw==,type:str]",
+		"S3_ALIAS_HOST": "ENC[AES256_GCM,data:5C+rbytgSjP0EMoe7yRDo6rU/7uoaJc7CKlZNv5hjQXS5ewfFZVGFPNxJmAWJ8TN1hqnkHfsC+WFFTE4q7PDBpBzFak=,iv:jZ0Zu9qBxUWkln5ZZ9UXd9ES5fjCFtgbmDaUlLhUGn8=,tag:0HMWAwygzNmo/rsrMWh65A==,type:str]",
+		"S3_REGION": "ENC[AES256_GCM,data:JhCNnuLJlVWUbPzc5AvR7g==,iv:sOZxpTo/dPAGq7cdoxnnWcKquD7Xfjh12M3+J+EaxJM=,tag:UgAPMcvuGY7Kz8dzV4R+bA==,type:str]",
+		"S3_BUCKET": "ENC[AES256_GCM,data:F+yTT1YgVgbdELeYV21IPyuHoN2Ogzlmx8Shmg==,iv:cgIUXN27XWCIYAaGQkHGUJZVGvTT9jjtMzNZMETMU7A=,tag:+J+fHdVDriUl9YGOAxRnMw==,type:str]",
+		"AWS_ACCESS_KEY_ID": "ENC[AES256_GCM,data:CwcBBeDEw58Xt60/5JqWaIodm2Is0T9aOf3ojQ==,iv:klECGG4m83LKR9owB8JTchBuTintCFC02d+Mf58RmuQ=,tag:16UACbis+4vBLqzXFDOJ9g==,type:str]",
+		"AWS_SECRET_ACCESS_KEY": "ENC[AES256_GCM,data:eEKRZHVPsfyXe0G91S3h8CD23DwWFH6CPp3fi58qM6Q2xQDBhR3hW4oTJ/63H/XFZuckT9+8q0w=,iv:8I5i3Rne7jdM0cbpd43qarixTavTRvECvEhjB9LNYrw=,tag:h67ZeQTBijFotU0sR2f4aQ==,type:str]"
+	},
+	"sops": {
+		"kms": null,
+		"gcp_kms": null,
+		"azure_kv": null,
+		"hc_vault": null,
+		"age": [
+			{
+				"recipient": "age1ufcw42mtfu65grs30zqwu65xl7wczkllu3r4gjpk5yr7tr02q5kqq0pnvg",
+				"enc": "-----BEGIN AGE ENCRYPTED FILE-----\nYWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBQZS9pbFBKMWZ2M2w3elBB\nQ1hjSlVyMUg1b3FZZWxHdjN3bnFGYkpTelRNCkkybzgwblp4WWhWbUtDZ0kzb1hj\nbU1jTXUxWlRqZUorNWtJYzJESGlGSkkKLS0tIDZ3ZE1kcFA5WDRzOGlXYmxzZEh6\nZEtRYmVUM3ptWkplUjNtemsxUzl1UGMKcnssufyYx32Te+C4M3uYwiKoTQ9tjj6O\nYROt/YBnWtjb2+0GolQMUvBZroIB9moXf7YnBYogn4ic3Ol2fSw56Q==\n-----END AGE ENCRYPTED FILE-----\n"
+			}
+		],
+		"lastmodified": "2022-10-09T14:42:56Z",
+		"mac": "ENC[AES256_GCM,data:bi8nohBFem2I30tPV8Ly0xnF4o1EH9DG5k3PH88wGnHYKCsYCjl4FznrgoNKboEFI5PsQDv9H08f+71OaBurIieqRsnOtsHNx0pDTwvhHYhRKKTFTTMW47cbzpJryWhwBuB7lrEqZJqf0JIrWtHWUZ+H7edzGznMb9L432R3zkY=,iv:Prz0sM58eVKEw1nU6XuTlmseXcxx2as7vEClXDCVOC0=,tag:6slAeSF1WqdzVtRFOKzETQ==,type:str]",
+		"pgp": null,
+		"encrypted_regex": "^(data|stringData)$",
+		"version": "3.7.3"
+	}
+}
