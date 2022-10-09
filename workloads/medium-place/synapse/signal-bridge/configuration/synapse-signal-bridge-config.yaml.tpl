@@ -57,6 +57,7 @@ signal:
   data_dir: /signald/data
 
 logging:
+  version: 1
   handlers:
     file:
       class: logging.handlers.RotatingFileHandler
