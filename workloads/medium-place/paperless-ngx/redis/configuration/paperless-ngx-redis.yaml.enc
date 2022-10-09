@@ -1,0 +1,28 @@
+{
+	"apiVersion": "v1",
+	"kind": "Secret",
+	"metadata": {
+		"name": "paperless-ngx-redis-env",
+		"namespace": "medium-place"
+	},
+	"data": {
+		"REDIS_PASSWORD": "ENC[AES256_GCM,data:/SGHJcxExrh9e44ng+ZXH/+UZnRHO171reqgO2OuG3f3HYqSgTcPmJhxKrGhUh+x4hphcRR/aO5wAI8pjhlTQA==,iv:K/KdqM3fQFfAIRDS3PMaRHK5jPdJxkbCoxiy22RwzJY=,tag:XTgVvYL1rh1KJECXSDYWFA==,type:str]"
+	},
+	"sops": {
+		"kms": null,
+		"gcp_kms": null,
+		"azure_kv": null,
+		"hc_vault": null,
+		"age": [
+			{
+				"recipient": "age1ufcw42mtfu65grs30zqwu65xl7wczkllu3r4gjpk5yr7tr02q5kqq0pnvg",
+				"enc": "-----BEGIN AGE ENCRYPTED FILE-----\nYWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBxUTcvWEFudHBiaE5IUWlz\naDlsZmIySGIvRXFGWnpoUDJ1QUZHSzhLL0drClBvVVBqdEVnWmN3a2luV2VNeWFn\nQmdaNnF2ai9EMkdpN3doZzhna1ZGK3MKLS0tIDZvZHFRT1hpemVEOGEwWXVsQWJq\nTEFCbkFEemFNeVNSd0ZlMmEwY0FxU0EKJ6RYgotw69Ze3yJbbOZl0BTM8QQthTfX\n/FNlmqbf0KxilOlXcYHa8UOLvZTmDjxx5fg0nssHS+1oEuv6kDGe/w==\n-----END AGE ENCRYPTED FILE-----\n"
+			}
+		],
+		"lastmodified": "2022-10-09T16:05:20Z",
+		"mac": "ENC[AES256_GCM,data:BiZNkCpslNvFldMWLhSRN/euhhBBWssjygSWDsIP4lrC1R3hnFfRe6JU09deX6/LJPXbffai7zgwSyP8Yw3YT6wyMQ6PIL2NFjFYXnUkO48t5COlU32IgJ0cJZ+uuptaRFrb8mjs1hp+509JpoY50gQ2SZ0wzYdc8O2bXb9Cs0Y=,iv:dPS89nEpVxeBGpzRBXOZMgwm3ZCweNWQPHCrRLyGV4Q=,tag:nsS6IMPRFV91BsBbogWqfg==,type:str]",
+		"pgp": null,
+		"encrypted_regex": "^(data|stringData)$",
+		"version": "3.7.3"
+	}
+}

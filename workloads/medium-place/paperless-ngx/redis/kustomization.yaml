@@ -1,0 +1,4 @@
+resources:
+  - configuration/paperless-ngx-redis-env.yaml.enc
+  - deployment.yaml
+  - service.yaml
