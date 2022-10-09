@@ -55,6 +55,8 @@ spec:
                 secretKeyRef:
                   name: tailscale-token
                   key: TS_AUTH_KEY
+            - name: TS_KUBE_SECRET
+              value: tailscale-token
             - name: TS_DEST_IP
               value: 10.96.0.30
             - name: TS_EXTRA_ARGS
