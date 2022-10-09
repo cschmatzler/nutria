@@ -1,0 +1,29 @@
+{
+	"apiVersion": "v1",
+	"kind": "Secret",
+	"metadata": {
+		"name": "vaultwarden-env",
+		"namespace": "leuchtturm-io"
+	},
+	"data": {
+		"ADMIN_TOKEN": "ENC[AES256_GCM,data:+MB7Y/N+KotpezDdkKF7ljGrNJWcCg3+lvrwcqF1rjMSxYRaSf4my03y8Ut8jdzcCPJpNYydIsngVKlYSJLcmQ==,iv:j51NiRdgZdDyedollRP4v5dR8sBvn/tlQ+WnNfvXU6A=,tag:eBDGTi/UvftvA7Zjh0bqgg==,type:str]",
+		"DATABASE_URL": "ENC[AES256_GCM,data:7SzjS4PK7EpN4ZA7HBVtUsdLvwv9UQLiF1ZdaFKY87cmtfXD2As+tILfgyE0tte0Jr0FCil5LR5n9aPTYaI6IiSK5uwEB7TqPjiHP6Qqe0BbSiPMjH2Ke76EqIpbvlJEEvnq/5ONnTHWWf9gthakTGtSKBMy7hmO8kAPz+wpWythJmqJVxLerRzAJT0GC9t/KIdNKPeUvTAb8AdIX/HVm0sQ5tEqiFEEyAy+O+7cS/Xcv7/pIYAC7ciutXnJ2HED2W7dVYtWtq4UHWICapXB8A==,iv:Rw9vGTC9MDaicE6q4sLRpUDm5xYAjFV7yv40+iTAdSs=,tag:qrAEqxsEa+vpqMq+J88Wng==,type:str]"
+	},
+	"sops": {
+		"kms": null,
+		"gcp_kms": null,
+		"azure_kv": null,
+		"hc_vault": null,
+		"age": [
+			{
+				"recipient": "age1ufcw42mtfu65grs30zqwu65xl7wczkllu3r4gjpk5yr7tr02q5kqq0pnvg",
+				"enc": "-----BEGIN AGE ENCRYPTED FILE-----\nYWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBNSjNNeUdHSjEyTmlsREJ2\nalQ5R2RpZXdkNVd2L090L0ZiQ2dVRmR2cmtVCmM3azJlMWVjNnZiYVJMZDZwd3pV\nZE1OQ09tMVgzK0tGVTFHN3lEMk1MdWMKLS0tIHB6Yy9NR0ZOTlBwZ3ZuUEpCYWhx\nQW1RNW5EU0ZvWWIybjVaeDBPNlM1dHMKJNl0xRtE6XnSx24pN97DAVN8ZHqXbbms\n6Bq4NhjwQAOPRYNkCtfyqUSSxOZcPJmSJt7NKu1nO65eL7aAiFNAYA==\n-----END AGE ENCRYPTED FILE-----\n"
+			}
+		],
+		"lastmodified": "2022-10-09T17:43:24Z",
+		"mac": "ENC[AES256_GCM,data:Ol1LFuNPiGwIUTmDOQ53DGDi2gFzO1Q2ofiMvSF8mjFLtQtRDhnAvZI7Yk0EsMo3bDodMLAF9iIqC1w8eL89lFwx0rMoZY/JCdSG8WIjio1SnPmUdGryAdPYgmxtxBfajf/6fWkCdFkv2izLIBGtuT9/ZpWdiT1QtkC+822VrFU=,iv:0lWVSpRKKDOS5+I/j9MqGcTeeeKBLHo5lsjfaLh4+Rg=,tag:+VKFC7TCaV31FvkO6Y3DJg==,type:str]",
+		"pgp": null,
+		"encrypted_regex": "^(data|stringData)$",
+		"version": "3.7.3"
+	}
+}
