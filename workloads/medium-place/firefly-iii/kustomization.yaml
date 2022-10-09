@@ -1,5 +1,5 @@
 resources:
-  - firefly-iii-env.enc.yaml
+  - configuration/firefly-iii-env.yaml.enc
   - statefulset.yaml
   - cronjob.yaml
   - service.yaml
