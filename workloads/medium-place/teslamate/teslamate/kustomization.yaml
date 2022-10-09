@@ -1,0 +1,4 @@
+resources:
+  - configuration/teslamate-env.yaml.enc
+  - deployment.yaml 
+  - service.yaml

@@ -1,0 +1,5 @@
+resources:
+  - configuration/teslamate-grafana-env.yaml.enc
+  - statefulset.yaml 
+  - service.yaml 
+  - ingress.yaml

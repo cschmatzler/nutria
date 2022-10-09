@@ -1,0 +1,32 @@
+{
+	"apiVersion": "v1",
+	"kind": "Secret",
+	"metadata": {
+		"name": "teslamate-env",
+		"namespace": "medium-place"
+	},
+	"data": {
+		"ENCRYPTION_KEY": "ENC[AES256_GCM,data:j4apkVodTPxyU2R1jNNg4tcZ+KTWQDZ+Z900eoIqnn1rzpsHV59SeW3ubuM=,iv:+UaqUWBEA9Sw7iQQxUEzGutb281Z/d00KHftIZJf348=,tag:1mYs8obyHflBQ1LGxJL+wA==,type:str]",
+		"DATABASE_HOST": "ENC[AES256_GCM,data:CdwfuVT0AxP398LYmj+oBWV92rLPoTBEFn51ZLNcEYgrq09JzML2On+sqydXAi8V7RBMfQ==,iv:szIQ3HD1UjHjkJnyNcX11lLXrgYXB7Gyt3sgvweMD5s=,tag:GqvOCVuj0kcUby+PnPj8Iw==,type:str]",
+		"DATABASE_USER": "ENC[AES256_GCM,data:GyeUMQE2pYTlp7j/wKCY4BPr5Ee9mnmxH5ywh5J8jfY=,iv:LfrMvi1QJ7XMn35G49aS/i3rWzgcRX6m00KMobRfZxs=,tag:B7FW9K+J+RYuIz6ZCzGqqQ==,type:str]",
+		"DATABASE_PASS": "ENC[AES256_GCM,data:r+mwccTatlDfZZDOVvKeAM4tailf0luFENH0pHL1QHJ2GQaWYaRT5/k11vZSuL0tuAfoNtV8dUIUoH5XbwwEdA==,iv:uAfm4RDz+OFbiXoyXLuo5AFuLsWi6nyfvTQjbYau3Cc=,tag:0dO+KzKCvjgUVUS8YaeN8w==,type:str]",
+		"DATABASE_NAME": "ENC[AES256_GCM,data:RMP4iSD7/mvG/L5KgE/8/n0AZbDrFM67mgy+ztRFdDg=,iv:ZrmOD5X/5vB+dMoBqvmED0aJdMyhRdqmHoA3cWgHJh8=,tag:fB/7NVRkPS3fL3FdjRx93g==,type:str]"
+	},
+	"sops": {
+		"kms": null,
+		"gcp_kms": null,
+		"azure_kv": null,
+		"hc_vault": null,
+		"age": [
+			{
+				"recipient": "age1ufcw42mtfu65grs30zqwu65xl7wczkllu3r4gjpk5yr7tr02q5kqq0pnvg",
+				"enc": "-----BEGIN AGE ENCRYPTED FILE-----\nYWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBpOTRWN2ROY0FyYm5GK09K\nd3hwaEdXOXM5c09hbkVSdnNWZk5JQlloaFRNCmZnWER3MENLUHRjbmlxMEJUKzdI\nb2dVdnVMN21aWWJGR0hDT3ZWNVpFUUUKLS0tIEI1Wkp5YU9HUStUQ3ZOeXIzSGVl\neFBzZ1h4SDNNWmdZeWVFazEwanR6SmMKGTuY/gn6nR8cDRQOwQgFsrOADttljDdQ\nz0psrUZpfEZZyNROorD7ZhsebnvjiJIYOpfsCIFvaS4xsCuKpc+Bcg==\n-----END AGE ENCRYPTED FILE-----\n"
+			}
+		],
+		"lastmodified": "2022-10-09T17:38:34Z",
+		"mac": "ENC[AES256_GCM,data:dK2Fqp28VSnyBv+2CfdHN0ie3kjUckobtIbrFoztN9Lx/8Tg91Y8FCpkOCEm/Nm5fj9ZdJelmHVAFFPwkau0nC/ZXR2oGJ9kWGdksGtwucKe4xb5ijUNnx8MT1u1xBQLsQSDif/wVW95WOBDusWTKsH4+8KoNHy7ay0yGZ1P0/Y=,iv:lNc4LoiNOwZbV1xWjQqXw+JiIyvJOGZpx7GisD4nZMw=,tag:r5ra0JNwuqm2S+X1185hZA==,type:str]",
+		"pgp": null,
+		"encrypted_regex": "^(data|stringData)$",
+		"version": "3.7.3"
+	}
+}
