@@ -4,7 +4,7 @@ metadata:
     name: paperless-ngx-redis-env
     namespace: medium-place
 data:
-    REDIS_PASSWORD: ENC[AES256_GCM,data:vQkS7Z6sm2d3Lf9eLvpXNRyH+S0ynj3K3wE9Lv2D5MCM+d6LTSp6p4hcxG4WBXXrLIAg2W5jWmy9d3mn3s3pNw==,iv:jWSNqy02rLqr18qV6f1ZEYcA4plTTZueo1UnatCxjv0=,tag:VX410UZMZ9tIrV++S8ePVA==,type:str]
+    REDIS_PASSWORD: ENC[AES256_GCM,data:nSAU87WCxj7hTkAiJQwWRdFp1vLRYhDABQksnTp0SglyJYh+3jUmQGJXtgo2539ApSPA1LrS9RaooxUVmU7/0w==,iv:OyoTCYmBD2OzigMsMSju6hdf9DkNC2Rok9ZzOGu/dc4=,tag:m81o5KDa+p5Pw72pYCfHjQ==,type:str]
 sops:
     kms: []
     gcp_kms: []
@@ -14,14 +14,14 @@ sops:
         - recipient: age1ufcw42mtfu65grs30zqwu65xl7wczkllu3r4gjpk5yr7tr02q5kqq0pnvg
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSAvNlR2elNseTNDdWIxVGVp
-            NE9GaHZVbHJjUW9KK2lIUkpYTHBZWmxBYTM4Cm0yTEVQVjlGSzVMc3pIVWI4VWV4
-            VkxTejlsUDRZanFkZExpYmlYZlRic0UKLS0tIE93RkVYQ0s3eGRaMXpuR2xSS3Vs
-            dU9uVzJ5REFIU0pKSmk0UC9xU25IMzgKhxzYpMoFWa5bKNS/KWWEzoCkQ46sVq3Z
-            mw5ZnaMPDKz1szu0JGg3SwGUoF3yWS7h3zRZ+lIkOVH9nQWswJ+xng==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSB3YVVSZW15dlJsMUFKWng4
+            MTh6dVBNbVVZT1lsc2VxNFc2L0tqd2dhWXhVCmgwT1I0K0VYU1VQRHdyWHV5TVA3
+            NlFTMmJyaUw3bHhKQndQT3picDl5ZHMKLS0tIEFEUWpxa2ZLcW1xc3F3allGREtL
+            WlNxWGo0bnRYRy93NHA3NThkRXcrMkUKI+x4yyaQDWJBc5WYA1DUL41akcOh115h
+            g7LX5RDDrXu92H87fwT3eGa7l34J+YQ7P95WMSwN0YSFlM+LujBB6A==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2022-10-08T13:41:53Z"
-    mac: ENC[AES256_GCM,data:GWl8S6gh4+AYoTlSN/gacTIVmhpivf/H2wNHUOx0iKlhw4ueXjoRufsIvPrgf0iZ3fH10mYrmdvDlpSi2sxsJCnKl7QYuYHSaPXP6Y44bwmvvgyyUYn61LReIGk0cUUUrxqNrqvGnhlOE9RzgvawLE4T7QqXSj/ytvvwe4UAT1Y=,iv:DuXJKv6DQ2vrwA3fAIdK2M5dlToFiGCvlnLQCC6YsrA=,tag:8a44WLQTJY4PPrl6bmr2Fg==,type:str]
+    lastmodified: "2022-10-08T14:20:17Z"
+    mac: ENC[AES256_GCM,data:xNJT39UDcNdKIpopsdT3h/zfKHOMm7oMVCG5x/V+9+VrLrbLPyodN7R/LD8T9Pva04rMaL/+9/8NXvu/xc+mlb9Sl+Trb/Um4yr0x6R+q+hPgMYzNYVlJ/9oduKw6ua7paA7OE4UcXJPr9mcwG3eA+EiPiMIdfFnp+k5ha5+dfg=,iv:pu1reudkMWsiOd/RDKDBR+bSy9iiseS62SaNg1xqgrc=,tag:uE+0gLtEGATiuVFwS6XCHw==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData)$
     version: 3.7.3
