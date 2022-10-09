@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Secret
 metadata:
-  name: tailscale-token
+  name: tailscale-config
   namespace: tailscale
 data:
   TS_AUTH_KEY: {{ base64.Encode .Env.TS_AUTH_KEY }}
