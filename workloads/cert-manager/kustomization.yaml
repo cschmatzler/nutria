@@ -1,0 +1,7 @@
+resources:
+  - configuration/cloudflare-token.yaml.enc
+  - customresourcedefinition.yaml
+  - clusterissuer.yaml
+  - cainjector
+  - cert-manager
+  - cert-manager-webhook

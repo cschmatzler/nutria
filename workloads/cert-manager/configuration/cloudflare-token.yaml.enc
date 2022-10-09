@@ -1,0 +1,28 @@
+{
+	"apiVersion": "v1",
+	"kind": "Secret",
+	"metadata": {
+		"name": "cloudflare-token",
+		"namespace": "cert-manager"
+	},
+	"data": {
+		"token": "ENC[AES256_GCM,data:SmGxEBGbcAlbA9eUCshqWBYrvA8/mMGmGSQSkzUvZq+cmdGbMrteLQjrdjfvpTzfQhYJNtW28J4=,iv:HIgjIQ1hbhgMd74XC9NfLK+k/cWrspUuSeQA08O3aIA=,tag:O6R2tvD+Lqw7ZPkte5yTHg==,type:str]"
+	},
+	"sops": {
+		"kms": null,
+		"gcp_kms": null,
+		"azure_kv": null,
+		"hc_vault": null,
+		"age": [
+			{
+				"recipient": "age1ufcw42mtfu65grs30zqwu65xl7wczkllu3r4gjpk5yr7tr02q5kqq0pnvg",
+				"enc": "-----BEGIN AGE ENCRYPTED FILE-----\nYWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBWK1Rra3ZmMHZoWnAwQlhm\nanR0UFFPeGFndmZVbGEyYngrRW0zR2VpVkJ3Cjl0Y0MyaWVKVUNvb3RqZWpsejl3\nN0UxSVBXVFdvakk1TDhJVGw0MnZHWlkKLS0tIFYvbGdsOFR3NFFFTmtpYU82WFhm\nNzN3aGUwSk9CM0tKZ1NSWXdQZGl2UWsKBUXBBUfrtmcbbsTKweZKnF6g8DKL0hqs\nrreCKgXAmaMZm7VFhd2X1aJcQ7Kx9zg6chD4WaXWNQo7tyEyvGKukw==\n-----END AGE ENCRYPTED FILE-----\n"
+			}
+		],
+		"lastmodified": "2022-10-09T17:49:32Z",
+		"mac": "ENC[AES256_GCM,data:C5kyUGvgIwMVqsXpfZQVhKLuRMBMleJKyHfbXPYA8Q+A6YjhBJp5dEaTyUkHoPQXtIbxLZ2B5Djyy+XqgU1u6Ed23LC1bVzAT9TcbCeOuIKvvpVKr9KxUbBGFwey6xVR2bhiEpRzMy+wPM52+G57Ysp3MJUGbS3ycIW/MiGiBm4=,iv:dt4u6scKbtp1L7UtRyKFQJPFNSL8nnQTIw85Jf1OUuU=,tag:rQXZxSv/phtsbN9gTOnAlQ==,type:str]",
+		"pgp": null,
+		"encrypted_regex": "^(data|stringData)$",
+		"version": "3.7.3"
+	}
+}
