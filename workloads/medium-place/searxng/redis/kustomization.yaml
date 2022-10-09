@@ -1,0 +1,4 @@
+resources:
+  - configuration/searxng-redis-env.yaml.enc
+  - statefulset.yaml
+  - service.yaml

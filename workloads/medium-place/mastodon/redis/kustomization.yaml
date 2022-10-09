@@ -1,0 +1,5 @@
+resources:
+  - configuration/mastodon-redis-env.yaml.enc
+  - statefulset.yaml
+  - service.yaml
+
