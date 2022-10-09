@@ -39,15 +39,7 @@ max_upload_size: 50M
 
 admin_contact: 'mailto:christoph@medium.place'
 
-enable_registration: true
-registrations_require_3pid:
-  - email
-allowed_local_3pids:
-  - medium: email
-    pattern: '^[^@]+@medium\.place$'
-  - medium: email
-    pattern: '^[^@]+@leuchtturm\.io$'
-
+enable_registration: false
 registration_requires_token: true
 registration_shared_secret: {{ .Env.REGISTRATION_SHARED_SECRET }} 
 macaroon_secret_key: {{ .Env.MACAROON_SECRET_KEY }} 
