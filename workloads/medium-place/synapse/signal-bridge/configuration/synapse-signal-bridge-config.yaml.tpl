@@ -56,6 +56,14 @@ signal:
   avatar_dir: /signald/avatars
   data_dir: /signald/data
 
+logging:
+  handlers:
+    file:
+      class: logging.handlers.RotatingFileHandler
+      filename: ./mautrix-signal.log
+      maxBytes: 10485760
+      backupCount: 10
+
 manhole:
   enabled: false
 
