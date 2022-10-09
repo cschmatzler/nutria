@@ -2,11 +2,11 @@
 	"apiVersion": "v1",
 	"kind": "Secret",
 	"metadata": {
-		"name": "tailscale-auth",
+		"name": "tailscale-token",
 		"namespace": "tailscale"
 	},
 	"data": {
-		"TS_AUTH_KEY": "ENC[AES256_GCM,data:l3k/Pqe8VVe3ms+b8OKlYnP5jkwZLH3s87cMG9Nwp5NCg1Yl9Qhp40QE731Eh8M+ZkR+TklOns2lGlbL5CAQGcduz97MkhwuNNEoHw==,iv:JC8UEN3rDQLAsDwlaoT/EoRbx5s+bimRUjJ0ZjLWW8I=,tag:9vH5wVqXVhwUTkhy9ljgLA==,type:str]"
+		"TS_AUTH_KEY": "ENC[AES256_GCM,data:Xj1DZpjtR3YFy6NSuxRKA+fb5TgDqZMPjaUODXTB2ROQEVmRUY1DVscoIurX+5MUofoSEE8SVI4WO1pdbpiGWKbIjANLAShvM1BUqg==,iv:wS+Q2S2uMoy7Ob1110+3TD3rcYAZk7sCt5rI5R7K3AI=,tag:T9GnkYwpmVFp6FGZ+V1lKg==,type:str]"
 	},
 	"sops": {
 		"kms": null,
@@ -16,11 +16,11 @@
 		"age": [
 			{
 				"recipient": "age1ufcw42mtfu65grs30zqwu65xl7wczkllu3r4gjpk5yr7tr02q5kqq0pnvg",
-				"enc": "-----BEGIN AGE ENCRYPTED FILE-----\nYWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBvQ0tKNEVvRWZKVWQ2UnMy\nS2VsL05Eazl6c0tDVk1UYmtyY244c2dMOEhjClB4ZEFWRTFCZWgyUTNhS3ZzeEgw\nbFMwRDR0S2h0bDV6VUd2cjBFTFY5TDQKLS0tIEFVOVFMcjhoSDBXWVJNeW95ZVZj\nQnpnZkkvdEFTZXdvTW82M2E0ZFRZUXMKcSXqtbhWG03wMbI73CnEVcIv1gpGvaHw\nbOO3RjGKjfVC8+i709iajwrACIw2slD9Nm82Hmc23uLrijX1ER6Puw==\n-----END AGE ENCRYPTED FILE-----\n"
+				"enc": "-----BEGIN AGE ENCRYPTED FILE-----\nYWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSArRlR3cHFHazgraGVZTnRQ\neFVza01KL0tpeXo3b3NKTlVKYUIxRHhUSzJnClUwVThOVERIcmtLamczYURTek80\ncjhqV2lhK3ZHSWR5SS95QklKZEJaMFUKLS0tIGdaS1NNNytZNDBsTHFlUDU0RmR3\nSzV1eWxFRFplMjdyd1I3STREcjVLQXMKJym1XC0I03chSCq/Jcrgh/kB87LgVo36\nqVSodGX05b4EAPeaW8BSMNxofrhdhYtfpricEoRA008LSs1O/gLszQ==\n-----END AGE ENCRYPTED FILE-----\n"
 			}
 		],
-		"lastmodified": "2022-10-09T17:59:28Z",
-		"mac": "ENC[AES256_GCM,data:H31oSNC3gaTVMHS6lj/OwnHbokSByjKdnLXAJVXGrqtAfBG+I6PHZS43fLLo3s1iG3yXeTb2ZnQvL+0s1M/T99QaUt4sdQjQNMgMC3CJjZRFOBK0Mtq65/edmamDkswGEOjnws5n/LKR6YRiwI2Sp+Jq7DiQ3Upnl/Rckfwa4bk=,iv:3gaqmWZ2MHJN1vRQ25xmGhr4m4g09fkrNCk/aTIsluI=,tag:DN50oFiR6Bhj7Q3Nv+nZZg==,type:str]",
+		"lastmodified": "2022-10-09T18:02:01Z",
+		"mac": "ENC[AES256_GCM,data:knSAn3MLyPlXeKLY+kb68P8FYgrhUYIFRwxKubg1phUgMqgN+4LQjcWFnVJk3DVyZCy3eRQQ+LF22cwT8lkDVSTX9ajrtr1I0sNm0AqCX4tZlt6Oopx3GPvQ3aUU8LYNqAjYQW8q+nMEVOeH70aMzapangoKqqlUkC1xqSpOLlc=,iv:IPXBT8+HXOmh1byJuWohk4Ib7V3+iO5rLFg/z+1rp7I=,tag:KvYuEHP/uFpfauGl+5IP9w==,type:str]",
 		"pgp": null,
 		"encrypted_regex": "^(data|stringData)$",
 		"version": "3.7.3"
