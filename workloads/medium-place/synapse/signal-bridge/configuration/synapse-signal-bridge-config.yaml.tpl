@@ -71,7 +71,7 @@ logging:
       formatter: colored
   root:
     level: WARNING
-    handlers: [file, console]
+    handlers: [console]
 
 metrics:
   enabled: false
