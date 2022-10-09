@@ -27,4 +27,3 @@ spec:
   timeout: 3m0s
   retryInterval: 2m0s
   prune: true
-  force: true
