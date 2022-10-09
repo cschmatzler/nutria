@@ -48,6 +48,8 @@ spec:
                 - NET_ADMIN
 
           env:
+            - name: TS_USERSPACE
+              value: "false"
             - name: TS_AUTH_KEY
               valueFrom:
                 secretKeyRef:
