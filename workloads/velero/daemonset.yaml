@@ -75,7 +75,7 @@ spec:
             - name: host-pods
               mountPath: /host_pods
               mountPropagation: HostToContainer
-            - name: cloud-credentials
+            - name: wasabi-credentials
               mountPath: /credentials
             - name: scratch
               mountPath: /scratch
