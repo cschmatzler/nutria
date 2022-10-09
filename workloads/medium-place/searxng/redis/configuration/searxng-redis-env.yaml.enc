@@ -1,0 +1,28 @@
+{
+	"apiVersion": "v1",
+	"kind": "Secret",
+	"metadata": {
+		"name": "searxng-redis-env",
+		"namespace": "medium-place"
+	},
+	"data": {
+		"REDIS_PASSWORD": "ENC[AES256_GCM,data:IFp1vK3dQUeQraeXZHWIdOlM8cKrSa3iKV6XUMH4HspgVxDnaXIOdMiNxNveYjZgD8gLCrYVcu0+jybo83XLYA==,iv:bSm7HKTPopL6JMVzgMkXE+vHuAiqxdTGKwFg5562k3g=,tag:CiU/ftkxEQKaVRFbmu55gw==,type:str]"
+	},
+	"sops": {
+		"kms": null,
+		"gcp_kms": null,
+		"azure_kv": null,
+		"hc_vault": null,
+		"age": [
+			{
+				"recipient": "age1ufcw42mtfu65grs30zqwu65xl7wczkllu3r4gjpk5yr7tr02q5kqq0pnvg",
+				"enc": "-----BEGIN AGE ENCRYPTED FILE-----\nYWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSB2VUd4bE1wRUpUTWdZSUpx\nTzdXZGxWMWVkSE0rMWg5VjlvSEM0N2lFbHhRCk1lL0t5cDJBVEpjRzlDOCtmamdW\nMXM3WUxxaFF5UW14Wnk5Y3ZYNXNqVHcKLS0tIFNFa2oyMnI4TytxRXJvaUIrZEF3\nb0k3ZENPbTJyODZSbjYveTZNcmVHVFkKFf1flLwHdd1DbFwoZ0zwX7NIRzPZHmnu\nNjGJbp9trYEXnHU+/ugLJNza2RSckTr6vy+wKBl/ecVZIIblWmY0VQ==\n-----END AGE ENCRYPTED FILE-----\n"
+			}
+		],
+		"lastmodified": "2022-10-09T15:17:28Z",
+		"mac": "ENC[AES256_GCM,data:exyh+dVILJ045KMZHhpG0iU+kvt9fw5Jn5JYHymdWvG+Y5m4H5ioQSNmIrBDJuyEY64+T8ud8eTS363jE2/gifL1BdLTyBi8pI0f7ppd+qlW6e3ajKWFu6ZiD1zEVkOULEb9nYzZriiz7e4PnFVznNcEJ7Pa6Yf1kFA1RyXgnw8=,iv:N9kvQTu1ZK2emJTCR2jXd5XVyaseRJUXtXVLOOUDilk=,tag:j8b+CMxeCiamyQPo+w+UxQ==,type:str]",
+		"pgp": null,
+		"encrypted_regex": "^(data|stringData)$",
+		"version": "3.7.3"
+	}
+}
