@@ -43,7 +43,7 @@ bridge:
     allow: true
     default: true
     appservice: true
-	require: true
+    require: true
     verification_levels:
       receive: cross-signed-tofu
       send: cross-signed-tofu
