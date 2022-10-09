@@ -1,5 +1,5 @@
 resources:
-  - /configuration/mastodon-env.yaml.enc
+  - configuration/mastodon-env.yaml.enc
   - deployment.yaml
   - service.yaml
   - ingress.yaml
