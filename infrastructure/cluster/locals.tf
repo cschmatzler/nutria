@@ -18,12 +18,6 @@ locals {
   worker_nodepools = [
     {
       count       = 2
-      name        = "worker-cpx21",
-      server_type = "cpx21",
-      location    = "fsn1",
-    },
-    {
-      count       = 1
       name        = "worker-cx31",
       server_type = "cx31",
       location    = "fsn1",
