@@ -34,7 +34,11 @@ spec:
 
           volumeMounts:
             - name: data
-              mountPath: /data
+              mountPath: /config
+              subPath: config 
+            - name: data 
+              mountPath: /books
+              subPath: books
 
           ports:
             - name: http

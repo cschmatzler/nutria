@@ -1,0 +1,32 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+
+metadata:
+  name: calibre-web
+  namespace: medium-place
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt
+    external-dns.alpha.kubernetes.io/target: nutria.cschmatzler.github.beta.tailscale.net
+    nginx.ingress.kubernetes.io/proxy-body-size: 50m
+  labels:
+    app.kubernetes.io/part-of: calibre-web
+
+spec:
+  ingressClassName: nginx-private
+
+  tls:
+    - hosts:
+        - library.medium.place
+      secretName: library.medium.place-tls
+
+  rules:
+    - host: library.medium.place
+      http:
+        paths:
+          - pathType: Prefix
+            path: /
+            backend:
+              service:
+                name: calibre-web
+                port:
+                  name: http
