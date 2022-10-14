@@ -26,6 +26,15 @@ output "cluster_nodes" {
   value = module.cluster
 }
 
+module "mail" {
+  source = "./mail"
+
+  ssh_key_id = module.network.ssh_key_id
+
+  database_root_password = var.mail_database_root_password
+  database_password      = var.mail_database_password
+}
+
 # module "turn" {
 #   source = "./turn"
 #

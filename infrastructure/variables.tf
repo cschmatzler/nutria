@@ -25,6 +25,18 @@ variable "image_id" {
   type        = string
 }
 
+variable "mail_database_root_password" {
+  description = "Root password for MySQL database"
+  type        = string
+  sensitive   = true
+}
+
+variable "mail_database_password" {
+  description = "Password for MySQL database"
+  type        = string
+  sensitive   = true
+}
+
 variable "turn_secret" {
   description = "TURN secret"
   type        = string
