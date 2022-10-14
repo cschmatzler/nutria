@@ -62,7 +62,8 @@ spec:
               subPath: books
 
           env:
-            - DOCKER_MODS: linuxserver/mods:universal-calibre
+            - name: DOCKER_MODS 
+              value: linuxserver/mods:universal-calibre
 
           ports:
             - name: http
