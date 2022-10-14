@@ -15,11 +15,11 @@ spec:
 
   tls:
     - hosts:
-        - library.medium.place
-      secretName: library.medium.place-tls
+        - helpdesk.medium.place
+      secretName: helpdesk.medium.place-tls
 
   rules:
-    - host: library.medium.place
+    - host: helpdesk.medium.place
       http:
         paths:
           - pathType: Prefix

@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: calibre-web
+  namespace: medium-place
+  labels:
+    app.kubernetes.io/name: calibre-web
+    app.kubernetes.io/part-of: calibre-web
+    app.kubernetes.io/version: 0.6.19
+
+spec:
+  selector:
+    app.kubernetes.io/name: calibre-web
+    app.kubernetes.io/part-of: calibre-web
+
+  ports:
+    - name: http
+      protocol: TCP
+      port: 8083
+      targetPort: http
+
