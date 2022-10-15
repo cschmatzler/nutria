@@ -5,9 +5,9 @@
 		"name": "stolon-keeper-env",
 		"namespace": "stolon"
 	},
-	"data": {
-		"STKEEPER_PG_SU_PASSWORD": "ENC[AES256_GCM,data:dy1Ux4TBdNsdItGNtulM59KArmRc1PBY79an0vbw4Nri1pbK4p0Sbsgol7FVmei7eGJeCeCWdbcd/xGz95JU0w==,iv:IN+PKRfmrBW4cvFfVZyhNwVnmunNHH8KpdzqDK/MZUE=,tag:U6vxDi8a6becNsc3PZ+8uA==,type:str]",
-		"STKEEPER_PG_REPL_PASSWORD": "ENC[AES256_GCM,data:XYZkmskFWr0ovKm4q5ZmS9Vkl8HvmLiP8FbdFnJvJUbtOUU+IVLIctF5UqdfmrtbDgkxGAbzy+Ey8822P76gQg==,iv:7WBoZNNAPqAARv8cZD2HqPBhKePxU/+mw7ZO5QKSgmo=,tag:JzdYLbMlFwpqGX3AGWthWA==,type:str]"
+	"stringData": {
+		"STKEEPER_PG_SU_PASSWORD": "ENC[AES256_GCM,data:znDB6WcYADJJx+jeEEIQgsr8ARVFjIaST5vhK5PdCLM/nFY3KqNyg5ctN52YCK+O,iv:53tMogo6xdr5Va1cH/Omdsu2tOxARf1A+Z3OvztTcbc=,tag:2wB0BAejhaCOuPmoby6dsg==,type:str]",
+		"STKEEPER_PG_REPL_PASSWORD": "ENC[AES256_GCM,data:0/foi/nTYLbFCX1uXjT6ItmQhxhZdVl8VltX/xfEICBhctyNUCucl3Czn2KMvCyZ,iv:Mnkb9qnwCtoJcRkHKSiWr7VkcXk9iGNq7DKp7edjKHs=,tag:r5axRwyloo4z8NORcXBmoA==,type:str]"
 	},
 	"sops": {
 		"kms": null,
@@ -17,11 +17,11 @@
 		"age": [
 			{
 				"recipient": "age1ufcw42mtfu65grs30zqwu65xl7wczkllu3r4gjpk5yr7tr02q5kqq0pnvg",
-				"enc": "-----BEGIN AGE ENCRYPTED FILE-----\nYWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSAxVnlibHh2Qm1ZWEl3NHkv\nRE9SL0d3YVl2emNMRnMyZGZ5bjhjUis3ZFQ4CnUwdk9aK1lOQTdQaWQ3cVZUb1ps\nNWFiN3Zha1AzQkxKd0JGckpqZy9nMW8KLS0tIEVlVGpxdWlXMzBveEVYVzY3dnIx\nd2VObjg1R01Vd1hFYVJWKzhJWXBsRjAKap8bAyVQuP5K+51TVGzhl6813JFXVG6W\ntk6BYyq8kwRpm8jBbdUIfFKQ7U31emlpOQeeqILubcTPuAW9AoufWw==\n-----END AGE ENCRYPTED FILE-----\n"
+				"enc": "-----BEGIN AGE ENCRYPTED FILE-----\nYWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBWMG1ORTl1S0lqMlpKTkhP\nWWsrbFRKV0hUSEZhZlFxcXJMZGNyUzB0OTFJCmI3cFNyQU5KbVU3bHZTOVhSRkdo\nS2ROdXdlZXRBQkVlVTZsNjkyRlV4b00KLS0tIDU2VDFYOVJIZFlPd1A5ZG9WSVJS\nQVp5dE9mbm9wK0xIOE9jQjB2KzVwajAKYkrawJo/r0Wsbc8BXnpV6I5xyIYqbKf/\nfG6ZFaHKOIAe6m/JjimeLSjc1D08+WlK2XBRmpMW01ykc98z6Rv5Aw==\n-----END AGE ENCRYPTED FILE-----\n"
 			}
 		],
-		"lastmodified": "2022-10-09T17:56:18Z",
-		"mac": "ENC[AES256_GCM,data:bplIdrilSJk1Go1Wxulqh32VqFsSb2RR49QHhvJtmGBMhmwXkbt3xK1/SroWIjSSOOKOR45P3Qzro37//SGQ3GpJyn+6dDM5ob0G/flaYzIVpfj9fTHyclUTmQHyOXiK04KGo4jEv8km3OV/rfNwSgeV5vYLbFDIfKgIvpfLumo=,iv:ZWi2TB4zJby1Q44j9u1zQEV2Fjjhe3HRIxSoEQbRe1Q=,tag:S4138t6Jd4U2v04JguDEyA==,type:str]",
+		"lastmodified": "2022-10-15T18:52:28Z",
+		"mac": "ENC[AES256_GCM,data:yCEeHzMp4WEjEHAmRjYFiPDackz22aYE+pcI2boB1jORe7SmUAYSoHwXYJk03eskTzOYTH12QO7ujp8ejbj8guQmKwxvCon/AA9DUaCSUQ2vtdtlwf7XCfLZaF787b8Be4YLdnwWb+rGqyUwzL7C2qKw/h0iYMtG0gF0q6A/nwE=,iv:J/WEPnemTDbrc7WYlGrQPPzXfakweZmDWF2zbsd7jK8=,tag:U/mKLG8PbAC3GWmbssuXPg==,type:str]",
 		"pgp": null,
 		"encrypted_regex": "^(data|stringData)$",
 		"version": "3.7.3"

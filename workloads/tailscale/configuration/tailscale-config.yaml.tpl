@@ -3,6 +3,6 @@ kind: Secret
 metadata:
   name: tailscale-config
   namespace: tailscale
-data:
-  TS_AUTH_KEY: {{ base64.Encode .Env.TS_AUTH_KEY }}
+stringData:
+  TS_AUTH_KEY: {{ .Env.TS_AUTH_KEY }}
 
