@@ -22,11 +22,6 @@ spec:
     metadata:
       annotations:
         backup.velero.io/backup-volumes: data
-        diun.enable: "true"
-        diun.regopt: docker.io
-        diun.watch_repo: "true"
-        diun.include_tags: "^\\d+\\.\\d+\\.\\d+$"
-        diun.sort_tags: "semver"
       labels:
         app.kubernetes.io/name: redis
         app.kubernetes.io/part-of: mastodon

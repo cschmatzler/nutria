@@ -20,12 +20,6 @@ spec:
 
   template:
     metadata:
-      annotations:
-        diun.enable: "true"
-        diun.regopt: docker.io
-        diun.watch_repo: "true"
-        diun.include_tags: "^\\d+\\.\\d+\\.\\d+-.+"
-        diun.sort_tags: "semver"
       labels:
         app.kubernetes.io/name: searxng
         app.kubernetes.io/part-of: searxng
@@ -47,10 +41,6 @@ spec:
             - name: searxng-config
               mountPath: /etc/searxng/settings.yml
               subPath: settings.yml
-
-          envFrom:
-            - configMapRef:
-                name: searxng-env
 
           ports:
             - name: http

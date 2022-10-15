@@ -5,8 +5,21 @@
 		"name": "searxng-config",
 		"namespace": "medium-place"
 	},
-	"data": {
-		"settings.yml": "ENC[AES256_GCM,data:kvOEgw4g/snBUqdig1/5T/yBrJm4LUek1LYLALQ3b09TIcU8TW/rRcVW7xthYgUuNy7kv+VxiV9QZ5Ay1LnU861AJKRmZuTBEnPMUmRPB/zRnyl4Rd//BAsSmDSn30Bat35w/S4I6bQOvbmYBHkWmh9ZUHCJSpgba+JC2SMK08Ofsxi+V3Zmy6iGgav/T3DU4fxgKQE27rj+/obl7X1/LJt4RL6iGGEwMPBoBdbT6i4ILmloB2oDogZAmDyiqo+8RriGrwY+ChqSg5sODIIUi5jtGP505VQ8922skZso25hA31Z6rBf4XDqpZGxwhIWZMvxu9QhdPlO1bHpJD9rZtu2m6xw/YWl5ptR17YcE9npppT197VY6nkNi3c//R/imjdYv/HDKhbd7mBckTZzpYHpd/ZfwxbKegdTsXkCRNIs8cT3/dgMI40W3Mg5mfFMnOHKGQbt6FlGzcTJgdUT7AV8krBNvXSSf,iv:1xgXKWA4ChPGmwpL2mJX5s4STBm6w50wDMYANeyI840=,tag:fDhZ2hWAXvuK5MeaJasdGg==,type:str]"
+	"stringData": {
+		"settings.yml": null
+	},
+	"use_default_settings": true,
+	"server": {
+		"base_url": "https://helpdesk.medium.place",
+		"secret_key": "d20b414f9ae6a889106dbdd63faccd42ebbf6e0aa6339ffbedcb0a8cc26d1f42",
+		"limiter": true,
+		"image_proxy": true
+	},
+	"redis": {
+		"url": "redis://:zai8ooqu4peejeza6phaibu3Sethiech5ohzoh9Oshao3Yie@searxng-redis:6379"
+	},
+	"ui": {
+		"static_use_hash": true
 	},
 	"sops": {
 		"kms": null,
@@ -16,11 +29,11 @@
 		"age": [
 			{
 				"recipient": "age1ufcw42mtfu65grs30zqwu65xl7wczkllu3r4gjpk5yr7tr02q5kqq0pnvg",
-				"enc": "-----BEGIN AGE ENCRYPTED FILE-----\nYWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBSOXlWdGkvdVMrbFhMWFlG\nM0J4SjZ4YzY2aGdPWktaVUMvYXV0L3FveDM4CjhIMTN5TEtMK2pvOU1CZU9UNWti\nNFpzbW0ra2hkZHEvNi9lS3MybGlYQkEKLS0tIEJSZGZWWEJFb01FRTh6VlArUmQ0\na1dCUjYyRUdoSzVGSHZoOTZJUFdXZXcKpnFmPBck9nQv2wWW4Dc5KmIWEaMoIktn\n32T1qSEhGuaFouMQpm4eeaVF865C52EqqTn5RLOtRRo9Su4RN3TCiQ==\n-----END AGE ENCRYPTED FILE-----\n"
+				"enc": "-----BEGIN AGE ENCRYPTED FILE-----\nYWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBJVzZjWnlkYytyWW5ETFZS\nU1luUWM0UVc4SnNReTVYc09jTW0yV2pyRFhNClRtZHdoVWUzUTRsa3dGaDc4bnRu\nSTZmM2dwcDkza24xNmRmSFMwSk91NDAKLS0tIDRhenVWWkVqK1JhNkZKOEI3dFhY\nUGdHRmlTelU5YVZ0MEx0UWx4WXlFdG8KlbImnK3sTJHu3SvF+Jtjr+ATvwy/tI/l\nHjJugXnElFUGGg0QxVFp1E8y1M2RJIs86Q/m3E97XqFMbq/aDLgnig==\n-----END AGE ENCRYPTED FILE-----\n"
 			}
 		],
-		"lastmodified": "2022-10-09T15:19:31Z",
-		"mac": "ENC[AES256_GCM,data:tre7jF8FTEB754PD/pXxYQHuBWPKRLt7AZT2qJp4jwzOYlUc1uzZPWhWVxoyTutdsncpf2pCSaGI+NnglVjIZ1nQboPg9h06FhKSsjLx9xXeoKNieE3gi8m2tgKmrlJ7eR/cAY03asqOXivqA7DSwCsfa8CWfkMf/2Eb4Xbdwyo=,iv:4Pxpd294JAwjJEfjRyZRCSUrSouR0P1ElT33N/Xi2ZM=,tag:F17WQgv6KB2XWG+IgiuUFQ==,type:str]",
+		"lastmodified": "2022-10-15T18:33:29Z",
+		"mac": "ENC[AES256_GCM,data:FeCLYQQ0cBuwK7SYXUMqSKIytt6QgGZnJxe55i1akuy74ydUXW+/zUvRAc8LCOAJzezysj5TEvSoLGbwKkEFyRjInFYFqaWPqplUCwklBpMjSdp8foSK54UPkWOJd6LIHxKBUx7TJpePYXFkjW+quOj18EiJHmJ/z8Io267SUMc=,iv:zWpjbqjgI46igIC/QoLvXKhh4XEV5csvzsayEXgCOeQ=,tag:gbT/0EnM5I4NozHEZuWxmQ==,type:str]",
 		"pgp": null,
 		"encrypted_regex": "^(data|stringData)$",
 		"version": "3.7.3"

@@ -3,5 +3,5 @@ kind: Secret
 metadata:
   name: searxng-redis-env
   namespace: medium-place
-data:
-  REDIS_PASSWORD: {{ base64.Encode .Env.REDIS_PASSWORD }}
+stringData:
+  REDIS_PASSWORD: {{ .Env.REDIS_PASSWORD }}

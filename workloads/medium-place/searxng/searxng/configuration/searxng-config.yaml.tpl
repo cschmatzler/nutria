@@ -9,6 +9,7 @@ data:
 {{ define "settings" }}
 use_default_settings: true
 server:
+  base_url: https://helpdesk.medium.place
   secret_key: {{ .Env.SERVER__SECRET_KEY }}
   limiter: true
   image_proxy: true

@@ -3,14 +3,14 @@ kind: Secret
 metadata:
   name: vaultwarden-env
   namespace: leuchtturm-io
-data:
-  ADMIN_TOKEN: {{ base64.Encode .Env.ADMIN_TOKEN }}
-  DATABASE_URL: {{ base64.Encode .Env.DATABASE_URL }}
-  SMTP_HOST: {{ base64.Encode .Env.GLOBAL_SMTP_HOST }}
-  SMTP_PORT: {{ base64.Encode "465" }}
-  SMTP_SECURITY: {{ base64.Encode "force_tls" }}
-  SMTP_USERNAME: {{ base64.Encode .Env.GLOBAL_SMTP_USERNAME }}
-  SMTP_PASSWORD: {{ base64.Encode .Env.GLOBAL_SMTP_PASSWORD }}
-  SMTP_FROM: {{ base64.Encode .Env.GLOBAL_SMTP_USERNAME }}
-  SMTP_FROM_NAME: {{ base64.Encode "Leuchtturm Vault" }}
+stringData:
+  ADMIN_TOKEN: {{ .Env.ADMIN_TOKEN }}
+  DATABASE_URL: {{ .Env.DATABASE_URL }}
+  SMTP_HOST: {{ .Env.GLOBAL_SMTP_HOST }}
+  SMTP_PORT: "465"
+  SMTP_SECURITY: "force_tls"
+  SMTP_USERNAME: {{ .Env.GLOBAL_SMTP_USERNAME }}
+  SMTP_PASSWORD: {{ .Env.GLOBAL_SMTP_PASSWORD }}
+  SMTP_FROM: {{ .Env.GLOBAL_SMTP_USERNAME }}
+  SMTP_FROM_NAME: "Leuchtturm Vault"
 

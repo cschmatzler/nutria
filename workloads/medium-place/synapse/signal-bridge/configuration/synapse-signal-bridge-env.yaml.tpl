@@ -3,5 +3,5 @@ kind: Secret
 metadata:
   name: synapse-signal-bridge-env
   namespace: medium-place
-data:
-  SIGNALD_DATABASE: {{ base64.Encode .Env.SIGNALD_DATABASE }}
+stringData:
+  SIGNALD_DATABASE: {{ .Env.SIGNALD_DATABASE }}

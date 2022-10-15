@@ -22,11 +22,6 @@ spec:
     metadata:
       annotations:
         backup.velero.io/backup-volumes: data
-        diun.enable: "true"
-        diun.regopt: docker.io
-        diun.watch_repo: "true"
-        diun.include_tags: "^version-\\d+\\.\\d+\\.\\d+$"
-        diun.sort_tags: "semver"
       labels:
         app.kubernetes.io/name: firefly-iii
         app.kubernetes.io/part-of: firefly-iii
@@ -42,8 +37,6 @@ spec:
               mountPath: /var/www/html/storage/upload
 
           envFrom:
-            - configMapRef:
-                name: firefly-iii-env
             - secretRef:
                 name: firefly-iii-env
 

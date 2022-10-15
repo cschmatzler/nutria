@@ -5,8 +5,8 @@
 		"name": "synapse-signal-bridge-env",
 		"namespace": "medium-place"
 	},
-	"data": {
-		"SIGNALD_DATABASE": "ENC[AES256_GCM,data:DIR8ryKWQ56zoBgBcsEI7hSgtm1kLGGqABPPR9VfLJhDXzbW3xdhfmkhtXTg1NoNgDb/2RVMn6F4aqR8SuU42fWKNN1dKo3KFe7EpX5+YUiXfh/Y3UfqaEa7/fMf2OGaIycO3cW/Bkc3xfM1wQcdM2xTQsHBXfRA83MD5R0pozasjvNzRs7gartG+x5HpVk2GJmqjDb5XDnGHgZA0RFzXZuzQ5KOj6N7evotlaT0EgWdpI3JjgHquC/mRCYI+ZfumNle7cpksjFaaAWypcoLw3VbjRU/Q45+,iv:O54aHCHG1sE67oht0puYwvJYUTqZpth5eerG4Ey5VBU=,tag:Ondf/ikkk0IKeQPP2eu6tw==,type:str]"
+	"stringData": {
+		"SIGNALD_DATABASE": "ENC[AES256_GCM,data:XDOyCUzO4HLqVB+VktkXbSHqVwXSJ/Otwkx/ydKPVCiAxSjMeHhn2VaYz6cVU2PSNb9GPkhrqXw43BVVIJugq1ioNEpL7z1eXm9yZwerHacwwLFx5WYT0m2u7HhZP9e5Q3VWsym5MiUYoviJdPgghnErdIJ1kqXyKZJGmtdFq8Pqoj0BEeDQMV/TXUTft2hUOEwF5tPYbchyc7Cec/E0oM+Y,iv:4hlUrUCjeLVqFuM8qkWtU12rLyHgvUqFi4P0ixQGFpQ=,tag:V/mwm7ICrJCLYc+uCWq3Tw==,type:str]"
 	},
 	"sops": {
 		"kms": null,
@@ -16,11 +16,11 @@
 		"age": [
 			{
 				"recipient": "age1ufcw42mtfu65grs30zqwu65xl7wczkllu3r4gjpk5yr7tr02q5kqq0pnvg",
-				"enc": "-----BEGIN AGE ENCRYPTED FILE-----\nYWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBvMTJLNUtlNWlpZ3VLSFhq\neVlPLzcvbFZNWWhKYm5seDFEOEJMN1p0dFFNCjF1Nml0NDJNb280NGxIZXlWdUY5\nNkhTMmdxcmMzcFk2UUpIWEt1bEw2Qk0KLS0tIDRkL2xjc2Z1UGtGN0hlenQ3VkNm\nQUl0MlBXUkVyZVpEdFdQUXcvOTVGeUkKwT+vWM1rM+v/SxwqKlfDLvkPd/bHUBBL\nQbR8hYVLLHY+g5IOVGoasEabYkhVLn61S3RdN9ZahQ0kQ3QGxLUI/Q==\n-----END AGE ENCRYPTED FILE-----\n"
+				"enc": "-----BEGIN AGE ENCRYPTED FILE-----\nYWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSB2aWFTVkZQb3NPNEpaRVZE\nS2MxL1puU21tVUgrQVFETzRjS0ZobUwrVG1FCnErU2lMVnROajZDMlNUWGRzN1VE\nUDlvMmUzYXVscHlPVExaTzg1ekhxZUkKLS0tIC9pcGN5aWxIM1pzOG9lU2lpenB1\nY2pnUVlaaXdSdkt2K1pjTHgxVCtnSFEKXek//HYkY89HdT6jrGs5n9pLVA9LGiT9\nQEzuT+4wZDkNsbhwnJQGcmsTTViBPNU6BR/dAobvgvl8nSswIHcFBw==\n-----END AGE ENCRYPTED FILE-----\n"
 			}
 		],
-		"lastmodified": "2022-10-09T16:49:07Z",
-		"mac": "ENC[AES256_GCM,data:iY27wvIapSh0hLxeREb2yPrN1VyqcDG0hifYl6WbHLQtzgx3H+3icKMrrwFsf+iM4ZzN9eLjUOABpE79lnyqJ4jk6meRcrYAyZAFQpYywXBp5vzEKXsqrl6tNVUxmk806acTk1c6mVQhHrBD7PgFhEUtpUQx+jBnveKFvmVBed0=,iv:E/+6nycrwUo4lsfBGkNwjr/jwteXbReqJrkYeR7bIvU=,tag:Llio0IYtAZaBrJKld3kKjg==,type:str]",
+		"lastmodified": "2022-10-15T18:37:16Z",
+		"mac": "ENC[AES256_GCM,data:obDQZE3rTrdp4UqS7i/hvm3D5TLcahoKScGDKF8Uz2p3UE7udhj6gpT4DzN2VvXyLGXgPleJnOOBUJbVOTJdJ9Sd54n8lZbuMgvD3sPybV+Txu9394i4/9y0UHiXU+7tCfkBU30d4w3gBdsEJrraBcdLg3YEO29qXQc8gJLpleg=,iv:jXUS3J3WlQMNwVga+1j6BtxrJCexMoYHqY4uAiwCRj0=,tag:rEZ5MiLFctl+iZ5lnPF54Q==,type:str]",
 		"pgp": null,
 		"encrypted_regex": "^(data|stringData)$",
 		"version": "3.7.3"

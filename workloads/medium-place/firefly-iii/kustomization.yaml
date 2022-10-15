@@ -4,8 +4,3 @@ resources:
   - cronjob.yaml
   - service.yaml
   - ingress.yaml
-
-configMapGenerator:
-  - name: firefly-iii-env
-    namespace: medium-place
-    env: configuration/firefly-iii.env

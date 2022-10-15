@@ -20,12 +20,6 @@ spec:
 
   template:
     metadata:
-      annotations:
-        diun.enable: "true"
-        diun.regopt: docker.io
-        diun.watch_repo: "true"
-        diun.include_tags: "^\\d+\\.\\d+\\.\\d+$"
-        diun.sort_tags: "semver"
       labels:
         app.kubernetes.io/name: vaultwarden
         app.kubernetes.io/part-of: vaultwarden

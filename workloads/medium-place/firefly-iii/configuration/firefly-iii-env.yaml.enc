@@ -6,18 +6,20 @@
 		"namespace": "medium-place"
 	},
 	"stringData": {
-		"APP_KEY": "ENC[AES256_GCM,data:8hrECSw5GGONaU4Pg4eJx0FbdAOIOQuRwAP3YMaN9Dk=,iv:zJ1uY8jf7lsRfWLS+t5Wx3IH7eqmb+dWoDMg7mCfODA=,tag:1uuhara3az0gQzmlqh0b5g==,type:str]",
-		"STATIC_CRON_TOKEN": "ENC[AES256_GCM,data:0G9g3X3tRHbtI/aYfk0LTe/Wbl95lwzeZ018O4NP8bU=,iv:cCdhJGXbw4O3ziikyqlgUf6sOjLX6+z+LTUpcYeukrc=,tag:RISlE2nFgcb2pxtQ+CFSlQ==,type:str]",
-		"DB_HOST": "ENC[AES256_GCM,data:PZaCpwnTHnswzuDqU7FNWjr4owUTt7Ye/Cgx1Run7iWEYzKECQ==,iv:giJ5Z8Lgbhr4Bqzd8Z4lT3+CrpGMbz4Idf43YcnzDUE=,tag:7o9O6em3OcqwelSytVr1Dw==,type:str]",
-		"DB_USERNAME": "ENC[AES256_GCM,data:hqNT8Jc6Z+SDx2NKrW36WpkGmRDfFfNW,iv:YJ++CVcC4XaUkvWfk0JzpwClO8v8wamRqc2yvIjkeOM=,tag:TUrfLtK3mIMUgfJ1UvWNZw==,type:str]",
-		"DB_PASSWORD": "ENC[AES256_GCM,data:6nckiM2hfgTk28nXubpyaPfK0ILDv/IykxgbR5OfUFz3ctdPWa6CTnySNP94awwj,iv:cUXxHdiZG2B8uodGMmgR4SZ2Dzi2ih2Vwqn5rQO+138=,tag:bxCooO/YBz2ttotlZgOJHg==,type:str]",
-		"DB_DATABASE": "ENC[AES256_GCM,data:RS7RQRZ0tdIos85L94HZygKY6l6CHz+C,iv:KfarN1ei6l0m9XJoR55Mua/My/+AGjVmzHdlzZTb3Yc=,tag:BFzIdfOioLzkDDZw+LQytA==,type:str]",
-		"MAIL_HOST": "ENC[AES256_GCM,data:ysAfj1j4nvLBPCYAe7YtpV4=,iv:uSNgY9duDmqXApKRmlAeaNWlnMFebajyeFIXWZl77uM=,tag:QjsnRiXrExf++YxGV1c+sA==,type:str]",
-		"MAIL_PORT": "ENC[AES256_GCM,data:4Km3,iv:+K9YIc2jcPTRwZo2golnQaB/wvmgi9tNi3sDq5iiWzo=,tag:UhZODJT3WzjQs6wnj1E5UA==,type:str]",
-		"MAIL_ENCRYPTION": "ENC[AES256_GCM,data:nHqA,iv:IL1ixebuV84jzMacWgPzKJCMh335CAtnRSz3pNw8JWY=,tag:+Y85+yt6RjZhffHpNM/eZg==,type:str]",
-		"MAIL_USERNAME": "ENC[AES256_GCM,data:0V/W7DYPFV04qhrneZnawkL1dA==,iv:cqVvcMltys9ed2NTIYF5/+0DpFDfFDkTXqDflqVz+lE=,tag:dgCEhV6EqKkZQlPFRsrpXA==,type:str]",
-		"MAIL_PASSWORD": "ENC[AES256_GCM,data:ucKqCB42cqkqLcRCH8emBs5fYbModhp2FQGkSvskkFKDRXTolkRrXGbQuAKFQpai,iv:vMZlIZDBL41u4UHSKV2koQVb/X2oApsjfTQicDuxK0Q=,tag:tfBA3S/NBDG6HfzxDbLcrQ==,type:str]",
-		"MAIL_FROM": "ENC[AES256_GCM,data:UuCEEfe7642YaWgB+/FdbJmcwg==,iv:+p9xIiRgkz+VojPAnOHavfWoP11bah3YXBqa4v085hY=,tag:wryeHyo+dElSOl1SMPugLw==,type:str]"
+		"TRUSTED_PROXIES": "ENC[AES256_GCM,data:FKM=,iv:IIHzLSRphl2DEnR2Z2cYyslWz+cHNwkfIpdJsIjwy48=,tag:c3P9ebZvPQQNGNt9R8Pkqw==,type:str]",
+		"APP_KEY": "ENC[AES256_GCM,data:e6LXC+G+d9drod+KVt5vK4m7o+7O2pZkplvp8B6iLfo=,iv:P9N4yMhNtvemWI6irTFIp7zbwvWjJ0KTsBPdkqJY3b8=,tag:9uUI/qY6rAc3g/ikWTnnFg==,type:str]",
+		"STATIC_CRON_TOKEN": "ENC[AES256_GCM,data:zO8kXyyN2t921K59Iv9I8DU52xwwZ7XxqLKqd+y1d0Y=,iv:oFrY3cRiQVTjeaaBFg2PBH7SGByKDw3CmXww49+fZCE=,tag:SZGxc4YcXjvoeVOuWazbvQ==,type:str]",
+		"DB_CONNECTION": "ENC[AES256_GCM,data:y5oHA2o=,iv:zXrB/WKXbau8RWNu9fuBImplWoiePoNrfPcaF1ClKUE=,tag:abQYr3br7MC1QNyPKWnkrQ==,type:str]",
+		"DB_HOST": "ENC[AES256_GCM,data:JCxDoBzq36XywTi6hUG1P2UDZ9dmqP2/TVc0gjAgRQzeW9vZMQ==,iv:QXhGWqvG6tXH+bWPRKFD4T8H9wjYR4pddQYBVUDXv54=,tag:qlajmJ/q5NnHiONraILUhg==,type:str]",
+		"DB_USERNAME": "ENC[AES256_GCM,data:azRSuYkaHojkf9ZMUM+ylRzGjr6uWYMB,iv:4sZw4hO5lCywOonn8swcD8UWzkS6gAHdPODYbzfccD8=,tag:BdEBvHoF27KVhCNoPL3Uhg==,type:str]",
+		"DB_PASSWORD": "ENC[AES256_GCM,data:rPxec5Ie05fJZ5yXFigTbPEPsM2P0Z2UXZ7qJ0NDLAcEXx80ojLOK23H5avaqYee,iv:Y+EGvzymijFFtwZ7VwHgRVVjOQsOyKBtbQ8rb3ws0U4=,tag:NkMGFDL6DspWoAXTmTsQrQ==,type:str]",
+		"DB_DATABASE": "ENC[AES256_GCM,data:quxP06XEkV0peQn6ZBmWPPn/LBj67r9x,iv:+cKAnYv1mJ5VmJJTa5XocGTuDbPKG896Kua/J216pbw=,tag:SfagX4pIe9dwhuc0ggaP4Q==,type:str]",
+		"MAIL_HOST": "ENC[AES256_GCM,data:s/t7v1NQ9U9V/vxRQzU9VIk=,iv:tTa7XTTlNy5sINm+/Wz8f0XTrfW1ev9gUjYPKXxBZz4=,tag:giHRholQHD3KpmULaXkS3w==,type:str]",
+		"MAIL_PORT": "ENC[AES256_GCM,data:86uL,iv:KEwXS8R766dyjGkr40AFS9nJAfvTp0bphyHYe3JUzE4=,tag:GsrfxgoKbH+Px3DdG+QXqg==,type:str]",
+		"MAIL_ENCRYPTION": "ENC[AES256_GCM,data:e2W9,iv:KFDm3l8+m+RTs69sHmeXznMqVdjnDWv4t1wWa8B6Lv4=,tag:08PYPTl+pc6RFDwS7DEyQg==,type:str]",
+		"MAIL_USERNAME": "ENC[AES256_GCM,data:S3itojH5Gu+FdKjlzQjs8LQrrg==,iv:PoFBb6BLEzx6SrkoSOOwXLlnQhIx22TgdRSsuY96uzY=,tag:CQdtZAMoiRdPnUOqXeokLQ==,type:str]",
+		"MAIL_PASSWORD": "ENC[AES256_GCM,data:YHt2/eMQNc7S7yXby88UhG2rclPQnyJDXYrPUF5V6M+kvG69u3lNM+rRpTQmUBsO,iv:rumqOic5Q08BR8ZMrQBDotpu+yK4aVnam2BERMuOTFQ=,tag:ngZgDNB63rdY8HKnIG6MmQ==,type:str]",
+		"MAIL_FROM": "ENC[AES256_GCM,data:WaXuLp/6OHqFwCH/pwOQxpVCmg==,iv:0sXbqEf9A4yXyLrqt1y8qRMVvAiee/K26D3/Qvh6hOg=,tag:4FRHzgQNxdW4S1tbS5gAzg==,type:str]"
 	},
 	"sops": {
 		"kms": null,
@@ -27,11 +29,11 @@
 		"age": [
 			{
 				"recipient": "age1ufcw42mtfu65grs30zqwu65xl7wczkllu3r4gjpk5yr7tr02q5kqq0pnvg",
-				"enc": "-----BEGIN AGE ENCRYPTED FILE-----\nYWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBLM0FqYXdmbURkajhweWdM\ncXhDNEhVNUFuR0IyNkVOYzNMcm5XQ0VPSEg4CitsWUtWUS9rWWRuWjRHMFBMTzJN\nWVNLTU9NVFdaSUVGRDdodTlzS2ZDMUEKLS0tIFdObEp0V2NRNVpxbnNUTWpIUm8w\nZGZ4dW9NL2daTEZTOFVmOW1FL05POVkKXhbQIunU78GuKJ5/rSjlsJGUYIGrDvXq\nn4lbN8shLC331XnF1SSNh7qBQtgjskR2v6JnrUW6GvqyOs9sv0CNeQ==\n-----END AGE ENCRYPTED FILE-----\n"
+				"enc": "-----BEGIN AGE ENCRYPTED FILE-----\nYWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBXTW5YK2VkRG5ESHR2NEpz\nai9xM2pZUk9SVWFJZ3ZuQ3Q2RU1HNkJobVJNCnRuZ3ZEUHAzRGpCbzRwR2FPNEZj\nZUF0N0w2Zng4Q01nNUltbmFHWTRUYU0KLS0tIGVuZVltaDVHUktYYWdwUmFsbDk2\nSVFYa3ozWEQ1L0lJSEhRdE9KSjhzbkUKbupw0MmEJHvT6dZOyMRfXxIT4SEALqVm\naMmvuVOqEr95n4/Piab/c2HWJvowGVIerXMXTCV/adAZ/fCZDLfvdg==\n-----END AGE ENCRYPTED FILE-----\n"
 			}
 		],
-		"lastmodified": "2022-10-15T16:53:43Z",
-		"mac": "ENC[AES256_GCM,data:NsiCjFJwsDbTUIm63xKxqjfr0X98bUnw556wRLk9WW1A6/gYdCfF1ZKfjCjkdF8u2RE4cptUFW3iMDO2Q+98NCkOmu5ogsciCc5xUA0nIpNL5y4sJ+orkz8Qn3TGw0Pctc5CTzfohMvtPDM0U3mMEQgc6HS1YUVN1PR6mxpzzqE=,iv:W/Ck4peKqWa1WkkfRUXmfqOwPjCEFAXw7V/sjfv5rCY=,tag:NYB/HP2N0L86YerX9CyrJw==,type:str]",
+		"lastmodified": "2022-10-15T18:25:58Z",
+		"mac": "ENC[AES256_GCM,data:SvZt97Pz4rsVYK9svEyIzIvmYkh8n/pRPtZzXwba4l3R8km+qnLK8GwouetQDxhom/szI623Pr+/9WYR+2Qm7KLSBEkX9EU8Q15ksJdTAghRz7XnO29Kkiti74n/cgEg+dckLexHXQTd0yooPcyXaNt2idqvTlAmfDsRZkmQIXY=,iv:Wi9BEXuJ7+qMaqzMs02NlLU2+nC0CfP2/DUI/yuod/M=,tag:BbVvemAQvw+s+dmgem7Bxw==,type:str]",
 		"pgp": null,
 		"encrypted_regex": "^(data|stringData)$",
 		"version": "3.7.3"

@@ -3,8 +3,3 @@ resources:
   - statefulset.yaml
   - service.yaml
   - ingress.yaml
-
-configMapGenerator:
-  - name: paperless-ngx-env
-    namespace: medium-place
-    env: configuration/paperless-ngx.env

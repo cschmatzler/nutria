@@ -47,8 +47,6 @@ spec:
               subPath: usr/src/paperless/export
 
           envFrom:
-            - configMapRef:
-                name: paperless-ngx-env
             - secretRef:
                 name: paperless-ngx-env
 
