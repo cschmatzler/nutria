@@ -46,12 +46,6 @@ spec:
               value: https://vault.leuchtturm.io
             - name: ROCKET_PORT
               value: "8080"
-            - name: SMTP_PORT
-              value: "587"
-            - name: SMTP_SECURITY
-              value: starttls
-            - name: SMTP_FROM_NAME
-              value: Vault
             - name: SIGNUPS_ALLOWED
               value: "false"
             - name: SIGNUPS_DOMAINS_WHITELIST 
