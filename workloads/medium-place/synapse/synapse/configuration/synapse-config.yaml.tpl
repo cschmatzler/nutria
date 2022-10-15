@@ -39,9 +39,20 @@ max_upload_size: 50M
 
 admin_contact: 'mailto:christoph@medium.place'
 
+email:
+  smtp_host: {{ .Env.GLOBAL_SMTP_HOST }}
+  smtp_port: 465
+  force_tls: true
+  smtp_user: {{ .Env.GLOBAL_SMTP_USERNAME }}
+  smtp_pass: {{ .Env.GLOBAL_SMTP_PASSWORD }}
+  notif_from: "Medium Place Boardroom <{{ .Env.GLOBAL_SMTP_USERNAME }}>"
+
 enable_registration: false
-registration_requires_token: true
-registration_shared_secret: {{ .Env.REGISTRATION_SHARED_SECRET }} 
+registrations_require_3pid:
+  - email
+allowed_local_3pids:
+  - medium: email
+    pattern: '^[^@]+@medium\.place$'
 macaroon_secret_key: {{ .Env.MACAROON_SECRET_KEY }} 
 
 presence:
@@ -50,7 +61,7 @@ presence:
 turn_uris: 
   - turn:turn.medium.place?transport=udp
   - turn:turn.medium.place?transport=tcp
-turn_shared_secret: {{ .Env.TURN_SHARED_SECRET }} 
+turn_shared_secret: {{ .Env.GLOBAL_TURN_SHARED_SECRET }} 
 turn_user_lifetime: 86400000
 turn_allow_guests: false
 
