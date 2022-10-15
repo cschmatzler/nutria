@@ -2,7 +2,7 @@ resource "hcloud_server" "mail" {
   name = "mail.nutria.cloud"
 
   image       = "debian-11"
-  server_type = "cpx11"
+  server_type = "cx21"
   location    = "fsn1"
 
   public_net {

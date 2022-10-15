@@ -40,7 +40,7 @@ resource "hetznerdns_record" "mailv6" {
   ttl     = 60
   name    = "mail"
   # `ip_address` here returns an entire subnet - we just want the first address
-  value   = cidrhost(format("%s/64", hcloud_primary_ip.mailv6.ip_address), 1)
+  value = cidrhost(format("%s/64", hcloud_primary_ip.mailv6.ip_address), 1)
 }
 
 resource "hcloud_rdns" "mail" {
@@ -54,3 +54,145 @@ resource "hcloud_rdns" "mailv6" {
   ip_address = cidrhost(format("%s/64", hcloud_primary_ip.mailv6.ip_address), 1)
   dns_ptr    = "mail.nutria.cloud"
 }
+
+resource "hcloud_firewall" "mail" {
+  name = "mail"
+
+  rule {
+    direction       = "out"
+    protocol        = "tcp"
+    port            = "53"
+    destination_ips = ["0.0.0.0/0"]
+  }
+
+  rule {
+    direction       = "out"
+    protocol        = "udp"
+    port            = "53"
+    destination_ips = ["0.0.0.0/0"]
+  }
+
+  rule {
+    direction       = "out"
+    protocol        = "tcp"
+    port            = "1024-65535"
+    destination_ips = ["0.0.0.0/0"]
+  }
+
+  rule {
+    direction       = "out"
+    protocol        = "udp"
+    port            = "1024-65535"
+    destination_ips = ["0.0.0.0/0"]
+  }
+
+  rule {
+    direction       = "out"
+    protocol        = "tcp"
+    port            = "25"
+    destination_ips = ["0.0.0.0/0"]
+  }
+
+  rule {
+    direction       = "out"
+    protocol        = "tcp"
+    port            = "465"
+    destination_ips = ["0.0.0.0/0"]
+  }
+
+  rule {
+    direction       = "out"
+    protocol        = "tcp"
+    port            = "587"
+    destination_ips = ["0.0.0.0/0"]
+  }
+
+  rule {
+    direction       = "out"
+    protocol        = "tcp"
+    port            = "80"
+    destination_ips = ["0.0.0.0/0"]
+  }
+
+  rule {
+    direction       = "out"
+    protocol        = "tcp"
+    port            = "443"
+    destination_ips = ["0.0.0.0/0"]
+  }
+
+  rule {
+    direction       = "out"
+    protocol        = "icmp"
+    destination_ips = ["0.0.0.0/0"]
+  }
+
+  rule {
+    direction  = "in"
+    protocol   = "tcp"
+    port       = "22"
+    source_ips = ["0.0.0.0/0"]
+  }
+
+  rule {
+    direction  = "in"
+    protocol   = "tcp"
+    port       = "25"
+    source_ips = ["0.0.0.0/0"]
+  }
+
+  rule {
+    direction  = "in"
+    protocol   = "tcp"
+    port       = "465"
+    source_ips = ["0.0.0.0/0"]
+  }
+
+  rule {
+    direction  = "in"
+    protocol   = "tcp"
+    port       = "587"
+    source_ips = ["0.0.0.0/0"]
+  }
+
+  rule {
+    direction  = "in"
+    protocol   = "tcp"
+    port       = "143"
+    source_ips = ["0.0.0.0/0"]
+  }
+
+  rule {
+    direction  = "in"
+    protocol   = "tcp"
+    port       = "993"
+    source_ips = ["0.0.0.0/0"]
+  }
+
+  rule {
+    direction  = "in"
+    protocol   = "tcp"
+    port       = "4190"
+    source_ips = ["0.0.0.0/0"]
+  }
+
+  rule {
+    direction  = "in"
+    protocol   = "tcp"
+    port       = "80"
+    source_ips = ["0.0.0.0/0"]
+  }
+
+  rule {
+    direction  = "in"
+    protocol   = "tcp"
+    port       = "443"
+    source_ips = ["0.0.0.0/0"]
+  }
+}
+
+resource "hcloud_firewall_attachment" "mail" {
+  firewall_id = hcloud_firewall.mail.id
+  server_ids  = [hcloud_server.mail.id]
+}
+
