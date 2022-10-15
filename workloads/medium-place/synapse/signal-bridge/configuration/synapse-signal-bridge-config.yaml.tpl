@@ -11,7 +11,7 @@ homeserver:
   address: http://synapse.medium-place.svc.cluster.local:8008
   domain: medium.place
   verify_ssl: true
-  async_media: true
+  async_media: false
 
 appservice:
   id: signal

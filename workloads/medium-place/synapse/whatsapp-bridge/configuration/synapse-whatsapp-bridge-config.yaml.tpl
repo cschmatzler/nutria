@@ -10,7 +10,7 @@ data:
 homeserver:
   address: http://synapse.medium-place.svc.cluster.local:8008
   domain: medium.place
-  async_media: true
+  async_media: false
 
 appservice:
   id: whatsapp
