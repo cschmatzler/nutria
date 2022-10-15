@@ -3,5 +3,8 @@ kind: Secret
 metadata:
   name: photoprism-env
   namespace: medium-place
-data:
-  PHOTOPRISM_ADMIN_PASSWORD: {{ base64.Encode .Env.PHOTOPRISM_ADMIN_PASSWORD }}
+stringData:
+  PHOTOPRISM_SITE_URL: https://gallery.medium.place
+  PHOTOPRISM_DATABASE_DRIVER: sqlite
+  PHOTOPRISM_ADMIN_PASSWORD: {{ .Env.PHOTOPRISM_ADMIN_PASSWORD }}
+  PHOTOPRISM_EXPERIMENTAL: true
