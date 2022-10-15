@@ -7,7 +7,7 @@ metadata:
   labels:
     app.kubernetes.io/name: vaultwarden
     app.kubernetes.io/part-of: vaultwarden
-    app.kubernetes.io/version: 1.25.2
+    app.kubernetes.io/version: 1.26.0
 
 spec:
   replicas: 1
@@ -29,13 +29,13 @@ spec:
       labels:
         app.kubernetes.io/name: vaultwarden
         app.kubernetes.io/part-of: vaultwarden
-        app.kubernetes.io/version: 1.25.2
+        app.kubernetes.io/version: 1.26.0
 
     spec:
       containers:
         - name: vaultwarden
 
-          image: vaultwarden/server:1.25.2
+          image: vaultwarden/server:1.26.0
 
           volumeMounts:
             - name: data
