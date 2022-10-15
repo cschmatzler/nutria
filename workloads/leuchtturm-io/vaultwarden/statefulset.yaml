@@ -35,15 +35,6 @@ spec:
             - name: data
               mountPath: /data
 
-          env:
-            - name: DOMAIN
-              value: https://vault.leuchtturm.io
-            - name: ROCKET_PORT
-              value: "8080"
-            - name: SIGNUPS_ALLOWED
-              value: "false"
-            - name: SIGNUPS_DOMAINS_WHITELIST 
-              value: medium.place,frisch-luebeck.de
           envFrom:
             - secretRef:
                 name: vaultwarden-env
