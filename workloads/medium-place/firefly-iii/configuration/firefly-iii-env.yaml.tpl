@@ -3,10 +3,17 @@ kind: Secret
 metadata:
   name: firefly-iii-env
   namespace: medium-place
-data:
-  APP_KEY: {{ base64.Encode .Env.APP_KEY }}
-  STATIC_CRON_TOKEN: {{ base64.Encode .Env.STATIC_CRON_TOKEN }}
-  DB_HOST: {{ base64.Encode .Env.DB_HOST }} 
-  DB_USERNAME: {{ base64.Encode .Env.DB_USERNAME }}
-  DB_PASSWORD: {{ base64.Encode .Env.DB_PASSWORD }}
-  DB_DATABASE: {{ base64.Encode .Env.DB_DATABASE }}
+stringData:
+  APP_KEY: {{ .Env.APP_KEY }}
+  STATIC_CRON_TOKEN: {{ .Env.STATIC_CRON_TOKEN }}
+  DB_HOST: {{ .Env.DB_HOST }} 
+  DB_USERNAME: {{ .Env.DB_USERNAME }}
+  DB_PASSWORD: {{ .Env.DB_PASSWORD }}
+  DB_DATABASE: {{ .Env.DB_DATABASE }}
+  MAIL_HOST: {{ .Env.GLOBAL_SMTP_HOST }}
+  MAIL_PORT: "465"
+  MAIL_ENCRYPTION: tls
+  MAIL_USERNAME: {{ .Env.GLOBAL_SMTP_USERNAME }}
+  MAIL_PASSWORD: {{ .Env.GLOBAL_SMTP_PASSWORD }}
+  MAIL_PROM: {{ .Env.GLOBAL_SMTP_USERNAME }}
+
