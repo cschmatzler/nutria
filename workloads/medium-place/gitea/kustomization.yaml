@@ -3,8 +3,3 @@ resources:
   - statefulset.yaml
   - service.yaml
   - ingress.yaml
-
-configMapGenerator:
-  - name: gitea-env
-    namespace: medium-place
-    env: configuration/gitea.env
