@@ -6,7 +6,7 @@
 		"namespace": "medium-place"
 	},
 	"stringData": {
-		"REDIS_PASSWORD": "ENC[AES256_GCM,data:mwPTiI2D16kr2VJBLw2brAy5lVkjGFXSFti65UYmCiu6/ICSGEQPHr9wctdT6TYV,iv:pUgn9T/Zjj5bRA32pWk+NsHUqFt9QH+zCxrFmf4obkY=,tag:ovwoY69/eN+kb4MLmy0LjA==,type:str]"
+		"REDIS_PASSWORD": "ENC[AES256_GCM,data:hr5a6fCEfuGHYj/BEJyKFRAJDs8as4/0LnMG0p3csX6dsupM4QqeG7T269kzbGFC,iv:XftF3MpfKoNPm6j/Y/Ui7O8LgDJ7sHRwbYA68D86R6Y=,tag:kdxZMVQzzKAostftYrJ4Cg==,type:str]"
 	},
 	"sops": {
 		"kms": null,
@@ -16,11 +16,11 @@
 		"age": [
 			{
 				"recipient": "age1ufcw42mtfu65grs30zqwu65xl7wczkllu3r4gjpk5yr7tr02q5kqq0pnvg",
-				"enc": "-----BEGIN AGE ENCRYPTED FILE-----\nYWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBCTExRMUx3cmI2MXBFTk9j\nSnNPWDE1VUpjeVdVRkx3Z0MzbGErRE9FWFY0CmhQQTh6UFY2Q3RsTzE0akFkYXZr\nNElkREhKejkwd25TWXA4TUpJZmxuWkUKLS0tIFBMSzkvMFVFd2o3TWYreEYwZmtK\nN2VlUjh0aVJOS0tlRXVnQlRKQjRRTzAKiqGrLGKz6JjLApIPB3vFn+1ULBf5UC9t\nzuQRjK5MTCCLHcwSjHqtrXJGqU8XXbOMCg75LHqGVfr+/sNBaEXfWw==\n-----END AGE ENCRYPTED FILE-----\n"
+				"enc": "-----BEGIN AGE ENCRYPTED FILE-----\nYWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBCSlZCU0ZETGtkajU1cGlJ\nM011cWpVRXlkM0hheUFiSVd5OXhvT2xlK3o4CitRQThvZXBpZjRDTTNKR2VtS0ZZ\nR1UvSjFqQWhaSXJ2WjN4T3lIbGFBUFEKLS0tIGJsVVZWQVJTK2w0MGNUQ2tPZWNJ\nY1RYSmVPU3c4dnd4TDNZT0F4OVVEZGMKglTLk0lTvaTZHYRTC1s7MolBOaPo79rZ\nfEv/2xhbkSC8R4AlhkUeH1kKfI7X/zltJEdZ/a/ISLO7q27qJ9W54A==\n-----END AGE ENCRYPTED FILE-----\n"
 			}
 		],
-		"lastmodified": "2022-10-15T18:39:33Z",
-		"mac": "ENC[AES256_GCM,data:QfrgD6p6IS8SfJ7F49eyVcWMW8XkLqmdaH7zwx8FbR7UiS9ivDaqg6Z75vU1kaWjnJYQDoKOhtUh4dw3h2z+kSGtGVRGM9S2vJmbCrYL1f27BQUWpANO3Za1aR9I0vA5q7Bo+BzFJyhD12XRh16ubi6a+7KaV1BugXjcsNdyRC8=,iv:h0hfcvFqNH/odxjEnSIBXYSw1i5MWJMNkLrnyktLQ34=,tag:3Qe/M1kgN/UYUDuKK9ySvw==,type:str]",
+		"lastmodified": "2022-10-15T19:09:33Z",
+		"mac": "ENC[AES256_GCM,data:Sf48DX3XvVIAgLD4oVwLVpsmY6tLOv7Qq+IEOLlawB0NQd0WrsX1c9fXsChVLUIqantmRSKXMIXOTFRcuqrsFqI/MMqPxP5+Z3lQ0dO3z9uUbZj8yXpUJzd5s6R8IzwgQSHMpVRlyyRPnI85LFtM6aXYxnVSza4x7LfXePwDnU4=,iv:CylvndSXWWFb2ikEuXz6iezvTRpRusi1psuS++xIfeI=,tag:wkj99YU1F8O5TGcDI4dnEA==,type:str]",
 		"pgp": null,
 		"encrypted_regex": "^(data|stringData)$",
 		"version": "3.7.3"
