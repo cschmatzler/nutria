@@ -19,7 +19,7 @@ stringData:
   GITEA__mailer__ENABLED: "true"
   GITEA__mailer__HOST: "{{ .Env.GLOBAL_SMTP_HOST }}:465"
   GITEA__mailer__USER: {{ .Env.GLOBAL_SMTP_USERNAME }}
-  GITEA__mailer__PASSWRD: {{ .Env.GLOBAL_SMTP_PASSWORD }}
+  GITEA__mailer__PASSWD: {{ .Env.GLOBAL_SMTP_PASSWORD }}
   GITEA__mailer__FROM: "Medium Place Forge <{{ .Env.GLOBAL_SMTP_USERNAME }}>"
   GITEA__picture__DISABLE_GRAVATAR: "true"
   GITEA__service_0x2E_explore__DISABLE_USERS_PAGE: "true"
