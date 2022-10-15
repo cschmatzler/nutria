@@ -17,8 +17,7 @@ stringData:
   GITEA__security__PASSWORD_HASH_ALGO: argon2
   GITEA__service__EMAIL_DOMAIN_WHITELIST: medium.place
   GITEA__mailer__ENABLED: "true"
-  GITEA__mailer__SMTP_ADDR: {{ .Env.GLOBAL_SMTP_HOST }}
-  GITEA__mailer__SMTP_PORT: "465"
+  GITEA__mailer__SMTP_HOST: "{{ .Env.GLOBAL_SMTP_HOST }}:465"
   GITEA__mailer__USER: {{ .Env.GLOBAL_SMTP_USERNAME }}
   GITEA__mailer__PASSWRD: {{ .Env.GLOBAL_SMTP_PASSWORD }}
   GITEA__mailer__FROM: "Medium Place Forge <{{ .Env.GLOBAL_SMTP_USERNAME }}>"
