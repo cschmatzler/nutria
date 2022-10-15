@@ -12,4 +12,5 @@ data:
   SMTP_USERNAME: {{ base64.Encode .Env.GLOBAL_SMTP_USERNAME }}
   SMTP_PASSWORD: {{ base64.Encode .Env.GLOBAL_SMTP_PASSWORD }}
   SMTP_FROM: {{ base64.Encode .Env.GLOBAL_SMTP_USERNAME }}
+  SMTP_FROM_NAME: {{ base64.Encode "Leuchtturm Vault" }}
 
