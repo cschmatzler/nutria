@@ -20,12 +20,6 @@ spec:
 
   template:
     metadata:
-      annotations:
-        diun.enable: "true"
-        diun.regopt: docker.io
-        diun.watch_repo: "true"
-        diun.include_tags: "^\\d+\\.\\d+\\.\\d+$"
-        diun.sort_tags: "semver"
       labels:
         app.kubernetes.io/name: mastodon
         app.kubernetes.io/part-of: mastodon
@@ -43,8 +37,6 @@ spec:
             - rails db:migrate
 
           envFrom:
-            - configMapRef:
-                name: mastodon-env
             - secretRef:
                 name: mastodon-env
 
@@ -65,8 +57,6 @@ spec:
               mountPath: /opt/mastodon/tmp
 
           envFrom:
-            - configMapRef:
-                name: mastodon-env
             - secretRef:
                 name: mastodon-env
 
@@ -82,8 +72,6 @@ spec:
             - ./streaming
 
           envFrom:
-            - configMapRef:
-                name: mastodon-env
             - secretRef:
                 name: mastodon-env
 
@@ -100,7 +88,5 @@ spec:
             - sidekiq
 
           envFrom:
-            - configMapRef:
-                name: mastodon-env
             - secretRef:
                 name: mastodon-env
