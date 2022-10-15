@@ -13,7 +13,6 @@ roleRef:
   name: tailscale
 
 subjects:
-- kind: ServiceAccount
-  namespace: tailscale
-  name: tailscale
-
+  - kind: ServiceAccount
+    namespace: tailscale
+    name: tailscale

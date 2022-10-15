@@ -20,7 +20,7 @@ resource "hetznerdns_record" "serverv6" {
   type    = "AAAA"
   ttl     = 60
   name    = format("%s.cluster", local.name)
-  value = hcloud_server.server.ipv6_address 
+  value   = hcloud_server.server.ipv6_address
 }
 
 resource "hcloud_rdns" "server" {

@@ -33,7 +33,7 @@ rules:
 
   - apiGroups: ["externaldns.k8s.io"]
     resources: ["dnsendpoints"]
-    verbs: ["get","watch","list"]
+    verbs: ["get", "watch", "list"]
 
   - apiGroups: ["externaldns.k8s.io"]
     resources: ["dnsendpoints/status"]

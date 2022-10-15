@@ -8,9 +8,9 @@ metadata:
     app.kubernetes.io/part-of: tailscale
 
 rules:
-- apiGroups: [""]
-  resources: ["secrets"]
-  verbs: ["create"]
-- apiGroups: [""] 
-  resources: ["secrets"]
-  verbs: ["get", "update"]
+  - apiGroups: [""]
+    resources: ["secrets"]
+    verbs: ["create"]
+  - apiGroups: [""]
+    resources: ["secrets"]
+    verbs: ["get", "update"]
