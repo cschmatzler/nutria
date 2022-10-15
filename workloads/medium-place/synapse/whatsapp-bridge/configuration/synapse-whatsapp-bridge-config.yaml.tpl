@@ -32,7 +32,7 @@ appservice:
 
 bridge:
   username_template: {{ "whatsapp_{{.}}" }}
-  displayname_template: {{ "\"{{ .FirstName }} (WhatsApp)\"" }}
+  displayname_template: {{ "\"{{ .FullName }} (WhatsApp)\"" }}
   delivery_receipts: true
   identity_change_notices: true
   history_sync:
