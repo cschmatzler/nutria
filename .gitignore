@@ -6,9 +6,10 @@ kubeconfig
 .terraform/
 **/.terraform/
 .terraform.lock.hcl
-*.tfstate
-*.tfstate.backup
-*.tfplan
+**/*.tfstate
+**/*.tfstate.backup
+**/*.tfstate.*.backup
+**/*.tfplan
 
 talos/
 
