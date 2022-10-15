@@ -47,7 +47,7 @@ email:
   smtp_pass: {{ .Env.GLOBAL_SMTP_PASSWORD }}
   notif_from: "Medium Place Boardroom <{{ .Env.GLOBAL_SMTP_USERNAME }}>"
 
-enable_registration: false
+enable_registration: true
 registrations_require_3pid:
   - email
 allowed_local_3pids:
