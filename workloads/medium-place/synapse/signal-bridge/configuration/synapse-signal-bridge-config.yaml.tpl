@@ -31,8 +31,8 @@ appservice:
 
 bridge:
   displayname_preference:
-    - full_name
     - first_name
+    - full_name
     - phone
   federate_rooms: true
   encryption:
