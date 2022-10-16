@@ -28,11 +28,18 @@ spec:
         app.kubernetes.io/version: 3.1.8
 
     spec:
+      volumes:
+        - name: radicale-config
+          secret:
+            secretName: radicale-config
+
       containers:
         - name: radicale
           image: tomsquest/docker-radicale:3.1.8.0
 
           volumeMounts:
+            - name: radicale-config 
+              mountPath: /config
             - name: data
               mountPath: /data
 
