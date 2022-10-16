@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: radicale
+  namespace: medium-place
+  labels:
+    app.kubernetes.io/name: radicale
+    app.kubernetes.io/part-of: radicale
+    app.kubernetes.io/version: 3.1.8
+
+spec:
+  selector:
+    app.kubernetes.io/name: radicale
+    app.kubernetes.io/part-of: radicale
+
+  ports:
+    - name: http
+      protocol: TCP
+      port: 5232
+      targetPort: http

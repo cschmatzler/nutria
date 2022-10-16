@@ -1,0 +1,30 @@
+{
+	"apiVersion": "v1",
+	"kind": "Secret",
+	"metadata": {
+		"name": "radicale-config",
+		"namespace": "medium-place"
+	},
+	"data": {
+		"config": "ENC[AES256_GCM,data:NKXtrqFIoYdtL7Ih6LUW80rMoZiOrblBrnXKMYdkYeAAs36LthbuLoIAamSjOTxmAyYbLDqtyFJ92A5q/ohNvBUX1x0MLW5B7ujVz5rCN00Lj4C6SzkwGiRKEEbIj5p5hnnYOPROI8ZgXHurw7qaoAsa8GcLx5KY0I951d0zE/IU2W0j29LHng18Iu82s4Cr9/A81+LL6sAJnU5n14W0fy8ZnKxmxkfc1JQqGn6j5UnBubM0EJCQ9PYv/JvapONHH+uuPQm4rhvGHhnuUae7fCbDiu9QbVUk7iUXcaW1sPdrYJlNBdkQreFewUx8x+txHTVGp+ijwXX7Xya8tHZBUgXGYv0Lw2gfcyJom5ZV0FE1oVn4R6ksnmsi62v1Svi5ukLGrCtlbCuGzHUFYDHG8/3mZcLVnJVZguQ0pS6udnrW4jv74/MUMZtyRV6rgart,iv:L7ZiPfctGX+PURh8UCjtPPu9uhdxtC7AAew9m+mNrvM=,tag:CLp6rbQJKX4Yhod30Hs1bQ==,type:str]",
+		"users": "ENC[AES256_GCM,data:JD6S6ZyzTRzjfg95mV8Cayy5JP7fNoH/eZPMEQW4rzyKc9ygq9uqmBOiVWaQunPR53udwlid/Zb52+7S/IwQnnsylfXOmOWqkV6Tmo5nzq2Z/TmS0DDSOhdkV02abb/Y,iv:IIUXE/K/5hOTmS3m9ywFgWrzX2XaQlJC2AQeIrdJqxU=,tag:QCWjGve9F0JvPeMIuKbxQw==,type:str]",
+		"rights": "ENC[AES256_GCM,data:B5KeeOq8dhNWGQaq8d03VVXlvbwh6HRIaV+Ah5XKN5QTVX4LUwL3GwLu3aO+9DHcZktRja4JIGF63fhuXqFGAhGq3i1AyOXQ28xUsqOljT+M7svxIEDO/aHEIME/lVCvZCn73UrnbsNBKtHXGbaizm5lziuhekAGeFZnqBv/6a+Q6+x00IKWg8vQAztDeBo5VJtf8mAWtH93jGEp9vOc1A==,iv:CZu/Hv2Y7XZ/ZpGDijkVBdiIpsZQck6bN1NEdOfgqso=,tag:mY7kCxdsMExEfB7SyQj26A==,type:str]"
+	},
+	"sops": {
+		"kms": null,
+		"gcp_kms": null,
+		"azure_kv": null,
+		"hc_vault": null,
+		"age": [
+			{
+				"recipient": "age1ufcw42mtfu65grs30zqwu65xl7wczkllu3r4gjpk5yr7tr02q5kqq0pnvg",
+				"enc": "-----BEGIN AGE ENCRYPTED FILE-----\nYWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBLMHp5WStrcW9SNkptWTh2\nQ1FzQ2xPUFJKVHdRbkFkbEpwL3FXOTFEVkJnCmRQN1RFN00xaG5uT2hDYnhzWUdz\nQlZ6aXFJSFhzZ2h6YnU1MFUrWVF5UVEKLS0tIFlnaFFNYnlQQjlsM0N0aHJJaTJz\nUDB5OG43S1RObDZnT1V5V0NaTnlZZlUK2iXLAAxi1lDEGBZCueImDYZeyN4tPzPR\nIWidkgqjmEX7xgqbIwfm+1w/I/G3HLxF2WtbfPE8WEU6+YpxRHPyTQ==\n-----END AGE ENCRYPTED FILE-----\n"
+			}
+		],
+		"lastmodified": "2022-10-16T12:46:45Z",
+		"mac": "ENC[AES256_GCM,data:k6FUgiKPUF3WKNqwPbaxCDl2j5QYE/RdggVl5MVZ7OWQEj+cD2Wj4wmzYwENT7kKT4jtBp5oZxTp8csa6SshvKCxuoST1P8ZtCdM4axsOEiABciCzvEDGQvUWtIMB+pc0E1E6B08nr8Ks5NxOnzgSIcUVNPhtaF2Wehp5T89Amc=,iv:oO+pg/TdckNP1VdaP5hvCUZ24WPdCWX2OR1Bbc3n1kc=,tag:Ip/FWkFDKeh940roVLZNSg==,type:str]",
+		"pgp": null,
+		"encrypted_regex": "^(data|stringData)$",
+		"version": "3.7.3"
+	}
+}
