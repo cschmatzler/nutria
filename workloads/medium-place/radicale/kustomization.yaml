@@ -1,5 +1,5 @@
 resources:
   - configuration/radicale-config.yaml.enc
-  - deployment.yaml
+  - statefulset.yaml
   - service.yaml
   - ingress.yaml
