@@ -44,6 +44,7 @@ bridge:
     default: true
     appservice: true
     require: true
+	allow_key_sharing: true
     verification_levels:
       receive: cross-signed-tofu
       send: cross-signed-tofu
