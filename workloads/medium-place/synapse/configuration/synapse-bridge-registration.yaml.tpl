@@ -23,7 +23,7 @@ namespaces:
 {{ end }}
 
 {{ define "whatsapp" }}
-id: whatsapp-bridge
+id: whatsapp
 url: http://synapse-whatsapp-bridge.medium-place.svc.cluster.local:29318
 as_token: {{ .Env.WHATSAPP__AS_TOKEN }}
 hs_token: {{ .Env.WHATSAPP__HS_TOKEN }}
@@ -31,8 +31,8 @@ sender_localpart: {{ .Env.WHATSAPP__SENDER_LOCALPART }}
 rate_limited: false
 namespaces:
   users:
-    - regex: ^@whatsapp_bridge:medium\.place$
+    - regex: ^@whatsapp:medium\.place$
       exclusive: true
-    - regex: ^@whatsapp_bridge_.*:medium\.place$
+    - regex: ^@whatsapp_.*:medium\.place$
       exclusive: true
 {{ end }}

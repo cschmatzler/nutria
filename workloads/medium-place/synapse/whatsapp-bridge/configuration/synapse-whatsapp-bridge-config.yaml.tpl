@@ -13,7 +13,7 @@ homeserver:
   async_media: false
 
 appservice:
-  id: whatsapp-bridge
+  id: whatsapp
   address: http://synapse-whatsapp-bridge.medium-place.svc.cluster.local:29318
   hostname: 0.0.0.0
   port: 29318
@@ -25,13 +25,13 @@ appservice:
     max_open_conns: 20
     max_idle_conns: 2
   bot:
-    username: whatsapp_bridge
+    username: whatsapp
     displayname: WhatsApp Bridge
     avatar: mxc://maunium.net/NeXNQarUbrlYBiPCpprYsRqr
     ephemeral_events: true
 
 bridge:
-  username_template: {{ "whatsapp_bridge_{{.}}" }}
+  username_template: {{ "whatsapp_{{.}}" }}
   displayname_template: {{ "\"{{ .FullName }} (WhatsApp)\"" }}
   delivery_receipts: true
   identity_change_notices: true
