@@ -25,13 +25,13 @@ appservice:
     max_open_conns: 20
     max_idle_conns: 2
   bot:
-    username: whatsapp
+    username: whatsapp_bridge
     displayname: WhatsApp Bridge
     avatar: mxc://maunium.net/NeXNQarUbrlYBiPCpprYsRqr
     ephemeral_events: true
 
 bridge:
-  username_template: {{ "whatsapp_{{.}}" }}
+  username_template: {{ "whatsapp_bridge_{{.}}" }}
   displayname_template: {{ "\"{{ .FullName }} (WhatsApp)\"" }}
   delivery_receipts: true
   identity_change_notices: true

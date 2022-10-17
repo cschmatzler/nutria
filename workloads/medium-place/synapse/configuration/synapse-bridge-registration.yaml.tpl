@@ -32,8 +32,8 @@ sender_localpart: {{ .Env.WHATSAPP__SENDER_LOCALPART }}
 rate_limited: false
 namespaces:
   users:
-    - regex: ^@whatsapp:medium\.place$
+    - regex: ^@whatsapp_bridge:medium\.place$
       exclusive: true
-    - regex: ^@whatsapp_[0-9]+:medium\.place$
+    - regex: ^@whatsapp_bridge_.*:medium\.place$
       exclusive: true
 {{ end }}
