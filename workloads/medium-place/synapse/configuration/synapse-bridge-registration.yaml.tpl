@@ -24,7 +24,7 @@ rate_limited: false
 {{ end }}
 
 {{ define "whatsapp" }}
-id: whatsapp
+id: whatsapp-bridge
 url: http://synapse-whatsapp-bridge.medium-place.svc.cluster.local:29318
 as_token: {{ .Env.WHATSAPP__AS_TOKEN }}
 hs_token: {{ .Env.WHATSAPP__HS_TOKEN }}
