@@ -13,14 +13,13 @@ url: http://synapse-signal-bridge.medium-place.svc.cluster.local:29328
 as_token: {{ .Env.SIGNAL__AS_TOKEN }}
 hs_token: {{ .Env.SIGNAL__HS_TOKEN }} 
 sender_localpart: {{ .Env.SIGNAL__SENDER_LOCALPART }}
+rate_limited: false
 namespaces:
   users:
     - regex: '@signal:medium\.place'
       exclusive: true
     - regex: '@signal_.*:medium\.place'
       exclusive: true
-  aliases: []
-rate_limited: false
 {{ end }}
 
 {{ define "whatsapp" }}

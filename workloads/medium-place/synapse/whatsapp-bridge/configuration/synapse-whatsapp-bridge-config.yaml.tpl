@@ -13,7 +13,7 @@ homeserver:
   async_media: false
 
 appservice:
-  id: whatsapp
+  id: whatsapp-bridge
   address: http://synapse-whatsapp-bridge.medium-place.svc.cluster.local:29318
   hostname: 0.0.0.0
   port: 29318
