@@ -56,5 +56,5 @@ flux:
     --personal \
     --author-email=christoph@medium.place \
     --author-name="Christoph Schmatzler" \
-    --components=source-controller,kustomize-controller,notification-controller
+    --components=source-controller,kustomize-controller,helm-controller,notification-controller
   cat secrets.agekey | kubectl create secret generic sops-age --namespace flux-system --from-file=secrets.agekey=/dev/stdin
