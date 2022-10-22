@@ -3,5 +3,6 @@ resources:
 
 configMapGenerator:
   - name: forge-values
+    namespace: nutria-cloud
     files:
       - values.yaml
