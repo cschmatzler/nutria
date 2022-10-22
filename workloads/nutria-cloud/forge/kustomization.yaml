@@ -1,0 +1,7 @@
+resources:
+  - release.yaml
+
+configMapGenerator:
+  - name: forge-values
+    files:
+      - values.yaml
