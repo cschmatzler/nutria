@@ -11,8 +11,6 @@ spec:
     name: flux-system
   path: "./workloads/kube-prometheus"
   interval: 60m
-  wait: true
   timeout: 3m0s
   retryInterval: 2m0s
   prune: true
-  force: true
