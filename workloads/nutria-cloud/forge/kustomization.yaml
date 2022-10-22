@@ -1,8 +1,0 @@
-resources:
-  - release.yaml
-
-configMapGenerator:
-  - name: forge-values
-    namespace: nutria-cloud
-    files:
-      - values.yaml
