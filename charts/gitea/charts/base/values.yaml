@@ -22,8 +22,8 @@ service:
 ingress:
   public: false
   clusterIssuer: letsencrypt
-  host: base.nutria.cloud
-  paths:
-    - path: /
-      pathType: ImplementationSpecific
-      port: http
+  # host: base.nutria.cloud
+  # paths:
+  #   - path: /
+  #     pathType: ImplementationSpecific
+  #     port: http
