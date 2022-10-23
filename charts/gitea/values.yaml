@@ -1,0 +1,13 @@
+base:
+  image: 
+    repository: gitea/gitea
+    tag: 1.17.3 
+
+  persistence:
+    enabled: true
+
+  postgresql:
+    enabled: true
+
+  ingress:
+    public: true
