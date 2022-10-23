@@ -9,7 +9,7 @@ spec:
   interval: 1m
   chart:
     spec:
-      chart: gitea
+      chart: ./charts/gitea
       sourceRef:
         kind: GitRepository
         name: flux-system
