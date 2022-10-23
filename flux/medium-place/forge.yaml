@@ -7,6 +7,7 @@ metadata:
 
 spec:
   interval: 1m
+
   chart:
     spec:
       chart: ./charts/gitea
@@ -15,6 +16,14 @@ spec:
         name: flux-system
         namespace: flux-system
       version: ~0.1.2
+
+  values:
+    ingress:
+      host: forge2.medium.place
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+          port: http
 
   upgrade:
     remediation:
