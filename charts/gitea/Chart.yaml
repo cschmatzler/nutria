@@ -3,7 +3,7 @@ name: gitea
 description: Gitea Application Chart
 
 type: application
-version: 0.1.1
+version: 0.1.2
 
 appVersion: 1.17.3
 
