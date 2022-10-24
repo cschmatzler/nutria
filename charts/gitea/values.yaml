@@ -8,3 +8,4 @@ base:
 
   postgresql:
     enabled: true
+    secretName: medium-place-forge-postgresql-env

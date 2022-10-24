@@ -6,4 +6,11 @@ persistence:
   volumeSize: 10Gi
 
 authentication:
-  # postgresPassword: Shu7meeshoowoh4up8Ohgh7Mau2uusae6aiceexeuh2ELoo0ohyaedahkoo7Teij
+  applicationUser:
+    # This by convention expects an environment variable with name $NAME_PASSWORD.
+    # For example, if the name was set as medium_place_forge here, the environment variable would
+    # be $MEDIUM_PLACE_FORGE_PASSWORD.
+    name: 
+
+databases:
+  # -  

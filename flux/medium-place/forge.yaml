@@ -1,39 +1,18 @@
-apiVersion: helm.toolkit.fluxcd.io/v2beta1
-kind: HelmRelease
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
 
 metadata:
-  name: forge
-  namespace: medium-place
+  name: medium-place-forge
+  namespace: flux-system
 
 spec:
-  interval: 1m
-
-  chart:
-    spec:
-      chart: ./charts/gitea
-      sourceRef:
-        kind: GitRepository
-        name: flux-system
-        namespace: flux-system
-      version: ~0.1.2
-
-  values:
-    ingress:
-      host: forge2.medium.place
-      paths:
-        - path: /
-          pathType: ImplementationSpecific
-          port: http
-
-  upgrade:
-    remediation:
-      retries: 5
-
-  rollback:
-    timeout: 5m
-    disableWait: false
-    disableHooks: false
-    recreate: false
-    force: false
-    cleanupOnFail: false
-  
+  interval: 10m
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: "./workloads/medium-place/forge"
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-age

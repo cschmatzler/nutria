@@ -25,13 +25,20 @@ spec:
         {{- include "base.selectorLabels" . | nindent 8 }}
     spec:
       serviceAccountName: {{ include "base.fullname" . | trim }}
+      volumes:
+        - name: init-scripts
+          configMap:
+            name: {{ include "base.fullname" . | trim }}-postgresql-init-scripts
       containers:
         - name: {{ .Chart.Name }}
           image: postgres:{{ .Values.image.tag }}
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           envFrom:
             - secretRef:
-                name: {{ include "base.fullname" . | trim }}-postgres-env
+                name: {{ .Values.secretName }}
+          volumeMounts:
+            - name: init-scripts 
+              mountPath: /docker-entrypoint-initdb.d
 
 
 
