@@ -3,10 +3,9 @@ name: base
 description: Nutria Base Chart
 
 type: application
-version: 0.1.5
+version: 0.1.6
 
 dependencies:
   - name: postgresql
-    repository: file://../dependencies/postgresql
-    version: ~0.1.5
+    version: ~0.1.0
     condition: postgresql.enabled

@@ -9,5 +9,4 @@ appVersion: 1.17.3
 
 dependencies:
   - name: base
-    version: ~0.1.5
-    repository: file://../base
+    version: ~0.1.0
