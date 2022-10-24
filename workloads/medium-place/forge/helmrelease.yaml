@@ -19,14 +19,14 @@ spec:
 
   values:
     base:
-      postgresql:
-        secretName: medium-place-forge-postgresql-env
       ingress:
         host: forge-testing.medium.place
         paths:
           - path: /
             pathType: ImplementationSpecific
             port: http
+    postgresql:
+      secretName: medium-place-forge-postgresql-env
     
   upgrade:
     remediation:

@@ -1,6 +1,9 @@
 dependencies:
 - name: base
   repository: file://../base
-  version: 0.1.9
-digest: sha256:1e1c944de5c6a9d1cf61dd6c3b41c33b09d0dae6a60600a63db57ba6a1c8ed6b
-generated: "2022-10-24T23:02:09.65554+02:00"
+  version: 0.1.11
+- name: postgresql
+  repository: file://..//postgresql
+  version: 0.1.8
+digest: sha256:0ec53282ce51e688441a0421e4bb56294e8ed5a9c7e60fbbfe27f212e189231e
+generated: "2022-10-24T23:10:37.737597+02:00"
