@@ -6,10 +6,11 @@ base:
   persistence:
     enabled: true
 
-  postgresql:
-    enabled: true
-    secretName: # Set the name of the secret holding environment variables 
-
   ports:
     - name: http
       port: 3000
+
+postgresql:
+  enabled: true
+  secretName: # Set the name of the secret holding environment variables 
+

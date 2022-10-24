@@ -9,9 +9,6 @@ persistence:
   enabled: false
   volumeSize: 1Gi
 
-postgresql:
-  enabled: false
-
 ports:
   # - name: http
   #   port: 8080

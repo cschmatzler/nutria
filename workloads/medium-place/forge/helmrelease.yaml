@@ -18,12 +18,15 @@ spec:
       version: ~0.1.2
 
   values:
-    ingress:
-      host: forge-testing.medium.place
-      paths:
-        - path: /
-          pathType: ImplementationSpecific
-          port: http
+    base:
+      ingress:
+        host: forge-testing.medium.place
+        paths:
+          - path: /
+            pathType: ImplementationSpecific
+            port: http
+    postgresql:
+      secretName: medium-place-forge-postgresql-env
 
   upgrade:
     remediation:
