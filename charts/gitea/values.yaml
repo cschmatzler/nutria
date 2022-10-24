@@ -8,4 +8,4 @@ base:
 
   postgresql:
     enabled: true
-    secretName: medium-place-forge-postgresql-env
+    secretName: # Set the name of the secret holding environment variables 
