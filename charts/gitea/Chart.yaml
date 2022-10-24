@@ -3,7 +3,7 @@ name: gitea
 description: Gitea Application Chart
 
 type: application
-version: 0.1.10
+version: 0.1.12
 
 appVersion: 1.17.3
 
@@ -11,6 +11,3 @@ dependencies:
   - name: base
     version: ~0.1.0
     repository: file://../base
-  - name: postgresql
-    version: ~0.1.0
-    repository: file://../postgresql

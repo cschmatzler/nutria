@@ -9,6 +9,10 @@ persistence:
   enabled: false
   volumeSize: 1Gi
 
+postgresql:
+  enabled: false
+  secretName: # Set the name of the secret holding environment variables 
+
 ports:
   # - name: http
   #   port: 8080

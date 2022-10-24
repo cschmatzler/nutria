@@ -2,6 +2,8 @@ image:
   tag: 15.0-alpine
   pullPolicy: IfNotPresent
 
+secretName: 
+
 persistence:
   volumeSize: 10Gi
 
