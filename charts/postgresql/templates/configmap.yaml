@@ -1,3 +1,4 @@
+{{- $userName := default (include "base.fullname" . | trim | snakecase) .Values.authentication.applicationUser.name -}}
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -8,9 +9,9 @@ data:
     set -e
 
     psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" <<-EOSQL
-      CREATE USER {{ default (include "base.fullname" . | trim | snakecase) .Values.authentication.applicationUser.name }} WITH PASSWORD '${{ default (include "base.fullname" . | trim | snakecase) .Values.authentication.applicationUser.name | upper }}_PASSWORD';
+      CREATE USER {{ $userName }} WITH PASSWORD '${{ $userName | upper }}_PASSWORD';
       {{ range .Values.databases }}
       CREATE DATABASE {{ . }};
-      GRANT ALL PRIVILEGES ON DATABASE {{ . }} TO {{ default (include "base.fullname" . | trim | snakecase) .Values.authentication.applicationUser.name }};
+      GRANT ALL PRIVILEGES ON DATABASE {{ . }} TO {{ $userName }};
       {{ end }}
     EOSQL
