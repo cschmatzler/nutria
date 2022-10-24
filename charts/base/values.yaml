@@ -13,8 +13,8 @@ postgresql:
   enabled: false
 
 ports:
-  - name: http
-    port: 8080
+  # - name: http
+  #   port: 8080
 
 service:
   type: ClusterIP
