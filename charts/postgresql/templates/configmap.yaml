@@ -8,7 +8,7 @@ data:
     set -e
 
     psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" <<-EOSQL
-      CREATE USER {{ default (include "base.fullname" . | trim | snakecase) .Values.authentication.applicationUser.name }} WITH PASSWORD "${{ default (include "base.fullname" . | trim | snakecase) .Values.authentication.applicationUser.name | upper }}_PASSWORD";
+      CREATE USER {{ default (include "base.fullname" . | trim | snakecase) .Values.authentication.applicationUser.name }} WITH PASSWORD '${{ default (include "base.fullname" . | trim | snakecase) .Values.authentication.applicationUser.name | upper }}_PASSWORD';
       {{ range .Values.databases }}
       CREATE DATABASE {{ . }};
       GRANT ALL PRIVILEGES ON DATABASE {{ . }} TO {{ default (include "base.fullname" . | trim | snakecase) .Values.authentication.applicationUser.name }};

@@ -27,6 +27,8 @@ spec:
             port: http
     postgresql:
       secretName: medium-place-forge-postgresql-env
+      databases:
+        - medium_place_forge
     
   upgrade:
     remediation:
