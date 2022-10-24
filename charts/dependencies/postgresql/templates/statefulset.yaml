@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: {{ .Release.Namespace }}-{{ .Release.Name }}-postgres
+  name: {{ include "base.fullname" . | trim }}-postgres
   labels:
     {{- include "base.labels" . | nindent 4 }}
 spec:
@@ -24,11 +24,14 @@ spec:
       labels:
         {{- include "base.selectorLabels" . | nindent 8 }}
     spec:
-      serviceAccountName: {{ include "base.fullname" . }}
+      serviceAccountName: {{ include "base.fullname" . | trim }}
       containers:
         - name: {{ .Chart.Name }}
           image: postgres:{{ .Values.image.tag }}
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          envFrom:
+            - secretRef:
+                name: {{ include "base.fullname" . | trim }}-postgres-env
 
 
 

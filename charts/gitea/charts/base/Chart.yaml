@@ -2,7 +2,7 @@ apiVersion: v2
 dependencies:
 - condition: postgresql.enabled
   name: postgresql
-  repository: file://../postgresql
+  repository: file://../dependencies/postgresql
   version: ~0.1.0
 description: Nutria Base Chart
 name: base

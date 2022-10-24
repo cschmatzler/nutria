@@ -1,0 +1,9 @@
+image:
+  tag: 15.0-alpine
+  pullPolicy: IfNotPresent
+
+persistence:
+  volumeSize: 10Gi
+
+authentication:
+  # postgresPassword: Shu7meeshoowoh4up8Ohgh7Mau2uusae6aiceexeuh2ELoo0ohyaedahkoo7Teij

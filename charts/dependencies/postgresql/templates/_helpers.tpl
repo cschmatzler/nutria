@@ -4,7 +4,7 @@
 
 {{- define "base.selectorLabels" -}}
 app.kubernetes.io/name: {{ .Chart.Name }}
-app.kubernetes.io/instance: {{ .Release.Namespace }}-{{ .Release.Name }}-postgres
+app.kubernetes.io/instance: {{ include "base.fullname" . | trim }}-postgres
 {{- end }}
 
 {{- define "base.labels" -}}

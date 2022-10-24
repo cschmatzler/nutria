@@ -1,6 +1,0 @@
-image:
-  tag: 15.0-alpine
-  pullPolicy: IfNotPresent
-
-persistence:
-  volumeSize: 10Gi
