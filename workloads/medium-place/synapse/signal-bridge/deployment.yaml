@@ -59,7 +59,7 @@ spec:
               containerPort: 29328
 
         - name: signald 
-          image: signald/signald:0.22.2
+          image: signald/signald:0.23.0
 
           volumeMounts:
             - name: signald
