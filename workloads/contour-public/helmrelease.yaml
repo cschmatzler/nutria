@@ -33,5 +33,6 @@ spec:
     envoy:
       service:
         type: ClusterIP
+        externalTrafficPolicy: ""
 
  
