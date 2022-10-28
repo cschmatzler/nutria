@@ -31,6 +31,8 @@ spec:
 
   values:
     contour:
+      extraArgs:
+        - --use-proxy-protocol
       ingressClass:
         name: public
         default: false
