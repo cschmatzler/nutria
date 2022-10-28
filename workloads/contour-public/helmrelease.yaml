@@ -30,9 +30,10 @@ spec:
       version: 9.1.6
 
   values:
+    ingress:
+      ingressClassName: public
     envoy:
       service:
-        type: ClusterIP
-        externalTrafficPolicy: ""
+        clusterIP: 10.96.0.100
 
  
