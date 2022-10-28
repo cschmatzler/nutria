@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Namespace
+
+metadata:
+  name: contour-public
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+
+metadata:
+  name: contour-public
+  namespace: flux-system
+
+spec:
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: "./workloads/contour-public"
+  interval: 60m
+  timeout: 3m0s
+  retryInterval: 2m0s
+  prune: true
+  wait: true
+ 
