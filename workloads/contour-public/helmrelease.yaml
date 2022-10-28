@@ -30,8 +30,10 @@ spec:
       version: 9.1.6
 
   values:
-    ingress:
-      ingressClassName: public
+    contour:
+      ingressClass:
+        name: public
+        default: false
     envoy:
       service:
         annotations:
