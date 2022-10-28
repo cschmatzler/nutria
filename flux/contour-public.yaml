@@ -3,6 +3,8 @@ kind: Namespace
 
 metadata:
   name: contour-public
+  labels:
+    pod-security.kubernetes.io/enforce: privileged
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
