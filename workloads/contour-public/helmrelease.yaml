@@ -42,6 +42,6 @@ spec:
           load-balancer.hetzner.cloud/ipv6-disabled: "true"
           load-balancer.hetzner.cloud/location: fsn1
           load-balancer.hetzner.cloud/type: lb11
-        clusterIP: 10.96.0.100
+        clusterIP: 10.96.0.50
 
  
