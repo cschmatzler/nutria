@@ -6,7 +6,7 @@ metadata:
   namespace: medium-place
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt
-    external-dns.alpha.kubernetes.io/target: tail9b5a.ts.net
+    external-dns.alpha.kubernetes.io/target: nutria.tail9b5a.ts.net
   labels:
     app.kubernetes.io/part-of: searxng
 
