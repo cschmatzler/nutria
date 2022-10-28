@@ -7,7 +7,7 @@ metadata:
   labels:
     app.kubernetes.io/name: tailscale
     app.kubernetes.io/part-of: tailscale
-    app.kubernetes.io/version: 1.32.0
+    app.kubernetes.io/version: 1.32.2
 
 spec:
   replicas: 1
@@ -23,7 +23,7 @@ spec:
       labels:
         app.kubernetes.io/name: tailscale
         app.kubernetes.io/part-of: tailscale
-        app.kubernetes.io/version: 1.32.0
+        app.kubernetes.io/version: 1.32.2
 
     spec:
       serviceAccountName: tailscale
@@ -34,7 +34,7 @@ spec:
         - name: tailscale
 
           imagePullPolicy: Always
-          image: ghcr.io/tailscale/tailscale:v1.32.0
+          image: ghcr.io/tailscale/tailscale:v1.32.2
 
           securityContext:
             capabilities:
@@ -52,6 +52,6 @@ spec:
             - name: TS_KUBE_SECRET
               value: tailscale-config
             - name: TS_DEST_IP
-              value: 10.96.0.30
+              value: 10.96.0.60
             - name: TS_EXTRA_ARGS
               value: --hostname=nutria
