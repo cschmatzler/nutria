@@ -37,7 +37,9 @@ spec:
         name: public
         default: false
     envoy:
+      useHostPort: false
       service:
+        clusterIP: 10.96.0.50
         annotations:
           load-balancer.hetzner.cloud/name: contour-public
           load-balancer.hetzner.cloud/uses-proxyprotocol: "true"
@@ -46,6 +48,5 @@ spec:
           load-balancer.hetzner.cloud/ipv6-disabled: "true"
           load-balancer.hetzner.cloud/location: fsn1
           load-balancer.hetzner.cloud/type: lb11
-        clusterIP: 10.96.0.50
 
  
