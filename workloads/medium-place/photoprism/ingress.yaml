@@ -5,13 +5,13 @@ metadata:
   name: photoprism
   namespace: medium-place
   annotations:
-    nginx.ingress.kubernetes.io/proxy-body-size: 100m
     cert-manager.io/cluster-issuer: letsencrypt
+    external-dns.alpha.kubernetes.io/target: tail9b5a.ts.net
   labels:
     app.kubernetes.io/part-of: photoprism
 
 spec:
-  ingressClassName: nginx
+  ingressClassName: private
 
   tls:
     - hosts:

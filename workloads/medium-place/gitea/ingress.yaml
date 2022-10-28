@@ -5,13 +5,12 @@ metadata:
   name: gitea
   namespace: medium-place
   annotations:
-    nginx.ingress.kubernetes.io/proxy-body-size: 250m
     cert-manager.io/cluster-issuer: letsencrypt
   labels:
     app.kubernetes.io/part-of: gitea
 
 spec:
-  ingressClassName: nginx
+  ingressClassName: public
 
   tls:
     - hosts:

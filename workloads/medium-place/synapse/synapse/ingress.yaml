@@ -5,14 +5,13 @@ metadata:
   name: synapse
   namespace: medium-place
   annotations:
-    nginx.ingress.kubernetes.io/proxy-body-size: 100m
     cert-manager.io/cluster-issuer: letsencrypt
   labels:
     app.kubernetes.io/name: synapse
     app.kubernetes.io/part-of: synapse
 
 spec:
-  ingressClassName: nginx
+  ingressClassName: public
 
   tls:
     - hosts:

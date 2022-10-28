@@ -6,13 +6,12 @@ metadata:
   namespace: medium-place
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt
-    external-dns.alpha.kubernetes.io/target: nutria.cschmatzler.github.beta.tailscale.net
-    nginx.ingress.kubernetes.io/proxy-body-size: 50m
+    external-dns.alpha.kubernetes.io/target: tail9b5a.ts.net
   labels:
     app.kubernetes.io/part-of: calibre-web
 
 spec:
-  ingressClassName: nginx-private
+  ingressClassName: private
 
   tls:
     - hosts:

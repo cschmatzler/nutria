@@ -11,7 +11,7 @@ metadata:
     app.kubernetes.io/part-of: vaultwarden
 
 spec:
-  ingressClassName: nginx
+  ingressClassName: public
 
   tls:
     - hosts:

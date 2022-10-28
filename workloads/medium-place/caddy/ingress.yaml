@@ -5,13 +5,12 @@ metadata:
   name: caddy
   namespace: medium-place
   annotations:
-    nginx.ingress.kubernetes.io/limit-rpm: 100
     cert-manager.io/cluster-issuer: letsencrypt
   labels:
     app.kubernetes.io/part-of: caddy
 
 spec:
-  ingressClassName: nginx
+  ingressClassName: public
 
   tls:
     - hosts:
