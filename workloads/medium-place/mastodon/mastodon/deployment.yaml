@@ -30,8 +30,7 @@ spec:
 
       initContainers:
         - name: migrations
-          imagePullPolicy: Always
-          image: ghcr.io/glitch-soc/mastodon:latest
+          image: tootsuite/mastodon:v3.5.3
           command:
             - bundle
             - exec
@@ -47,8 +46,7 @@ spec:
 
       containers:
         - name: web
-          imagePullPolicy: Always
-          image: ghcr.io/glitch-soc/mastodon:latest
+          image: tootsuite/mastodon:v3.5.3
           command:
             - bundle
             - exec
@@ -68,8 +66,7 @@ spec:
               containerPort: 3000
 
         - name: streaming
-          imagePullPolicy: Always
-          image: ghcr.io/glitch-soc/mastodon:latest
+          image: tootsuite/mastodon:v3.5.3
           command:
             - node
             - ./streaming
@@ -84,8 +81,7 @@ spec:
               containerPort: 4000
 
         - name: sidekiq
-          imagePullPolicy: Always
-          image: ghcr.io/glitch-soc/mastodon:latest
+          image: tootsuite/mastodon:v3.5.3
           command:
             - bundle
             - exec
