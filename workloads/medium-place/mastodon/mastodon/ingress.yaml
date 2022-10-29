@@ -6,6 +6,7 @@ metadata:
   namespace: medium-place
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt
+    projectcontour.io/websocket-routes: /api/v1/streaming
   labels:
     app.kubernetes.io/part-of: mastodon
 
