@@ -17,7 +17,7 @@ data:
     EOSQL
     {{ range .Values.databases }}
     psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "{{ . }}" <<-EOSQL
-      CREATE SCHEMA {{ include "base.fullname" . | trim | snakecase }} AUTHORIZATION {{ $userName }};
+      CREATE SCHEMA AUTHORIZATION {{ $userName }};
     EOSQL
     {{ end }}
 
