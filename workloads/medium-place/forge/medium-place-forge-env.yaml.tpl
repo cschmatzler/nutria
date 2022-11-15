@@ -13,6 +13,7 @@ stringData:
   GITEA__database__HOST: {{ .Env.GITEA__database__HOST }}
   GITEA__database__USER: {{ .Env.GITEA__database__USER }}
   GITEA__database__PASSWD: {{ .Env.GITEA__database__PASSWD }}
+  GITEA__database__SCHEMA: {{ .Env.GITEA__database__SCHEMA }}
   GITEA__database__NAME: {{ .Env.GITEA__database__NAME }}
   GITEA__security__PASSWORD_HASH_ALGO: argon2
   GITEA__service__EMAIL_DOMAIN_WHITELIST: medium.place
