@@ -30,4 +30,6 @@ spec:
       version: 0.15.5
 
   values:
+    persistentVolume:
+      storageClass: hcloud-volume
 
