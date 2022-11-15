@@ -19,6 +19,7 @@ spec:
 
   values:
     base:
+      envSecretName: medium-place-forge-env
       ingress:
         host: forge-testing.medium.place
         paths:
@@ -27,9 +28,11 @@ spec:
             port: http
     postgresql:
       secretName: medium-place-forge-postgresql-env
+      authentication:
+        applicationUser: medium_place_forge
       databases:
         - medium_place_forge
-    
+
   upgrade:
     remediation:
       retries: 5
@@ -41,4 +44,4 @@ spec:
     recreate: false
     force: false
     cleanupOnFail: false
-  
+
