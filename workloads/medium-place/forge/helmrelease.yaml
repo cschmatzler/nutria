@@ -28,8 +28,6 @@ spec:
             port: http
     postgresql:
       secretName: medium-place-forge-postgresql-env
-      authentication:
-        applicationUser: medium_place_forge
       databases:
         - medium_place_forge
 
