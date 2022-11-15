@@ -27,4 +27,3 @@ spec:
     recreate: false
     force: false
     cleanupOnFail: false
-  
