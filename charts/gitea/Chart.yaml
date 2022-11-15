@@ -12,5 +12,5 @@ dependencies:
     version: 0.1.15
     repository: file://../base
   - name: postgresql
-    version: 0.1.10
+    version: 0.1.11
     repository: file://..//postgresql
