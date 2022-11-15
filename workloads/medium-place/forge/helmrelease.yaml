@@ -21,6 +21,7 @@ spec:
     base:
       secretName: medium-place-forge-env
       ingress:
+        public: true
         host: forge-testing.medium.place
         paths:
           - path: /
