@@ -25,6 +25,6 @@ spec:
               service:
                 name: {{ $fullName }}
                 port:
-                  name: http
+                  name: {{ .port }}
           {{- end }}
 {{- end }}

@@ -7,7 +7,7 @@
 {{- end }}
 
 {{- define "base.selectorLabels" -}}
-app.kubernetes.io/name: {{ .Chart.Name }}
+app.kubernetes.io/name: {{ .Release.Name }}
 app.kubernetes.io/instance: {{ include "base.fullname" . }}
 {{- end }}
 
