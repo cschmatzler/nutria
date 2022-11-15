@@ -1,7 +1,7 @@
 base:
-  image: 
+  image:
     repository: gitea/gitea
-    tag: 1.17.3 
+    tag: 1.17.3
 
   persistence:
     enabled: true
@@ -11,5 +11,4 @@ base:
       port: 3000
 
 postgresql:
-  secretName: # Set the name of the secret holding environment variables 
-
+  secretName: # Set the name of the secret holding environment variables

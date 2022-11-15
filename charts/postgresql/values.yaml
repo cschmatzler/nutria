@@ -2,7 +2,7 @@ image:
   tag: 15.0-alpine
   pullPolicy: IfNotPresent
 
-secretName: 
+secretName:
 
 persistence:
   volumeSize: 10Gi
@@ -12,7 +12,7 @@ authentication:
     # This by convention expects an environment variable with name $NAME_PASSWORD.
     # For example, if the name was set as medium_place_forge here, the environment variable would
     # be $MEDIUM_PLACE_FORGE_PASSWORD.
-    name: 
+    name:
 
 databases:
-  # -  
+  # -

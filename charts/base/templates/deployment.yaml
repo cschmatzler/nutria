@@ -26,6 +26,9 @@ spec:
               protocol: {{ default "TCP" .protocol }}
               containerPort: {{ .port }}
             {{- end }}
+          envFrom:
+            - secretRef:
+                name: {{ .Values.envSecretName }}
           livenessProbe:
             httpGet:
               path: /
