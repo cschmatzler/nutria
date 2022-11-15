@@ -1,3 +1,4 @@
 resources:
   - medium-place-forge-postgresql-env.yaml.enc
+  - medium-place-forge-env.yaml.enc
   - helmrelease.yaml
