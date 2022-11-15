@@ -10,7 +10,7 @@ base:
     - name: http
       port: 3000
 
-  envSecretName: ""
+  secretName: ""
 
 postgresql:
   secretName: # Set the name of the secret holding environment variables

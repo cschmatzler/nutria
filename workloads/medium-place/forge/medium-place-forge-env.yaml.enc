@@ -1,0 +1,47 @@
+{
+	"apiVersion": "v1",
+	"kind": "Secret",
+	"metadata": {
+		"name": "medium-place-forge-env",
+		"namespace": "medium-place"
+	},
+	"stringData": {
+		"GITEA____APP_NAME": "ENC[AES256_GCM,data:9q7tcXqRosFTflUYI0RJDMgm,iv:bjjhkPhOgb7XVS/6a33qVz+vaJPbTZyNvjmMp+LyM2k=,tag:HSKr2Llu/MmFirTxHTRf4Q==,type:str]",
+		"GITEA__server__DOMAIN": "ENC[AES256_GCM,data:jAxgAa2Z0gRu38lAZW7t+A0V,iv:pdebC51NYpBqB21ci+5M1CLlwWrTmb/SOXF4nhVM8G8=,tag:jfzrFq0trml7civbUglnUA==,type:str]",
+		"GITEA__server__ROOT_URL": "ENC[AES256_GCM,data:4kx/GnVbDrhyLxJZzk7AVsAWnzYGBbUUTPw=,iv:uqcbS2ImTgxQIS0QTOtxaSFhgn3yFebR0BnYtHDABB0=,tag:PasIBiCw4Vdk6VII/nHnEw==,type:str]",
+		"GITEA__server__SSH_PORT": "ENC[AES256_GCM,data:z7o=,iv:7/XYlPUlbsP2aqLHFcxIlObl1nfJ5nHh5wOE00r2diA=,tag:Jz8m6PSN2trh7LiTPdG9YA==,type:str]",
+		"GITEA__server__SSH_LISTEN_PORT": "ENC[AES256_GCM,data:TbTctg==,iv:PEh7hTEkaz+7dNGHw1+MqaHtFoFgIs3uxcpX9ttiq7s=,tag:w8IBkNTZ26yymRXPrqaDzg==,type:str]",
+		"GITEA__database__DB_TYPE": "ENC[AES256_GCM,data:YvvENtq95no=,iv:SYPAsXzC2hGgt7G56C+6OTOjMSHNxnTqpDO/znKU0Gk=,tag:KPvtP/7Opa1zHBPyVmS/7A==,type:str]",
+		"GITEA__database__HOST": "ENC[AES256_GCM,data:hvlpjCo8KWOQMCqDjDYqV11WjncFK22EOf40VE8=,iv:0cqIbCdaHAyXJzkVxMlB5Tz0oZ3ykSSzH5CdBgdCHUY=,tag:uYYuBtrPORbnc/9gABCNRw==,type:str]",
+		"GITEA__database__USER": "ENC[AES256_GCM,data:nXKSM4wHOADW5PG9ZP86aVdz,iv:lK7Ht1LIT8B+WNy+ndAJPbBb7LZjsvVRvtH/3Cie9WU=,tag:aFfQWK13HbWSH0YhQmP/lA==,type:str]",
+		"GITEA__database__PASSWD": "ENC[AES256_GCM,data:GK27rDvsBCK2xQI28isgMTYcdm5lbeJEfesW2utFNcYZAT/QhPFVGPAbya/OM09N526Ev94g0s32MDDHyLb2pw==,iv:USYJfg5HyIqqEGwAjTKAoknU0YjAS86+wT5baTYp6tY=,tag:JeY3Hb7/Fg6sIYxx4XN9qA==,type:str]",
+		"GITEA__database__NAME": "ENC[AES256_GCM,data:rBtjbFaZcxAHm9kqo/8uhNSX,iv:6JZArrPp5xK6h+nw1v1AcMq4wdNDl/g8eEj36Vd5aAk=,tag:/qbnoAMFeMxpTAVQi7jSXA==,type:str]",
+		"GITEA__security__PASSWORD_HASH_ALGO": "ENC[AES256_GCM,data:t9MRp2Ex,iv:GzS5eLCh06X7/kuwfiNNJUTsvov8AaiDOEVuECcWXV8=,tag:PIS5zh/k0H/RGbIYH0zAng==,type:str]",
+		"GITEA__service__EMAIL_DOMAIN_WHITELIST": "ENC[AES256_GCM,data:126/21A6OXypXOpl,iv:MKPeTEkMPJ+hgPOps0MAyjg4jbm1fde2Sr2sU4n/TJU=,tag:sZ1wah3fZMEq3bNojN4lFg==,type:str]",
+		"GITEA__mailer__ENABLED": "ENC[AES256_GCM,data:c7C44w==,iv:MLSvHU11DN3q4/+VZyE9Svfxo0HCkPlORLSr2IxNuuw=,tag:svsQ5Do1xHzJI58f8rXpnw==,type:str]",
+		"GITEA__mailer__HOST": "ENC[AES256_GCM,data:a2XbOOV5kbREf0U12lvwoxcy09Lf,iv:ndgU4JKG0UIIxbX5NGe37jWMQgsuOTX5mLhTIzjgI2o=,tag:FqTu0wKX+EU9T3KmIugttw==,type:str]",
+		"GITEA__mailer__USER": "ENC[AES256_GCM,data:031tBW1iK0FHmyRG3YN8JUijNQ==,iv:3tddURQ5IhLfhddQFw93snXOp7VFqptRY/pjZtikGPo=,tag:aQxD1dwcPHwslPUwXSQvhg==,type:str]",
+		"GITEA__mailer__PASSWD": "ENC[AES256_GCM,data:uSgclhV0ZT7i/7uDUHt3v5ylOBybiQCPVkIkU3GdN/3vE3ZnhAKn5UBeRGOWDZy1,iv:v+5NrYWXepndcmRQM9AoXg3O58UnPP1Mq0oaiGYLCcM=,tag:jIkffOY6+ZetcY9+mj/IOw==,type:str]",
+		"GITEA__mailer__FROM": "ENC[AES256_GCM,data:/txVLsouxHzuvIXte2HMAF+Yanv4Uus8GKS9zEhvfDnakJrDt6Y1RQ==,iv:QvMP2EmT0SIFBZdAPoeddoo6BsCk/GVOsRghIZVR9/A=,tag:4EWdwGFsHZmrvO1tsrzV1g==,type:str]",
+		"GITEA__picture__DISABLE_GRAVATAR": "ENC[AES256_GCM,data:gih54Q==,iv:UvRCpr2QuuGSJ6XuzUIIYjzb2zNDPdMJdLiprsMgxVQ=,tag:y3A2IP3r+bI0mvfwezxaIA==,type:str]",
+		"GITEA__service_0x2E_explore__DISABLE_USERS_PAGE": "ENC[AES256_GCM,data:/SlYbw==,iv:Syok2UGhUkjErP24SbtzLlEOsuhoPCZulabH33jxVmg=,tag:8CAIpNIC8EU7qYOUlocG5g==,type:str]",
+		"GITEA__other__SHOW_FOOTER_VERSION": "ENC[AES256_GCM,data:HmHOR+c=,iv:R7ll5ahlSznrSIuhoNUa2M4Nebf7VFuOwcdu/bo+gvQ=,tag:IpeAVLptsV0jzmvLgY0CGQ==,type:str]"
+	},
+	"sops": {
+		"kms": null,
+		"gcp_kms": null,
+		"azure_kv": null,
+		"hc_vault": null,
+		"age": [
+			{
+				"recipient": "age1ufcw42mtfu65grs30zqwu65xl7wczkllu3r4gjpk5yr7tr02q5kqq0pnvg",
+				"enc": "-----BEGIN AGE ENCRYPTED FILE-----\nYWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSB1Z2pNMVNrTW9PMGtqR3k3\nUUtOaWJPMTc5YzRTRnpZa1A3WWZlQWNHbHhNCk5SRjd6TDVUdWRKY0hRNS9qcEt5\naldWV3EwbnhJODVQZ0FhbXdTR2xBbVkKLS0tIGxVVzlaVDIwa1RIandpYndwV1Zo\nUm94WGFLUkpZaER3dmx6OGwvR09RU1kKQ+HX1zuYpninb722eUs96CJ5KPwbLx4h\nWiaMR4DGMb9LZnbS4fkJ1cx8i5X+wjDN1ItXHdhYoA553DOsIlBerA==\n-----END AGE ENCRYPTED FILE-----\n"
+			}
+		],
+		"lastmodified": "2022-11-15T19:22:35Z",
+		"mac": "ENC[AES256_GCM,data:4w7MhxJNnFHz11LYz/IBDxPSFe+wYT5UMrkauKctGH83YcHgLZGWddE3dvVANvOUfuXPcH247HlZQNTw0lln9uoy8pP5cBSaIDFeSty5GuDKuuLywIIzkLMgVSXvaF0xoRjzT0qAymofpzv+wRgT8GJx3GDlpkrpeTOYHrnnr9U=,iv:6zB7z1Ss6AtnVeOwzFhDv0metU6pl4na+lezFfjw75w=,tag:5dRRD02SEEIfC5sqYAprtg==,type:str]",
+		"pgp": null,
+		"encrypted_regex": "^(data|stringData)$",
+		"version": "3.7.3"
+	}
+}

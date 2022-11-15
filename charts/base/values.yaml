@@ -13,7 +13,7 @@ ports:
   # - name: http
   #   port: 8080
 
-envSecretName: ""
+secretName: ""
 
 service:
   type: ClusterIP

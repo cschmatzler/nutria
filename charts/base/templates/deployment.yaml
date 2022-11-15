@@ -28,7 +28,7 @@ spec:
             {{- end }}
           envFrom:
             - secretRef:
-                name: {{ .Values.envSecretName }}
+                name: {{ .Values.secretName }}
           livenessProbe:
             httpGet:
               path: /
