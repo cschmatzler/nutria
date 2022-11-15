@@ -3,7 +3,7 @@ kind: HelmRelease
 
 metadata:
   name: woodpecker-server
-  namespace: woodpecker
+  namespace: medium-place
 
 spec:
   interval: 1m
