@@ -27,7 +27,7 @@ spec:
     spec:
       serviceAccountName: {{ include "base.fullname" . }}
       containers:
-        - name: {{ .Chart.Name }}
+        - name: {{ .Resource.Name }}
           image: "{{ .Values.image.repository }}:{{ default .Chart.AppVersion .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
