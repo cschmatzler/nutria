@@ -5,6 +5,9 @@ metadata:
   name: {{ include "base.fullname" . }}
   annotations:
     cert-manager.io/cluster-issuer: {{ .Values.ingress.clusterIssuer }}
+    {{- if .Values.ingress.externalDnsTarget }}
+    external-dns.alpha.kubernetes.io/target: {{ .Values.ingress.externalDnsTarget }}
+    {{- end }}
   labels:
     {{- include "base.labels" . | nindent 4 }}
 spec:

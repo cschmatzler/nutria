@@ -21,6 +21,7 @@ service:
 ingress:
   public: false
   clusterIssuer: letsencrypt
+  # externalDnsTarget: ""
   # host: base.nutria.cloud
   # paths:
   #   - path: /
