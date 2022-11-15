@@ -40,7 +40,7 @@ spec:
     timeout: 5m
     disableWait: false
     disableHooks: false
-    recreate: false
+    recreate: true
     force: false
     cleanupOnFail: false
 
