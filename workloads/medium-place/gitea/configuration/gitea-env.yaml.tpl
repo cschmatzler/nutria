@@ -5,6 +5,7 @@ metadata:
   namespace: medium-place
 stringData:
   GITEA____APP_NAME: Medium Place Forge
+  GITEA__log__LEVEL: debug
   GITEA__server__DOMAIN: forge.medium.place
   GITEA__server__ROOT_URL: https://forge.medium.place
   GITEA__server__SSH_PORT: "22"
