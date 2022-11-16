@@ -16,6 +16,7 @@ stringData:
   GITEA__database__NAME: {{ .Env.GITEA__database__NAME }}
   GITEA__security__PASSWORD_HASH_ALGO: argon2
   GITEA__service__EMAIL_DOMAIN_WHITELIST: medium.place
+  GITEA__webhook__ALLOWED_HOST_LIST: loopback,private,external
   GITEA__mailer__ENABLED: "true"
   GITEA__mailer__HOST: "{{ .Env.GLOBAL_SMTP_HOST }}:465"
   GITEA__mailer__USER: {{ .Env.GLOBAL_SMTP_USERNAME }}

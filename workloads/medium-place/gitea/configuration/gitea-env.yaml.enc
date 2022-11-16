@@ -6,26 +6,27 @@
 		"namespace": "medium-place"
 	},
 	"stringData": {
-		"GITEA____APP_NAME": "ENC[AES256_GCM,data:atJ8TfTwSbDjk9VWx6nmV4GK,iv:O7O0BwW/RtCdtmeHSNze+DqKxK0KjCGnolJzcFBJVdo=,tag:GjzbKuUTJALM0PByAf541A==,type:str]",
-		"GITEA__server__DOMAIN": "ENC[AES256_GCM,data:L7cz12+eMTx1wjpqiVlWqXJ4,iv:+WGcU1O0j6cEvVI62UjvKQ2kbvzMWgBsLnFYFydxthg=,tag:0hzZW1sRVjTRhtmzoPqrjw==,type:str]",
-		"GITEA__server__ROOT_URL": "ENC[AES256_GCM,data:AqKmd+kSnzooVQ1isDeKRvVa+SOeTo6ks8M=,iv:2IIWbF836esU1F71kRiA3XPgNoqIRVH/a4GpBAOnYtI=,tag:+vxO3fPBYja2UfVvrYyCrQ==,type:str]",
-		"GITEA__server__SSH_PORT": "ENC[AES256_GCM,data:RmY=,iv:YIbyYIR8vYhOIxmH4ZiSM77ji2nlCD0tNUFxSOIOg2M=,tag:8/ACqQc7LhmA+teKswozRw==,type:str]",
-		"GITEA__server__SSH_LISTEN_PORT": "ENC[AES256_GCM,data:ExHTeg==,iv:d/2Z+R7LBxIB0wVyHVSaVJw3xh1jVPsV113XpRSs7xY=,tag:4Hojfo3igr5dP3LugivrtA==,type:str]",
-		"GITEA__database__DB_TYPE": "ENC[AES256_GCM,data:uaLT3EuKtgc=,iv:BpGaz+c0bJeAQvrcY97TAtrGsTJCd+eRpsTbfuMWH7o=,tag:Mf1Z4dS4HALRL2g+IqVaaQ==,type:str]",
-		"GITEA__database__HOST": "ENC[AES256_GCM,data:uiWlifx9qDOUCOv7Gvs5C3qCULLKfUjbv3eLjtYzIMbbSvpYTg==,iv:V3hMAmb4/4G9qh63PJhhbouWDKpDf3RojSXOKkHh5VA=,tag:G75idEq36yxbCetpF7xYYQ==,type:str]",
-		"GITEA__database__USER": "ENC[AES256_GCM,data:MR26sy5nJRkx0LKJd5PWvwZW,iv:TVaOSy5siOOVa50hOJGsIgUJ0/Jg0fxBPNj5sC8GHO0=,tag:nl4o0AlF1Lh+R1ltXv8BUw==,type:str]",
-		"GITEA__database__PASSWD": "ENC[AES256_GCM,data:axgzMV05pO5BsGFOFsgeeXbc3rRzN5tAVNdsnV89MFIegJYk/ZvWnZLlMkZjIrcC,iv:X7wS2+rXuDHl5LAvdygfkpWNZ3Mq/pW/rq+k/XrJo9Q=,tag:Mln7lFWVSzsrTAG7WH1Csw==,type:str]",
-		"GITEA__database__NAME": "ENC[AES256_GCM,data:lvysuJp5p7vAYD9IkUPpyDsH,iv:jxSruqtGe6CcAMlIUVgq0uxR8vtk0BOXNNYLbvp7vhc=,tag:iGK5rg7DbO4/a82WFffVlQ==,type:str]",
-		"GITEA__security__PASSWORD_HASH_ALGO": "ENC[AES256_GCM,data:wxJsqLhC,iv:0a3BcrW5GjqAfLTcvvQRGBw/QHrqq4vzmdN5l106gWo=,tag:mnR8/W3vWxJ2d2VmZIMmOw==,type:str]",
-		"GITEA__service__EMAIL_DOMAIN_WHITELIST": "ENC[AES256_GCM,data:YxU5F01EHEHG6IYB,iv:uTG+kEj+ZVFyagbv7dYWTP404KWGXZ0oKHOBAnee3dA=,tag:uzeQIhDFp6dlpXAapnnW6g==,type:str]",
-		"GITEA__mailer__ENABLED": "ENC[AES256_GCM,data:nVSD5A==,iv:+fm/sC9STsOtRB2EBQov5wOSakbHaL9nJekwcabA9GQ=,tag:yNOFsENMx4K3wPhY6HNAfg==,type:str]",
-		"GITEA__mailer__HOST": "ENC[AES256_GCM,data:Za58BQFnbNGJGzHn6GSooeyJmR+4,iv:8FyEkO5So599FwRua8l8kcm/bcaEUzKwz2OTvRLNRSw=,tag:B6oephHxLNTN9UaoO5LPSw==,type:str]",
-		"GITEA__mailer__USER": "ENC[AES256_GCM,data:4KIJ0D+S/818dg37KCEaRDYjtQ==,iv:Hd2WRDclKjPV77bec8W7iC7v/AttdKMF0HeloI3DALY=,tag:cv37eOwFphkVaUivcapPYA==,type:str]",
-		"GITEA__mailer__PASSWD": "ENC[AES256_GCM,data:7pjK5QUPbkClzlsv3IQC/dr4ZBoLEbqK4w2Ev2DNHEXVPkkDisdRDIMc1WPQvr6k,iv:WQXFmzl1mG//swYueg+g7rBBrH4XiaZbH7cl5wF2wQM=,tag:BEti9ScRWwVDLYhl0Toryg==,type:str]",
-		"GITEA__mailer__FROM": "ENC[AES256_GCM,data:COqxgOOaD4gVFPGrK0wP4+/xMkbbYrAMG/00uwz3mXvVyh2g3E6F0w==,iv:pTjGsUOXt5n/NWyy3jm+nPwfv3dA9EdY1//C1ZnTAKU=,tag:1yDJs9gC0leDfh0DTwErUg==,type:str]",
-		"GITEA__picture__DISABLE_GRAVATAR": "ENC[AES256_GCM,data:2uR5fw==,iv:JSt6+zsFTEfaiAYlXGyvFifIh7hEpvUBIE2OFYHFLls=,tag:W7lof5nf/ImbKrGmAACXXw==,type:str]",
-		"GITEA__service_0x2E_explore__DISABLE_USERS_PAGE": "ENC[AES256_GCM,data:Jj4qeQ==,iv:JJiqidDhyKYv47PYdkKrngzwSL/eWa3SjNVUi4GW0Sc=,tag:WFUGey5zRrutdQDDDlLdRg==,type:str]",
-		"GITEA__other__SHOW_FOOTER_VERSION": "ENC[AES256_GCM,data:3rBK96U=,iv:mDBYS0ukZdm5gQ38lHP+wyCaLFPh7RKfbuuG3Xk500Y=,tag:/ZcG2pUrM4Z+xTus7tPT4w==,type:str]"
+		"GITEA____APP_NAME": "ENC[AES256_GCM,data:5h1rXQQjxDR/EJZ5lK+x3lNs,iv:39td74ojaKMImnPJ/Nn2xh2N7RwS4NSJak8IYPMl0HI=,tag:T3b0LdOQdADW+lj76HHPWg==,type:str]",
+		"GITEA__server__DOMAIN": "ENC[AES256_GCM,data:XDl/C+UqUIngrW7DzIJ77Jqp,iv:kTaaFAdc3O6ghgOyQLQ0Q1I6MXR7na8ElIg5W9AGc7M=,tag:hQ+Ioacg7NDAK7dN2FoYSw==,type:str]",
+		"GITEA__server__ROOT_URL": "ENC[AES256_GCM,data:UbHjzvnaJpaUmJ2a0q9WhLFFK+Nla+SX8Us=,iv:N65XoVKpuT0cZeHtNUEOrpkvpWa8DIqmnivAqm1+kRA=,tag:deD4Sv3gS9ekU5VzxPg5hA==,type:str]",
+		"GITEA__server__SSH_PORT": "ENC[AES256_GCM,data:C0U=,iv:GDUld7mqFIStk5gzzXqOz6o3D/z8p9TRG13cm5qAxJg=,tag:PKsDvU2HdpI5bpIET1faBw==,type:str]",
+		"GITEA__server__SSH_LISTEN_PORT": "ENC[AES256_GCM,data:fCUDVw==,iv:FOucPJbpToqsbOHXBuy0VbvesUAvY6oV9Lw0t9m7Lsk=,tag:Dv1ioVM22v8aYZVA3htlHg==,type:str]",
+		"GITEA__database__DB_TYPE": "ENC[AES256_GCM,data:rsY77UPaBG8=,iv:sOK9vvzsuRdvSiRwEkJLDqX8/o2OaX2tF8y+twT3fdU=,tag:rfDRyC8jOtBqcCevI7r0kQ==,type:str]",
+		"GITEA__database__HOST": "ENC[AES256_GCM,data:rTF4I972arChe9c6G7TXBpde9+yN0ii9J5vKjERC+vwCUCD7Ag==,iv:DiJOVsphXF5UWbSUyeb4bpTXEc8p2XcQN7qqen5WMC4=,tag:+Gfh+miLuNf4Sy86w282fA==,type:str]",
+		"GITEA__database__USER": "ENC[AES256_GCM,data:wywE7EnLLC4gIdXif4I/rCBH,iv:JTJUqJudD72fCbP7a0aJ162/TJX63Ey1Ew/ZYAiyUUM=,tag:Wi02AT6MVBXR3+NYXtoiPg==,type:str]",
+		"GITEA__database__PASSWD": "ENC[AES256_GCM,data:5RiXhHqfj7vhBDt45IcN8kVRO12T/EgILm9H2rm+YrkeYVKnamYUdKtnh2vSlw+C,iv:5/PrKaWePJYJvCvAcm2eP8SED5uHh2gRYXRg8P7tsDk=,tag:e+5Qppa50kWS+4652VDb6A==,type:str]",
+		"GITEA__database__NAME": "ENC[AES256_GCM,data:rUMQHJpMXkyzeX//VDvhXa4x,iv:wGjHPWUCy3I3Olt7LTiP6qzQpBjwNB+XgFwSjlohJ+o=,tag:LMipazdjh9FsO43fnUeekQ==,type:str]",
+		"GITEA__security__PASSWORD_HASH_ALGO": "ENC[AES256_GCM,data:TlQvQGm5,iv:0p+8VbMMuWrbChLYZJM8YKcFnLsN783snppPPh525pM=,tag:JgO8N2uUGsT4FmXhvZYMDA==,type:str]",
+		"GITEA__service__EMAIL_DOMAIN_WHITELIST": "ENC[AES256_GCM,data:FNGWAAZ1zmFVUDqa,iv:IS5CoQ39jLom1IeRmcN5V5b67dtV8i8ynfsbR7S7Sks=,tag:V56R+iOn2Et9LCuALHi2Mg==,type:str]",
+		"GITEA__webhook__ALLOWED_HOST_LIST": "ENC[AES256_GCM,data:QkCsA8dSWbQodURui8JSFo0EMMpjejv0gg==,iv:e78z9aY6QOxvQzfGhnw9lmpzxKx258o4N/YECufXfXM=,tag:rHxkpuCcR5obKWRRxOffDA==,type:str]",
+		"GITEA__mailer__ENABLED": "ENC[AES256_GCM,data:WHTXBA==,iv:Cis3/h1u9F2hEjgSuRkSWMBMlClsOo+SphFcdvXjxI8=,tag:U6xC+9TJBmQvBQPW/hzTng==,type:str]",
+		"GITEA__mailer__HOST": "ENC[AES256_GCM,data:6xmbPrc7OuHpwzVyZkgpqYql8bjz,iv:/XkQSBGh68ChvNHkuiwSmcr1hbiMqcqcEVtDrC/+0tc=,tag:4WSPojvDudOHZ/OO1lKplQ==,type:str]",
+		"GITEA__mailer__USER": "ENC[AES256_GCM,data:VE9CsmvlVtxSZW7pUmbWEuGb3A==,iv:k5YwMFJn2pt9i4iOoBcUIXBAVLIaoQB0iYl25SQ+n94=,tag:y4hTrvGmuqgOISDdXPxjbA==,type:str]",
+		"GITEA__mailer__PASSWD": "ENC[AES256_GCM,data:exorxDaD0BbD110nFchIkvbC9zDoWmS1ri9X89ugokfKXMBml047a9h2vHb3Dva2,iv:8ivU+hzKQIZMY/OTRTzyZS0tpAOHVFGUJnWpceFdxlg=,tag:pcI+hjNiS3k4BTASVem0nw==,type:str]",
+		"GITEA__mailer__FROM": "ENC[AES256_GCM,data:Wy/e3JmNLRhmnn2IBAJoQGIFuzsYBtWzjInd+0ZYQb5fxHCFVnfXzQ==,iv:qraM9UzTATwTvwsGjTt2/SLVkOyliO/ICJ1SwsVJwEM=,tag:256S5zNw4rss3gmq9ihU+Q==,type:str]",
+		"GITEA__picture__DISABLE_GRAVATAR": "ENC[AES256_GCM,data:orKx/A==,iv:8H08s9GNdKGIU4dLgy86OKOyfDemRa8qSDtfn+17ObY=,tag:GEB76FdgOEY5fjFeGJyp6g==,type:str]",
+		"GITEA__service_0x2E_explore__DISABLE_USERS_PAGE": "ENC[AES256_GCM,data:OQgfZw==,iv:all1G8JdraR+4kqLPUhdHKOBDK4LZxxkOmRnxpcjwQU=,tag:f50HwGgJLDwuYSjrioU72Q==,type:str]",
+		"GITEA__other__SHOW_FOOTER_VERSION": "ENC[AES256_GCM,data:SZ9Uhd0=,iv:cq9Al87vvub/hW/Kc3+mW8iKzCcJ6DPx44Gg/LqA/1s=,tag:hryKsBj2bl5bJ5QQCkx4cA==,type:str]"
 	},
 	"sops": {
 		"kms": null,
@@ -35,11 +36,11 @@
 		"age": [
 			{
 				"recipient": "age1ufcw42mtfu65grs30zqwu65xl7wczkllu3r4gjpk5yr7tr02q5kqq0pnvg",
-				"enc": "-----BEGIN AGE ENCRYPTED FILE-----\nYWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBzL2dSTndIQUt6SnNiZ1Vh\na2JZUlNiL1JzbURuVW05MlJTUW1MWFdtV21BCk1weExZVWJXRlBrRlZ0R00zKzli\neGpZb0hHbllvM2hqeVo0M0dtRDNucFEKLS0tIDhoUGprUW4yUmJMQkNYWW1SMFZ5\nMmtNcDBUVGc3blRseFRzdXVUMUtXMnMK6v6qDBC04jiJAMPN5l2/CDih8XUlkDSm\nPJCSUbhctjyZTXpedzhMldmY1f5LPDdvL/04MkyR1bSwtZ54cj+9QQ==\n-----END AGE ENCRYPTED FILE-----\n"
+				"enc": "-----BEGIN AGE ENCRYPTED FILE-----\nYWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBraWM1NnpjbkdNcDVPUUdj\nLzA4MW9zdE9oVVQ4bXhTOER3NjZvb3AvNWxJCkM0RkpOOEhibWw2UUVzZFoyVk9X\nTlN4d1VnZDUxd0lrWDZzRmhiOVVmQmMKLS0tIGVRQkFxNzN3bms4Q3duMjgyZUdZ\ncWd3bDBzcnprSUQzdC9NdkNCQUgvWGcKbr/Ta2xAjePjcEkP2/Q3/vL3XyBwZzAi\n9QG/4pCPgfCzYrpfB+cz0MBaJdYMx6zB8bjbhsjIVohuzLg1P0trag==\n-----END AGE ENCRYPTED FILE-----\n"
 			}
 		],
-		"lastmodified": "2022-10-15T17:33:14Z",
-		"mac": "ENC[AES256_GCM,data:SlqOb0zvY+qIF/1+s4crrK9aIlHVAdqOeWFijvpKdLhu5C3hL+TmXYTtz3tfbQWhDrrv/ePvokr6yHucD2lqzLnbrxSw7WVc5YfbeH8IPd4wOI7diQ21VPpXLm45j4sfwret9RQArwrcDBerxnBqtcDhH4+HU+wFipZ3XIINXSg=,iv:ayTJ4HpFbIfOagdljBWVcIQAIeC8VyhLTpUZQt5YKIo=,tag:wV/H5e+WN7aTVXSljB3Yew==,type:str]",
+		"lastmodified": "2022-11-16T21:51:01Z",
+		"mac": "ENC[AES256_GCM,data:kpID8J/AsnvRgpt6Og6h8bG8RCCwzlZV/gK4kQ23cRIq+4dyoGfUkhiPW7TzI1ZNwGTVyGpHCfPfx7Pxmk8G6J9GgNnqSthrsH+0KOcz28wrsGRzphy21SAEtW4eT2GI3ei/OtbnnoS3Pan6kIRA5T1UA15SW+KML+hDGMmqcBo=,iv:Jcw1NWUOYX+qN642CFL7S3iAFK/zGEZ+vaW1lShszy8=,tag:aQxqd5Vt4npZ3zAR8Kvigg==,type:str]",
 		"pgp": null,
 		"encrypted_regex": "^(data|stringData)$",
 		"version": "3.7.3"
