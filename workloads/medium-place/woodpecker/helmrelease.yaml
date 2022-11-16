@@ -34,4 +34,19 @@ spec:
       - woodpecker-env
     persistentVolume:
       storageClass: hcloud-volume
-
+    ingress:
+      enabled: true
+      annotations:
+        cert-manager.io/cluster-issuer: letsencrypt
+        external-dns.alpha.kubernetes.io/target: nutria.tail9b5a.ts.net
+      tls:
+        - hosts:
+            - ci.medium.place
+          secretName: ci.medium.place-tls
+      hosts:
+        - host: ci.medium.place
+          paths:
+            - path: /
+              backend:
+                serviceName: medium-place-woodpecker
+                servicePort: 80
