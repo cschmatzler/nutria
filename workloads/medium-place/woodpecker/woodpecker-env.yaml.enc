@@ -6,13 +6,13 @@
 		"namespace": "medium-place"
 	},
 	"stringData": {
-		"WOODPECKER_HOST": "ENC[AES256_GCM,data:DLby7fF6dvdSlC0nZNXa,iv:hhamdaQyUQ0NNdTyA+7vDxJ7TB9JmPkeoEgJdgCftMM=,tag:6fCSj9oBhS1Z+Y4GHAD9iA==,type:str]",
-		"WOODPECKER_AGENT_SECRET": "ENC[AES256_GCM,data:MQ/vcS58Wd3nMfJoOdQI2wKu3JxsKZgfFeWw49GGsJA=,iv:x+WWgDujuIicXQhqu6R82B7VyAplOK4o46+1UARLdRc=,tag:AAmAYHshYNxE19j2fvF7IQ==,type:str]",
-		"WOODPECKER_GITHUB": "ENC[AES256_GCM,data:alfec60=,iv:KGQ1C53C4nG3Oaor75HDcCBKMOs6rojFW89V2q2ITHE=,tag:BPEPNQsQF9022HWTqrm2bg==,type:str]",
-		"WOODPECKER_GITEA": "ENC[AES256_GCM,data:DKaiLw==,iv:2fX3vvwhM4pozYIN2oiPiQQbgFq27yVMGNMDsRbvLMA=,tag:UMKndjPGtNMHKK/qESYDyQ==,type:str]",
-		"WOODPECKER_GITEA_URL": "ENC[AES256_GCM,data:mVSATEbgFegbYKDpPomTwUk=,iv:YBtVY24ygx2LiWzDmzstYRAQ+LIew7M6StOqIKgglDY=,tag:Q+0LIh4FsxShUOzx//NDyQ==,type:str]",
-		"WOODPECKER_GITEA_CLIENT": "ENC[AES256_GCM,data:a7MBs2Kb9o+ROTOGkpkSIEkPhigkzH5mX5uzRLce2+PbUEeF,iv:C0aQiA4xTUkv7//kVr+5/lNenbDzPpEjmuiWYETJX/I=,tag:KSwZMObkb+/l8Mqi4SlEPw==,type:str]",
-		"WOODPECKER_GITEA_SECRET": "ENC[AES256_GCM,data:j7edhsFQKSKirwVEv0cJJHDOQ6zu3sojtGrNVp6hBKFQsHWqpKGEek771zl4d0DB30ADWOo+mZ8=,iv:dIbyi/8VjZIkZ3Jls0PSYItunLqzTCk+e3IWmdst/f0=,tag:e04DS3waFI1XWSZNwp+Nsw==,type:str]"
+		"WOODPECKER_HOST": "ENC[AES256_GCM,data:QY9TPsJmpExiTxiN9ny72wQEPzZFkXQ=,iv:QzOVf1WCa/bkuMouW/k0GlF54Cgjlf/0sJ+pfdbu5Rg=,tag:y9lQU7qNbE+qWUuH/OmRng==,type:str]",
+		"WOODPECKER_AGENT_SECRET": "ENC[AES256_GCM,data:345mAg8arCOMC9n3QJsOl1VzlJRLLLUHJ/n/Ztq3tc8=,iv:NDzcz/WimjEHaLK2tKBudQmNvPrcYZixHES8yVZwU4M=,tag:KemlLBGoXCDqrm9KiQBZBw==,type:str]",
+		"WOODPECKER_GITHUB": "ENC[AES256_GCM,data:WAJiWpA=,iv:1OsoTDUoal0+KdB+ggP6EVa4TVx3gQd+s2gc8ZuENx0=,tag:WFRg4lzHsahL9apbG+oXyA==,type:str]",
+		"WOODPECKER_GITEA": "ENC[AES256_GCM,data:J/3a8g==,iv:zl3W+Sa5G7hz+bhXMY35hYRw2+Xge2+ZN/BC3AGelgU=,tag:MUsDH050daf7PvPiIzYL7Q==,type:str]",
+		"WOODPECKER_GITEA_URL": "ENC[AES256_GCM,data:pfUd2dTEWr8GFoUNyDnuLtk=,iv:XAy8a9R7YPWiZP9+EQsgijw64k8DPmUNguEpQ/Zc/SQ=,tag:bRdJire9SLTNy4c/0h+Ppw==,type:str]",
+		"WOODPECKER_GITEA_CLIENT": "ENC[AES256_GCM,data:Zw68TMxGTM7FJXp0FjJNBEaDKgK+2mBDmdSMHPfUc/+yluM7,iv:ITJh/xvhsgMwvJeDmh8Pe4yV0Cq1H7Ixyt+Ji24+qbA=,tag:iCrLkJ6BlApKW14qdcJIGA==,type:str]",
+		"WOODPECKER_GITEA_SECRET": "ENC[AES256_GCM,data:/BbBc15kp/nqrAUzMBLh9p4UcXnWedOcZzxXdQbusz4hh2ceWX4DjyEj4TFF0yr66ZBCQ7yHD/I=,iv:BS5N0w+DR8zxh+VP4HWQh0nd23TV1XZtK/+h87ZGyUI=,tag:ocP81fJ29sjSgSc+rULblA==,type:str]"
 	},
 	"sops": {
 		"kms": null,
@@ -22,11 +22,11 @@
 		"age": [
 			{
 				"recipient": "age1ufcw42mtfu65grs30zqwu65xl7wczkllu3r4gjpk5yr7tr02q5kqq0pnvg",
-				"enc": "-----BEGIN AGE ENCRYPTED FILE-----\nYWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBESG9tWmJBMzVXRi9XTUFy\nZGkyNFZ1Y0J1N2JJdk83V0lTMys3R0xyZkRzCi84dFl3V0RSWUNkUmQwWlA1QWht\nWXRmQmRSa0ZlMUtIMnBsaklXcStxMGMKLS0tIGdaOWdzdkI3MlZPeVR2TXFuc3Jm\nbWJMa0xWRzVOYk90cGNTQ0NFVkpyMTAKCqgv8fgFqG5XdB9woMOhNFAmbagyoHVp\newPdesG0YxGF3bwwyPgzIWBKXxjJiuoneCZWiZAGWPRPF+K60IHXNw==\n-----END AGE ENCRYPTED FILE-----\n"
+				"enc": "-----BEGIN AGE ENCRYPTED FILE-----\nYWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSAvYlJESHUybVpEem9mR0h1\nZVJhamc0VXNMVEtkSUE5RUFiWVRCSDZobDJBCjNVNVFKaVE1S0ZCK1VrbDAvdDRV\nMEdGNURCRm45U2p1ZlltMmc1RkoyUWsKLS0tIFo5NzBKR0NjaUQ5eHNNU24rZGhv\nL2xKd0tNT29lVkNxSFlRTlBpMVFnYncKk7hyutHvqJ502G/bYztzKYyZINKQDOLT\nTrutG6D/jJfjQvfWYDvsghAgRr2UuxP4q38o9JcmyYIdVHFTwLqxWw==\n-----END AGE ENCRYPTED FILE-----\n"
 			}
 		],
-		"lastmodified": "2022-11-16T21:23:43Z",
-		"mac": "ENC[AES256_GCM,data:1KHOZHHHDczUZKzh1OFfOrW3qwQeejH2VhWDkKAqV6NGdm6paCYIFUW7yFgKJV3Zi8oxjMKybkVGeYVNqeqk3M9AzTe89yQElUlaHVuEDgLaHhOheH3wu97cxAIn//gI/dHQT/HGj1u2ZoH+YU3InLqkr7zt3Ny4hIpeOYxdd+A=,iv:3Dut/a/3kcC0V3EEZ2kRiJ4RVEnOFDtXsXDRg9ZMyhM=,tag:9RriYWMDk+FEW10B1srxHg==,type:str]",
+		"lastmodified": "2022-11-16T21:27:48Z",
+		"mac": "ENC[AES256_GCM,data:dzRRBcOdbdSyaG4bi8c3hQXZMwq5H8kqqhHn5aSYFLQFD8suzAx3kP3GFK3VvuHzvcSRmH4iI+9k72OXle43zyXPqCIAFEUyJFWg9XUSMm2kHK+83nsJ1y3EiyBXf8iXHwDrPGDqhp0Lk8i2BVzUfTZzKqBd0UVvRXcXsk+M/Fc=,iv:p2W2S2DkUc9kUZlA8oufoX5DjlHgKZ6LzVK1RXl/MnM=,tag:Ic9hHOpzirVXT99hImWkcA==,type:str]",
 		"pgp": null,
 		"encrypted_regex": "^(data|stringData)$",
 		"version": "3.7.3"

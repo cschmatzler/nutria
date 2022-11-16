@@ -4,7 +4,7 @@ metadata:
   name: woodpecker-env
   namespace: medium-place
 stringData:
-  WOODPECKER_HOST: ci.medium.place
+  WOODPECKER_HOST: https://ci.medium.place
   WOODPECKER_AGENT_SECRET: {{ .Env.WOODPECKER_SECRET }}
   WOODPECKER_GITHUB: "false"
   WOODPECKER_GITEA: "true"
