@@ -6,13 +6,13 @@
 		"namespace": "medium-place"
 	},
 	"stringData": {
-		"WOODPECKER_HOST": "ENC[AES256_GCM,data:QY9TPsJmpExiTxiN9ny72wQEPzZFkXQ=,iv:QzOVf1WCa/bkuMouW/k0GlF54Cgjlf/0sJ+pfdbu5Rg=,tag:y9lQU7qNbE+qWUuH/OmRng==,type:str]",
-		"WOODPECKER_AGENT_SECRET": "ENC[AES256_GCM,data:345mAg8arCOMC9n3QJsOl1VzlJRLLLUHJ/n/Ztq3tc8=,iv:NDzcz/WimjEHaLK2tKBudQmNvPrcYZixHES8yVZwU4M=,tag:KemlLBGoXCDqrm9KiQBZBw==,type:str]",
-		"WOODPECKER_GITHUB": "ENC[AES256_GCM,data:WAJiWpA=,iv:1OsoTDUoal0+KdB+ggP6EVa4TVx3gQd+s2gc8ZuENx0=,tag:WFRg4lzHsahL9apbG+oXyA==,type:str]",
-		"WOODPECKER_GITEA": "ENC[AES256_GCM,data:J/3a8g==,iv:zl3W+Sa5G7hz+bhXMY35hYRw2+Xge2+ZN/BC3AGelgU=,tag:MUsDH050daf7PvPiIzYL7Q==,type:str]",
-		"WOODPECKER_GITEA_URL": "ENC[AES256_GCM,data:pfUd2dTEWr8GFoUNyDnuLtk=,iv:XAy8a9R7YPWiZP9+EQsgijw64k8DPmUNguEpQ/Zc/SQ=,tag:bRdJire9SLTNy4c/0h+Ppw==,type:str]",
-		"WOODPECKER_GITEA_CLIENT": "ENC[AES256_GCM,data:Zw68TMxGTM7FJXp0FjJNBEaDKgK+2mBDmdSMHPfUc/+yluM7,iv:ITJh/xvhsgMwvJeDmh8Pe4yV0Cq1H7Ixyt+Ji24+qbA=,tag:iCrLkJ6BlApKW14qdcJIGA==,type:str]",
-		"WOODPECKER_GITEA_SECRET": "ENC[AES256_GCM,data:/BbBc15kp/nqrAUzMBLh9p4UcXnWedOcZzxXdQbusz4hh2ceWX4DjyEj4TFF0yr66ZBCQ7yHD/I=,iv:BS5N0w+DR8zxh+VP4HWQh0nd23TV1XZtK/+h87ZGyUI=,tag:ocP81fJ29sjSgSc+rULblA==,type:str]"
+		"WOODPECKER_HOST": "ENC[AES256_GCM,data:Oz7O+c/Xtt+akI7rHazM3N8K53RFTAY=,iv:oFqB16N0v1oN+8jrHxFpr3bBVEiECb6cqV7lCfuWLMU=,tag:5RE9ml3gPJWtlGecI3qeIg==,type:str]",
+		"WOODPECKER_AGENT_SECRET": "ENC[AES256_GCM,data:ZCC1NyDf1rHRKON/xq7ACfbqx9HCNSxwuwW1TdihuYU=,iv:J6TC7hUuCRLYCu7OztXYj1uBVP2uKz1Ss89o5Kagg8o=,tag:D12NiWuS56FsortlDW1Brg==,type:str]",
+		"WOODPECKER_GITHUB": "ENC[AES256_GCM,data:LJf8ZmQ=,iv:MdMjygVSzGfVtHTp8tQS4j+PPgTacmcPZyUJSVr0ETo=,tag:uOVVa1z1MZzWCF225iWmDw==,type:str]",
+		"WOODPECKER_GITEA": "ENC[AES256_GCM,data:jhsiPQ==,iv:F2iTi6sFD3vpGEfw6v1Vm76MZ7pc8yHzHMIFm+c6JU0=,tag:7wu8J9NJR+KwyctExBBnQQ==,type:str]",
+		"WOODPECKER_GITEA_URL": "ENC[AES256_GCM,data:EtpRU6N1dqCnKL7wRsn/gXXqC2jDrCd7SHE=,iv:PER9uWwRMyd+eHyFYg+F+byKZvguzWc6UioJnh0Wjas=,tag:8IdOR5p6ah3y/qDqo0DWhA==,type:str]",
+		"WOODPECKER_GITEA_CLIENT": "ENC[AES256_GCM,data:LA7Hc1BoWoFS5ljIVnv6IW5QSqpqcMnY1g8/E50xMZSfKhVp,iv:vTKehbQkfXoTTzWU7P5xxsmjMZdfSbKwi1qSQjGpIew=,tag:YVRlNOCkEZLn4TC7pW+m1A==,type:str]",
+		"WOODPECKER_GITEA_SECRET": "ENC[AES256_GCM,data:RkTSIBsPfeYsZ2BC9gUtkoU6Iz3dM7pN5UUfoEMUn5axM5KgBuPjOM54SbPu0sLsjYb84/rcM9w=,iv:oYoTRHQXhFIZG+jLs68IsY5USHAL3/dqapnv3TEnvN8=,tag:PBYKp9on1foMbQk2tzS5yg==,type:str]"
 	},
 	"sops": {
 		"kms": null,
@@ -22,11 +22,11 @@
 		"age": [
 			{
 				"recipient": "age1ufcw42mtfu65grs30zqwu65xl7wczkllu3r4gjpk5yr7tr02q5kqq0pnvg",
-				"enc": "-----BEGIN AGE ENCRYPTED FILE-----\nYWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSAvYlJESHUybVpEem9mR0h1\nZVJhamc0VXNMVEtkSUE5RUFiWVRCSDZobDJBCjNVNVFKaVE1S0ZCK1VrbDAvdDRV\nMEdGNURCRm45U2p1ZlltMmc1RkoyUWsKLS0tIFo5NzBKR0NjaUQ5eHNNU24rZGhv\nL2xKd0tNT29lVkNxSFlRTlBpMVFnYncKk7hyutHvqJ502G/bYztzKYyZINKQDOLT\nTrutG6D/jJfjQvfWYDvsghAgRr2UuxP4q38o9JcmyYIdVHFTwLqxWw==\n-----END AGE ENCRYPTED FILE-----\n"
+				"enc": "-----BEGIN AGE ENCRYPTED FILE-----\nYWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBObkFQN0ZPcmVFYXkvNDd6\nanlpdTJPaUZRNlN5KzlTQVdiN00yZ0daTkRZCmsyUGVNRThUL3g5SHlMN0JJUUdj\nYUcrWlFURWovV3VvUG03eG9YMVloNFUKLS0tIDRkSlBHVDl2azlBUXVORUlCQ1Z0\nMlh0TVF6RFhUOVNWbVRaa1doUjdZOVUKGkzitYAEnVZF77w22Rag9Dr2tjM97wz4\n4BXSTwFf+Wrb1TZPkfh4Bl4bfZMncM45xlzJmsdzJaHyKuyF8OgV0A==\n-----END AGE ENCRYPTED FILE-----\n"
 			}
 		],
-		"lastmodified": "2022-11-16T21:27:48Z",
-		"mac": "ENC[AES256_GCM,data:dzRRBcOdbdSyaG4bi8c3hQXZMwq5H8kqqhHn5aSYFLQFD8suzAx3kP3GFK3VvuHzvcSRmH4iI+9k72OXle43zyXPqCIAFEUyJFWg9XUSMm2kHK+83nsJ1y3EiyBXf8iXHwDrPGDqhp0Lk8i2BVzUfTZzKqBd0UVvRXcXsk+M/Fc=,iv:p2W2S2DkUc9kUZlA8oufoX5DjlHgKZ6LzVK1RXl/MnM=,tag:Ic9hHOpzirVXT99hImWkcA==,type:str]",
+		"lastmodified": "2022-11-16T21:30:55Z",
+		"mac": "ENC[AES256_GCM,data:bVm8aZ54yR6+x7QBeEsQTR+H9q+5mgcQReW/W4zHsmCZ4bVHMT8odX64GEkZOMWaSXoUKsWqEf9iE5+lgi8aJpqByrKtCrNye8HnDEi9C+yQNTE7kONBA45J3WukVheHURGwpunXzfd4Dr0ov2QXbdZ/LP6uD501ItPcFy/0UFI=,iv:+Fqi3eLjDLk3cwCuUvMzEfTZ7tB40tgN7lZVsmlz8N8=,tag:QkeabCx24EWVk2EdWIkqfQ==,type:str]",
 		"pgp": null,
 		"encrypted_regex": "^(data|stringData)$",
 		"version": "3.7.3"
