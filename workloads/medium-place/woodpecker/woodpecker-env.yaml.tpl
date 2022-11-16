@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Secret
 metadata:
-  name: woodpecker-secret
+  name: woodpecker-env
   namespace: medium-place
 stringData:
   WOODPECKER_AGENT_SECRET: {{ .Env.WOODPECKER_SECRET }}

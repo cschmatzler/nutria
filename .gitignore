@@ -14,5 +14,4 @@ kubeconfig
 talos/
 
 *.agekey
-**/*secret.yaml*
 **/*.env.secret
