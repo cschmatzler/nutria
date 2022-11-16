@@ -30,6 +30,7 @@ spec:
       version: 0.15.5
 
   values:
+    env:
     extraSecretNamesForEnvFrom:
       - woodpecker-env
     persistentVolume:
