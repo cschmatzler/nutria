@@ -40,7 +40,7 @@ spec:
       annotations:
         cert-manager.io/cluster-issuer: letsencrypt
         external-dns.alpha.kubernetes.io/target: nutria.tail9b5a.ts.net
-        ingress.kubernetes.io/force-ssl-redirect: true
+        ingress.kubernetes.io/force-ssl-redirect: "true"
       ingressClassName: public
       tls:
         - hosts:
