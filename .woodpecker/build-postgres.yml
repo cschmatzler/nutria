@@ -3,4 +3,5 @@ pipeline:
     image: alpine:3.16
     commands:
       export WALG_VERSION=$(< images/wal-g/VERSION)
+      echo $WALG_VERSION
 
