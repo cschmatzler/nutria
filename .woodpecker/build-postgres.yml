@@ -2,7 +2,6 @@ pipeline:
   build-walg:
     image: alpine:3.16
     commands:
-      - cat images/wal-g/VERSION
       - export WALG_VERSION=$(cat images/wal-g/VERSION)
-      - echo $WALG_VERSION
+      - docker build -f images/wal-g/Dockerfile -t forge.medium.place/nutria/wal-g:$WALG_VERSION .
 
