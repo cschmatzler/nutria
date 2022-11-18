@@ -88,5 +88,3 @@ spec:
     env:
     extraSecretNamesForEnvFrom:
       - woodpecker-env
-    persistentVolume:
-      storageClass: hcloud-volume
