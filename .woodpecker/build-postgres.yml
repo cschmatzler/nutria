@@ -4,5 +4,5 @@ pipeline:
     commands:
       - cat images/wal-g/VERSION
       - export WALG_VERSION=$(< images/wal-g/VERSION)
-       -echo $WALG_VERSION
+      - echo $WALG_VERSION
 
