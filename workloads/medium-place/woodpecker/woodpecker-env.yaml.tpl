@@ -5,6 +5,7 @@ metadata:
   namespace: medium-place
 stringData:
   WOODPECKER_HOST: https://ci.medium.place
+  WOODPECKER_SERVER: woodpecker-server:9000
   WOODPECKER_AGENT_SECRET: {{ .Env.WOODPECKER_SECRET }}
   WOODPECKER_GITHUB: "false"
   WOODPECKER_OPEN: "true"
