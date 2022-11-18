@@ -52,3 +52,41 @@ spec:
               backend:
                 serviceName: medium-place-woodpecker
                 servicePort: 80
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+
+metadata:
+  name: woodpecker-agent
+  namespace: medium-place
+
+spec:
+  interval: 1m
+
+  upgrade:
+    remediation:
+      retries: 5
+
+  rollback:
+    timeout: 5m
+    disableWait: false
+    disableHooks: false
+    recreate: false
+    force: false
+    cleanupOnFail: false
+
+  chart:
+    spec:
+      chart: woodpecker-agent
+      sourceRef:
+        kind: HelmRepository
+        name: woodpecker
+        namespace: flux-system
+      version: 0.15.5
+
+  values:
+    env:
+    extraSecretNamesForEnvFrom:
+      - woodpecker-env
+    persistentVolume:
+      storageClass: hcloud-volume
