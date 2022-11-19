@@ -16,7 +16,7 @@ spec:
     spec:
       chart: ./charts/vaultwarden
       sourceRef:
-        kind: HelmRepository
+        kind: GitRepository
         name: flux-system
         namespace: flux-system
       version: ~0.1.0
