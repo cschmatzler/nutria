@@ -1,0 +1,16 @@
+base:
+  image:
+    repository: vaultwarden/server
+    tag: 1.26.0
+
+  persistence:
+    enabled: true
+
+  ports:
+    - name: http
+      port: 80
+
+  secretName: ""
+
+postgresql:
+  secretName: # Set the name of the secret holding environment variables

@@ -1,0 +1,4 @@
+resources:
+  - medium-place-vault-env.yaml.enc
+  - medium-place-vault-postgresql-env.yaml.enc
+  - helmrelease.yaml

@@ -1,0 +1,16 @@
+apiVersion: v2
+name: Vaultwarden
+description: Vaultwarden Application Chart
+
+type: application
+version: 0.1.0
+
+appVersion: 1.26.0
+
+dependencies:
+  - name: base
+    version: ~0.1.0
+    repository: file://../base
+  - name: postgresql
+    version: ~0.1.0
+    repository: file://..//postgresql

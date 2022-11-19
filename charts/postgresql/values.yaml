@@ -1,6 +1,6 @@
 image:
-  tag: 15.0-alpine
-  pullPolicy: IfNotPresent
+  tag: cschmatzler/postgres-wal-g:15.1-2.0.1-alpine
+  pullPolicy: Always
 
 secretName:
 

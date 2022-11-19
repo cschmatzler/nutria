@@ -1,0 +1,29 @@
+{
+	"apiVersion": "v1",
+	"kind": "Secret",
+	"metadata": {
+		"name": "medium-place-vault-postgresql-env",
+		"namespace": "medium-place"
+	},
+	"stringData": {
+		"POSTGRES_PASSWORD": "ENC[AES256_GCM,data:ucBIvVgzzLdoqR3xdu95REwCbd0iFhKII55KpZBYlxuqVY0+Y6g+zzWfuZRVQVyL,iv:Mift27tOwqG21p8RJRKq8S5Fdqh/RtPx/dqGdv5J8yE=,tag:RmFSCJHqS48JPT82kNSEdA==,type:str]",
+		"MEDIUM_PLACE_VAULT_PASSWORD": "ENC[AES256_GCM,data:TZsum5mcK0DNTOV9VcPswq/UcNBn1vbY05IzwrXAU6AqwyOvflj8ACmG6/OHkLnr,iv:fU9rEFhcMZ3vJtZtjDAWIsSSiZnUZL9GLj0a5hLmPv0=,tag:zZzuyByViyUtGnUvjz/3AQ==,type:str]"
+	},
+	"sops": {
+		"kms": null,
+		"gcp_kms": null,
+		"azure_kv": null,
+		"hc_vault": null,
+		"age": [
+			{
+				"recipient": "age1ufcw42mtfu65grs30zqwu65xl7wczkllu3r4gjpk5yr7tr02q5kqq0pnvg",
+				"enc": "-----BEGIN AGE ENCRYPTED FILE-----\nYWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBxSHVWeHN4SDM5UGpac3Zu\nR0dzZStNemlDbWdsdGdSU0JCa2dwOXpBNFdBCkowY204RWFkeEtwd2RsYkYxTmRk\nT0QxYjJ1cFVpVE1zS2FYK2liQjZvcUkKLS0tIFR6MjUweDI1VTFycjcxekNqU2wx\nUmRMb0FPYXdHclhvTEJGVzJoTGRaQ3cKbvzhN8NjR9n7zl4+zgvMVl8gTO4gPfTP\nY/thHtc8hOB88zoaWeBswtrF/uA6HAWzLctXe60L2+QBUjw1owV7Xw==\n-----END AGE ENCRYPTED FILE-----\n"
+			}
+		],
+		"lastmodified": "2022-11-19T19:37:02Z",
+		"mac": "ENC[AES256_GCM,data:sGyetngYsgzCYLhjgJ/HLAoDY8XN6mMUOukLjOeNOeom+ACJvnhjRUo2rSECs+FEuqdKV3i4OhO1Xx0Qaww5fDn4lkBZcG5s1kBjm1Jq9cu3LyYlYJe20IeO9SoMfhmxq4ZCBU4IADhZFo/EFNJlWgtzJi9xdLexMDAe3qf8TBo=,iv:jgkfjSCyVD/ekRokKnRpGKByip24+g9w8ddendzvoIQ=,tag:gJHYlfDAGUB8SRuLGVBH/g==,type:str]",
+		"pgp": null,
+		"encrypted_regex": "^(data|stringData)$",
+		"version": "3.7.3"
+	}
+}
