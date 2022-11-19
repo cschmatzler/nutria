@@ -6,7 +6,7 @@ locals {
 
   # Network
   # -------
-  rdns_domain = "cluster.nutria.cloud"
+  rdns_domain = "cluster.medium.place"
 
   control_plane_nodes = {
     count       = 3

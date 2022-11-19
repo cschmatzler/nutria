@@ -31,7 +31,7 @@ spec:
 
   values:
     contour:
-      # We are deploying Contour twice - having both deployments manage the CRDs 
+      # We are deploying Contour twice - having both deployments manage the CRDs
       # fails. We will let the `contour-public` deployment handle these.
       manageCRDs: false
       ingressClass:
@@ -43,5 +43,3 @@ spec:
         type: ClusterIP
         externalTrafficPolicy: ""
         clusterIP: 10.96.0.60
-
- 

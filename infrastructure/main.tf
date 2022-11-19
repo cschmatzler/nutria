@@ -9,8 +9,8 @@ module "network" {
 module "cluster" {
   source = "./cluster"
 
-  hcloud_token = var.hcloud_token
-  hdns_token   = var.hdns_token
+  hcloud_token         = var.hcloud_token
+  cloudflare_api_token = var.cloudflare_api_token
 
   private_key = var.private_key
   public_key  = var.public_key

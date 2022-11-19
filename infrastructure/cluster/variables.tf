@@ -4,8 +4,8 @@ variable "hcloud_token" {
   sensitive   = true
 }
 
-variable "hdns_token" {
-  description = "Hetzner DNS API Token"
+variable "cloudflare_api_token" {
+  description = "Cloudflare API Token"
   type        = string
   sensitive   = true
 }

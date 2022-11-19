@@ -3,7 +3,7 @@ output "ssh_key_id" {
 }
 
 output "network_id" {
-  value = hcloud_network.nutria.id
+  value = hcloud_network.medium_place.id
 }
 
 output "cluster_subnet_id" {

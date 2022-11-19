@@ -10,6 +10,12 @@ variable "hdns_token" {
   sensitive   = true
 }
 
+variable "cloudflare_api_token" {
+  description = "Cloudflare API Token"
+  type        = string
+  sensitive   = true
+}
+
 variable "private_key" {
   description = "SSH private key path"
   type        = string

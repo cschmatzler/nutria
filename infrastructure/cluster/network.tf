@@ -1,4 +1,4 @@
-# Control plane load balancer 
+# Control plane load balancer
 # ---------------------------
 resource "hcloud_load_balancer" "control_plane" {
   name               = "control-plane"
@@ -6,7 +6,7 @@ resource "hcloud_load_balancer" "control_plane" {
   location           = "fsn1"
 }
 
-resource "hcloud_load_balancer_network" "nutria" {
+resource "hcloud_load_balancer_network" "medium_place" {
   load_balancer_id = hcloud_load_balancer.control_plane.id
   network_id       = var.network_id
 }
@@ -20,12 +20,12 @@ resource "hcloud_load_balancer_service" "control_plane" {
 
 # Control plane DNS
 # -----------------
-data "hetznerdns_zone" "nutria" {
-  name = "nutria.cloud"
+data "cloudflare_zone" "medium_place" {
+  name = "medium.place"
 }
 
-resource "hetznerdns_record" "cluster" {
-  zone_id = data.hetznerdns_zone.nutria.id
+resource "cloudflare_record" "medium_place_cluster" {
+  zone_id = data.cloudflare_zone.medium_place.id
   type    = "A"
   ttl     = 60
   name    = "cluster"
