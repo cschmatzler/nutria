@@ -35,6 +35,7 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: postgresql
+              protocol: TCP
               containerPort: 5432
           env:
             - name: PGDATA
