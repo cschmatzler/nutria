@@ -37,9 +37,6 @@ spec:
             - name: postgresql
               protocol: TCP
               containerPort: 5432
-          env:
-            - name: PGDATA
-              value: /var/lib/postgresql/data/pgdata
           envFrom:
             - secretRef:
                 name: {{ .Values.secretName }}
@@ -47,7 +44,7 @@ spec:
             - name: init-scripts
               mountPath: /docker-entrypoint-initdb.d
             - name: data
-              mountPath: /var/lib/postgresql/data
+              mountPath: /data
 
 
 
