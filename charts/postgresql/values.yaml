@@ -1,6 +1,7 @@
 image:
   repository: cschmatzler/postgres-wal-g
   tag: 15.1-2.0.1-alpine
+  # TODO: change this once I'm done fucking around with the image
   pullPolicy: Always
 
 secretName:
