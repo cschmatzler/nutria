@@ -6,11 +6,17 @@ base:
   persistence:
     enabled: true
 
+  secretName: ""
+
   ports:
     - name: http
       port: 80
 
-  secretName: ""
+  ingress:
+    paths:
+      - path: /
+        pathType: ImplementationSpecific
+        port: http
 
 postgresql:
   secretName: # Set the name of the secret holding environment variables
