@@ -34,9 +34,7 @@ spec:
           image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
-            - name: postgresql
-              protocol: TCP
-              containerPort: 5432
+            - containerPort: 5432
           env:
             - name: PGDATA
               value: /var/lib/postgresql/data/pgdata

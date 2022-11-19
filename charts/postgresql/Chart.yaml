@@ -3,6 +3,6 @@ name: postgresql
 description: PostgreSQL
 
 type: application
-version: 0.1.28
+version: 0.1.29
 
 appVersion: 15.1
