@@ -3,11 +3,11 @@ kind: Service
 metadata:
   name: {{ include "base.fullname" . | trim }}-postgresql
   labels:
-    {{- include "base.labels" . | nindent 4 }}
+    {{- include "postgresql.labels" . | nindent 4 }}
 spec:
   type: ClusterIP
   selector:
-    {{- include "base.selectorLabels" . | nindent 4 }}
+    {{- include "postgresql.selectorLabels" . | nindent 4 }}
   ports:
     - name: postgresql
       protocol: TCP

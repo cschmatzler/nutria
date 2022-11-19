@@ -1,15 +1,15 @@
-{{- define "base.chart" -}}
+{{- define "postgresql.chart" -}}
 {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
-{{- define "base.selectorLabels" -}}
+{{- define "postgresql.selectorLabels" -}}
 app.kubernetes.io/name: {{ .Chart.Name }}
 app.kubernetes.io/instance: {{ include "base.fullname" . | trim }}-postgres
 {{- end }}
 
-{{- define "base.labels" -}}
-helm.sh/chart: {{ include "base.chart" . }}
-{{ include "base.selectorLabels" . }}
+{{- define "postgresql.labels" -}}
+helm.sh/chart: {{ include "postgresql.chart" . }}
+{{ include "postgresql.selectorLabels" . }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{- end }}
