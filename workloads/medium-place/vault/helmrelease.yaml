@@ -30,8 +30,8 @@ spec:
         paths:
           - path: /
             pathType: ImplementationSpecific
-            post: http
-      postgresql:
-        secretName: medium-place-vault-postgresql-env
-        databases:
-          - medium_place_vault
+            port: http
+    postgresql:
+      secretName: medium-place-vault-postgresql-env
+      databases:
+        - medium_place_vault
