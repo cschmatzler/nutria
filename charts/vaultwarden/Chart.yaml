@@ -3,7 +3,7 @@ name: Vaultwarden
 description: Vaultwarden Application Chart
 
 type: application
-version: 0.1.9
+version: 0.1.10
 
 appVersion: 1.26.0
 
