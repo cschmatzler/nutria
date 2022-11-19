@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: {{ include "base.fullname" . | trim }}-postgresql
+  name: {{ include "postgresql.fullname" . | trim }}
   labels:
     {{- include "postgresql.labels" . | nindent 4 }}
 spec:
@@ -28,9 +28,9 @@ spec:
       volumes:
         - name: init-scripts
           configMap:
-            name: {{ include "base.fullname" . | trim }}-postgresql-init-scripts
+            name: {{ include "postgresql.fullname" . | trim }}-init-scripts
       containers:
-        - name: {{ .Chart.Name }}
+        - name: postgresql
           image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
@@ -43,6 +43,8 @@ spec:
           volumeMounts:
             - name: init-scripts
               mountPath: /docker-entrypoint-initdb.d
+            - name: data
+              mountPath: /var/lib/postgresql/data
 
 
 
