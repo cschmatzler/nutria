@@ -8,7 +8,7 @@ data:
     #!/bin/bash
     set -e
 
-    psql -v ON_ERROR_STOP=1 --username postgres --dbname "$POSTGRES_DB" <<-EOSQL
+    psql -v ON_ERROR_STOP=1 --username postgres <<-EOSQL
       CREATE USER {{ $userName }} WITH PASSWORD '${{ $userName | upper }}_PASSWORD';
       {{ range .Values.databases }}
       CREATE DATABASE {{ . }};
