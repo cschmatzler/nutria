@@ -1,0 +1,4 @@
+resources:
+  - configuration/mastodon-postgresql-env.yaml.enc
+  - statefulset.yaml
+  # - service.yaml

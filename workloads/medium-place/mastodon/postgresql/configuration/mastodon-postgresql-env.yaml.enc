@@ -1,0 +1,28 @@
+{
+	"apiVersion": "v1",
+	"kind": "Secret",
+	"metadata": {
+		"name": "mastodon-postgresql-env",
+		"namespace": "medium-place"
+	},
+	"data": {
+		"POSTGRES_PASSWORD": "ENC[AES256_GCM,data:Yf7zIRzaA+JnKiCu2EiEqvAQdqhxs3NXEI8FtAO9NHItP6rpeG0XsLq+la9HHeecrRaZquei6fhMlHazeSgDqg==,iv:JvXc1rAuzlO/bPN5JSf25WOhFPiQyNoZwvxcH+6oRuI=,tag:dIP8LW1Ok8Vif/B5pxxuBw==,type:str]"
+	},
+	"sops": {
+		"kms": null,
+		"gcp_kms": null,
+		"azure_kv": null,
+		"hc_vault": null,
+		"age": [
+			{
+				"recipient": "age1ufcw42mtfu65grs30zqwu65xl7wczkllu3r4gjpk5yr7tr02q5kqq0pnvg",
+				"enc": "-----BEGIN AGE ENCRYPTED FILE-----\nYWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBmVGI4UURJU0hNamZBUEc4\nZzczckJsQ0M3bnBvVHBrZm5EWjNtbzRzMEN3CjA4cmozTkVsbGYxeXZIQTFxTFBX\nM2ZKeGkvZDN4QVUzNSs0TWxOc1ROWWMKLS0tIGpDTFpkWWM2UFdQL0NnSlNucGpl\nVWp1UlZ5QXh4N0J0SUh5STFVTGo4YmMKBaGj4vzRyr8N6InhfBfr/XcrDg19ydcI\nJPMaIz8KHxPQrzTfVJY5gf5BuJ+v3R/AT3gyQ8p26FH7T2ERwjp2lQ==\n-----END AGE ENCRYPTED FILE-----\n"
+			}
+		],
+		"lastmodified": "2022-11-20T18:36:02Z",
+		"mac": "ENC[AES256_GCM,data:aj9elVpXwtEs6ksiwdc89r/sqI68a+VotTW+WzEw0CLkFOmxsI7W5P1tv2ClYV/y7OPm4XZ73H+Ium49UfoJgOpFJRdu4JZG8mi4h3DMq9QV53WSKvwl6M1sqY6WJCnWtBXxc70JfV3Lozoi00gV1oEAx/N5kD2U4Oyvi1a1jgY=,iv:NHgraq984FVRgM/0FJuOC4b+kkuSa3xSn68acz4XoKo=,tag:DK2qX1bT0TPqSm7pcxVzsg==,type:str]",
+		"pgp": null,
+		"encrypted_regex": "^(data|stringData)$",
+		"version": "3.7.3"
+	}
+}
