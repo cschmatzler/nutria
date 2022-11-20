@@ -8,18 +8,6 @@ metadata:
 spec:
   interval: 1m
 
-  upgrade:
-    remediation:
-      retries: 5
-
-  rollback:
-    timeout: 5m
-    disableWait: false
-    disableHooks: false
-    recreate: false
-    force: false
-    cleanupOnFail: false
-
   chart:
     spec:
       chart: contour
@@ -27,7 +15,7 @@ spec:
         kind: HelmRepository
         name: bitnami
         namespace: flux-system
-      version: 9.1.6
+      version: 10.0.0
 
   values:
     contour:
