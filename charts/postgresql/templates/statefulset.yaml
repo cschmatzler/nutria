@@ -25,6 +25,8 @@ spec:
         {{- include "postgresql.selectorLabels" . | nindent 8 }}
     spec:
       serviceAccountName: {{ include "base.fullname" . | trim }}
+      securityContext:
+        fsGroup: 1001
       volumes:
         - name: init-scripts
           configMap:
@@ -33,8 +35,6 @@ spec:
         - name: postgresql
           image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-          securityContext:
-            fsGroup: 1001
           ports:
             - name: postgresql
               protocol: TCP

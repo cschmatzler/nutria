@@ -4,6 +4,6 @@ dependencies:
   version: 0.1.18
 - name: postgresql
   repository: file://..//postgresql
-  version: 0.1.34
-digest: sha256:df6bcb59dbf3fbc97a95bd83088a63237155c0a8514f4610df10ceff270057a6
-generated: "2022-11-20T13:40:35.594659+01:00"
+  version: 0.1.35
+digest: sha256:499e899799e2d8280c2d7a8db00dfc5e848a56e176709e4f5717cdd179921d8e
+generated: "2022-11-20T13:43:41.176807+01:00"
