@@ -23,17 +23,17 @@ spec:
     - host: plaza.medium.place
       http:
         paths:
-          - pathType: Prefix
+          - pathType: ImplementationSpecific
             path: /api/v1/streaming
             backend:
               service:
-                name: mastodon
+                name: mastodon-streaming
                 port:
                   name: http-ws
-          - pathType: Prefix
+          - pathType: ImplementationSpecific
             path: /
             backend:
               service:
-                name: mastodon
+                name: mastodon-web
                 port:
                   name: http
