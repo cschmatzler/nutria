@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 
 metadata:
-  name: synapse-signal-bridge 
+  name: synapse-signal-bridge
   namespace: medium-place
   labels:
     app.kubernetes.io/name: signal-bridge
@@ -24,11 +24,11 @@ spec:
       labels:
         app.kubernetes.io/name: signal-bridge
         app.kubernetes.io/part-of: synapse
-        app.kubernetes.io/version: 0.4.0  
+        app.kubernetes.io/version: 0.4.0
 
     spec:
       volumes:
-        - name: signald 
+        - name: signald
           emptyDir: {}
         - name: synapse-signal-bridge-config
           secret:
@@ -38,8 +38,8 @@ spec:
             secretName: synapse-bridge-registration
 
       containers:
-        - name: mautrix-signal 
-          image: dock.mau.dev/mautrix/signal:v0.4.0
+        - name: mautrix-signal
+          image: dock.mau.dev/mautrix/signal:v0.4.1
 
           volumeMounts:
             - name: signald
@@ -58,13 +58,13 @@ spec:
               protocol: TCP
               containerPort: 29328
 
-        - name: signald 
+        - name: signald
           image: signald/signald:0.23.0
 
           volumeMounts:
             - name: signald
               mountPath: /signald
-          
+
           envFrom:
             - secretRef:
                 name: synapse-signal-bridge-env

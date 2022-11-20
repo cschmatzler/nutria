@@ -7,7 +7,7 @@ metadata:
   labels:
     app.kubernetes.io/name: whatsapp-bridge
     app.kubernetes.io/part-of: synapse
-    app.kubernetes.io/version: 0.7.1
+    app.kubernetes.io/version: 0.7.2
 
 spec:
   selector:
