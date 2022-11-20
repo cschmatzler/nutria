@@ -51,7 +51,7 @@ spec:
       containers:
         - name: stolon-keeper
 
-          image: cschmatzler/stolon:0.17.0-pg14-r2
+          image: cschmatzler/stolon:0.17.0-pg14-r3
           command:
             - "/bin/bash"
             - "-ec"
