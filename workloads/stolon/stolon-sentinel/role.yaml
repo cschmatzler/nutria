@@ -26,3 +26,12 @@ rules:
       - create
       - get
       - update
+
+  - apiGroups:
+      - ""
+    resources:
+      - events
+    verbs:
+      - create
+      - get
+      - update
