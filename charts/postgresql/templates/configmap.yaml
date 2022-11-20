@@ -4,7 +4,18 @@ kind: ConfigMap
 metadata:
   name: {{ include "postgresql.fullname" . | trim }}-init-scripts
 data:
-  setup.sh: |
+  setup_wal_g: |
+    #!/bin/bash
+    set -e
+
+    psql -v ON_ERROR_STOP=1 --username postgres <<-EOSQL
+      ALTER SYSTEM SET archive_mode=on;
+      ALTER SYSTEM SET archive_timeout=60;
+      ALTER SYSTEM SET archive_command='/wal-g wal-push %p';
+      ALTER SYSTEM SET restore_command='/wal-g wal-fetch %f %p';
+    EOSQL
+
+  setup_databases.sh: |
     #!/bin/bash
     set -e
 
