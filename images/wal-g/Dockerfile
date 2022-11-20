@@ -1,10 +1,11 @@
-FROM golang:1.19.3-alpine3.16 AS builder
+FROM golang:1.19.3-bullseye AS builder
 
 ENV WALG_VERSION=v2.0.1
 ENV BROTLI_VERSION=v1.0.9
 
 RUN set -ex \
-     && apk add --no-cache wget cmake git build-base bash
+     && apt update \
+     && apt install -y wget cmake git build-essential bash
 
 RUN set -ex \
      && cd /tmp \
@@ -24,9 +25,8 @@ RUN set -ex \
      && make deps \
      && make pg_build \
      && make link_brotli \
-     && install main/pg/wal-g / \
-     && /wal-g --help
+     && install main/pg/wal-g /
 
-FROM alpine:3.16
+FROM debian:bullseye
 
 COPY --from=builder /wal-g /
