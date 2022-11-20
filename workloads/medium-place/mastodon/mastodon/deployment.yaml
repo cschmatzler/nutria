@@ -2,10 +2,10 @@ apiVersion: apps/v1
 kind: Deployment
 
 metadata:
-  name: mastodon
+  name: mastodon-web
   namespace: medium-place
   labels:
-    app.kubernetes.io/name: mastodon
+    app.kubernetes.io/name: mastodon-web
     app.kubernetes.io/part-of: mastodon
     app.kubernetes.io/version: 4.0.2
 
@@ -15,13 +15,13 @@ spec:
 
   selector:
     matchLabels:
-      app.kubernetes.io/name: mastodon
+      app.kubernetes.io/name: mastodon-web
       app.kubernetes.io/part-of: mastodon
 
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: mastodon
+        app.kubernetes.io/name: mastodon-web
         app.kubernetes.io/part-of: mastodon
         app.kubernetes.io/version: 4.0.2
 
@@ -64,6 +64,80 @@ spec:
             - name: http
               protocol: TCP
               containerPort: 3000
+---
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: mastodon-sidekiq
+  namespace: medium-place
+  labels:
+    app.kubernetes.io/name: mastodon-sidekiq
+    app.kubernetes.io/part-of: mastodon
+    app.kubernetes.io/version: 4.0.2
+
+spec:
+  replicas: 1
+  revisionHistoryLimit: 5
+
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: mastodon-sidekiq
+      app.kubernetes.io/part-of: mastodon
+
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: mastodon-sidekiq
+        app.kubernetes.io/part-of: mastodon
+        app.kubernetes.io/version: 4.0.2
+
+    spec:
+      terminationGracePeriodSeconds: 60
+
+      containers:
+        - name: sidekiq
+          image: tootsuite/mastodon:v4.0.2
+          command:
+            - bundle
+            - exec
+            - sidekiq
+
+          envFrom:
+            - secretRef:
+                name: mastodon-env
+---
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: mastodon-streaming
+  namespace: medium-place
+  labels:
+    app.kubernetes.io/name: mastodon-streaming
+    app.kubernetes.io/part-of: mastodon
+    app.kubernetes.io/version: 4.0.2
+
+spec:
+  replicas: 1
+  revisionHistoryLimit: 5
+
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: mastodon-streaming
+      app.kubernetes.io/part-of: mastodon
+
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: mastodon-streaming
+        app.kubernetes.io/part-of: mastodon
+        app.kubernetes.io/version: 4.0.2
+
+    spec:
+      terminationGracePeriodSeconds: 60
+
+      containers:
 
         - name: streaming
           image: tootsuite/mastodon:v4.0.2
@@ -79,14 +153,3 @@ spec:
             - name: http-ws
               protocol: TCP
               containerPort: 4000
-
-        - name: sidekiq
-          image: tootsuite/mastodon:v4.0.2
-          command:
-            - bundle
-            - exec
-            - sidekiq
-
-          envFrom:
-            - secretRef:
-                name: mastodon-env
