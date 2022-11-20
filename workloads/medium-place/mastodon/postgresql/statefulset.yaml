@@ -39,7 +39,7 @@ spec:
 
           volumeMounts:
             - name: data
-              mountPath: /bitnami/postgresql/data
+              mountPath: /bitnami/postgresql
 
           envFrom:
             - secretRef:
